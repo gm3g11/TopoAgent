@@ -64,7 +64,7 @@ These are evaluated across 5 morphological object types: discrete cells, glands/
 
 ```bash
 # Clone the repository
-git clone https://github.com/gmeng/TopoAgent.git
+git clone https://github.com/gm3g11/TopoAgent.git
 cd TopoAgent
 
 # Create conda environment
