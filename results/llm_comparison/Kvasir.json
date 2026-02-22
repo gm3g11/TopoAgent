@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:49:02",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "gpt4o",
+      "claude",
+      "gemini_flash",
+      "gemini_pro"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "gpt4o": "GPT-4o",
+      "claude": "Claude",
+      "gemini_flash": "Gemini-Flash",
+      "gemini_pro": "Gemini-Pro"
+    }
+  },
+  "per_dataset": {
+    "Kvasir": {
+      "fixed_pi": {
+        "accuracy": 30.5,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 1352,
+        "time": 400.5
+      },
+      "fixed_ps": {
+        "accuracy": 38.37,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 276.7
+      },
+      "gpt4o": {
+        "accuracy": 16.55,
+        "descriptor": "persistence_codebook",
+        "n_valid": 200,
+        "feature_dim": 112,
+        "agent_time": 77.4,
+        "time": 405.0
+      },
+      "claude": {
+        "accuracy": 43.92,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 83.0,
+        "time": 184.0
+      },
+      "gemini_flash": {
+        "accuracy": 16.55,
+        "descriptor": "persistence_codebook",
+        "n_valid": 200,
+        "feature_dim": 112,
+        "agent_time": 101.9,
+        "time": 431.3
+      },
+      "gemini_pro": {
+        "accuracy": 36.98,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 98.1,
+        "time": 424.8
+      }
+    }
+  },
+  "per_object_type": {
+    "glands_lumens": {
+      "n_datasets": 1,
+      "fixed_pi": 30.5,
+      "fixed_ps": 38.37,
+      "gpt4o": 16.55,
+      "claude": 43.92,
+      "gemini_flash": 16.55,
+      "gemini_pro": 36.98
+    }
+  },
+  "overall": {
+    "fixed_pi": 30.5,
+    "fixed_ps": 38.37,
+    "gpt4o": 16.55,
+    "claude": 43.92,
+    "gemini_flash": 16.55,
+    "gemini_pro": 36.98
+  }
+}

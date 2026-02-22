@@ -1,0 +1,168 @@
+{
+  "dataset": "GasHisSDB",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.8857,
+  "best_accuracy": 0.89,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.8856666666666667,
+      "accuracy": 0.89,
+      "std": 0.04886105583977667,
+      "fold_balanced_accuracy": [
+        0.8958333333333333,
+        0.96875,
+        0.8229166666666667,
+        0.8541666666666667,
+        0.8866666666666667
+      ],
+      "fold_accuracy": [
+        0.9,
+        0.975,
+        0.85,
+        0.85,
+        0.875
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.8205,
+      "accuracy": 0.8300000000000001,
+      "std": 0.05127634824057666,
+      "fold_balanced_accuracy": [
+        0.7916666666666667,
+        0.8854166666666667,
+        0.8020833333333333,
+        0.75,
+        0.8733333333333333
+      ],
+      "fold_accuracy": [
+        0.8,
+        0.9,
+        0.825,
+        0.75,
+        0.875
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.8039999999999999,
+      "accuracy": 0.8150000000000001,
+      "std": 0.08176083006754112,
+      "fold_balanced_accuracy": [
+        0.75,
+        0.9375,
+        0.7708333333333333,
+        0.7083333333333333,
+        0.8533333333333333
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.95,
+        0.8,
+        0.7,
+        0.85
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.8355,
+      "accuracy": 0.85,
+      "std": 0.05880487980507138,
+      "fold_balanced_accuracy": [
+        0.8020833333333333,
+        0.90625,
+        0.7708333333333333,
+        0.7916666666666667,
+        0.9066666666666667
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.925,
+        0.8,
+        0.8,
+        0.9
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_statistics', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 55.72,
+  "eval_time_s": 46.41,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:33:51.953914",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image likely contains gastric histopathology structures such as glands and lumens, which are common in such images and are important for diagnostic purposes.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color is diagnostically meaningful in histopathology images, and using per-channel mode can leverage the color information to improve feature extraction accuracy.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for capturing dark-on-light structures like stained cells and tissue boundaries, which are typical in histopathology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 20.61
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image contains gastric histopathology features, likely including glandular structures and lumens, which are common in tissue sections.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is RGB and color carries diagnostic information in histopathology, making per-channel analysis beneficial for capturing relevant details.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for stained histopathology images where darker regions (e.g., stained cells or tissue boundaries) are diagnostically significant.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 15.49
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image likely contains histopathology structures such as glands or lumens, which are common in gastric tissue samples.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color in histopathology images often carries diagnostic information related to different tissue components, making per-channel analysis beneficial.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures common in stained histopathology images, like cell boundaries and tissue interfaces.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 19.62
+    }
+  ]
+}

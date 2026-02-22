@@ -1,0 +1,77 @@
+# TopoAgent Requirements
+# Medical AI Agent for Topological Data Analysis
+
+# ============== Core Dependencies ==============
+
+# LangChain/LangGraph (Agent Framework)
+langgraph>=0.0.10
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-openai>=0.0.2
+langchain-anthropic>=0.0.2
+
+# ============== TDA Libraries ==============
+
+# Primary TDA library
+gudhi>=3.8.0
+
+# Alternative TDA libraries
+giotto-tda>=0.6.0
+ripser>=0.6.0
+persim>=0.3.0
+
+# ============== Medical Imaging ==============
+
+# Image loading and processing
+Pillow>=9.0.0
+scikit-image>=0.19.0
+opencv-python>=4.5.0
+pydicom>=2.3.0
+
+# Medical datasets
+medmnist>=2.2.0
+
+# ============== Machine Learning ==============
+
+# Core ML
+numpy>=1.20.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Deep learning (optional, for MLP)
+torch>=2.0.0
+
+# ============== Visualization ==============
+
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# ============== Utilities ==============
+
+# Data handling
+pydantic>=2.0.0
+python-dotenv>=0.19.0
+PyYAML>=6.0.0
+
+# Job persistence
+joblib>=1.1.0
+
+# Progress bars
+tqdm>=4.62.0
+
+# ============== Development ==============
+
+# Testing
+pytest>=7.0.0
+pytest-asyncio>=0.18.0
+
+# Type checking
+mypy>=0.950
+
+# ============== Optional Dependencies ==============
+
+# Gradio interface (optional)
+# gradio>=3.0.0
+
+# Weights & Biases logging (optional)
+# wandb>=0.12.0

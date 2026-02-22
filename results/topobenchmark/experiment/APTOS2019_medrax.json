@@ -1,0 +1,106 @@
+{
+  "dataset": "APTOS2019",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.3203,
+  "best_accuracy": 0.545,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.23485167464114834,
+      "accuracy": 0.52,
+      "std": 0.01924384069353548,
+      "fold_balanced_accuracy": [
+        0.22636363636363638,
+        0.20818181818181816,
+        0.2545454545454545,
+        0.22583732057416267,
+        0.25933014354066986
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.5,
+        0.55,
+        0.5,
+        0.525
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.3203253588516747,
+      "accuracy": 0.545,
+      "std": 0.04213590374174323,
+      "fold_balanced_accuracy": [
+        0.3393939393939394,
+        0.33575757575757575,
+        0.2516746411483254,
+        0.3759968102073365,
+        0.2988038277511962
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.575,
+        0.525,
+        0.575,
+        0.525
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.29350877192982455,
+      "accuracy": 0.515,
+      "std": 0.0449925416941648,
+      "fold_balanced_accuracy": [
+        0.32939393939393935,
+        0.33575757575757575,
+        0.2200956937799043,
+        0.2624401913875598,
+        0.31985645933014356
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.575,
+        0.45,
+        0.475,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.3115757575757575,
+      "accuracy": 0.5700000000000001,
+      "std": 0.033492402822609735,
+      "fold_balanced_accuracy": [
+        0.333030303030303,
+        0.31121212121212116,
+        0.2545454545454545,
+        0.30454545454545456,
+        0.35454545454545455
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.575,
+        0.55,
+        0.575,
+        0.6
+      ]
+    }
+  },
+  "feature_dim": 1176,
+  "selection_reasoning": "Given the high number of features and low persistence, persistence_image is suitable as it can capture the distribution of topological features across the image, providing a comprehensive view of the retinal structure complexity and variability.",
+  "selection_time_s": 4.07,
+  "eval_time_s": 503.54,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:10:53.120952",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 37227.0,
+    "avg_H1_count": 54355.3,
+    "avg_H0_persistence": 0.011491,
+    "avg_H1_persistence": 0.011471,
+    "avg_total_features": 91582.3,
+    "avg_h1_h0_ratio": 1.45
+  }
+}

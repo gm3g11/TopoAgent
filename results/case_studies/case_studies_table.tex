@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{TopoAgent consistency and accuracy across 5 MedMNIST datasets ($n$ images per dataset). Consistency = fraction selecting the same descriptor. Regret = Oracle $-$ Agent.}
+\label{tab:case_studies}
+\small
+\begin{tabular}{llclccccc}
+\toprule
+Dataset & Object Type & $n$ & Descriptor & Consist. & Acc.\ (\%) & Oracle (\%) & Regret (\%) & Avg.\ Time (s) \\
+\midrule
+  Blood & discrete\_cells & 10 & template\_functions & 10/10 & 97.9 & 98.0 & 0.06 & 12.1 \\
+  Path & glands\_lumens & 10 & persistence\_statistics & 10/10 & 97.5 & 97.5 & 0.00 & 10.7 \\
+  Retina & vessel\_trees & 10 & lbp\_texture & 10/10 & 53.1 & 55.5 & 2.46 & 10.9 \\
+  Derma & surface\_lesions & 10 & persistence\_statistics & 10/10 & 57.6 & 57.6 & 0.00 & 9.5 \\
+  OrganA & organ\_shape & 10 & edge\_histogram & 10/10 & 85.1 & 85.6 & 0.45 & 8.5 \\
+\midrule
+  \textbf{Mean} & & & & & & & 0.59 & \\
+\bottomrule
+\end{tabular}
+\end{table*}

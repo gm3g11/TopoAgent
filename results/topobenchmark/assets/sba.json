@@ -1,0 +1,21 @@
+{
+  "all_means": {
+    "ATOL": 0.746,
+    "betti_curves": 0.7011,
+    "edge_histogram": 0.5508,
+    "euler_characteristic_curve": 0.7133,
+    "euler_characteristic_transform": 0.5158,
+    "lbp_texture": 0.7196,
+    "minkowski_functionals": 0.7379,
+    "persistence_codebook": 0.7367,
+    "persistence_entropy": 0.6664,
+    "persistence_image": 0.6245,
+    "persistence_landscapes": 0.7049,
+    "persistence_silhouette": 0.6789,
+    "persistence_statistics": 0.7478,
+    "template_functions": 0.7205,
+    "tropical_coordinates": 0.6638
+  },
+  "descriptor": "persistence_statistics",
+  "mean_accuracy": 0.7478
+}

@@ -1,0 +1,183 @@
+{
+  "dataset": "AML_Cytomorphology",
+  "method": "topoagent",
+  "descriptor": "lbp_texture",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.4838,
+  "best_accuracy": 0.72,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.48378625134264236,
+      "accuracy": 0.72,
+      "std": 0.09685132909700103,
+      "fold_balanced_accuracy": [
+        0.4212962962962963,
+        0.4362244897959183,
+        0.6281537176274019,
+        0.5648705096073516,
+        0.36838624338624343
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.75,
+        0.825,
+        0.75,
+        0.65
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.0,
+      "accuracy": 0.0,
+      "std": 0.0,
+      "error": "Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3 4 5 6 7], got [1 2 3 4 5 6 7 8]"
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.3728929466523451,
+      "accuracy": 0.5850000000000001,
+      "std": 0.09343729400348358,
+      "fold_balanced_accuracy": [
+        0.3287037037037037,
+        0.3693310657596372,
+        0.4197994987468672,
+        0.5138262322472849,
+        0.2328042328042328
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.65,
+        0.6,
+        0.675,
+        0.475
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.29725484345785097,
+      "accuracy": 0.525,
+      "std": 0.052773946303966444,
+      "fold_balanced_accuracy": [
+        0.27777777777777773,
+        0.31604308390022673,
+        0.3686299081035923,
+        0.314828738512949,
+        0.20899470899470898
+      ],
+      "fold_accuracy": [
+        0.45,
+        0.6,
+        0.6,
+        0.5,
+        0.475
+      ]
+    }
+  },
+  "feature_dim": 912,
+  "selection_reasoning": "Majority vote from 3 demo images: ['lbp_texture', 'template_functions', 'lbp_texture']",
+  "selection_time_s": 134.02,
+  "eval_time_s": 754.47,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:47:42.579753",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains hematology samples with distinct cell types, which are best described as discrete cells due to their individual and separate morphology.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "This is an RGB image where color can carry diagnostic information, such as differentiating cell types or identifying specific staining patterns, making per-channel mode more advantageous.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures, ideal for stained cells which typically appear darker against a lighter background.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.008399,
+            "h1_avg_persistence": 0.007696
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 43.02
+    },
+    {
+      "index": 15,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains individual cells typical of hematology images, where each cell is considered a discrete entity.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since the image is in RGB format and color differences may convey diagnostic information regarding cell types and their morphology, using per-channel mode can enhance feature extraction.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The task involves identifying dark-on-light structures such as stained cells, which are best captured by sublevel filtration.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 41.8
+    },
+    {
+      "index": 30,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains various cell types, including blasts and mature cells, typical of hematology and cytomorphology studies.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is RGB, and color differences may carry diagnostic information relevant for identifying subtle differences in cell types.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which is typical for stained cells and tissue boundaries in cytomorphology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.008586,
+            "h1_avg_persistence": 0.007346
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 49.2
+    }
+  ]
+}

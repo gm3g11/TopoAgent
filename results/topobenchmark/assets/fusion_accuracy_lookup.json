@@ -1,0 +1,156 @@
+{
+  "TissueMNIST|edge_histogram+persistence_statistics": {
+    "balanced_accuracy": 0.3098321974927492,
+    "std": 0.013440856427223863,
+    "fold_scores": [
+      0.29922310183108836,
+      0.31080698266925433,
+      0.3053720138548701,
+      0.3351900885928017,
+      0.29856880051573137
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 542,
+    "n_samples": 5000,
+    "dataset": "TissueMNIST",
+    "desc1": "persistence_statistics",
+    "desc2": "edge_histogram",
+    "desc1_dim": 62,
+    "desc2_dim": 480,
+    "object_type": "discrete_cells",
+    "color_mode": "grayscale",
+    "time_total": 258.5
+  },
+  "TissueMNIST|edge_histogram+lbp_texture": {
+    "balanced_accuracy": 0.2910430001197681,
+    "std": 0.018570547419849273,
+    "fold_scores": [
+      0.26544562784970277,
+      0.3172361767441642,
+      0.27528003605183593,
+      0.30175114278273585,
+      0.2955020171704017
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 784,
+    "n_samples": 5000,
+    "dataset": "TissueMNIST",
+    "desc1": "lbp_texture",
+    "desc2": "edge_histogram",
+    "desc1_dim": 304,
+    "desc2_dim": 480,
+    "object_type": "discrete_cells",
+    "color_mode": "grayscale",
+    "time_total": 407.1
+  },
+  "TissueMNIST|lbp_texture+persistence_statistics": {
+    "balanced_accuracy": 0.34385322053514533,
+    "std": 0.018323536977123855,
+    "fold_scores": [
+      0.33337381471968164,
+      0.3700069827491731,
+      0.3242314013626053,
+      0.36151318463988974,
+      0.33014071920437693
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 366,
+    "n_samples": 5000,
+    "dataset": "TissueMNIST",
+    "desc1": "persistence_statistics",
+    "desc2": "lbp_texture",
+    "desc1_dim": 62,
+    "desc2_dim": 304,
+    "object_type": "discrete_cells",
+    "color_mode": "grayscale",
+    "time_total": 365.5
+  },
+  "OCTMNIST|edge_histogram+persistence_statistics": {
+    "balanced_accuracy": 0.6506934593222555,
+    "std": 0.01026283734500861,
+    "fold_scores": [
+      0.6659542760513895,
+      0.635615013189412,
+      0.6478577811269787,
+      0.6572553779381002,
+      0.6467848483053976
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 574,
+    "n_samples": 5000,
+    "dataset": "OCTMNIST",
+    "desc1": "persistence_statistics",
+    "desc2": "edge_histogram",
+    "desc1_dim": 62,
+    "desc2_dim": 512,
+    "object_type": "organ_shape",
+    "color_mode": "grayscale",
+    "time_total": 572.0
+  },
+  "OCTMNIST|edge_histogram+lbp_texture": {
+    "balanced_accuracy": 0.6264969627664623,
+    "std": 0.015594791125575908,
+    "fold_scores": [
+      0.6344382850509268,
+      0.5986263871623055,
+      0.6422055928909094,
+      0.6208456354696843,
+      0.6363689132584857
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 692,
+    "n_samples": 5000,
+    "dataset": "OCTMNIST",
+    "desc1": "lbp_texture",
+    "desc2": "edge_histogram",
+    "desc1_dim": 180,
+    "desc2_dim": 512,
+    "object_type": "organ_shape",
+    "color_mode": "grayscale",
+    "time_total": 616.6
+  },
+  "OCTMNIST|lbp_texture+persistence_statistics": {
+    "balanced_accuracy": 0.5955799786314686,
+    "std": 0.014968990605544474,
+    "fold_scores": [
+      0.5732402323252986,
+      0.5886984172705497,
+      0.6115790898683929,
+      0.591454493419644,
+      0.6129276602734577
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 242,
+    "n_samples": 5000,
+    "dataset": "OCTMNIST",
+    "desc1": "persistence_statistics",
+    "desc2": "lbp_texture",
+    "desc1_dim": 62,
+    "desc2_dim": 180,
+    "object_type": "organ_shape",
+    "color_mode": "grayscale",
+    "time_total": 375.6
+  },
+  "MURA|edge_histogram+persistence_statistics": {
+    "balanced_accuracy": 0.495484015202325,
+    "std": 0.011162877967871179,
+    "fold_scores": [
+      0.517144533869886,
+      0.4872149564050972,
+      0.4930835010060362,
+      0.48687961099932925,
+      0.4930974737312765
+    ],
+    "classifier": "XGBoost",
+    "total_dim": 574,
+    "n_samples": 5000,
+    "dataset": "MURA",
+    "desc1": "persistence_statistics",
+    "desc2": "edge_histogram",
+    "desc1_dim": 62,
+    "desc2_dim": 512,
+    "object_type": "organ_shape",
+    "color_mode": "grayscale",
+    "time_total": 2126.0
+  }
+}

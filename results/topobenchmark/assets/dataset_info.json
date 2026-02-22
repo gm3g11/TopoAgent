@@ -1,0 +1,158 @@
+{
+  "AML_Cytomorphology": {
+    "color_mode": "per_channel",
+    "n_classes": 15,
+    "n_samples": 5000,
+    "object_type": "discrete_cells"
+  },
+  "APTOS2019": {
+    "color_mode": "per_channel",
+    "n_classes": 5,
+    "n_samples": 3296,
+    "object_type": "vessel_trees"
+  },
+  "BloodMNIST": {
+    "color_mode": "per_channel",
+    "n_classes": 8,
+    "n_samples": 5000,
+    "object_type": "discrete_cells"
+  },
+  "BrainTumorMRI": {
+    "color_mode": "grayscale",
+    "n_classes": 4,
+    "n_samples": 5000,
+    "object_type": "organ_shape"
+  },
+  "BreakHis": {
+    "color_mode": "per_channel",
+    "n_classes": 8,
+    "n_samples": 5000,
+    "object_type": "glands_lumens"
+  },
+  "BreastMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 2,
+    "n_samples": 546,
+    "object_type": "organ_shape"
+  },
+  "Chaoyang": {
+    "color_mode": "per_channel",
+    "n_classes": 4,
+    "n_samples": 5000,
+    "object_type": "glands_lumens"
+  },
+  "DermaMNIST": {
+    "color_mode": "per_channel",
+    "n_classes": 7,
+    "n_samples": 5000,
+    "object_type": "surface_lesions"
+  },
+  "GasHisSDB": {
+    "color_mode": "per_channel",
+    "n_classes": 2,
+    "n_samples": 5000,
+    "object_type": "surface_lesions"
+  },
+  "IDRiD": {
+    "color_mode": "per_channel",
+    "n_classes": 5,
+    "n_samples": 516,
+    "object_type": "vessel_trees"
+  },
+  "ISIC2019": {
+    "color_mode": "per_channel",
+    "n_classes": 8,
+    "n_samples": 5000,
+    "object_type": "surface_lesions"
+  },
+  "Kvasir": {
+    "color_mode": "per_channel",
+    "n_classes": 8,
+    "n_samples": 4000,
+    "object_type": "glands_lumens"
+  },
+  "LC25000": {
+    "color_mode": "per_channel",
+    "n_classes": 5,
+    "n_samples": 5000,
+    "object_type": "glands_lumens"
+  },
+  "MURA": {
+    "color_mode": "grayscale",
+    "n_classes": 14,
+    "n_samples": 5000,
+    "object_type": "organ_shape"
+  },
+  "MalariaCell": {
+    "color_mode": "per_channel",
+    "n_classes": 2,
+    "n_samples": 5000,
+    "object_type": "discrete_cells"
+  },
+  "NCT_CRC_HE": {
+    "color_mode": "per_channel",
+    "n_classes": 9,
+    "n_samples": 5000,
+    "object_type": "glands_lumens"
+  },
+  "OCTMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 4,
+    "n_samples": 5000,
+    "object_type": "organ_shape"
+  },
+  "OrganAMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 11,
+    "n_samples": 5000,
+    "object_type": "organ_shape"
+  },
+  "OrganCMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 11,
+    "n_samples": 5000,
+    "object_type": "organ_shape"
+  },
+  "OrganSMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 11,
+    "n_samples": 5000,
+    "object_type": "organ_shape"
+  },
+  "PCam": {
+    "color_mode": "per_channel",
+    "n_classes": 2,
+    "n_samples": 5000,
+    "object_type": "discrete_cells"
+  },
+  "PathMNIST": {
+    "color_mode": "per_channel",
+    "n_classes": 9,
+    "n_samples": 5000,
+    "object_type": "glands_lumens"
+  },
+  "PneumoniaMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 2,
+    "n_samples": 4708,
+    "object_type": "organ_shape"
+  },
+  "RetinaMNIST": {
+    "color_mode": "per_channel",
+    "n_classes": 5,
+    "n_samples": 1080,
+    "object_type": "vessel_trees"
+  },
+  "SIPaKMeD": {
+    "color_mode": "per_channel",
+    "n_classes": 5,
+    "n_samples": 4049,
+    "object_type": "discrete_cells"
+  },
+  "TissueMNIST": {
+    "color_mode": "grayscale",
+    "n_classes": 8,
+    "n_samples": 5000,
+    "object_type": "discrete_cells"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "dataset": "MURA",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.1786,
+  "best_accuracy": 0.175,
+  "best_classifier": "RandomForest",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.15714285714285714,
+      "accuracy": 0.155,
+      "std": 0.04726055533637907,
+      "fold_balanced_accuracy": [
+        0.2380952380952381,
+        0.14285714285714285,
+        0.17857142857142858,
+        0.10714285714285714,
+        0.11904761904761904
+      ],
+      "fold_accuracy": [
+        0.225,
+        0.15,
+        0.175,
+        0.1,
+        0.125
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.17142857142857143,
+      "accuracy": 0.16999999999999998,
+      "std": 0.0502826478141497,
+      "fold_balanced_accuracy": [
+        0.21428571428571427,
+        0.16666666666666666,
+        0.2261904761904762,
+        0.08333333333333333,
+        0.16666666666666666
+      ],
+      "fold_accuracy": [
+        0.2,
+        0.175,
+        0.225,
+        0.075,
+        0.175
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.17857142857142855,
+      "accuracy": 0.17500000000000002,
+      "std": 0.05532833351724881,
+      "fold_balanced_accuracy": [
+        0.2857142857142857,
+        0.14285714285714285,
+        0.17857142857142858,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "fold_accuracy": [
+        0.275,
+        0.15,
+        0.175,
+        0.125,
+        0.15
+      ]
+    }
+  },
+  "feature_dim": 3500,
+  "selection_reasoning": "Persistence landscapes provide a robust way to summarize topological features, capturing both the presence and significance of features. Given the noisy persistence signal, landscapes can help filter out noise and highlight medically relevant structures like bone outlines and joint spaces.",
+  "selection_time_s": 4.04,
+  "eval_time_s": 1207.44,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T22:08:07.157040",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 7653.3,
+    "avg_H1_count": 10084.0,
+    "avg_H0_persistence": 0.00989,
+    "avg_H1_persistence": 0.009148,
+    "avg_total_features": 17737.3,
+    "avg_h1_h0_ratio": 1.27
+  }
+}

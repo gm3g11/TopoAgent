@@ -1,0 +1,168 @@
+{
+  "dataset": "BrainTumorMRI",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.8145,
+  "best_accuracy": 0.82,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.814469696969697,
+      "accuracy": 0.82,
+      "std": 0.022795856114976087,
+      "fold_balanced_accuracy": [
+        0.8212121212121213,
+        0.8517676767676767,
+        0.8166666666666667,
+        0.7847222222222222,
+        0.7979797979797979
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.85,
+        0.825,
+        0.8,
+        0.8
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7915909090909091,
+      "accuracy": 0.795,
+      "std": 0.0577005337650861,
+      "fold_balanced_accuracy": [
+        0.753030303030303,
+        0.8722222222222222,
+        0.8444444444444446,
+        0.7180555555555556,
+        0.7702020202020202
+      ],
+      "fold_accuracy": [
+        0.75,
+        0.875,
+        0.85,
+        0.725,
+        0.775
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7729545454545454,
+      "accuracy": 0.7750000000000001,
+      "std": 0.03693663311443013,
+      "fold_balanced_accuracy": [
+        0.7808080808080808,
+        0.8244949494949494,
+        0.793939393939394,
+        0.7180555555555556,
+        0.7474747474747474
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.825,
+        0.8,
+        0.725,
+        0.75
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.7971464646464648,
+      "accuracy": 0.8,
+      "std": 0.033779120424235975,
+      "fold_balanced_accuracy": [
+        0.8035353535353535,
+        0.8517676767676767,
+        0.7916666666666667,
+        0.7458333333333333,
+        0.792929292929293
+      ],
+      "fold_accuracy": [
+        0.8,
+        0.85,
+        0.8,
+        0.75,
+        0.8
+      ]
+    }
+  },
+  "feature_dim": 62,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_statistics', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 68.04,
+  "eval_time_s": 41.05,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:04:14.106379",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image contains brain tumor structures, which are best categorized as surface lesions due to their irregular shapes and boundaries on the brain surface.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "As this is a 1-channel MRI image, grayscale is appropriate since color does not carry additional diagnostic information.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures like tumors, which typically appear as darker regions against lighter brain tissue in MRI scans.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 22.88
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image contains brain structures with potential tumor boundaries, which are best classified as surface lesions in the context of MRI scans.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "MRI images are inherently grayscale, and color is not diagnostically meaningful in this context.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which are typical for detecting lesions or boundaries in MRI scans.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 23.52
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is a Brain MRI which typically involves identifying lesions such as tumors, which are surface-like structures within the brain tissue.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale (1-channel), typical for MRI scans, where color is not diagnostically meaningful.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for detecting dark lesions against the brighter brain tissue background, which is common in MRI scans.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 21.64
+    }
+  ]
+}

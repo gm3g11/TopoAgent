@@ -1,0 +1,54 @@
+Dataset          # Object Type       Chain              Descriptor                 Acc%  Oracle%  Regret%   Time  LLM Retry
+---------------------------------------------------------------------------------------------------------------------------
+BloodMNIST       0 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   11.6    2    No
+BloodMNIST       1 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   10.4    2    No
+BloodMNIST       2 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   12.9    2    No
+BloodMNIST       3 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   14.4    2    No
+BloodMNIST       4 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   10.3    2    No
+BloodMNIST       5 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   12.6    2    No
+BloodMNIST       6 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   14.4    2    No
+BloodMNIST       7 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   10.0    2    No
+BloodMNIST       8 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06    9.6    2    No
+BloodMNIST       9 discrete_cells    h0_dominant        template_functions         97.9     98.0     0.06   14.2    2    No
+PathMNIST        0 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00    9.2    2    No
+PathMNIST        1 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   10.0    2    No
+PathMNIST        2 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   10.1    2    No
+PathMNIST        3 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   13.0    2    No
+PathMNIST        4 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   14.7    2    No
+PathMNIST        5 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   10.1    2    No
+PathMNIST        6 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00    7.4    2    No
+PathMNIST        7 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00    8.7    2    No
+PathMNIST        8 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   13.1    2    No
+PathMNIST        9 glands_lumens     h1_important       persistence_statistics     97.5     97.5     0.00   10.8    2    No
+RetinaMNIST      0 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46   19.0    2    No
+RetinaMNIST      1 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    9.8    2    No
+RetinaMNIST      2 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    9.2    2    No
+RetinaMNIST      3 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    9.0    2    No
+RetinaMNIST      4 vessel_trees      color_diagnostic   lbp_texture                53.1     55.5     2.46    9.2    2    No
+RetinaMNIST      5 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    8.5    2    No
+RetinaMNIST      6 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    8.6    2    No
+RetinaMNIST      7 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    9.5    2    No
+RetinaMNIST      8 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46    9.3    2    No
+RetinaMNIST      9 vessel_trees      noisy_ph           lbp_texture                53.1     55.5     2.46   16.6    2    No
+DermaMNIST       0 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00   11.1    2    No
+DermaMNIST       1 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00   12.8    2    No
+DermaMNIST       2 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    9.2    2    No
+DermaMNIST       3 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    7.1    2    No
+DermaMNIST       4 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    8.8    2    No
+DermaMNIST       5 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    9.1    2    No
+DermaMNIST       6 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00   11.6    2    No
+DermaMNIST       7 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    8.3    2    No
+DermaMNIST       8 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    8.1    2    No
+DermaMNIST       9 surface_lesions   color_diagnostic   persistence_statistics     57.6     57.6     0.00    9.1    2    No
+OrganAMNIST      0 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    9.2    2    No
+OrganAMNIST      1 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    8.5    2    No
+OrganAMNIST      2 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    9.8    2    No
+OrganAMNIST      3 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    6.5    2    No
+OrganAMNIST      4 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    8.4    2    No
+OrganAMNIST      5 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    9.5    2    No
+OrganAMNIST      6 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    7.2    2    No
+OrganAMNIST      7 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    8.5    2    No
+OrganAMNIST      8 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    8.4    2    No
+OrganAMNIST      9 organ_shape       shape_silhouette   edge_histogram             85.1     85.6     0.45    8.7    2    No
+---------------------------------------------------------------------------------------------------------------------------
+Mean regret:                                                                             0.59

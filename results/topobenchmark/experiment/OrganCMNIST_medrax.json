@@ -1,0 +1,87 @@
+{
+  "dataset": "OrganCMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.35,
+  "best_accuracy": 0.425,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.3467676767676767,
+      "accuracy": 0.42000000000000004,
+      "std": 0.04877083166215502,
+      "fold_balanced_accuracy": [
+        0.38636363636363635,
+        0.4106060606060606,
+        0.3494949494949495,
+        0.3111111111111111,
+        0.27626262626262627
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.475,
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.35,
+      "accuracy": 0.425,
+      "std": 0.05083929799867281,
+      "fold_balanced_accuracy": [
+        0.3686868686868687,
+        0.35454545454545455,
+        0.4292929292929293,
+        0.3212121212121212,
+        0.27626262626262627
+      ],
+      "fold_accuracy": [
+        0.45,
+        0.425,
+        0.475,
+        0.4,
+        0.375
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.30343434343434345,
+      "accuracy": 0.41,
+      "std": 0.03953406830673957,
+      "fold_balanced_accuracy": [
+        0.3156565656565657,
+        0.3621212121212121,
+        0.2772727272727273,
+        0.24545454545454548,
+        0.31666666666666665
+      ],
+      "fold_accuracy": [
+        0.425,
+        0.425,
+        0.425,
+        0.35,
+        0.425
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are effective for capturing the spatial distribution and prominence of topological features, which is crucial for analyzing organ shapes and silhouettes in coronal CT images. Given the noisy persistence signal, persistence images can help in visualizing and interpreting the distribution of both H0 and H1 features across the dataset.",
+  "selection_time_s": 4.99,
+  "eval_time_s": 280.01,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:14:20.187593",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 421.3,
+    "avg_H1_count": 429.3,
+    "avg_H0_persistence": 0.074667,
+    "avg_H1_persistence": 0.03303,
+    "avg_total_features": 850.7,
+    "avg_h1_h0_ratio": 0.77
+  }
+}

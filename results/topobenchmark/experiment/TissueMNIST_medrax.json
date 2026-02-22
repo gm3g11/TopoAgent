@@ -1,0 +1,106 @@
+{
+  "dataset": "TissueMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "discrete_cells",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.2367,
+  "best_accuracy": 0.36,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.19509615384615384,
+      "accuracy": 0.38,
+      "std": 0.0432927734833751,
+      "fold_balanced_accuracy": [
+        0.12286324786324786,
+        0.1968482905982906,
+        0.17868589743589744,
+        0.24583333333333332,
+        0.23125
+      ],
+      "fold_accuracy": [
+        0.275,
+        0.4,
+        0.375,
+        0.45,
+        0.4
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.23670940170940172,
+      "accuracy": 0.36,
+      "std": 0.05987877970688957,
+      "fold_balanced_accuracy": [
+        0.15758547008547008,
+        0.26629273504273504,
+        0.20646367521367523,
+        0.33445512820512824,
+        0.21875
+      ],
+      "fold_accuracy": [
+        0.275,
+        0.425,
+        0.375,
+        0.4,
+        0.325
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.22740384615384618,
+      "accuracy": 0.36,
+      "std": 0.06401640399078097,
+      "fold_balanced_accuracy": [
+        0.12553418803418803,
+        0.2532051282051282,
+        0.1829594017094017,
+        0.27740384615384617,
+        0.29791666666666666
+      ],
+      "fold_accuracy": [
+        0.275,
+        0.4,
+        0.325,
+        0.425,
+        0.375
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.23554487179487182,
+      "accuracy": 0.41,
+      "std": 0.05659402532284373,
+      "fold_balanced_accuracy": [
+        0.1794871794871795,
+        0.2681623931623932,
+        0.17094017094017094,
+        0.2362179487179487,
+        0.3229166666666667
+      ],
+      "fold_accuracy": [
+        0.35,
+        0.475,
+        0.35,
+        0.425,
+        0.45
+      ]
+    }
+  },
+  "feature_dim": 200,
+  "selection_reasoning": "The persistence_image descriptor is chosen because it effectively captures the distribution and intensity of topological features, such as connected components and loops, which are crucial for analyzing the cellular textures and patterns in the kidney cortex. This aligns well with the PH data, providing a comprehensive view of the cellular topology and aiding in distinguishing the tissue types.",
+  "selection_time_s": 5.38,
+  "eval_time_s": 50.89,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:19:26.508386",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 119.0,
+    "avg_H1_count": 106.0,
+    "avg_H0_persistence": 0.036581,
+    "avg_H1_persistence": 0.050551,
+    "avg_total_features": 225.0,
+    "avg_h1_h0_ratio": 0.89
+  }
+}

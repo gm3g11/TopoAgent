@@ -1,0 +1,106 @@
+{
+  "dataset": "PneumoniaMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.8529,
+  "best_accuracy": 0.895,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.8529467084639499,
+      "accuracy": 0.8949999999999999,
+      "std": 0.06271437903255372,
+      "fold_balanced_accuracy": [
+        0.8918495297805643,
+        0.822884012539185,
+        0.8333333333333333,
+        0.7666666666666666,
+        0.95
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.825,
+        0.9,
+        0.85,
+        0.975
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.8452560083594566,
+      "accuracy": 0.885,
+      "std": 0.04345512342231946,
+      "fold_balanced_accuracy": [
+        0.9028213166144201,
+        0.8401253918495297,
+        0.7833333333333333,
+        0.8166666666666667,
+        0.8833333333333333
+      ],
+      "fold_accuracy": [
+        0.9,
+        0.85,
+        0.875,
+        0.875,
+        0.925
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.8391536050156739,
+      "accuracy": 0.865,
+      "std": 0.06004973467799204,
+      "fold_balanced_accuracy": [
+        0.7946708463949843,
+        0.8510971786833856,
+        0.8833333333333333,
+        0.75,
+        0.9166666666666667
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.825,
+        0.925,
+        0.825,
+        0.925
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.769007314524556,
+      "accuracy": 0.8549999999999999,
+      "std": 0.09145347639927795,
+      "fold_balanced_accuracy": [
+        0.8009404388714734,
+        0.7774294670846396,
+        0.75,
+        0.6166666666666667,
+        0.9
+      ],
+      "fold_accuracy": [
+        0.875,
+        0.8,
+        0.875,
+        0.775,
+        0.95
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "The persistence_image descriptor is well-suited for capturing and visualizing the distribution of topological features across the image, which is important for identifying patterns of lung opacities and shapes. Given the noisy persistence signal, this descriptor can effectively highlight significant topological features amidst variability.",
+  "selection_time_s": 4.13,
+  "eval_time_s": 32.37,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:43:55.908659",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 1101.0,
+    "avg_H1_count": 1817.0,
+    "avg_H0_persistence": 0.0204,
+    "avg_H1_persistence": 0.013648,
+    "avg_total_features": 2918.0,
+    "avg_h1_h0_ratio": 1.66
+  }
+}

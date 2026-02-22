@@ -1,0 +1,168 @@
+{
+  "dataset": "PneumoniaMNIST",
+  "method": "topoagent",
+  "descriptor": "edge_histogram",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.9069,
+  "best_accuracy": 0.92,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.9068861024033439,
+      "accuracy": 0.9199999999999999,
+      "std": 0.01980854456870243,
+      "fold_balanced_accuracy": [
+        0.9200626959247649,
+        0.9310344827586207,
+        0.8833333333333333,
+        0.9166666666666667,
+        0.8833333333333333
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.9,
+        0.925,
+        0.925,
+        0.925
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.8722675026123303,
+      "accuracy": 0.915,
+      "std": 0.05759505429447547,
+      "fold_balanced_accuracy": [
+        0.9373040752351097,
+        0.8573667711598747,
+        0.9333333333333333,
+        0.85,
+        0.7833333333333333
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.875,
+        0.95,
+        0.925,
+        0.875
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.8846917450365727,
+      "accuracy": 0.915,
+      "std": 0.051629839207565954,
+      "fold_balanced_accuracy": [
+        0.9827586206896552,
+        0.8573667711598747,
+        0.8666666666666667,
+        0.8833333333333333,
+        0.8333333333333333
+      ],
+      "fold_accuracy": [
+        0.975,
+        0.875,
+        0.9,
+        0.925,
+        0.9
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.8846917450365727,
+      "accuracy": 0.925,
+      "std": 0.06689791132985011,
+      "fold_balanced_accuracy": [
+        0.9655172413793103,
+        0.8746081504702194,
+        0.95,
+        0.85,
+        0.7833333333333333
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.9,
+        0.975,
+        0.925,
+        0.875
+      ]
+    }
+  },
+  "feature_dim": 512,
+  "selection_reasoning": "Majority vote from 3 demo images: ['edge_histogram', 'edge_histogram', 'minkowski_functionals']",
+  "selection_time_s": 72.77,
+  "eval_time_s": 54.55,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:43:17.285376",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "edge_histogram",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image contains a pediatric chest X-ray, focusing on the lung fields to identify opacity patterns associated with pneumonia, which relates to the overall shape and structure of the lungs.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is a single-channel grayscale X-ray, where color is not diagnostically relevant, making grayscale the appropriate choice for analysis.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark regions first, which is appropriate for identifying lung field opacities against the lighter background of the X-ray.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "edge_histogram"
+      ],
+      "time_s": 29.25
+    },
+    {
+      "index": 15,
+      "descriptor": "edge_histogram",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image contains pediatric chest X-ray images, where the primary structures of interest are the shapes and boundaries of the lungs to identify pneumonia.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "As this is a 1-channel X-ray image, grayscale is appropriate since color is not diagnostically meaningful in this context.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable because X-ray images typically have dark regions (like infiltrates) on a lighter background, and we want to capture these dark-on-light structures.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "edge_histogram"
+      ],
+      "time_s": 21.04
+    },
+    {
+      "index": 30,
+      "descriptor": "minkowski_functionals",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image contains pediatric chest X-ray images where the primary interest is the shape and opacity of the lungs to identify pneumonia.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale (X-ray), and color does not carry diagnostic information.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures such as lung field opacity patterns in X-ray images.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "minkowski_functionals"
+      ],
+      "time_s": 22.48
+    }
+  ]
+}

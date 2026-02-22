@@ -1,0 +1,78 @@
+{
+  "dataset": "OrganSMNIST",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.5067,
+  "best_accuracy": 0.565,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.4784848484848484,
+      "accuracy": 0.5700000000000001,
+      "std": 0.08443840295434453,
+      "fold_balanced_accuracy": [
+        0.5606060606060607,
+        0.4893939393939393,
+        0.5575757575757575,
+        0.45454545454545453,
+        0.33030303030303027
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.575,
+        0.6,
+        0.55,
+        0.475
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.5066666666666667,
+      "accuracy": 0.565,
+      "std": 0.09342773659414853,
+      "fold_balanced_accuracy": [
+        0.6651515151515152,
+        0.4287878787878788,
+        0.5560606060606061,
+        0.4696969696969697,
+        0.4136363636363637
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.5,
+        0.575,
+        0.55,
+        0.525
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.4854545454545455,
+      "accuracy": 0.575,
+      "std": 0.08962527847533558,
+      "fold_balanced_accuracy": [
+        0.6348484848484849,
+        0.44393939393939397,
+        0.5196969696969697,
+        0.4636363636363637,
+        0.36515151515151517
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.525,
+        0.575,
+        0.575,
+        0.55
+      ]
+    }
+  },
+  "feature_dim": 105,
+  "selection_reasoning": "Top-1 for organ_shape: minkowski_functionals (benchmark accuracy: 77.3%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 333.85,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:20:21.927312"
+}

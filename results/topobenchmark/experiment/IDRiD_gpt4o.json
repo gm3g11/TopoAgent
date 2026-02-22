@@ -1,0 +1,97 @@
+{
+  "dataset": "IDRiD",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.2765,
+  "best_accuracy": 0.35,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.21846153846153848,
+      "accuracy": 0.35500000000000004,
+      "std": 0.020409998709879383,
+      "fold_balanced_accuracy": [
+        0.23076923076923078,
+        0.24615384615384617,
+        0.21538461538461542,
+        0.21538461538461542,
+        0.18461538461538463
+      ],
+      "fold_accuracy": [
+        0.375,
+        0.4,
+        0.35,
+        0.35,
+        0.3
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.2764725274725275,
+      "accuracy": 0.35,
+      "std": 0.05429061240526513,
+      "fold_balanced_accuracy": [
+        0.24038461538461536,
+        0.19384615384615386,
+        0.34175824175824177,
+        0.32461538461538464,
+        0.28175824175824177
+      ],
+      "fold_accuracy": [
+        0.375,
+        0.275,
+        0.375,
+        0.35,
+        0.375
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.2537032967032967,
+      "accuracy": 0.305,
+      "std": 0.07710612130538362,
+      "fold_balanced_accuracy": [
+        0.16346153846153846,
+        0.19384615384615386,
+        0.3417582417582417,
+        0.34923076923076923,
+        0.22021978021978023
+      ],
+      "fold_accuracy": [
+        0.25,
+        0.275,
+        0.375,
+        0.35,
+        0.275
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.2712967032967033,
+      "accuracy": 0.365,
+      "std": 0.09633181395272683,
+      "fold_balanced_accuracy": [
+        0.2,
+        0.21538461538461537,
+        0.4032967032967033,
+        0.3707692307692308,
+        0.16703296703296702
+      ],
+      "fold_accuracy": [
+        0.325,
+        0.35,
+        0.475,
+        0.425,
+        0.25
+      ]
+    }
+  },
+  "feature_dim": 1176,
+  "selection_reasoning": "Persistence images are well-suited for capturing complex topological features like retinal vessel branching and microaneurysms, which are crucial for classifying diabetic retinopathy severity in high-resolution images.",
+  "selection_time_s": 1.22,
+  "eval_time_s": 712.96,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:42:52.831876"
+}

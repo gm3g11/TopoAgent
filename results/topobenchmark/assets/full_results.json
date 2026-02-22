@@ -1,0 +1,4734 @@
+{
+  "AML_Cytomorphology": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.3836,
+        "RandomForest": 0.2872,
+        "RealMLP": 0.3754,
+        "TabM": 0.3864,
+        "TabPFN": 0.3965,
+        "XGBoost": 0.3564
+      },
+      "best_accuracy": 0.3965,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.3801,
+        "RandomForest": 0.3045,
+        "RealMLP": 0.3809,
+        "TabM": 0.407,
+        "TabPFN": 0.386,
+        "XGBoost": 0.3583
+      },
+      "best_accuracy": 0.407,
+      "best_classifier": "TabM"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.189,
+        "RandomForest": 0.168,
+        "RealMLP": 0.1436,
+        "TabM": 0.141,
+        "TabPFN": 0.1438,
+        "XGBoost": 0.1411
+      },
+      "best_accuracy": 0.189,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.3767,
+        "RandomForest": 0.2907,
+        "RealMLP": 0.3416,
+        "TabM": 0.3328,
+        "TabPFN": 0.3405,
+        "XGBoost": 0.3301
+      },
+      "best_accuracy": 0.3767,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.1293,
+        "RandomForest": 0.1036,
+        "RealMLP": 0.1073,
+        "TabM": 0.1173,
+        "TabPFN": 0.1169,
+        "XGBoost": 0.1228
+      },
+      "best_accuracy": 0.1293,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.2887,
+        "RandomForest": 0.1936,
+        "RealMLP": 0.2907,
+        "TabM": 0.3019,
+        "TabPFN": 0.2867,
+        "XGBoost": 0.2456
+      },
+      "best_accuracy": 0.3019,
+      "best_classifier": "TabM"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.3993,
+        "RandomForest": 0.3438,
+        "RealMLP": 0.401,
+        "TabM": 0.3915,
+        "TabPFN": 0.3904,
+        "XGBoost": 0.3737
+      },
+      "best_accuracy": 0.401,
+      "best_classifier": "RealMLP"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.3858,
+        "RandomForest": 0.2933,
+        "RealMLP": 0.3788,
+        "TabM": 0.3744,
+        "TabPFN": 0.4019,
+        "XGBoost": 0.3607
+      },
+      "best_accuracy": 0.4019,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.3204,
+        "RandomForest": 0.2532,
+        "RealMLP": 0.3132,
+        "TabM": 0.3016,
+        "TabPFN": 0.308,
+        "XGBoost": 0.3062
+      },
+      "best_accuracy": 0.3204,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.3226,
+        "RandomForest": 0.209,
+        "RealMLP": 0.2849,
+        "TabM": 0.2779,
+        "TabPFN": 0.2707,
+        "XGBoost": 0.2885
+      },
+      "best_accuracy": 0.3226,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.3708,
+        "RandomForest": 0.3011,
+        "RealMLP": 0.3736,
+        "TabM": 0.3774,
+        "TabPFN": 0.3366,
+        "XGBoost": 0.3446
+      },
+      "best_accuracy": 0.3774,
+      "best_classifier": "TabM"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.3352,
+        "RandomForest": 0.2475,
+        "RealMLP": 0.3152,
+        "TabM": 0.3427,
+        "TabPFN": 0.3148,
+        "XGBoost": 0.2971
+      },
+      "best_accuracy": 0.3427,
+      "best_classifier": "TabM"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.3225,
+        "RandomForest": 0.274,
+        "RealMLP": 0.3557,
+        "TabM": 0.3512,
+        "TabPFN": 0.3728,
+        "XGBoost": 0.3333
+      },
+      "best_accuracy": 0.3728,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.3844,
+        "RandomForest": 0.2935,
+        "RealMLP": 0.3659,
+        "TabM": 0.3587,
+        "TabPFN": 0.3873,
+        "XGBoost": 0.3483
+      },
+      "best_accuracy": 0.3873,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.2692,
+        "RandomForest": 0.198,
+        "RealMLP": 0.2613,
+        "TabM": 0.2416,
+        "TabPFN": 0.2723,
+        "XGBoost": 0.2563
+      },
+      "best_accuracy": 0.2723,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "APTOS2019": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.5185,
+        "RandomForest": 0.4746,
+        "RealMLP": 0.469,
+        "TabM": 0.4634,
+        "TabPFN": 0.4871,
+        "XGBoost": 0.4903
+      },
+      "best_accuracy": 0.5185,
+      "best_classifier": "CatBoost"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.5,
+        "RandomForest": 0.4385,
+        "RealMLP": 0.4321,
+        "TabM": 0.4614,
+        "TabPFN": 0.465,
+        "XGBoost": 0.4813
+      },
+      "best_accuracy": 0.5,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.5314,
+        "RandomForest": 0.4861,
+        "RealMLP": 0.4655,
+        "TabM": 0.4737,
+        "TabPFN": 0.4857,
+        "XGBoost": 0.4983
+      },
+      "best_accuracy": 0.5314,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.5112,
+        "RandomForest": 0.4498,
+        "RealMLP": 0.4469,
+        "TabM": 0.4518,
+        "TabPFN": 0.4829,
+        "XGBoost": 0.4795
+      },
+      "best_accuracy": 0.5112,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.4494,
+        "RandomForest": 0.4088,
+        "RealMLP": 0.3987,
+        "TabM": 0.4038,
+        "TabPFN": 0.3774,
+        "XGBoost": 0.4316
+      },
+      "best_accuracy": 0.4494,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.5615,
+        "RandomForest": 0.5018,
+        "RealMLP": 0.5392,
+        "TabM": 0.5399,
+        "TabPFN": 0.5772,
+        "XGBoost": 0.5279
+      },
+      "best_accuracy": 0.5772,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.5198,
+        "RandomForest": 0.4874,
+        "RealMLP": 0.4495,
+        "TabM": 0.4402,
+        "TabPFN": 0.4806,
+        "XGBoost": 0.4843
+      },
+      "best_accuracy": 0.5198,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.5293,
+        "RandomForest": 0.4775,
+        "RealMLP": 0.4853,
+        "TabM": 0.5057,
+        "TabPFN": 0.5087,
+        "XGBoost": 0.5137
+      },
+      "best_accuracy": 0.5293,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.5138,
+        "RandomForest": 0.4488,
+        "RealMLP": 0.4678,
+        "TabM": 0.4776,
+        "TabPFN": 0.4875,
+        "XGBoost": 0.4906
+      },
+      "best_accuracy": 0.5138,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.3959,
+        "RandomForest": 0.3382,
+        "RealMLP": 0.2631,
+        "TabM": 0.2914,
+        "TabPFN": 0.2831,
+        "XGBoost": 0.3704
+      },
+      "best_accuracy": 0.3959,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.5329,
+        "RandomForest": 0.465,
+        "RealMLP": 0.491,
+        "TabM": 0.4766,
+        "TabPFN": 0.4968,
+        "XGBoost": 0.4991
+      },
+      "best_accuracy": 0.5329,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.5145,
+        "RandomForest": 0.4657,
+        "RealMLP": 0.4591,
+        "TabM": 0.4681,
+        "TabPFN": 0.4854,
+        "XGBoost": 0.4902
+      },
+      "best_accuracy": 0.5145,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.5499,
+        "RandomForest": 0.5086,
+        "RealMLP": 0.5056,
+        "TabM": 0.5034,
+        "TabPFN": 0.5455,
+        "XGBoost": 0.5279
+      },
+      "best_accuracy": 0.5499,
+      "best_classifier": "CatBoost"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.5384,
+        "RandomForest": 0.4904,
+        "RealMLP": 0.4943,
+        "TabM": 0.4938,
+        "TabPFN": 0.5087,
+        "XGBoost": 0.518
+      },
+      "best_accuracy": 0.5384,
+      "best_classifier": "CatBoost"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.5391,
+        "RandomForest": 0.4635,
+        "RealMLP": 0.4874,
+        "TabM": 0.4763,
+        "TabPFN": 0.5174,
+        "XGBoost": 0.5014
+      },
+      "best_accuracy": 0.5391,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "BloodMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9579,
+        "RandomForest": 0.9361,
+        "RealMLP": 0.9707,
+        "TabM": 0.9643,
+        "TabPFN": 0.9763,
+        "XGBoost": 0.9534
+      },
+      "best_accuracy": 0.9763,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.9534,
+        "RandomForest": 0.9317,
+        "RealMLP": 0.9612,
+        "TabM": 0.9615,
+        "TabPFN": 0.9748,
+        "XGBoost": 0.9495
+      },
+      "best_accuracy": 0.9748,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.7798,
+        "RandomForest": 0.6947,
+        "RealMLP": 0.771,
+        "TabM": 0.7684,
+        "TabPFN": 0.7899,
+        "XGBoost": 0.7661
+      },
+      "best_accuracy": 0.7899,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9445,
+        "RandomForest": 0.9199,
+        "RealMLP": 0.9544,
+        "TabM": 0.9534,
+        "TabPFN": 0.973,
+        "XGBoost": 0.944
+      },
+      "best_accuracy": 0.973,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.4088,
+        "RandomForest": 0.3334,
+        "RealMLP": 0.4144,
+        "TabM": 0.4095,
+        "TabPFN": 0.464,
+        "XGBoost": 0.3925
+      },
+      "best_accuracy": 0.464,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.7971,
+        "RandomForest": 0.6649,
+        "RealMLP": 0.8651,
+        "TabM": 0.8629,
+        "TabPFN": 0.9,
+        "XGBoost": 0.7931
+      },
+      "best_accuracy": 0.9,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9427,
+        "RandomForest": 0.9206,
+        "RealMLP": 0.9566,
+        "TabM": 0.9557,
+        "TabPFN": 0.9772,
+        "XGBoost": 0.9429
+      },
+      "best_accuracy": 0.9772,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9572,
+        "RandomForest": 0.9331,
+        "RealMLP": 0.9659,
+        "TabM": 0.9622,
+        "TabPFN": 0.9796,
+        "XGBoost": 0.9525
+      },
+      "best_accuracy": 0.9796,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.9146,
+        "RandomForest": 0.8661,
+        "RealMLP": 0.9242,
+        "TabM": 0.9064,
+        "TabPFN": 0.9408,
+        "XGBoost": 0.9095
+      },
+      "best_accuracy": 0.9408,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.8985,
+        "RandomForest": 0.8275,
+        "RealMLP": 0.8924,
+        "TabM": 0.9063,
+        "TabPFN": 0.9063,
+        "XGBoost": 0.8962
+      },
+      "best_accuracy": 0.9063,
+      "best_classifier": "TabM"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.9288,
+        "RealMLP": 0.9633,
+        "TabM": 0.9614,
+        "TabPFN": 0.9692,
+        "XGBoost": 0.9491
+      },
+      "best_accuracy": 0.9692,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.9268,
+        "RandomForest": 0.9018,
+        "RealMLP": 0.9421,
+        "TabM": 0.9439,
+        "TabPFN": 0.9558,
+        "XGBoost": 0.9209
+      },
+      "best_accuracy": 0.9558,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9308,
+        "RandomForest": 0.8994,
+        "RealMLP": 0.9528,
+        "TabM": 0.9457,
+        "TabPFN": 0.9672,
+        "XGBoost": 0.9291
+      },
+      "best_accuracy": 0.9672,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9525,
+        "RandomForest": 0.9246,
+        "RealMLP": 0.9625,
+        "TabM": 0.9615,
+        "TabPFN": 0.979,
+        "XGBoost": 0.9477
+      },
+      "best_accuracy": 0.979,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.8783,
+        "RandomForest": 0.8146,
+        "RealMLP": 0.8868,
+        "TabM": 0.8609,
+        "TabPFN": 0.9235,
+        "XGBoost": 0.8759
+      },
+      "best_accuracy": 0.9235,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "BrainTumorMRI": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9171,
+        "RandomForest": 0.9032,
+        "RealMLP": 0.9355,
+        "TabM": 0.9325,
+        "TabPFN": 0.9608,
+        "XGBoost": 0.9277
+      },
+      "best_accuracy": 0.9608,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.8979,
+        "RandomForest": 0.8913,
+        "RealMLP": 0.9227,
+        "TabM": 0.9147,
+        "TabPFN": 0.9453,
+        "XGBoost": 0.9115
+      },
+      "best_accuracy": 0.9453,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.8464,
+        "RandomForest": 0.8414,
+        "RealMLP": 0.8716,
+        "TabM": 0.8674,
+        "TabPFN": 0.9101,
+        "XGBoost": 0.8707
+      },
+      "best_accuracy": 0.9101,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.8797,
+        "RandomForest": 0.8751,
+        "RealMLP": 0.8909,
+        "TabM": 0.8936,
+        "TabPFN": 0.9245,
+        "XGBoost": 0.8944
+      },
+      "best_accuracy": 0.9245,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.6954,
+        "RandomForest": 0.6656,
+        "RealMLP": 0.7033,
+        "TabM": 0.7409,
+        "TabPFN": 0.7952,
+        "XGBoost": 0.7267
+      },
+      "best_accuracy": 0.7952,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.9042,
+        "RandomForest": 0.9054,
+        "RealMLP": 0.9177,
+        "TabM": 0.9194,
+        "TabPFN": 0.9492,
+        "XGBoost": 0.9185
+      },
+      "best_accuracy": 0.9492,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.8874,
+        "RandomForest": 0.8879,
+        "RealMLP": 0.8973,
+        "TabM": 0.9082,
+        "TabPFN": 0.9475,
+        "XGBoost": 0.9038
+      },
+      "best_accuracy": 0.9475,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9162,
+        "RandomForest": 0.898,
+        "RealMLP": 0.933,
+        "TabM": 0.9319,
+        "TabPFN": 0.9557,
+        "XGBoost": 0.9289
+      },
+      "best_accuracy": 0.9557,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.859,
+        "RandomForest": 0.8553,
+        "RealMLP": 0.8637,
+        "TabM": 0.865,
+        "TabPFN": 0.9113,
+        "XGBoost": 0.8731
+      },
+      "best_accuracy": 0.9113,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.8148,
+        "RandomForest": 0.7868,
+        "RealMLP": 0.8029,
+        "TabM": 0.8058,
+        "TabPFN": 0.8339,
+        "XGBoost": 0.8293
+      },
+      "best_accuracy": 0.8339,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.8937,
+        "RandomForest": 0.8897,
+        "RealMLP": 0.9039,
+        "TabM": 0.9074,
+        "TabPFN": 0.9347,
+        "XGBoost": 0.9076
+      },
+      "best_accuracy": 0.9347,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.882,
+        "RandomForest": 0.8759,
+        "RealMLP": 0.8865,
+        "TabM": 0.8821,
+        "TabPFN": 0.9226,
+        "XGBoost": 0.8946
+      },
+      "best_accuracy": 0.9226,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9108,
+        "RandomForest": 0.9055,
+        "RealMLP": 0.9223,
+        "TabM": 0.9243,
+        "TabPFN": 0.9508,
+        "XGBoost": 0.9198
+      },
+      "best_accuracy": 0.9508,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9095,
+        "RandomForest": 0.899,
+        "RealMLP": 0.9207,
+        "TabM": 0.9174,
+        "TabPFN": 0.9515,
+        "XGBoost": 0.9225
+      },
+      "best_accuracy": 0.9515,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.7958,
+        "RandomForest": 0.8061,
+        "RealMLP": 0.7769,
+        "TabM": 0.7649,
+        "TabPFN": 0.8581,
+        "XGBoost": 0.8177
+      },
+      "best_accuracy": 0.8581,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "BreakHis": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.8067,
+        "RandomForest": 0.6983,
+        "RealMLP": 0.812,
+        "TabM": 0.8424,
+        "TabPFN": 0.8698,
+        "XGBoost": 0.7652
+      },
+      "best_accuracy": 0.8698,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.6887,
+        "RandomForest": 0.5232,
+        "RealMLP": 0.6766,
+        "TabM": 0.7051,
+        "TabPFN": 0.7772,
+        "XGBoost": 0.6047
+      },
+      "best_accuracy": 0.7772,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.2112,
+        "RandomForest": 0.1233,
+        "RealMLP": 0.1676,
+        "TabM": 0.1747,
+        "TabPFN": 0.1483,
+        "XGBoost": 0.1526
+      },
+      "best_accuracy": 0.2112,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.7585,
+        "RandomForest": 0.6497,
+        "RealMLP": 0.7425,
+        "TabM": 0.7469,
+        "TabPFN": 0.8237,
+        "XGBoost": 0.713
+      },
+      "best_accuracy": 0.8237,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.3137,
+        "RandomForest": 0.1796,
+        "RealMLP": 0.2486,
+        "TabM": 0.2721,
+        "TabPFN": 0.1999,
+        "XGBoost": 0.2306
+      },
+      "best_accuracy": 0.3137,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.6053,
+        "RandomForest": 0.3981,
+        "RealMLP": 0.6829,
+        "TabM": 0.7222,
+        "TabPFN": 0.77,
+        "XGBoost": 0.5266
+      },
+      "best_accuracy": 0.77,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7669,
+        "RandomForest": 0.6727,
+        "RealMLP": 0.7696,
+        "TabM": 0.7787,
+        "TabPFN": 0.8395,
+        "XGBoost": 0.7181
+      },
+      "best_accuracy": 0.8395,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.8007,
+        "RandomForest": 0.6728,
+        "RealMLP": 0.8071,
+        "TabM": 0.8268,
+        "TabPFN": 0.8591,
+        "XGBoost": 0.7635
+      },
+      "best_accuracy": 0.8591,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.627,
+        "RandomForest": 0.4343,
+        "RealMLP": 0.5845,
+        "TabM": 0.5953,
+        "TabPFN": 0.7146,
+        "XGBoost": 0.5428
+      },
+      "best_accuracy": 0.7146,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.6599,
+        "RandomForest": 0.3141,
+        "RealMLP": 0.5649,
+        "TabM": 0.6178,
+        "TabPFN": 0.6788,
+        "XGBoost": 0.569
+      },
+      "best_accuracy": 0.6788,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.5268,
+        "RealMLP": 0.6805,
+        "TabM": 0.7084,
+        "TabPFN": 0.7522,
+        "XGBoost": 0.5884
+      },
+      "best_accuracy": 0.7522,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.6671,
+        "RandomForest": 0.4974,
+        "RealMLP": 0.6126,
+        "TabM": 0.6693,
+        "TabPFN": 0.7341,
+        "XGBoost": 0.5571
+      },
+      "best_accuracy": 0.7341,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.7869,
+        "RandomForest": 0.6494,
+        "RealMLP": 0.8098,
+        "TabM": 0.8227,
+        "TabPFN": 0.8871,
+        "XGBoost": 0.744
+      },
+      "best_accuracy": 0.8871,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.6962,
+        "RandomForest": 0.4509,
+        "RealMLP": 0.6953,
+        "TabM": 0.705,
+        "TabPFN": 0.796,
+        "XGBoost": 0.6313
+      },
+      "best_accuracy": 0.796,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.6499,
+        "RandomForest": 0.4762,
+        "RealMLP": 0.621,
+        "TabM": 0.6144,
+        "TabPFN": 0.7585,
+        "XGBoost": 0.5634
+      },
+      "best_accuracy": 0.7585,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "BreastMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.7525,
+        "RandomForest": 0.6556,
+        "RealMLP": 0.7297,
+        "TabM": 0.7192,
+        "TabPFN": 0.7554,
+        "XGBoost": 0.736
+      },
+      "best_accuracy": 0.7554,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.6595,
+        "RandomForest": 0.6371,
+        "RealMLP": 0.6442,
+        "TabM": 0.6247,
+        "TabPFN": 0.6273,
+        "XGBoost": 0.6557
+      },
+      "best_accuracy": 0.6595,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.6909,
+        "RandomForest": 0.5697,
+        "RealMLP": 0.6877,
+        "TabM": 0.7129,
+        "TabPFN": 0.7083,
+        "XGBoost": 0.6868
+      },
+      "best_accuracy": 0.7129,
+      "best_classifier": "TabM"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.6926,
+        "RandomForest": 0.6227,
+        "RealMLP": 0.6312,
+        "TabM": 0.5929,
+        "TabPFN": 0.6149,
+        "XGBoost": 0.6478
+      },
+      "best_accuracy": 0.6926,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.6591,
+        "RandomForest": 0.64,
+        "RealMLP": 0.5775,
+        "TabM": 0.5917,
+        "TabPFN": 0.647,
+        "XGBoost": 0.6531
+      },
+      "best_accuracy": 0.6591,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.6983,
+        "RandomForest": 0.6643,
+        "RealMLP": 0.687,
+        "TabM": 0.6746,
+        "TabPFN": 0.6815,
+        "XGBoost": 0.6925
+      },
+      "best_accuracy": 0.6983,
+      "best_classifier": "CatBoost"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7274,
+        "RandomForest": 0.6791,
+        "RealMLP": 0.6532,
+        "TabM": 0.6429,
+        "TabPFN": 0.7349,
+        "XGBoost": 0.7259
+      },
+      "best_accuracy": 0.7349,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.7554,
+        "RandomForest": 0.6691,
+        "RealMLP": 0.698,
+        "TabM": 0.6835,
+        "TabPFN": 0.7356,
+        "XGBoost": 0.7397
+      },
+      "best_accuracy": 0.7554,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.7311,
+        "RandomForest": 0.6588,
+        "RealMLP": 0.654,
+        "TabM": 0.663,
+        "TabPFN": 0.6892,
+        "XGBoost": 0.7182
+      },
+      "best_accuracy": 0.7311,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.6044,
+        "RandomForest": 0.5281,
+        "RealMLP": 0.5826,
+        "TabM": 0.5705,
+        "TabPFN": 0.59,
+        "XGBoost": 0.5993
+      },
+      "best_accuracy": 0.6044,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.7541,
+        "RandomForest": 0.7456,
+        "RealMLP": 0.7568,
+        "TabM": 0.754,
+        "TabPFN": 0.7591,
+        "XGBoost": 0.7459
+      },
+      "best_accuracy": 0.7591,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.7501,
+        "RandomForest": 0.6894,
+        "RealMLP": 0.6837,
+        "TabM": 0.714,
+        "TabPFN": 0.7369,
+        "XGBoost": 0.7259
+      },
+      "best_accuracy": 0.7501,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.7898,
+        "RandomForest": 0.7483,
+        "RealMLP": 0.7157,
+        "TabM": 0.7374,
+        "TabPFN": 0.7772,
+        "XGBoost": 0.7821
+      },
+      "best_accuracy": 0.7898,
+      "best_classifier": "CatBoost"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.7486,
+        "RandomForest": 0.6571,
+        "RealMLP": 0.7221,
+        "TabM": 0.725,
+        "TabPFN": 0.7359,
+        "XGBoost": 0.7287
+      },
+      "best_accuracy": 0.7486,
+      "best_classifier": "CatBoost"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.7241,
+        "RandomForest": 0.6689,
+        "RealMLP": 0.6773,
+        "TabM": 0.7168,
+        "TabPFN": 0.7221,
+        "XGBoost": 0.7199
+      },
+      "best_accuracy": 0.7241,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "Chaoyang": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.7364,
+        "RandomForest": 0.7007,
+        "RealMLP": 0.7548,
+        "TabM": 0.7709,
+        "TabPFN": 0.7932,
+        "XGBoost": 0.7418
+      },
+      "best_accuracy": 0.7932,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.6853,
+        "RandomForest": 0.6566,
+        "RealMLP": 0.6802,
+        "TabM": 0.6997,
+        "TabPFN": 0.7352,
+        "XGBoost": 0.6799
+      },
+      "best_accuracy": 0.7352,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.3494,
+        "RandomForest": 0.285,
+        "RealMLP": 0.354,
+        "TabM": 0.3569,
+        "TabPFN": 0.3614,
+        "XGBoost": 0.3554
+      },
+      "best_accuracy": 0.3614,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.7092,
+        "RandomForest": 0.6755,
+        "RealMLP": 0.7221,
+        "TabM": 0.7321,
+        "TabPFN": 0.7614,
+        "XGBoost": 0.7118
+      },
+      "best_accuracy": 0.7614,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.4483,
+        "RandomForest": 0.4323,
+        "RealMLP": 0.4213,
+        "TabM": 0.4211,
+        "TabPFN": 0.4485,
+        "XGBoost": 0.4452
+      },
+      "best_accuracy": 0.4485,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.6297,
+        "RandomForest": 0.5905,
+        "RealMLP": 0.672,
+        "TabM": 0.6849,
+        "TabPFN": 0.7143,
+        "XGBoost": 0.6462
+      },
+      "best_accuracy": 0.7143,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7013,
+        "RandomForest": 0.6689,
+        "RealMLP": 0.6957,
+        "TabM": 0.7121,
+        "TabPFN": 0.7753,
+        "XGBoost": 0.7113
+      },
+      "best_accuracy": 0.7753,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.7345,
+        "RandomForest": 0.6997,
+        "RealMLP": 0.7438,
+        "TabM": 0.7704,
+        "TabPFN": 0.7883,
+        "XGBoost": 0.7447
+      },
+      "best_accuracy": 0.7883,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.6809,
+        "RandomForest": 0.637,
+        "RealMLP": 0.6608,
+        "TabM": 0.6765,
+        "TabPFN": 0.7154,
+        "XGBoost": 0.6827
+      },
+      "best_accuracy": 0.7154,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.6678,
+        "RandomForest": 0.5965,
+        "RealMLP": 0.6323,
+        "TabM": 0.6625,
+        "TabPFN": 0.6691,
+        "XGBoost": 0.6658
+      },
+      "best_accuracy": 0.6691,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.643,
+        "RealMLP": 0.6692,
+        "TabM": 0.689,
+        "TabPFN": 0.7155,
+        "XGBoost": 0.677
+      },
+      "best_accuracy": 0.7155,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.648,
+        "RandomForest": 0.6225,
+        "RealMLP": 0.6519,
+        "TabM": 0.6752,
+        "TabPFN": 0.7195,
+        "XGBoost": 0.6519
+      },
+      "best_accuracy": 0.7195,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.6846,
+        "RandomForest": 0.6443,
+        "RealMLP": 0.7001,
+        "TabM": 0.7162,
+        "TabPFN": 0.7707,
+        "XGBoost": 0.6921
+      },
+      "best_accuracy": 0.7707,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.6896,
+        "RandomForest": 0.6347,
+        "RealMLP": 0.6952,
+        "TabM": 0.7035,
+        "TabPFN": 0.738,
+        "XGBoost": 0.6925
+      },
+      "best_accuracy": 0.738,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.6082,
+        "RandomForest": 0.5626,
+        "RealMLP": 0.5821,
+        "TabM": 0.606,
+        "TabPFN": 0.6375,
+        "XGBoost": 0.6027
+      },
+      "best_accuracy": 0.6375,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "DermaMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.5394,
+        "RandomForest": 0.346,
+        "RealMLP": 0.4128,
+        "TabM": 0.4889,
+        "TabPFN": 0.4562,
+        "XGBoost": 0.4239
+      },
+      "best_accuracy": 0.5394,
+      "best_classifier": "CatBoost"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.4122,
+        "RandomForest": 0.2355,
+        "RealMLP": 0.2998,
+        "TabM": 0.3413,
+        "TabPFN": 0.3259,
+        "XGBoost": 0.297
+      },
+      "best_accuracy": 0.4122,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.2729,
+        "RandomForest": 0.1444,
+        "RealMLP": 0.1801,
+        "TabM": 0.1708,
+        "TabPFN": 0.1896,
+        "XGBoost": 0.1971
+      },
+      "best_accuracy": 0.2729,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.4766,
+        "RandomForest": 0.245,
+        "RealMLP": 0.3275,
+        "TabM": 0.3248,
+        "TabPFN": 0.3228,
+        "XGBoost": 0.3262
+      },
+      "best_accuracy": 0.4766,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.2856,
+        "RandomForest": 0.1454,
+        "RealMLP": 0.153,
+        "TabM": 0.1585,
+        "TabPFN": 0.1455,
+        "XGBoost": 0.175
+      },
+      "best_accuracy": 0.2856,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.4082,
+        "RandomForest": 0.2456,
+        "RealMLP": 0.3144,
+        "TabM": 0.3982,
+        "TabPFN": 0.3938,
+        "XGBoost": 0.3257
+      },
+      "best_accuracy": 0.4082,
+      "best_classifier": "CatBoost"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.5071,
+        "RandomForest": 0.3264,
+        "RealMLP": 0.3839,
+        "TabM": 0.4458,
+        "TabPFN": 0.438,
+        "XGBoost": 0.4048
+      },
+      "best_accuracy": 0.5071,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.5091,
+        "RandomForest": 0.3086,
+        "RealMLP": 0.3979,
+        "TabM": 0.4645,
+        "TabPFN": 0.4348,
+        "XGBoost": 0.4062
+      },
+      "best_accuracy": 0.5091,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.328,
+        "RandomForest": 0.1805,
+        "RealMLP": 0.2608,
+        "TabM": 0.2421,
+        "TabPFN": 0.2854,
+        "XGBoost": 0.2577
+      },
+      "best_accuracy": 0.328,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.3322,
+        "RandomForest": 0.1429,
+        "RealMLP": 0.1975,
+        "TabM": 0.203,
+        "TabPFN": 0.2053,
+        "XGBoost": 0.2187
+      },
+      "best_accuracy": 0.3322,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.2314,
+        "RealMLP": 0.3128,
+        "TabM": 0.3522,
+        "TabPFN": 0.3105,
+        "XGBoost": 0.3092
+      },
+      "best_accuracy": 0.3522,
+      "best_classifier": "TabM"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.3713,
+        "RandomForest": 0.2277,
+        "RealMLP": 0.281,
+        "TabM": 0.3054,
+        "TabPFN": 0.3024,
+        "XGBoost": 0.2958
+      },
+      "best_accuracy": 0.3713,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.536,
+        "RandomForest": 0.3305,
+        "RealMLP": 0.5024,
+        "TabM": 0.5445,
+        "TabPFN": 0.5765,
+        "XGBoost": 0.435
+      },
+      "best_accuracy": 0.5765,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.4003,
+        "RandomForest": 0.2433,
+        "RealMLP": 0.3401,
+        "TabM": 0.384,
+        "TabPFN": 0.4281,
+        "XGBoost": 0.331
+      },
+      "best_accuracy": 0.4281,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.4102,
+        "RandomForest": 0.2319,
+        "RealMLP": 0.3089,
+        "TabM": 0.3288,
+        "TabPFN": 0.3461,
+        "XGBoost": 0.3099
+      },
+      "best_accuracy": 0.4102,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "GasHisSDB": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9266,
+        "RandomForest": 0.9015,
+        "RealMLP": 0.9387,
+        "TabM": 0.9451,
+        "TabPFN": 0.9587,
+        "XGBoost": 0.9303
+      },
+      "best_accuracy": 0.9587,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.9014,
+        "RandomForest": 0.8652,
+        "RealMLP": 0.8973,
+        "TabM": 0.9104,
+        "TabPFN": 0.9302,
+        "XGBoost": 0.9033
+      },
+      "best_accuracy": 0.9302,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.6221,
+        "RandomForest": 0.5707,
+        "RealMLP": 0.6233,
+        "TabM": 0.6128,
+        "TabPFN": 0.6232,
+        "XGBoost": 0.606
+      },
+      "best_accuracy": 0.6233,
+      "best_classifier": "RealMLP"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9012,
+        "RandomForest": 0.874,
+        "RealMLP": 0.9107,
+        "TabM": 0.9159,
+        "TabPFN": 0.9339,
+        "XGBoost": 0.9007
+      },
+      "best_accuracy": 0.9339,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.704,
+        "RandomForest": 0.6707,
+        "RealMLP": 0.6869,
+        "TabM": 0.6961,
+        "TabPFN": 0.7072,
+        "XGBoost": 0.6933
+      },
+      "best_accuracy": 0.7072,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.8869,
+        "RandomForest": 0.857,
+        "RealMLP": 0.9024,
+        "TabM": 0.9067,
+        "TabPFN": 0.9234,
+        "XGBoost": 0.8911
+      },
+      "best_accuracy": 0.9234,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9002,
+        "RandomForest": 0.8767,
+        "RealMLP": 0.9075,
+        "TabM": 0.9105,
+        "TabPFN": 0.946,
+        "XGBoost": 0.9048
+      },
+      "best_accuracy": 0.946,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9362,
+        "RandomForest": 0.9057,
+        "RealMLP": 0.94,
+        "TabM": 0.9468,
+        "TabPFN": 0.9541,
+        "XGBoost": 0.9334
+      },
+      "best_accuracy": 0.9541,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.8833,
+        "RandomForest": 0.8575,
+        "RealMLP": 0.8718,
+        "TabM": 0.8667,
+        "TabPFN": 0.8895,
+        "XGBoost": 0.8832
+      },
+      "best_accuracy": 0.8895,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.7956,
+        "RandomForest": 0.7691,
+        "RealMLP": 0.7532,
+        "TabM": 0.7704,
+        "TabPFN": 0.7702,
+        "XGBoost": 0.8005
+      },
+      "best_accuracy": 0.8005,
+      "best_classifier": "XGBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.8858,
+        "RandomForest": 0.8583,
+        "RealMLP": 0.891,
+        "TabM": 0.9031,
+        "TabPFN": 0.9103,
+        "XGBoost": 0.8875
+      },
+      "best_accuracy": 0.9103,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.8726,
+        "RandomForest": 0.8423,
+        "RealMLP": 0.872,
+        "TabM": 0.8789,
+        "TabPFN": 0.8984,
+        "XGBoost": 0.8722
+      },
+      "best_accuracy": 0.8984,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9151,
+        "RandomForest": 0.8924,
+        "RealMLP": 0.9181,
+        "TabM": 0.931,
+        "TabPFN": 0.9528,
+        "XGBoost": 0.9138
+      },
+      "best_accuracy": 0.9528,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9031,
+        "RandomForest": 0.8677,
+        "RealMLP": 0.91,
+        "TabM": 0.913,
+        "TabPFN": 0.9362,
+        "XGBoost": 0.8993
+      },
+      "best_accuracy": 0.9362,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.8563,
+        "RandomForest": 0.8303,
+        "RealMLP": 0.8506,
+        "TabM": 0.8585,
+        "TabPFN": 0.8907,
+        "XGBoost": 0.8549
+      },
+      "best_accuracy": 0.8907,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "IDRiD": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.3757,
+        "RandomForest": 0.3425,
+        "RealMLP": 0.2788,
+        "TabM": 0.2889,
+        "TabPFN": 0.2962,
+        "XGBoost": 0.3506
+      },
+      "best_accuracy": 0.3757,
+      "best_classifier": "CatBoost"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.3812,
+        "RandomForest": 0.3553,
+        "RealMLP": 0.3049,
+        "TabM": 0.3025,
+        "TabPFN": 0.3202,
+        "XGBoost": 0.3532
+      },
+      "best_accuracy": 0.3812,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.3353,
+        "RandomForest": 0.3209,
+        "RealMLP": 0.3046,
+        "TabM": 0.3201,
+        "TabPFN": 0.305,
+        "XGBoost": 0.3374
+      },
+      "best_accuracy": 0.3374,
+      "best_classifier": "XGBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.3503,
+        "RandomForest": 0.3324,
+        "RealMLP": 0.2939,
+        "TabM": 0.3033,
+        "TabPFN": 0.3035,
+        "XGBoost": 0.3455
+      },
+      "best_accuracy": 0.3503,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.3444,
+        "RandomForest": 0.3122,
+        "RealMLP": 0.2644,
+        "TabM": 0.2729,
+        "TabPFN": 0.28,
+        "XGBoost": 0.3286
+      },
+      "best_accuracy": 0.3444,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.4349,
+        "RandomForest": 0.3789,
+        "RealMLP": 0.4085,
+        "TabM": 0.4266,
+        "TabPFN": 0.4597,
+        "XGBoost": 0.4193
+      },
+      "best_accuracy": 0.4597,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.3594,
+        "RandomForest": 0.3514,
+        "RealMLP": 0.3129,
+        "TabM": 0.3009,
+        "TabPFN": 0.2942,
+        "XGBoost": 0.3523
+      },
+      "best_accuracy": 0.3594,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.3925,
+        "RandomForest": 0.3578,
+        "RealMLP": 0.3264,
+        "TabM": 0.3054,
+        "TabPFN": 0.391,
+        "XGBoost": 0.405
+      },
+      "best_accuracy": 0.405,
+      "best_classifier": "XGBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.3747,
+        "RandomForest": 0.3484,
+        "RealMLP": 0.3382,
+        "TabM": 0.3371,
+        "TabPFN": 0.3627,
+        "XGBoost": 0.3638
+      },
+      "best_accuracy": 0.3747,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.3104,
+        "RandomForest": 0.2973,
+        "RealMLP": 0.2202,
+        "TabM": 0.2565,
+        "TabPFN": 0.2338,
+        "XGBoost": 0.3055
+      },
+      "best_accuracy": 0.3104,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.3767,
+        "RandomForest": 0.3423,
+        "RealMLP": 0.3328,
+        "TabM": 0.324,
+        "TabPFN": 0.3339,
+        "XGBoost": 0.372
+      },
+      "best_accuracy": 0.3767,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.3535,
+        "RandomForest": 0.3478,
+        "RealMLP": 0.3154,
+        "TabM": 0.3387,
+        "TabPFN": 0.3562,
+        "XGBoost": 0.3719
+      },
+      "best_accuracy": 0.3719,
+      "best_classifier": "XGBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.4349,
+        "RandomForest": 0.422,
+        "RealMLP": 0.3965,
+        "TabM": 0.4196,
+        "TabPFN": 0.4342,
+        "XGBoost": 0.418
+      },
+      "best_accuracy": 0.4349,
+      "best_classifier": "CatBoost"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.3963,
+        "RandomForest": 0.3915,
+        "RealMLP": 0.3463,
+        "TabM": 0.3993,
+        "TabPFN": 0.3709,
+        "XGBoost": 0.3958
+      },
+      "best_accuracy": 0.3993,
+      "best_classifier": "TabM"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.4056,
+        "RandomForest": 0.3531,
+        "RealMLP": 0.3893,
+        "TabM": 0.3157,
+        "TabPFN": 0.3892,
+        "XGBoost": 0.3982
+      },
+      "best_accuracy": 0.4056,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "ISIC2019": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.3319,
+        "RandomForest": 0.2517,
+        "RealMLP": 0.2907,
+        "TabM": 0.3036,
+        "TabPFN": 0.3396,
+        "XGBoost": 0.2811
+      },
+      "best_accuracy": 0.3396,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.3378,
+        "RandomForest": 0.2299,
+        "RealMLP": 0.2626,
+        "TabM": 0.2617,
+        "TabPFN": 0.2675,
+        "XGBoost": 0.2769
+      },
+      "best_accuracy": 0.3378,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.2052,
+        "RandomForest": 0.1494,
+        "RealMLP": 0.1569,
+        "TabM": 0.1557,
+        "TabPFN": 0.1769,
+        "XGBoost": 0.1744
+      },
+      "best_accuracy": 0.2052,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.3309,
+        "RandomForest": 0.2259,
+        "RealMLP": 0.2726,
+        "TabM": 0.2582,
+        "TabPFN": 0.2645,
+        "XGBoost": 0.2809
+      },
+      "best_accuracy": 0.3309,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.2311,
+        "RandomForest": 0.1713,
+        "RealMLP": 0.1707,
+        "TabM": 0.1537,
+        "TabPFN": 0.1856,
+        "XGBoost": 0.1875
+      },
+      "best_accuracy": 0.2311,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.3223,
+        "RandomForest": 0.2528,
+        "RealMLP": 0.2555,
+        "TabM": 0.2665,
+        "TabPFN": 0.2959,
+        "XGBoost": 0.2826
+      },
+      "best_accuracy": 0.3223,
+      "best_classifier": "CatBoost"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.3686,
+        "RandomForest": 0.2541,
+        "RealMLP": 0.259,
+        "TabM": 0.2838,
+        "TabPFN": 0.2801,
+        "XGBoost": 0.3194
+      },
+      "best_accuracy": 0.3686,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.3504,
+        "RandomForest": 0.2478,
+        "RealMLP": 0.2866,
+        "TabM": 0.3058,
+        "TabPFN": 0.2792,
+        "XGBoost": 0.3104
+      },
+      "best_accuracy": 0.3504,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.2945,
+        "RandomForest": 0.2027,
+        "RealMLP": 0.2531,
+        "TabM": 0.2348,
+        "TabPFN": 0.2414,
+        "XGBoost": 0.259
+      },
+      "best_accuracy": 0.2945,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.2811,
+        "RandomForest": 0.1688,
+        "RealMLP": 0.2099,
+        "TabM": 0.2201,
+        "TabPFN": 0.2172,
+        "XGBoost": 0.2248
+      },
+      "best_accuracy": 0.2811,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.2972,
+        "RandomForest": 0.2242,
+        "RealMLP": 0.2527,
+        "TabM": 0.2793,
+        "TabPFN": 0.2491,
+        "XGBoost": 0.2643
+      },
+      "best_accuracy": 0.2972,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.2958,
+        "RandomForest": 0.2258,
+        "RealMLP": 0.2469,
+        "TabM": 0.2678,
+        "TabPFN": 0.2558,
+        "XGBoost": 0.2466
+      },
+      "best_accuracy": 0.2958,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.361,
+        "RandomForest": 0.2524,
+        "RealMLP": 0.2991,
+        "TabM": 0.337,
+        "TabPFN": 0.3527,
+        "XGBoost": 0.3
+      },
+      "best_accuracy": 0.361,
+      "best_classifier": "CatBoost"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.3334,
+        "RandomForest": 0.2326,
+        "RealMLP": 0.2601,
+        "TabM": 0.2954,
+        "TabPFN": 0.2852,
+        "XGBoost": 0.2894
+      },
+      "best_accuracy": 0.3334,
+      "best_classifier": "CatBoost"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.2761,
+        "RandomForest": 0.1756,
+        "RealMLP": 0.2227,
+        "TabM": 0.2156,
+        "TabPFN": 0.2378,
+        "XGBoost": 0.2301
+      },
+      "best_accuracy": 0.2761,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "Kvasir": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.7438,
+        "RandomForest": 0.7225,
+        "RealMLP": 0.7498,
+        "TabM": 0.753,
+        "TabPFN": 0.7847,
+        "XGBoost": 0.7515
+      },
+      "best_accuracy": 0.7847,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.7362,
+        "RandomForest": 0.7155,
+        "RealMLP": 0.731,
+        "TabM": 0.74,
+        "TabPFN": 0.7708,
+        "XGBoost": 0.744
+      },
+      "best_accuracy": 0.7708,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.604,
+        "RandomForest": 0.5747,
+        "RealMLP": 0.6082,
+        "TabM": 0.6165,
+        "TabPFN": 0.636,
+        "XGBoost": 0.62
+      },
+      "best_accuracy": 0.636,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.6983,
+        "RandomForest": 0.675,
+        "RealMLP": 0.691,
+        "TabM": 0.7053,
+        "TabPFN": 0.7478,
+        "XGBoost": 0.7093
+      },
+      "best_accuracy": 0.7478,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.5427,
+        "RandomForest": 0.5245,
+        "RealMLP": 0.5055,
+        "TabM": 0.5062,
+        "TabPFN": 0.5813,
+        "XGBoost": 0.5563
+      },
+      "best_accuracy": 0.5813,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.6615,
+        "RandomForest": 0.6388,
+        "RealMLP": 0.6977,
+        "TabM": 0.7173,
+        "TabPFN": 0.766,
+        "XGBoost": 0.6695
+      },
+      "best_accuracy": 0.766,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7318,
+        "RandomForest": 0.7123,
+        "RealMLP": 0.721,
+        "TabM": 0.7355,
+        "TabPFN": 0.7722,
+        "XGBoost": 0.7382
+      },
+      "best_accuracy": 0.7722,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.7588,
+        "RandomForest": 0.7272,
+        "RealMLP": 0.7608,
+        "TabM": 0.7722,
+        "TabPFN": 0.7997,
+        "XGBoost": 0.7698
+      },
+      "best_accuracy": 0.7997,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.7212,
+        "RandomForest": 0.6935,
+        "RealMLP": 0.7047,
+        "TabM": 0.7157,
+        "TabPFN": 0.7612,
+        "XGBoost": 0.7183
+      },
+      "best_accuracy": 0.7612,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.7298,
+        "RandomForest": 0.6947,
+        "RealMLP": 0.699,
+        "TabM": 0.7202,
+        "TabPFN": 0.735,
+        "XGBoost": 0.7432
+      },
+      "best_accuracy": 0.7432,
+      "best_classifier": "XGBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.7105,
+        "RealMLP": 0.7328,
+        "TabM": 0.731,
+        "TabPFN": 0.761,
+        "XGBoost": 0.7495
+      },
+      "best_accuracy": 0.761,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.7013,
+        "RandomForest": 0.6777,
+        "RealMLP": 0.69,
+        "TabM": 0.713,
+        "TabPFN": 0.7392,
+        "XGBoost": 0.7085
+      },
+      "best_accuracy": 0.7392,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.744,
+        "RandomForest": 0.7117,
+        "RealMLP": 0.7528,
+        "TabM": 0.767,
+        "TabPFN": 0.7953,
+        "XGBoost": 0.7472
+      },
+      "best_accuracy": 0.7953,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.745,
+        "RandomForest": 0.7248,
+        "RealMLP": 0.738,
+        "TabM": 0.7582,
+        "TabPFN": 0.7857,
+        "XGBoost": 0.7558
+      },
+      "best_accuracy": 0.7857,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.6022,
+        "RandomForest": 0.5998,
+        "RealMLP": 0.5933,
+        "TabM": 0.5965,
+        "TabPFN": 0.6395,
+        "XGBoost": 0.615
+      },
+      "best_accuracy": 0.6395,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "LC25000": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9876,
+        "RandomForest": 0.9834,
+        "RealMLP": 0.9932,
+        "TabM": 0.9966,
+        "TabPFN": 0.9996,
+        "XGBoost": 0.9898
+      },
+      "best_accuracy": 0.9996,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.9764,
+        "RandomForest": 0.9692,
+        "RealMLP": 0.9828,
+        "TabM": 0.9824,
+        "TabPFN": 0.9986,
+        "XGBoost": 0.98
+      },
+      "best_accuracy": 0.9986,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.635,
+        "RandomForest": 0.6058,
+        "RealMLP": 0.6314,
+        "TabM": 0.6426,
+        "TabPFN": 0.6958,
+        "XGBoost": 0.6492
+      },
+      "best_accuracy": 0.6958,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9794,
+        "RandomForest": 0.978,
+        "RealMLP": 0.9896,
+        "TabM": 0.9868,
+        "TabPFN": 0.9974,
+        "XGBoost": 0.9842
+      },
+      "best_accuracy": 0.9974,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.7278,
+        "RandomForest": 0.6876,
+        "RealMLP": 0.7126,
+        "TabM": 0.7226,
+        "TabPFN": 0.7754,
+        "XGBoost": 0.7396
+      },
+      "best_accuracy": 0.7754,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.9524,
+        "RandomForest": 0.9318,
+        "RealMLP": 0.9798,
+        "TabM": 0.9768,
+        "TabPFN": 0.9932,
+        "XGBoost": 0.9598
+      },
+      "best_accuracy": 0.9932,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9848,
+        "RandomForest": 0.9784,
+        "RealMLP": 0.9868,
+        "TabM": 0.9838,
+        "TabPFN": 0.999,
+        "XGBoost": 0.9866
+      },
+      "best_accuracy": 0.999,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9912,
+        "RandomForest": 0.9858,
+        "RealMLP": 0.9972,
+        "TabM": 0.9956,
+        "TabPFN": 1.0,
+        "XGBoost": 0.992
+      },
+      "best_accuracy": 1.0,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.9718,
+        "RandomForest": 0.9706,
+        "RealMLP": 0.9768,
+        "TabM": 0.9708,
+        "TabPFN": 0.9922,
+        "XGBoost": 0.9774
+      },
+      "best_accuracy": 0.9922,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.9664,
+        "RandomForest": 0.953,
+        "RealMLP": 0.9708,
+        "TabM": 0.972,
+        "TabPFN": 0.9862,
+        "XGBoost": 0.974
+      },
+      "best_accuracy": 0.9862,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.9754,
+        "RandomForest": 0.9716,
+        "RealMLP": 0.984,
+        "TabM": 0.9816,
+        "TabPFN": 0.9956,
+        "XGBoost": 0.9798
+      },
+      "best_accuracy": 0.9956,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.9768,
+        "RandomForest": 0.9726,
+        "RealMLP": 0.9858,
+        "TabM": 0.9822,
+        "TabPFN": 0.9972,
+        "XGBoost": 0.9786
+      },
+      "best_accuracy": 0.9972,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9836,
+        "RandomForest": 0.9782,
+        "RealMLP": 0.9928,
+        "TabM": 0.9884,
+        "TabPFN": 0.998,
+        "XGBoost": 0.9872
+      },
+      "best_accuracy": 0.998,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.981,
+        "RandomForest": 0.9748,
+        "RealMLP": 0.9884,
+        "TabM": 0.9896,
+        "TabPFN": 0.9978,
+        "XGBoost": 0.9844
+      },
+      "best_accuracy": 0.9978,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.946,
+        "RandomForest": 0.9254,
+        "RealMLP": 0.942,
+        "TabM": 0.9398,
+        "TabPFN": 0.9858,
+        "XGBoost": 0.9514
+      },
+      "best_accuracy": 0.9858,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "MURA": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.4804,
+        "RandomForest": 0.494,
+        "RealMLP": 0.438,
+        "TabM": 0.4868,
+        "TabPFN": 0.5039,
+        "XGBoost": 0.4841
+      },
+      "best_accuracy": 0.5039,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.4293,
+        "RandomForest": 0.44,
+        "RealMLP": 0.3961,
+        "TabM": 0.418,
+        "TabPFN": 0.4403,
+        "XGBoost": 0.4346
+      },
+      "best_accuracy": 0.4403,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.341,
+        "RandomForest": 0.3533,
+        "RealMLP": 0.298,
+        "TabM": 0.3439,
+        "TabPFN": 0.3186,
+        "XGBoost": 0.346
+      },
+      "best_accuracy": 0.3533,
+      "best_classifier": "RandomForest"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.3766,
+        "RandomForest": 0.385,
+        "RealMLP": 0.3693,
+        "TabM": 0.3486,
+        "TabPFN": 0.3851,
+        "XGBoost": 0.3818
+      },
+      "best_accuracy": 0.3851,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.2365,
+        "RandomForest": 0.2269,
+        "RealMLP": 0.186,
+        "TabM": 0.2048,
+        "TabPFN": 0.2164,
+        "XGBoost": 0.2435
+      },
+      "best_accuracy": 0.2435,
+      "best_classifier": "XGBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.4843,
+        "RandomForest": 0.4713,
+        "RealMLP": 0.5032,
+        "TabM": 0.5316,
+        "TabPFN": 0.5797,
+        "XGBoost": 0.4947
+      },
+      "best_accuracy": 0.5797,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.4752,
+        "RandomForest": 0.4726,
+        "RealMLP": 0.4307,
+        "TabM": 0.4571,
+        "TabPFN": 0.506,
+        "XGBoost": 0.4726
+      },
+      "best_accuracy": 0.506,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.4784,
+        "RandomForest": 0.4797,
+        "RealMLP": 0.4353,
+        "TabM": 0.471,
+        "TabPFN": 0.4857,
+        "XGBoost": 0.482
+      },
+      "best_accuracy": 0.4857,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.3773,
+        "RandomForest": 0.4011,
+        "RealMLP": 0.3309,
+        "TabM": 0.3352,
+        "TabPFN": 0.3775,
+        "XGBoost": 0.3881
+      },
+      "best_accuracy": 0.4011,
+      "best_classifier": "RandomForest"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.384,
+        "RandomForest": 0.3913,
+        "RealMLP": 0.3054,
+        "TabM": 0.336,
+        "TabPFN": 0.3182,
+        "XGBoost": 0.3824
+      },
+      "best_accuracy": 0.3913,
+      "best_classifier": "RandomForest"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.4305,
+        "RandomForest": 0.4456,
+        "RealMLP": 0.4049,
+        "TabM": 0.4147,
+        "TabPFN": 0.4413,
+        "XGBoost": 0.4492
+      },
+      "best_accuracy": 0.4492,
+      "best_classifier": "XGBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.3435,
+        "RandomForest": 0.3423,
+        "RealMLP": 0.3163,
+        "TabM": 0.3482,
+        "TabPFN": 0.3637,
+        "XGBoost": 0.3442
+      },
+      "best_accuracy": 0.3637,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.4708,
+        "RandomForest": 0.462,
+        "RealMLP": 0.4379,
+        "TabM": 0.4554,
+        "TabPFN": 0.4993,
+        "XGBoost": 0.4668
+      },
+      "best_accuracy": 0.4993,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.4653,
+        "RandomForest": 0.4782,
+        "RealMLP": 0.4031,
+        "TabM": 0.4467,
+        "TabPFN": 0.4764,
+        "XGBoost": 0.471
+      },
+      "best_accuracy": 0.4782,
+      "best_classifier": "RandomForest"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.3204,
+        "RandomForest": 0.3521,
+        "RealMLP": 0.2751,
+        "TabM": 0.2866,
+        "TabPFN": 0.3281,
+        "XGBoost": 0.3284
+      },
+      "best_accuracy": 0.3521,
+      "best_classifier": "RandomForest"
+    }
+  },
+  "MalariaCell": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9516,
+        "RandomForest": 0.9498,
+        "RealMLP": 0.9432,
+        "TabM": 0.9468,
+        "TabPFN": 0.9532,
+        "XGBoost": 0.9508
+      },
+      "best_accuracy": 0.9532,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.9392,
+        "RandomForest": 0.94,
+        "RealMLP": 0.938,
+        "TabM": 0.9398,
+        "TabPFN": 0.9504,
+        "XGBoost": 0.939
+      },
+      "best_accuracy": 0.9504,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.8476,
+        "RandomForest": 0.8468,
+        "RealMLP": 0.8416,
+        "TabM": 0.8524,
+        "TabPFN": 0.8652,
+        "XGBoost": 0.8474
+      },
+      "best_accuracy": 0.8652,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9388,
+        "RandomForest": 0.9382,
+        "RealMLP": 0.9322,
+        "TabM": 0.932,
+        "TabPFN": 0.9462,
+        "XGBoost": 0.94
+      },
+      "best_accuracy": 0.9462,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.9228,
+        "RandomForest": 0.9284,
+        "RealMLP": 0.9242,
+        "TabM": 0.924,
+        "TabPFN": 0.9328,
+        "XGBoost": 0.9196
+      },
+      "best_accuracy": 0.9328,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.878,
+        "RandomForest": 0.8324,
+        "RealMLP": 0.8848,
+        "TabM": 0.8968,
+        "TabPFN": 0.9096,
+        "XGBoost": 0.8768
+      },
+      "best_accuracy": 0.9096,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9482,
+        "RandomForest": 0.9482,
+        "RealMLP": 0.9438,
+        "TabM": 0.9414,
+        "TabPFN": 0.9536,
+        "XGBoost": 0.9488
+      },
+      "best_accuracy": 0.9536,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9488,
+        "RandomForest": 0.9452,
+        "RealMLP": 0.9464,
+        "TabM": 0.9474,
+        "TabPFN": 0.9544,
+        "XGBoost": 0.9468
+      },
+      "best_accuracy": 0.9544,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.941,
+        "RandomForest": 0.938,
+        "RealMLP": 0.9318,
+        "TabM": 0.9214,
+        "TabPFN": 0.9506,
+        "XGBoost": 0.9362
+      },
+      "best_accuracy": 0.9506,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.9088,
+        "RandomForest": 0.8894,
+        "RealMLP": 0.811,
+        "TabM": 0.869,
+        "TabPFN": 0.8592,
+        "XGBoost": 0.9084
+      },
+      "best_accuracy": 0.9088,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.9342,
+        "RandomForest": 0.9292,
+        "RealMLP": 0.9276,
+        "TabM": 0.9246,
+        "TabPFN": 0.937,
+        "XGBoost": 0.9366
+      },
+      "best_accuracy": 0.937,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.882,
+        "RandomForest": 0.8524,
+        "RealMLP": 0.895,
+        "TabM": 0.9076,
+        "TabPFN": 0.9316,
+        "XGBoost": 0.8774
+      },
+      "best_accuracy": 0.9316,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.917,
+        "RandomForest": 0.8714,
+        "RealMLP": 0.93,
+        "TabM": 0.9358,
+        "TabPFN": 0.9468,
+        "XGBoost": 0.9172
+      },
+      "best_accuracy": 0.9468,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9526,
+        "RandomForest": 0.9512,
+        "RealMLP": 0.9464,
+        "TabM": 0.9468,
+        "TabPFN": 0.9534,
+        "XGBoost": 0.9504
+      },
+      "best_accuracy": 0.9534,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.9388,
+        "RandomForest": 0.9184,
+        "RealMLP": 0.9348,
+        "TabM": 0.9138,
+        "TabPFN": 0.9474,
+        "XGBoost": 0.9388
+      },
+      "best_accuracy": 0.9474,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "NCT_CRC_HE": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9289,
+        "RandomForest": 0.9056,
+        "RealMLP": 0.9607,
+        "TabM": 0.9638,
+        "TabPFN": 0.9769,
+        "XGBoost": 0.9335
+      },
+      "best_accuracy": 0.9769,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.8966,
+        "RandomForest": 0.8763,
+        "RealMLP": 0.923,
+        "TabM": 0.923,
+        "TabPFN": 0.9556,
+        "XGBoost": 0.9081
+      },
+      "best_accuracy": 0.9556,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.5685,
+        "RandomForest": 0.5308,
+        "RealMLP": 0.5583,
+        "TabM": 0.5688,
+        "TabPFN": 0.597,
+        "XGBoost": 0.5667
+      },
+      "best_accuracy": 0.597,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.911,
+        "RandomForest": 0.8836,
+        "RealMLP": 0.9357,
+        "TabM": 0.9454,
+        "TabPFN": 0.9685,
+        "XGBoost": 0.9163
+      },
+      "best_accuracy": 0.9685,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.5324,
+        "RandomForest": 0.4914,
+        "RealMLP": 0.5208,
+        "TabM": 0.5366,
+        "TabPFN": 0.563,
+        "XGBoost": 0.5313
+      },
+      "best_accuracy": 0.563,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.8748,
+        "RandomForest": 0.855,
+        "RealMLP": 0.9265,
+        "TabM": 0.9312,
+        "TabPFN": 0.9577,
+        "XGBoost": 0.8859
+      },
+      "best_accuracy": 0.9577,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9058,
+        "RandomForest": 0.877,
+        "RealMLP": 0.932,
+        "TabM": 0.9352,
+        "TabPFN": 0.9621,
+        "XGBoost": 0.9052
+      },
+      "best_accuracy": 0.9621,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9298,
+        "RandomForest": 0.9055,
+        "RealMLP": 0.9627,
+        "TabM": 0.9598,
+        "TabPFN": 0.9771,
+        "XGBoost": 0.9411
+      },
+      "best_accuracy": 0.9771,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.8836,
+        "RandomForest": 0.8682,
+        "RealMLP": 0.9049,
+        "TabM": 0.8884,
+        "TabPFN": 0.9349,
+        "XGBoost": 0.889
+      },
+      "best_accuracy": 0.9349,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.8613,
+        "RandomForest": 0.7966,
+        "RealMLP": 0.8678,
+        "TabM": 0.8759,
+        "TabPFN": 0.8519,
+        "XGBoost": 0.8729
+      },
+      "best_accuracy": 0.8759,
+      "best_classifier": "TabM"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.8598,
+        "RealMLP": 0.9203,
+        "TabM": 0.9247,
+        "TabPFN": 0.9454,
+        "XGBoost": 0.8896
+      },
+      "best_accuracy": 0.9454,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.89,
+        "RandomForest": 0.8598,
+        "RealMLP": 0.9194,
+        "TabM": 0.9137,
+        "TabPFN": 0.9485,
+        "XGBoost": 0.8932
+      },
+      "best_accuracy": 0.9485,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9257,
+        "RandomForest": 0.9004,
+        "RealMLP": 0.9545,
+        "TabM": 0.9521,
+        "TabPFN": 0.9752,
+        "XGBoost": 0.9285
+      },
+      "best_accuracy": 0.9752,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9084,
+        "RandomForest": 0.891,
+        "RealMLP": 0.9194,
+        "TabM": 0.9299,
+        "TabPFN": 0.9565,
+        "XGBoost": 0.9125
+      },
+      "best_accuracy": 0.9565,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.8386,
+        "RandomForest": 0.7889,
+        "RealMLP": 0.8492,
+        "TabM": 0.8522,
+        "TabPFN": 0.9127,
+        "XGBoost": 0.8414
+      },
+      "best_accuracy": 0.9127,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "OCTMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.6322,
+        "RandomForest": 0.4849,
+        "RealMLP": 0.6075,
+        "TabM": 0.6266,
+        "TabPFN": 0.6407,
+        "XGBoost": 0.5894
+      },
+      "best_accuracy": 0.6407,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.5612,
+        "RandomForest": 0.4364,
+        "RealMLP": 0.5196,
+        "TabM": 0.5239,
+        "TabPFN": 0.5203,
+        "XGBoost": 0.4948
+      },
+      "best_accuracy": 0.5612,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.6523,
+        "RandomForest": 0.5068,
+        "RealMLP": 0.6248,
+        "TabM": 0.6291,
+        "TabPFN": 0.6553,
+        "XGBoost": 0.6122
+      },
+      "best_accuracy": 0.6553,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.5699,
+        "RandomForest": 0.4516,
+        "RealMLP": 0.5103,
+        "TabM": 0.5217,
+        "TabPFN": 0.5417,
+        "XGBoost": 0.5183
+      },
+      "best_accuracy": 0.5699,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.3768,
+        "RandomForest": 0.3326,
+        "RealMLP": 0.3444,
+        "TabM": 0.3456,
+        "TabPFN": 0.3665,
+        "XGBoost": 0.3619
+      },
+      "best_accuracy": 0.3768,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.5414,
+        "RandomForest": 0.4304,
+        "RealMLP": 0.5457,
+        "TabM": 0.5638,
+        "TabPFN": 0.5739,
+        "XGBoost": 0.5075
+      },
+      "best_accuracy": 0.5739,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.5631,
+        "RandomForest": 0.4639,
+        "RealMLP": 0.5474,
+        "TabM": 0.5438,
+        "TabPFN": 0.5993,
+        "XGBoost": 0.5247
+      },
+      "best_accuracy": 0.5993,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.6077,
+        "RandomForest": 0.4762,
+        "RealMLP": 0.5843,
+        "TabM": 0.6071,
+        "TabPFN": 0.6072,
+        "XGBoost": 0.5683
+      },
+      "best_accuracy": 0.6077,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.5572,
+        "RandomForest": 0.4736,
+        "RealMLP": 0.5282,
+        "TabM": 0.5372,
+        "TabPFN": 0.5374,
+        "XGBoost": 0.5225
+      },
+      "best_accuracy": 0.5572,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.5346,
+        "RandomForest": 0.4502,
+        "RealMLP": 0.4565,
+        "TabM": 0.4813,
+        "TabPFN": 0.4744,
+        "XGBoost": 0.4954
+      },
+      "best_accuracy": 0.5346,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.6413,
+        "RandomForest": 0.505,
+        "RealMLP": 0.6174,
+        "TabM": 0.6359,
+        "TabPFN": 0.6133,
+        "XGBoost": 0.6052
+      },
+      "best_accuracy": 0.6413,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.5742,
+        "RandomForest": 0.4875,
+        "RealMLP": 0.5316,
+        "TabM": 0.5473,
+        "TabPFN": 0.5503,
+        "XGBoost": 0.5295
+      },
+      "best_accuracy": 0.5742,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.5754,
+        "RandomForest": 0.4937,
+        "RealMLP": 0.5428,
+        "TabM": 0.5596,
+        "TabPFN": 0.5866,
+        "XGBoost": 0.5502
+      },
+      "best_accuracy": 0.5866,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.6673,
+        "RandomForest": 0.5356,
+        "RealMLP": 0.6181,
+        "TabM": 0.6402,
+        "TabPFN": 0.6431,
+        "XGBoost": 0.614
+      },
+      "best_accuracy": 0.6673,
+      "best_classifier": "CatBoost"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.5799,
+        "RandomForest": 0.4728,
+        "RealMLP": 0.5193,
+        "TabM": 0.5228,
+        "TabPFN": 0.5595,
+        "XGBoost": 0.5372
+      },
+      "best_accuracy": 0.5799,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "OrganAMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.767,
+        "RandomForest": 0.7736,
+        "RealMLP": 0.7855,
+        "TabM": 0.799,
+        "TabPFN": 0.8267,
+        "XGBoost": 0.7769
+      },
+      "best_accuracy": 0.8267,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.6984,
+        "RandomForest": 0.7017,
+        "RealMLP": 0.6962,
+        "TabM": 0.7038,
+        "TabPFN": 0.7367,
+        "XGBoost": 0.7036
+      },
+      "best_accuracy": 0.7367,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.8273,
+        "RandomForest": 0.7953,
+        "RealMLP": 0.8218,
+        "TabM": 0.8396,
+        "TabPFN": 0.8513,
+        "XGBoost": 0.8123
+      },
+      "best_accuracy": 0.8513,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.7278,
+        "RandomForest": 0.734,
+        "RealMLP": 0.7593,
+        "TabM": 0.7522,
+        "TabPFN": 0.7758,
+        "XGBoost": 0.7417
+      },
+      "best_accuracy": 0.7758,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.6272,
+        "RandomForest": 0.5714,
+        "RealMLP": 0.622,
+        "TabM": 0.6804,
+        "TabPFN": 0.7016,
+        "XGBoost": 0.629
+      },
+      "best_accuracy": 0.7016,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.7018,
+        "RandomForest": 0.7156,
+        "RealMLP": 0.7241,
+        "TabM": 0.7424,
+        "TabPFN": 0.7888,
+        "XGBoost": 0.7275
+      },
+      "best_accuracy": 0.7888,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7851,
+        "RandomForest": 0.8066,
+        "RealMLP": 0.78,
+        "TabM": 0.7915,
+        "TabPFN": 0.8558,
+        "XGBoost": 0.8015
+      },
+      "best_accuracy": 0.8558,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.737,
+        "RandomForest": 0.7229,
+        "RealMLP": 0.7338,
+        "TabM": 0.746,
+        "TabPFN": 0.7822,
+        "XGBoost": 0.7397
+      },
+      "best_accuracy": 0.7822,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.5895,
+        "RandomForest": 0.5628,
+        "RealMLP": 0.5684,
+        "TabM": 0.564,
+        "TabPFN": 0.5874,
+        "XGBoost": 0.5784
+      },
+      "best_accuracy": 0.5895,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.5762,
+        "RandomForest": 0.5147,
+        "RealMLP": 0.4959,
+        "TabM": 0.5253,
+        "TabPFN": 0.4571,
+        "XGBoost": 0.5486
+      },
+      "best_accuracy": 0.5762,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.715,
+        "RandomForest": 0.7102,
+        "RealMLP": 0.7147,
+        "TabM": 0.7162,
+        "TabPFN": 0.7484,
+        "XGBoost": 0.7069
+      },
+      "best_accuracy": 0.7484,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.5946,
+        "RandomForest": 0.5588,
+        "RealMLP": 0.5932,
+        "TabM": 0.6057,
+        "TabPFN": 0.6365,
+        "XGBoost": 0.5913
+      },
+      "best_accuracy": 0.6365,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.7572,
+        "RandomForest": 0.759,
+        "RealMLP": 0.7342,
+        "TabM": 0.7565,
+        "TabPFN": 0.806,
+        "XGBoost": 0.7623
+      },
+      "best_accuracy": 0.806,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.7004,
+        "RandomForest": 0.7076,
+        "RealMLP": 0.7028,
+        "TabM": 0.6986,
+        "TabPFN": 0.7419,
+        "XGBoost": 0.7072
+      },
+      "best_accuracy": 0.7419,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.6237,
+        "RandomForest": 0.5982,
+        "RealMLP": 0.5879,
+        "TabM": 0.5976,
+        "TabPFN": 0.6462,
+        "XGBoost": 0.6216
+      },
+      "best_accuracy": 0.6462,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "OrganCMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.7408,
+        "RandomForest": 0.7292,
+        "RealMLP": 0.7722,
+        "TabM": 0.7745,
+        "TabPFN": 0.816,
+        "XGBoost": 0.7503
+      },
+      "best_accuracy": 0.816,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.643,
+        "RandomForest": 0.6311,
+        "RealMLP": 0.6351,
+        "TabM": 0.6368,
+        "TabPFN": 0.6809,
+        "XGBoost": 0.6426
+      },
+      "best_accuracy": 0.6809,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.8104,
+        "RandomForest": 0.78,
+        "RealMLP": 0.8052,
+        "TabM": 0.8292,
+        "TabPFN": 0.816,
+        "XGBoost": 0.8037
+      },
+      "best_accuracy": 0.8292,
+      "best_classifier": "TabM"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.7074,
+        "RandomForest": 0.7045,
+        "RealMLP": 0.7308,
+        "TabM": 0.7293,
+        "TabPFN": 0.7687,
+        "XGBoost": 0.7207
+      },
+      "best_accuracy": 0.7687,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.5587,
+        "RandomForest": 0.4766,
+        "RealMLP": 0.5518,
+        "TabM": 0.5917,
+        "TabPFN": 0.6071,
+        "XGBoost": 0.54
+      },
+      "best_accuracy": 0.6071,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.724,
+        "RandomForest": 0.7397,
+        "RealMLP": 0.7657,
+        "TabM": 0.7625,
+        "TabPFN": 0.7964,
+        "XGBoost": 0.7569
+      },
+      "best_accuracy": 0.7964,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7552,
+        "RandomForest": 0.7482,
+        "RealMLP": 0.7473,
+        "TabM": 0.7559,
+        "TabPFN": 0.8131,
+        "XGBoost": 0.778
+      },
+      "best_accuracy": 0.8131,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.7152,
+        "RandomForest": 0.6893,
+        "RealMLP": 0.716,
+        "TabM": 0.7314,
+        "TabPFN": 0.7656,
+        "XGBoost": 0.7082
+      },
+      "best_accuracy": 0.7656,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.5628,
+        "RandomForest": 0.5324,
+        "RealMLP": 0.5415,
+        "TabM": 0.5204,
+        "TabPFN": 0.5563,
+        "XGBoost": 0.5553
+      },
+      "best_accuracy": 0.5628,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.5161,
+        "RandomForest": 0.4588,
+        "RealMLP": 0.4372,
+        "TabM": 0.4793,
+        "TabPFN": 0.4151,
+        "XGBoost": 0.5053
+      },
+      "best_accuracy": 0.5161,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.6541,
+        "RandomForest": 0.647,
+        "RealMLP": 0.6699,
+        "TabM": 0.6696,
+        "TabPFN": 0.6904,
+        "XGBoost": 0.6597
+      },
+      "best_accuracy": 0.6904,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.5674,
+        "RandomForest": 0.5179,
+        "RealMLP": 0.5513,
+        "TabM": 0.5625,
+        "TabPFN": 0.599,
+        "XGBoost": 0.5591
+      },
+      "best_accuracy": 0.599,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.699,
+        "RandomForest": 0.6972,
+        "RealMLP": 0.7003,
+        "TabM": 0.7089,
+        "TabPFN": 0.7633,
+        "XGBoost": 0.7129
+      },
+      "best_accuracy": 0.7633,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.6558,
+        "RandomForest": 0.633,
+        "RealMLP": 0.6295,
+        "TabM": 0.6538,
+        "TabPFN": 0.6868,
+        "XGBoost": 0.6532
+      },
+      "best_accuracy": 0.6868,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.5815,
+        "RandomForest": 0.5646,
+        "RealMLP": 0.5466,
+        "TabM": 0.541,
+        "TabPFN": 0.5965,
+        "XGBoost": 0.5765
+      },
+      "best_accuracy": 0.5965,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "OrganSMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.7335,
+        "RandomForest": 0.7079,
+        "RealMLP": 0.7539,
+        "TabM": 0.7619,
+        "TabPFN": 0.7993,
+        "XGBoost": 0.7358
+      },
+      "best_accuracy": 0.7993,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.6306,
+        "RandomForest": 0.6214,
+        "RealMLP": 0.6362,
+        "TabM": 0.6347,
+        "TabPFN": 0.6749,
+        "XGBoost": 0.6363
+      },
+      "best_accuracy": 0.6749,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.6336,
+        "RandomForest": 0.581,
+        "RealMLP": 0.6255,
+        "TabM": 0.6386,
+        "TabPFN": 0.6528,
+        "XGBoost": 0.6129
+      },
+      "best_accuracy": 0.6528,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.6901,
+        "RandomForest": 0.6773,
+        "RealMLP": 0.7184,
+        "TabM": 0.7167,
+        "TabPFN": 0.7493,
+        "XGBoost": 0.7042
+      },
+      "best_accuracy": 0.7493,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.4168,
+        "RandomForest": 0.3591,
+        "RealMLP": 0.4036,
+        "TabM": 0.4539,
+        "TabPFN": 0.4529,
+        "XGBoost": 0.4097
+      },
+      "best_accuracy": 0.4539,
+      "best_classifier": "TabM"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.678,
+        "RandomForest": 0.6832,
+        "RealMLP": 0.7188,
+        "TabM": 0.7307,
+        "TabPFN": 0.7691,
+        "XGBoost": 0.7021
+      },
+      "best_accuracy": 0.7691,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.7243,
+        "RandomForest": 0.7119,
+        "RealMLP": 0.7265,
+        "TabM": 0.7321,
+        "TabPFN": 0.8119,
+        "XGBoost": 0.736
+      },
+      "best_accuracy": 0.8119,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.7158,
+        "RandomForest": 0.6678,
+        "RealMLP": 0.707,
+        "TabM": 0.7253,
+        "TabPFN": 0.7603,
+        "XGBoost": 0.7058
+      },
+      "best_accuracy": 0.7603,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.559,
+        "RandomForest": 0.5206,
+        "RealMLP": 0.5247,
+        "TabM": 0.5077,
+        "TabPFN": 0.5468,
+        "XGBoost": 0.542
+      },
+      "best_accuracy": 0.559,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.4996,
+        "RandomForest": 0.4097,
+        "RealMLP": 0.403,
+        "TabM": 0.4614,
+        "TabPFN": 0.393,
+        "XGBoost": 0.4792
+      },
+      "best_accuracy": 0.4996,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.6585,
+        "RandomForest": 0.6451,
+        "RealMLP": 0.6484,
+        "TabM": 0.6611,
+        "TabPFN": 0.6766,
+        "XGBoost": 0.6511
+      },
+      "best_accuracy": 0.6766,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.562,
+        "RandomForest": 0.5151,
+        "RealMLP": 0.5336,
+        "TabM": 0.5527,
+        "TabPFN": 0.5977,
+        "XGBoost": 0.5539
+      },
+      "best_accuracy": 0.5977,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.703,
+        "RandomForest": 0.6953,
+        "RealMLP": 0.6854,
+        "TabM": 0.6965,
+        "TabPFN": 0.7662,
+        "XGBoost": 0.7083
+      },
+      "best_accuracy": 0.7662,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.6451,
+        "RandomForest": 0.6098,
+        "RealMLP": 0.6104,
+        "TabM": 0.6398,
+        "TabPFN": 0.6784,
+        "XGBoost": 0.6367
+      },
+      "best_accuracy": 0.6784,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.577,
+        "RandomForest": 0.5225,
+        "RealMLP": 0.5245,
+        "TabM": 0.5179,
+        "TabPFN": 0.5678,
+        "XGBoost": 0.5657
+      },
+      "best_accuracy": 0.577,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "PCam": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.8778,
+        "RandomForest": 0.865,
+        "RealMLP": 0.8784,
+        "TabM": 0.8942,
+        "TabPFN": 0.9044,
+        "XGBoost": 0.8822
+      },
+      "best_accuracy": 0.9044,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.8468,
+        "RandomForest": 0.8392,
+        "RealMLP": 0.8414,
+        "TabM": 0.857,
+        "TabPFN": 0.8782,
+        "XGBoost": 0.8492
+      },
+      "best_accuracy": 0.8782,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.6614,
+        "RandomForest": 0.6716,
+        "RealMLP": 0.6484,
+        "TabM": 0.6374,
+        "TabPFN": 0.6966,
+        "XGBoost": 0.661
+      },
+      "best_accuracy": 0.6966,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.8518,
+        "RandomForest": 0.85,
+        "RealMLP": 0.8492,
+        "TabM": 0.857,
+        "TabPFN": 0.8872,
+        "XGBoost": 0.8546
+      },
+      "best_accuracy": 0.8872,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.706,
+        "RandomForest": 0.696,
+        "RealMLP": 0.694,
+        "TabM": 0.706,
+        "TabPFN": 0.7254,
+        "XGBoost": 0.7044
+      },
+      "best_accuracy": 0.7254,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.829,
+        "RandomForest": 0.8196,
+        "RealMLP": 0.8246,
+        "TabM": 0.8394,
+        "TabPFN": 0.8568,
+        "XGBoost": 0.8334
+      },
+      "best_accuracy": 0.8568,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.8478,
+        "RandomForest": 0.8454,
+        "RealMLP": 0.8404,
+        "TabM": 0.8478,
+        "TabPFN": 0.8876,
+        "XGBoost": 0.8576
+      },
+      "best_accuracy": 0.8876,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.882,
+        "RandomForest": 0.8614,
+        "RealMLP": 0.8674,
+        "TabM": 0.8868,
+        "TabPFN": 0.9024,
+        "XGBoost": 0.8812
+      },
+      "best_accuracy": 0.9024,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.8324,
+        "RandomForest": 0.8196,
+        "RealMLP": 0.8206,
+        "TabM": 0.81,
+        "TabPFN": 0.8438,
+        "XGBoost": 0.8324
+      },
+      "best_accuracy": 0.8438,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.8102,
+        "RandomForest": 0.797,
+        "RealMLP": 0.7814,
+        "TabM": 0.8032,
+        "TabPFN": 0.8018,
+        "XGBoost": 0.8128
+      },
+      "best_accuracy": 0.8128,
+      "best_classifier": "XGBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.8394,
+        "RandomForest": 0.8288,
+        "RealMLP": 0.8262,
+        "TabM": 0.8396,
+        "TabPFN": 0.8642,
+        "XGBoost": 0.842
+      },
+      "best_accuracy": 0.8642,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.8444,
+        "RandomForest": 0.8346,
+        "RealMLP": 0.8338,
+        "TabM": 0.8406,
+        "TabPFN": 0.8704,
+        "XGBoost": 0.8416
+      },
+      "best_accuracy": 0.8704,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.8634,
+        "RandomForest": 0.8524,
+        "RealMLP": 0.8584,
+        "TabM": 0.8712,
+        "TabPFN": 0.8962,
+        "XGBoost": 0.8638
+      },
+      "best_accuracy": 0.8962,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.862,
+        "RandomForest": 0.847,
+        "RealMLP": 0.8474,
+        "TabM": 0.8604,
+        "TabPFN": 0.8896,
+        "XGBoost": 0.8648
+      },
+      "best_accuracy": 0.8896,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.7956,
+        "RandomForest": 0.7906,
+        "RealMLP": 0.7618,
+        "TabM": 0.78,
+        "TabPFN": 0.807,
+        "XGBoost": 0.7968
+      },
+      "best_accuracy": 0.807,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "PathMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9278,
+        "RandomForest": 0.9038,
+        "RealMLP": 0.9558,
+        "TabM": 0.9597,
+        "TabPFN": 0.9746,
+        "XGBoost": 0.9322
+      },
+      "best_accuracy": 0.9746,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.8998,
+        "RandomForest": 0.8759,
+        "RealMLP": 0.917,
+        "TabM": 0.9195,
+        "TabPFN": 0.9559,
+        "XGBoost": 0.9019
+      },
+      "best_accuracy": 0.9559,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.5601,
+        "RandomForest": 0.5339,
+        "RealMLP": 0.5521,
+        "TabM": 0.5709,
+        "TabPFN": 0.6077,
+        "XGBoost": 0.5645
+      },
+      "best_accuracy": 0.6077,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9048,
+        "RandomForest": 0.8857,
+        "RealMLP": 0.9351,
+        "TabM": 0.9393,
+        "TabPFN": 0.9682,
+        "XGBoost": 0.915
+      },
+      "best_accuracy": 0.9682,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.5235,
+        "RandomForest": 0.4873,
+        "RealMLP": 0.5187,
+        "TabM": 0.5356,
+        "TabPFN": 0.5644,
+        "XGBoost": 0.5141
+      },
+      "best_accuracy": 0.5644,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.8816,
+        "RandomForest": 0.8605,
+        "RealMLP": 0.9327,
+        "TabM": 0.9362,
+        "TabPFN": 0.9621,
+        "XGBoost": 0.8965
+      },
+      "best_accuracy": 0.9621,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9039,
+        "RandomForest": 0.8703,
+        "RealMLP": 0.9364,
+        "TabM": 0.9333,
+        "TabPFN": 0.9662,
+        "XGBoost": 0.9153
+      },
+      "best_accuracy": 0.9662,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9268,
+        "RandomForest": 0.9062,
+        "RealMLP": 0.9497,
+        "TabM": 0.9514,
+        "TabPFN": 0.973,
+        "XGBoost": 0.931
+      },
+      "best_accuracy": 0.973,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.8893,
+        "RandomForest": 0.8668,
+        "RealMLP": 0.9019,
+        "TabM": 0.8938,
+        "TabPFN": 0.9332,
+        "XGBoost": 0.8954
+      },
+      "best_accuracy": 0.9332,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.7854,
+        "RealMLP": 0.8611,
+        "TabM": 0.8787,
+        "TabPFN": 0.8566,
+        "XGBoost": 0.8664
+      },
+      "best_accuracy": 0.8787,
+      "best_classifier": "TabM"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.0,
+        "RandomForest": 0.8548,
+        "RealMLP": 0.9144,
+        "TabM": 0.9223,
+        "TabPFN": 0.9456,
+        "XGBoost": 0.8931
+      },
+      "best_accuracy": 0.9456,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.8913,
+        "RandomForest": 0.8615,
+        "RealMLP": 0.9136,
+        "TabM": 0.9143,
+        "TabPFN": 0.9491,
+        "XGBoost": 0.8948
+      },
+      "best_accuracy": 0.9491,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9205,
+        "RandomForest": 0.8989,
+        "RealMLP": 0.9504,
+        "TabM": 0.9492,
+        "TabPFN": 0.975,
+        "XGBoost": 0.9296
+      },
+      "best_accuracy": 0.975,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9012,
+        "RandomForest": 0.885,
+        "RealMLP": 0.9201,
+        "TabM": 0.9213,
+        "TabPFN": 0.9569,
+        "XGBoost": 0.9123
+      },
+      "best_accuracy": 0.9569,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.8299,
+        "RandomForest": 0.7824,
+        "RealMLP": 0.8498,
+        "TabM": 0.8479,
+        "TabPFN": 0.907,
+        "XGBoost": 0.8251
+      },
+      "best_accuracy": 0.907,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "PneumoniaMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.925,
+        "RandomForest": 0.8926,
+        "RealMLP": 0.911,
+        "TabM": 0.9197,
+        "TabPFN": 0.931,
+        "XGBoost": 0.917
+      },
+      "best_accuracy": 0.931,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.8913,
+        "RandomForest": 0.8328,
+        "RealMLP": 0.8754,
+        "TabM": 0.8811,
+        "TabPFN": 0.8931,
+        "XGBoost": 0.88
+      },
+      "best_accuracy": 0.8931,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.954,
+        "RandomForest": 0.918,
+        "RealMLP": 0.9424,
+        "TabM": 0.9505,
+        "TabPFN": 0.9516,
+        "XGBoost": 0.9474
+      },
+      "best_accuracy": 0.954,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9058,
+        "RandomForest": 0.88,
+        "RealMLP": 0.8878,
+        "TabM": 0.8938,
+        "TabPFN": 0.8966,
+        "XGBoost": 0.8847
+      },
+      "best_accuracy": 0.9058,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.869,
+        "RandomForest": 0.7389,
+        "RealMLP": 0.854,
+        "TabM": 0.876,
+        "TabPFN": 0.8919,
+        "XGBoost": 0.8464
+      },
+      "best_accuracy": 0.8919,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.9291,
+        "RandomForest": 0.9108,
+        "RealMLP": 0.9219,
+        "TabM": 0.9263,
+        "TabPFN": 0.9332,
+        "XGBoost": 0.9197
+      },
+      "best_accuracy": 0.9332,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.916,
+        "RandomForest": 0.8919,
+        "RealMLP": 0.8958,
+        "TabM": 0.9026,
+        "TabPFN": 0.9157,
+        "XGBoost": 0.9025
+      },
+      "best_accuracy": 0.916,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9013,
+        "RandomForest": 0.8734,
+        "RealMLP": 0.8882,
+        "TabM": 0.9018,
+        "TabPFN": 0.9079,
+        "XGBoost": 0.8955
+      },
+      "best_accuracy": 0.9079,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.88,
+        "RandomForest": 0.8059,
+        "RealMLP": 0.8419,
+        "TabM": 0.8485,
+        "TabPFN": 0.8694,
+        "XGBoost": 0.8584
+      },
+      "best_accuracy": 0.88,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.8873,
+        "RandomForest": 0.8431,
+        "RealMLP": 0.8541,
+        "TabM": 0.8518,
+        "TabPFN": 0.8734,
+        "XGBoost": 0.8648
+      },
+      "best_accuracy": 0.8873,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.9277,
+        "RandomForest": 0.8924,
+        "RealMLP": 0.9191,
+        "TabM": 0.9252,
+        "TabPFN": 0.9287,
+        "XGBoost": 0.9225
+      },
+      "best_accuracy": 0.9287,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.9057,
+        "RandomForest": 0.872,
+        "RealMLP": 0.867,
+        "TabM": 0.8908,
+        "TabPFN": 0.9038,
+        "XGBoost": 0.8922
+      },
+      "best_accuracy": 0.9057,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9168,
+        "RandomForest": 0.8995,
+        "RealMLP": 0.9022,
+        "TabM": 0.9156,
+        "TabPFN": 0.9344,
+        "XGBoost": 0.901
+      },
+      "best_accuracy": 0.9344,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9235,
+        "RandomForest": 0.8701,
+        "RealMLP": 0.9105,
+        "TabM": 0.9124,
+        "TabPFN": 0.9344,
+        "XGBoost": 0.9147
+      },
+      "best_accuracy": 0.9344,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.9125,
+        "RandomForest": 0.885,
+        "RealMLP": 0.8947,
+        "TabM": 0.8851,
+        "TabPFN": 0.909,
+        "XGBoost": 0.903
+      },
+      "best_accuracy": 0.9125,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "RetinaMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.4326,
+        "RandomForest": 0.388,
+        "RealMLP": 0.4137,
+        "TabM": 0.3915,
+        "TabPFN": 0.4331,
+        "XGBoost": 0.4118
+      },
+      "best_accuracy": 0.4331,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.4063,
+        "RandomForest": 0.3198,
+        "RealMLP": 0.3633,
+        "TabM": 0.3854,
+        "TabPFN": 0.396,
+        "XGBoost": 0.3793
+      },
+      "best_accuracy": 0.4063,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.3912,
+        "RandomForest": 0.3236,
+        "RealMLP": 0.3113,
+        "TabM": 0.3511,
+        "TabPFN": 0.3638,
+        "XGBoost": 0.3493
+      },
+      "best_accuracy": 0.3912,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.4022,
+        "RandomForest": 0.3414,
+        "RealMLP": 0.3321,
+        "TabM": 0.3377,
+        "TabPFN": 0.3476,
+        "XGBoost": 0.3906
+      },
+      "best_accuracy": 0.4022,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.3043,
+        "RandomForest": 0.2402,
+        "RealMLP": 0.2651,
+        "TabM": 0.2642,
+        "TabPFN": 0.2261,
+        "XGBoost": 0.3061
+      },
+      "best_accuracy": 0.3061,
+      "best_classifier": "XGBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.4897,
+        "RandomForest": 0.4072,
+        "RealMLP": 0.4967,
+        "TabM": 0.4993,
+        "TabPFN": 0.5307,
+        "XGBoost": 0.4674
+      },
+      "best_accuracy": 0.5307,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.4221,
+        "RandomForest": 0.3882,
+        "RealMLP": 0.3413,
+        "TabM": 0.3624,
+        "TabPFN": 0.373,
+        "XGBoost": 0.3933
+      },
+      "best_accuracy": 0.4221,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.4008,
+        "RandomForest": 0.3331,
+        "RealMLP": 0.3608,
+        "TabM": 0.3722,
+        "TabPFN": 0.4074,
+        "XGBoost": 0.3796
+      },
+      "best_accuracy": 0.4074,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.4064,
+        "RandomForest": 0.347,
+        "RealMLP": 0.3816,
+        "TabM": 0.3725,
+        "TabPFN": 0.3833,
+        "XGBoost": 0.3916
+      },
+      "best_accuracy": 0.4064,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.2718,
+        "RandomForest": 0.249,
+        "RealMLP": 0.2014,
+        "TabM": 0.2297,
+        "TabPFN": 0.1984,
+        "XGBoost": 0.259
+      },
+      "best_accuracy": 0.2718,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.4475,
+        "RandomForest": 0.4129,
+        "RealMLP": 0.4013,
+        "TabM": 0.4179,
+        "TabPFN": 0.4138,
+        "XGBoost": 0.4278
+      },
+      "best_accuracy": 0.4475,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.3936,
+        "RandomForest": 0.3697,
+        "RealMLP": 0.3281,
+        "TabM": 0.319,
+        "TabPFN": 0.3388,
+        "XGBoost": 0.3684
+      },
+      "best_accuracy": 0.3936,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.5191,
+        "RandomForest": 0.4471,
+        "RealMLP": 0.4628,
+        "TabM": 0.4734,
+        "TabPFN": 0.5553,
+        "XGBoost": 0.5121
+      },
+      "best_accuracy": 0.5553,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.4588,
+        "RandomForest": 0.393,
+        "RealMLP": 0.4178,
+        "TabM": 0.4251,
+        "TabPFN": 0.4548,
+        "XGBoost": 0.4526
+      },
+      "best_accuracy": 0.4588,
+      "best_classifier": "CatBoost"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.4352,
+        "RandomForest": 0.3749,
+        "RealMLP": 0.3883,
+        "TabM": 0.3279,
+        "TabPFN": 0.4258,
+        "XGBoost": 0.4101
+      },
+      "best_accuracy": 0.4352,
+      "best_classifier": "CatBoost"
+    }
+  },
+  "SIPaKMeD": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.9461,
+        "RandomForest": 0.9368,
+        "RealMLP": 0.9422,
+        "TabM": 0.9516,
+        "TabPFN": 0.9619,
+        "XGBoost": 0.9455
+      },
+      "best_accuracy": 0.9619,
+      "best_classifier": "TabPFN"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.8824,
+        "RandomForest": 0.8564,
+        "RealMLP": 0.8892,
+        "TabM": 0.9002,
+        "TabPFN": 0.9217,
+        "XGBoost": 0.8919
+      },
+      "best_accuracy": 0.9217,
+      "best_classifier": "TabPFN"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.2136,
+        "RandomForest": 0.215,
+        "RealMLP": 0.2038,
+        "TabM": 0.2127,
+        "TabPFN": 0.1894,
+        "XGBoost": 0.2077
+      },
+      "best_accuracy": 0.215,
+      "best_classifier": "RandomForest"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.9035,
+        "RandomForest": 0.8933,
+        "RealMLP": 0.8951,
+        "TabM": 0.8861,
+        "TabPFN": 0.9426,
+        "XGBoost": 0.9174
+      },
+      "best_accuracy": 0.9426,
+      "best_classifier": "TabPFN"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.6141,
+        "RandomForest": 0.5886,
+        "RealMLP": 0.568,
+        "TabM": 0.5991,
+        "TabPFN": 0.6372,
+        "XGBoost": 0.6293
+      },
+      "best_accuracy": 0.6372,
+      "best_classifier": "TabPFN"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.8625,
+        "RandomForest": 0.8373,
+        "RealMLP": 0.897,
+        "TabM": 0.9033,
+        "TabPFN": 0.9417,
+        "XGBoost": 0.8767
+      },
+      "best_accuracy": 0.9417,
+      "best_classifier": "TabPFN"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.9387,
+        "RandomForest": 0.9285,
+        "RealMLP": 0.9358,
+        "TabM": 0.9399,
+        "TabPFN": 0.9691,
+        "XGBoost": 0.9417
+      },
+      "best_accuracy": 0.9691,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.9292,
+        "RandomForest": 0.9147,
+        "RealMLP": 0.9283,
+        "TabM": 0.9459,
+        "TabPFN": 0.9646,
+        "XGBoost": 0.9292
+      },
+      "best_accuracy": 0.9646,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.872,
+        "RandomForest": 0.8323,
+        "RealMLP": 0.8735,
+        "TabM": 0.8608,
+        "TabPFN": 0.9125,
+        "XGBoost": 0.8773
+      },
+      "best_accuracy": 0.9125,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.8793,
+        "RandomForest": 0.8594,
+        "RealMLP": 0.8742,
+        "TabM": 0.881,
+        "TabPFN": 0.9089,
+        "XGBoost": 0.8907
+      },
+      "best_accuracy": 0.9089,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.9008,
+        "RandomForest": 0.861,
+        "RealMLP": 0.9258,
+        "TabM": 0.9199,
+        "TabPFN": 0.9344,
+        "XGBoost": 0.9127
+      },
+      "best_accuracy": 0.9344,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.8897,
+        "RandomForest": 0.8648,
+        "RealMLP": 0.9049,
+        "TabM": 0.8977,
+        "TabPFN": 0.9283,
+        "XGBoost": 0.8934
+      },
+      "best_accuracy": 0.9283,
+      "best_classifier": "TabPFN"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.9388,
+        "RandomForest": 0.9219,
+        "RealMLP": 0.9495,
+        "TabM": 0.9503,
+        "TabPFN": 0.9764,
+        "XGBoost": 0.9403
+      },
+      "best_accuracy": 0.9764,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.9084,
+        "RandomForest": 0.8876,
+        "RealMLP": 0.9116,
+        "TabM": 0.9116,
+        "TabPFN": 0.9449,
+        "XGBoost": 0.915
+      },
+      "best_accuracy": 0.9449,
+      "best_classifier": "TabPFN"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.8826,
+        "RandomForest": 0.8592,
+        "RealMLP": 0.8895,
+        "TabM": 0.8795,
+        "TabPFN": 0.9379,
+        "XGBoost": 0.8844
+      },
+      "best_accuracy": 0.9379,
+      "best_classifier": "TabPFN"
+    }
+  },
+  "TissueMNIST": {
+    "ATOL": {
+      "all_classifiers": {
+        "CatBoost": 0.4061,
+        "RandomForest": 0.3285,
+        "RealMLP": 0.3665,
+        "TabM": 0.385,
+        "TabPFN": 0.3704,
+        "XGBoost": 0.3454
+      },
+      "best_accuracy": 0.4061,
+      "best_classifier": "CatBoost"
+    },
+    "betti_curves": {
+      "all_classifiers": {
+        "CatBoost": 0.3431,
+        "RandomForest": 0.2947,
+        "RealMLP": 0.3076,
+        "TabM": 0.3195,
+        "TabPFN": 0.3158,
+        "XGBoost": 0.309
+      },
+      "best_accuracy": 0.3431,
+      "best_classifier": "CatBoost"
+    },
+    "edge_histogram": {
+      "all_classifiers": {
+        "CatBoost": 0.1764,
+        "RandomForest": 0.1717,
+        "RealMLP": 0.1623,
+        "TabM": 0.1634,
+        "TabPFN": 0.1613,
+        "XGBoost": 0.1634
+      },
+      "best_accuracy": 0.1764,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_curve": {
+      "all_classifiers": {
+        "CatBoost": 0.3767,
+        "RandomForest": 0.3113,
+        "RealMLP": 0.3422,
+        "TabM": 0.3362,
+        "TabPFN": 0.3401,
+        "XGBoost": 0.3268
+      },
+      "best_accuracy": 0.3767,
+      "best_classifier": "CatBoost"
+    },
+    "euler_characteristic_transform": {
+      "all_classifiers": {
+        "CatBoost": 0.2236,
+        "RandomForest": 0.1727,
+        "RealMLP": 0.1702,
+        "TabM": 0.1746,
+        "TabPFN": 0.1719,
+        "XGBoost": 0.181
+      },
+      "best_accuracy": 0.2236,
+      "best_classifier": "CatBoost"
+    },
+    "lbp_texture": {
+      "all_classifiers": {
+        "CatBoost": 0.3262,
+        "RandomForest": 0.2574,
+        "RealMLP": 0.3102,
+        "TabM": 0.3114,
+        "TabPFN": 0.3258,
+        "XGBoost": 0.2865
+      },
+      "best_accuracy": 0.3262,
+      "best_classifier": "CatBoost"
+    },
+    "minkowski_functionals": {
+      "all_classifiers": {
+        "CatBoost": 0.3743,
+        "RandomForest": 0.3065,
+        "RealMLP": 0.319,
+        "TabM": 0.3276,
+        "TabPFN": 0.3291,
+        "XGBoost": 0.3264
+      },
+      "best_accuracy": 0.3743,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_codebook": {
+      "all_classifiers": {
+        "CatBoost": 0.3782,
+        "RandomForest": 0.3169,
+        "RealMLP": 0.3425,
+        "TabM": 0.3536,
+        "TabPFN": 0.3555,
+        "XGBoost": 0.3415
+      },
+      "best_accuracy": 0.3782,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_entropy": {
+      "all_classifiers": {
+        "CatBoost": 0.3071,
+        "RandomForest": 0.2589,
+        "RealMLP": 0.2684,
+        "TabM": 0.259,
+        "TabPFN": 0.2727,
+        "XGBoost": 0.2815
+      },
+      "best_accuracy": 0.3071,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_image": {
+      "all_classifiers": {
+        "CatBoost": 0.3099,
+        "RandomForest": 0.2634,
+        "RealMLP": 0.2615,
+        "TabM": 0.2656,
+        "TabPFN": 0.2688,
+        "XGBoost": 0.2913
+      },
+      "best_accuracy": 0.3099,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_landscapes": {
+      "all_classifiers": {
+        "CatBoost": 0.3858,
+        "RandomForest": 0.3143,
+        "RealMLP": 0.3284,
+        "TabM": 0.3342,
+        "TabPFN": 0.3199,
+        "XGBoost": 0.3412
+      },
+      "best_accuracy": 0.3858,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_silhouette": {
+      "all_classifiers": {
+        "CatBoost": 0.3406,
+        "RandomForest": 0.2977,
+        "RealMLP": 0.3,
+        "TabM": 0.3127,
+        "TabPFN": 0.2985,
+        "XGBoost": 0.3057
+      },
+      "best_accuracy": 0.3406,
+      "best_classifier": "CatBoost"
+    },
+    "persistence_statistics": {
+      "all_classifiers": {
+        "CatBoost": 0.3505,
+        "RandomForest": 0.2979,
+        "RealMLP": 0.3356,
+        "TabM": 0.3446,
+        "TabPFN": 0.3541,
+        "XGBoost": 0.3183
+      },
+      "best_accuracy": 0.3541,
+      "best_classifier": "TabPFN"
+    },
+    "template_functions": {
+      "all_classifiers": {
+        "CatBoost": 0.3677,
+        "RandomForest": 0.2915,
+        "RealMLP": 0.3286,
+        "TabM": 0.3412,
+        "TabPFN": 0.3382,
+        "XGBoost": 0.3213
+      },
+      "best_accuracy": 0.3677,
+      "best_classifier": "CatBoost"
+    },
+    "tropical_coordinates": {
+      "all_classifiers": {
+        "CatBoost": 0.3259,
+        "RandomForest": 0.2645,
+        "RealMLP": 0.2813,
+        "TabM": 0.3011,
+        "TabPFN": 0.3049,
+        "XGBoost": 0.3006
+      },
+      "best_accuracy": 0.3259,
+      "best_classifier": "CatBoost"
+    }
+  }
+}

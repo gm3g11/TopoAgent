@@ -1,0 +1,210 @@
+{
+  "dataset": "SIPaKMeD",
+  "method": "topoagent",
+  "descriptor": "lbp_texture",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.7802,
+  "best_accuracy": 0.78,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.7802380952380952,
+      "accuracy": 0.78,
+      "std": 0.061989868238062386,
+      "fold_balanced_accuracy": [
+        0.8297619047619047,
+        0.75,
+        0.8,
+        0.675,
+        0.8464285714285715
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.75,
+        0.8,
+        0.675,
+        0.85
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7402380952380951,
+      "accuracy": 0.74,
+      "std": 0.03229154322995942,
+      "fold_balanced_accuracy": [
+        0.7297619047619047,
+        0.7,
+        0.75,
+        0.725,
+        0.7964285714285715
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.7,
+        0.75,
+        0.725,
+        0.8
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7307936507936509,
+      "accuracy": 0.7300000000000001,
+      "std": 0.05968000670072382,
+      "fold_balanced_accuracy": [
+        0.6825396825396826,
+        0.65,
+        0.75,
+        0.75,
+        0.8214285714285715
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.65,
+        0.75,
+        0.75,
+        0.825
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6652380952380952,
+      "accuracy": 0.6649999999999999,
+      "std": 0.0767331861674623,
+      "fold_balanced_accuracy": [
+        0.7047619047619047,
+        0.6,
+        0.75,
+        0.55,
+        0.7214285714285714
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.6,
+        0.75,
+        0.55,
+        0.725
+      ]
+    }
+  },
+  "feature_dim": 912,
+  "selection_reasoning": "Majority vote from 3 demo images: ['lbp_texture', 'lbp_texture', 'lbp_texture']",
+  "selection_time_s": 139.91,
+  "eval_time_s": 749.12,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:42:08.002788",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The SIPaKMeD dataset consists of Pap smear cell images for cervical cancer screening, where the primary structures are individual cells.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since the image is an RGB Pap smear, color can carry diagnostic information about the cellular structures, making per-channel analysis beneficial.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Pap smear images typically highlight cells that are dark on a lighter background, so sublevel filtration is appropriate to capture these structures.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.004926,
+            "h1_avg_persistence": 0.003915
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 43.96
+    },
+    {
+      "index": 15,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image is from the SIPaKMeD dataset, which contains isolated Pap smear cells for cervical cancer screening.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is in RGB format and color may carry diagnostic information, which can improve accuracy for discrete cell classification.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable because it captures dark-on-light structures, typical for stained cells in cytology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.004453,
+            "h1_avg_persistence": 0.003084
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 50.38
+    },
+    {
+      "index": 30,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains isolated discrete cells typical of cytology samples used for cervical cancer screening.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Given that the image is an RGB cytology image, color may carry diagnostic information, thus per-channel analysis is recommended.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures, which are common in stained cytology samples where cells appear as darker regions.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.002326,
+            "h1_avg_persistence": 0.001999
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 45.57
+    }
+  ]
+}

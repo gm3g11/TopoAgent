@@ -1,0 +1,387 @@
+{
+  "discrete_cells": [
+    {
+      "descriptor": "ATOL",
+      "mean_accuracy": 0.766412,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_codebook",
+      "mean_accuracy": 0.7635161666666667,
+      "datasets": 6
+    },
+    {
+      "descriptor": "minkowski_functionals",
+      "mean_accuracy": 0.7604765000000001,
+      "datasets": 6
+    },
+    {
+      "descriptor": "template_functions",
+      "mean_accuracy": 0.7536408333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_statistics",
+      "mean_accuracy": 0.7522475000000001,
+      "datasets": 6
+    },
+    {
+      "descriptor": "euler_characteristic_curve",
+      "mean_accuracy": 0.7504045,
+      "datasets": 6
+    },
+    {
+      "descriptor": "betti_curves",
+      "mean_accuracy": 0.7458821666666667,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_landscapes",
+      "mean_accuracy": 0.7446654999999999,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_silhouette",
+      "mean_accuracy": 0.7282366666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_entropy",
+      "mean_accuracy": 0.7125258333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "lbp_texture",
+      "mean_accuracy": 0.7060466666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "tropical_coordinates",
+      "mean_accuracy": 0.7023354999999999,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_image",
+      "mean_accuracy": 0.6948675,
+      "datasets": 6
+    },
+    {
+      "descriptor": "euler_characteristic_transform",
+      "mean_accuracy": 0.5187323333333334,
+      "datasets": 6
+    },
+    {
+      "descriptor": "edge_histogram",
+      "mean_accuracy": 0.4886788333333334,
+      "datasets": 6
+    }
+  ],
+  "glands_lumens": [
+    {
+      "descriptor": "persistence_statistics",
+      "mean_accuracy": 0.9001936666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "ATOL",
+      "mean_accuracy": 0.8997896666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_codebook",
+      "mean_accuracy": 0.8995365,
+      "datasets": 6
+    },
+    {
+      "descriptor": "minkowski_functionals",
+      "mean_accuracy": 0.8857203333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "euler_characteristic_curve",
+      "mean_accuracy": 0.8778216666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "template_functions",
+      "mean_accuracy": 0.8718125,
+      "datasets": 6
+    },
+    {
+      "descriptor": "betti_curves",
+      "mean_accuracy": 0.8655323333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "lbp_texture",
+      "mean_accuracy": 0.8605558333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_landscapes",
+      "mean_accuracy": 0.8525521666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_silhouette",
+      "mean_accuracy": 0.8479426666666666,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_entropy",
+      "mean_accuracy": 0.8419228333333334,
+      "datasets": 6
+    },
+    {
+      "descriptor": "tropical_coordinates",
+      "mean_accuracy": 0.8068233333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "persistence_image",
+      "mean_accuracy": 0.8053138333333333,
+      "datasets": 6
+    },
+    {
+      "descriptor": "euler_characteristic_transform",
+      "mean_accuracy": 0.5410346666666667,
+      "datasets": 6
+    },
+    {
+      "descriptor": "edge_histogram",
+      "mean_accuracy": 0.5181844999999999,
+      "datasets": 6
+    }
+  ],
+  "organ_shape": [
+    {
+      "descriptor": "ATOL",
+      "mean_accuracy": 0.7792386250000001,
+      "datasets": 8
+    },
+    {
+      "descriptor": "minkowski_functionals",
+      "mean_accuracy": 0.773065,
+      "datasets": 8
+    },
+    {
+      "descriptor": "persistence_statistics",
+      "mean_accuracy": 0.762069,
+      "datasets": 8
+    },
+    {
+      "descriptor": "lbp_texture",
+      "mean_accuracy": 0.7610735,
+      "datasets": 8
+    },
+    {
+      "descriptor": "persistence_codebook",
+      "mean_accuracy": 0.752549875,
+      "datasets": 8
+    },
+    {
+      "descriptor": "edge_histogram",
+      "mean_accuracy": 0.739870625,
+      "datasets": 8
+    },
+    {
+      "descriptor": "template_functions",
+      "mean_accuracy": 0.7358862500000001,
+      "datasets": 8
+    },
+    {
+      "descriptor": "persistence_landscapes",
+      "mean_accuracy": 0.7285375000000001,
+      "datasets": 8
+    },
+    {
+      "descriptor": "euler_characteristic_curve",
+      "mean_accuracy": 0.7214625,
+      "datasets": 8
+    },
+    {
+      "descriptor": "betti_curves",
+      "mean_accuracy": 0.698984,
+      "datasets": 8
+    },
+    {
+      "descriptor": "persistence_silhouette",
+      "mean_accuracy": 0.668701125,
+      "datasets": 8
+    },
+    {
+      "descriptor": "tropical_coordinates",
+      "mean_accuracy": 0.6558135,
+      "datasets": 8
+    },
+    {
+      "descriptor": "persistence_entropy",
+      "mean_accuracy": 0.6489901250000001,
+      "datasets": 8
+    },
+    {
+      "descriptor": "persistence_image",
+      "mean_accuracy": 0.6054228749999999,
+      "datasets": 8
+    },
+    {
+      "descriptor": "euler_characteristic_transform",
+      "mean_accuracy": 0.591128375,
+      "datasets": 8
+    }
+  ],
+  "vessel_trees": [
+    {
+      "descriptor": "lbp_texture",
+      "mean_accuracy": 0.522517,
+      "datasets": 3
+    },
+    {
+      "descriptor": "persistence_statistics",
+      "mean_accuracy": 0.5133706666666666,
+      "datasets": 3
+    },
+    {
+      "descriptor": "template_functions",
+      "mean_accuracy": 0.46551433333333336,
+      "datasets": 3
+    },
+    {
+      "descriptor": "tropical_coordinates",
+      "mean_accuracy": 0.4599593333333334,
+      "datasets": 3
+    },
+    {
+      "descriptor": "persistence_landscapes",
+      "mean_accuracy": 0.4523713333333334,
+      "datasets": 3
+    },
+    {
+      "descriptor": "ATOL",
+      "mean_accuracy": 0.44240666666666667,
+      "datasets": 3
+    },
+    {
+      "descriptor": "minkowski_functionals",
+      "mean_accuracy": 0.43377366666666667,
+      "datasets": 3
+    },
+    {
+      "descriptor": "persistence_entropy",
+      "mean_accuracy": 0.43164033333333335,
+      "datasets": 3
+    },
+    {
+      "descriptor": "betti_curves",
+      "mean_accuracy": 0.429155,
+      "datasets": 3
+    },
+    {
+      "descriptor": "persistence_silhouette",
+      "mean_accuracy": 0.42663199999999996,
+      "datasets": 3
+    },
+    {
+      "descriptor": "euler_characteristic_curve",
+      "mean_accuracy": 0.421214,
+      "datasets": 3
+    },
+    {
+      "descriptor": "edge_histogram",
+      "mean_accuracy": 0.41999800000000004,
+      "datasets": 3
+    },
+    {
+      "descriptor": "persistence_codebook",
+      "mean_accuracy": 0.406213,
+      "datasets": 2
+    },
+    {
+      "descriptor": "euler_characteristic_transform",
+      "mean_accuracy": 0.36662066666666665,
+      "datasets": 3
+    },
+    {
+      "descriptor": "persistence_image",
+      "mean_accuracy": 0.32605966666666664,
+      "datasets": 3
+    }
+  ],
+  "surface_lesions": [
+    {
+      "descriptor": "persistence_statistics",
+      "mean_accuracy": 0.764663,
+      "datasets": 2
+    },
+    {
+      "descriptor": "ATOL",
+      "mean_accuracy": 0.7490505000000001,
+      "datasets": 2
+    },
+    {
+      "descriptor": "persistence_codebook",
+      "mean_accuracy": 0.7315985,
+      "datasets": 2
+    },
+    {
+      "descriptor": "minkowski_functionals",
+      "mean_accuracy": 0.7265815,
+      "datasets": 2
+    },
+    {
+      "descriptor": "euler_characteristic_curve",
+      "mean_accuracy": 0.7052620000000001,
+      "datasets": 2
+    },
+    {
+      "descriptor": "template_functions",
+      "mean_accuracy": 0.6821585,
+      "datasets": 2
+    },
+    {
+      "descriptor": "betti_curves",
+      "mean_accuracy": 0.671195,
+      "datasets": 2
+    },
+    {
+      "descriptor": "lbp_texture",
+      "mean_accuracy": 0.665801,
+      "datasets": 2
+    },
+    {
+      "descriptor": "tropical_coordinates",
+      "mean_accuracy": 0.650463,
+      "datasets": 2
+    },
+    {
+      "descriptor": "persistence_silhouette",
+      "mean_accuracy": 0.634858,
+      "datasets": 2
+    },
+    {
+      "descriptor": "persistence_landscapes",
+      "mean_accuracy": 0.6312305,
+      "datasets": 2
+    },
+    {
+      "descriptor": "persistence_entropy",
+      "mean_accuracy": 0.60873,
+      "datasets": 2
+    },
+    {
+      "descriptor": "persistence_image",
+      "mean_accuracy": 0.5663705,
+      "datasets": 2
+    },
+    {
+      "descriptor": "euler_characteristic_transform",
+      "mean_accuracy": 0.496425,
+      "datasets": 2
+    },
+    {
+      "descriptor": "edge_histogram",
+      "mean_accuracy": 0.44812699999999994,
+      "datasets": 2
+    }
+  ]
+}

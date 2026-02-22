@@ -1,0 +1,182 @@
+{
+  "dataset": "TissueMNIST",
+  "method": "topoagent",
+  "descriptor": "template_functions",
+  "object_type": "discrete_cells",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.265,
+  "best_accuracy": 0.415,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.23354700854700855,
+      "accuracy": 0.42000000000000004,
+      "std": 0.03595305329760073,
+      "fold_balanced_accuracy": [
+        0.22008547008547008,
+        0.2403846153846154,
+        0.18482905982905984,
+        0.2953525641025641,
+        0.22708333333333333
+      ],
+      "fold_accuracy": [
+        0.375,
+        0.475,
+        0.375,
+        0.5,
+        0.375
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.228034188034188,
+      "accuracy": 0.4,
+      "std": 0.03342602647256713,
+      "fold_balanced_accuracy": [
+        0.20192307692307693,
+        0.25240384615384615,
+        0.18215811965811968,
+        0.22868589743589746,
+        0.275
+      ],
+      "fold_accuracy": [
+        0.35,
+        0.45,
+        0.35,
+        0.425,
+        0.425
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.2650213675213675,
+      "accuracy": 0.41500000000000004,
+      "std": 0.0793868798425714,
+      "fold_balanced_accuracy": [
+        0.17574786324786323,
+        0.28018162393162394,
+        0.19177350427350429,
+        0.39823717948717946,
+        0.2791666666666667
+      ],
+      "fold_accuracy": [
+        0.3,
+        0.475,
+        0.375,
+        0.475,
+        0.45
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.21310897435897438,
+      "accuracy": 0.4,
+      "std": 0.03106850832923092,
+      "fold_balanced_accuracy": [
+        0.17414529914529914,
+        0.2203525641025641,
+        0.18482905982905984,
+        0.2612179487179487,
+        0.225
+      ],
+      "fold_accuracy": [
+        0.325,
+        0.45,
+        0.375,
+        0.475,
+        0.375
+      ]
+    }
+  },
+  "feature_dim": 162,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_image', 'template_functions', 'template_functions']",
+  "selection_time_s": 90.7,
+  "eval_time_s": 70.29,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:18:28.688077",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_image",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains cellular textures typical of kidney cortex histology, where individual cells and their boundaries are prominent features.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale, and color does not carry diagnostic information in this context, as it is a single-channel image.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for capturing dark-on-light structures, such as stained cells and tissue boundaries commonly found in histological images.",
+        "_n_channels": 1,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "sparse_distinctive",
+          "description": "Few but persistent features \u2014 compact representations preferred",
+          "recommends": [
+            "tropical_coordinates",
+            "persistence_image"
+          ],
+          "reasoning": "Sparse PH diagrams with high average persistence contain few but meaningful features. Tropical coordinates or persistence images can preserve the geometric structure of these sparse diagrams better than statistical summaries.",
+          "metrics": {
+            "total_features": 230,
+            "h0_avg_persistence": 0.043475
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_image"
+      ],
+      "time_s": 33.91
+    },
+    {
+      "index": 15,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains cellular textures typical of kidney cortex histology, where individual cell structures are identifiable.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale, and color does not carry additional diagnostic information in this context.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures, such as stained cells and tissue boundaries, which are prevalent in histology images.",
+        "_n_channels": 1,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 35.18
+    },
+    {
+      "index": 30,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains kidney cortex microscopy images showing cellular textures, indicating the presence of discrete cells.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale with 1 channel, making grayscale the appropriate choice for vectorization.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures like stained cells and tissue boundaries, which are key features in histology images.",
+        "_n_channels": 1,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 21.61
+    }
+  ]
+}

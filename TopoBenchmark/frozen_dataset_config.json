@@ -1,0 +1,195 @@
+{
+  "version": "1.0",
+  "created": "2026-02-20",
+  "seed": 42,
+  "n_folds": 5,
+  "min_n": 200,
+  "default_n": 500,
+  "n_datasets": 26,
+  "total_samples": 113182,
+  "datasets": {
+    "AML_Cytomorphology": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": null,
+      "n_classes": 15
+    },
+    "APTOS2019": {
+      "n": 3000,
+      "n_max": 3296,
+      "data_n_max": 3296,
+      "convergence_n": 3000,
+      "n_classes": 5
+    },
+    "BloodMNIST": {
+      "n": 3000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 3000,
+      "n_classes": 8
+    },
+    "BrainTumorMRI": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5712,
+      "convergence_n": 5000,
+      "n_classes": 4
+    },
+    "BreakHis": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 8
+    },
+    "BreastMNIST": {
+      "n": 546,
+      "n_max": 546,
+      "data_n_max": 546,
+      "convergence_n": 546,
+      "n_classes": 2
+    },
+    "Chaoyang": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 4
+    },
+    "DermaMNIST": {
+      "n": 7007,
+      "n_max": 5000,
+      "data_n_max": 10000,
+      "convergence_n": 7500,
+      "n_classes": 7,
+      "note": "capped to actual training set size (7007 < 10000)"
+    },
+    "GasHisSDB": {
+      "n": 7500,
+      "n_max": 5000,
+      "data_n_max": 10000,
+      "convergence_n": 7500,
+      "n_classes": 2
+    },
+    "IDRiD": {
+      "n": 500,
+      "n_max": 516,
+      "data_n_max": 516,
+      "convergence_n": 500,
+      "n_classes": 5
+    },
+    "ISIC2019": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 8
+    },
+    "Kvasir": {
+      "n": 4000,
+      "n_max": 4000,
+      "data_n_max": 4000,
+      "convergence_n": null,
+      "n_classes": 8
+    },
+    "LC25000": {
+      "n": 2000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 2000,
+      "n_classes": 5
+    },
+    "MURA": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 14
+    },
+    "MalariaCell": {
+      "n": 2000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 2000,
+      "n_classes": 2
+    },
+    "NCT_CRC_HE": {
+      "n": 7500,
+      "n_max": 5000,
+      "data_n_max": 10000,
+      "convergence_n": 7500,
+      "n_classes": 9
+    },
+    "OCTMNIST": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 4
+    },
+    "OrganAMNIST": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 11
+    },
+    "OrganCMNIST": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 11
+    },
+    "OrganSMNIST": {
+      "n": 5000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 5000,
+      "n_classes": 11
+    },
+    "PCam": {
+      "n": 7500,
+      "n_max": 5000,
+      "data_n_max": 10000,
+      "convergence_n": 7500,
+      "n_classes": 2
+    },
+    "PathMNIST": {
+      "n": 3000,
+      "n_max": 5000,
+      "data_n_max": 5000,
+      "convergence_n": 3000,
+      "n_classes": 9
+    },
+    "PneumoniaMNIST": {
+      "n": 3000,
+      "n_max": 4708,
+      "data_n_max": 4708,
+      "convergence_n": 3000,
+      "n_classes": 2
+    },
+    "RetinaMNIST": {
+      "n": 1080,
+      "n_max": 1080,
+      "data_n_max": 1080,
+      "convergence_n": 1080,
+      "n_classes": 5
+    },
+    "SIPaKMeD": {
+      "n": 4049,
+      "n_max": 4049,
+      "data_n_max": 4049,
+      "convergence_n": null,
+      "n_classes": 5
+    },
+    "TissueMNIST": {
+      "n": 7500,
+      "n_max": 5000,
+      "data_n_max": 10000,
+      "convergence_n": 7500,
+      "n_classes": 8
+    }
+  }
+}

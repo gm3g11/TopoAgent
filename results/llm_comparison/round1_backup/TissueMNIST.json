@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:26:33",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "TissueMNIST": {
+      "fixed_pi": {
+        "accuracy": 22.25,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 200,
+        "time": 167.5
+      },
+      "fixed_ps": {
+        "accuracy": 21.84,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 43.6
+      },
+      "claude": {
+        "accuracy": 18.29,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 40,
+        "agent_time": 116.2,
+        "time": 160.8
+      },
+      "gemini": {
+        "accuracy": 18.29,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 40,
+        "agent_time": 52.0,
+        "time": 96.1
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "fixed_pi": 22.25,
+      "fixed_ps": 21.84,
+      "claude": 18.29,
+      "gemini": 18.29
+    }
+  },
+  "overall": {
+    "fixed_pi": 22.25,
+    "fixed_ps": 21.84,
+    "claude": 18.29,
+    "gemini": 18.29
+  }
+}

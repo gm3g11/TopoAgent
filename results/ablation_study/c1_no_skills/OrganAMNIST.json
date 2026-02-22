@@ -1,0 +1,91 @@
+{
+  "condition": "c1_no_skills",
+  "condition_id": "c1",
+  "dataset": "OrganAMNIST",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "tropical_coordinates",
+    "tropical_coordinates",
+    "tropical_coordinates",
+    "tropical_coordinates",
+    "tropical_coordinates"
+  ],
+  "majority_descriptor": "tropical_coordinates",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "XGBoost",
+  "balanced_accuracy": 34.03,
+  "std_accuracy": 2.47,
+  "fold_accuracies": [
+    31.55,
+    37.39,
+    33.15
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "tropical_coordinates",
+      "stance": "DEVIATE",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 29.0
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 3,
+      "descriptor": "tropical_coordinates",
+      "stance": "DEVIATE",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 22.99
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 4,
+      "descriptor": "tropical_coordinates",
+      "stance": "DEVIATE",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 21.62
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 5,
+      "descriptor": "tropical_coordinates",
+      "stance": "DEVIATE",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 19.46
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 6,
+      "descriptor": "tropical_coordinates",
+      "stance": "DEVIATE",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 18.05
+    }
+  ],
+  "demo_time_seconds": 127.75,
+  "eval_time_seconds": 36.02,
+  "total_time_seconds": 163.76
+}

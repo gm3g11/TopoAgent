@@ -1,0 +1,78 @@
+{
+  "dataset": "OrganSMNIST",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.3109,
+  "best_accuracy": 0.41,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.3109090909090909,
+      "accuracy": 0.41000000000000003,
+      "std": 0.07742053599620317,
+      "fold_balanced_accuracy": [
+        0.3818181818181818,
+        0.3318181818181818,
+        0.37121212121212116,
+        0.303030303030303,
+        0.16666666666666666
+      ],
+      "fold_accuracy": [
+        0.375,
+        0.425,
+        0.5,
+        0.425,
+        0.325
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.2921212121212121,
+      "accuracy": 0.395,
+      "std": 0.02626767628214466,
+      "fold_balanced_accuracy": [
+        0.2924242424242424,
+        0.2590909090909091,
+        0.3242424242424243,
+        0.3181818181818182,
+        0.26666666666666666
+      ],
+      "fold_accuracy": [
+        0.4,
+        0.325,
+        0.45,
+        0.425,
+        0.375
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.21727272727272728,
+      "accuracy": 0.345,
+      "std": 0.0592546294487706,
+      "fold_balanced_accuracy": [
+        0.3303030303030303,
+        0.18939393939393936,
+        0.2121212121212121,
+        0.19696969696969696,
+        0.1575757575757576
+      ],
+      "fold_accuracy": [
+        0.35,
+        0.35,
+        0.375,
+        0.35,
+        0.3
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are effective for capturing topological features like shape and silhouette, which are crucial for distinguishing between different organ classes in sagittal CT images.",
+  "selection_time_s": 1.48,
+  "eval_time_s": 305.92,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:14:43.407697"
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:23:04",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "OrganAMNIST": {
+      "fixed_pi": {
+        "accuracy": 37.92,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 288,
+        "time": 106.2
+      },
+      "fixed_ps": {
+        "accuracy": 49.96,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 25.5
+      },
+      "claude": {
+        "accuracy": 51.82,
+        "descriptor": "edge_histogram",
+        "n_valid": 200,
+        "feature_dim": 512,
+        "agent_time": 59.9,
+        "time": 77.1
+      },
+      "gemini": {
+        "accuracy": 47.32,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 105,
+        "agent_time": 32.8,
+        "time": 50.3
+      }
+    }
+  },
+  "per_object_type": {
+    "organ_shape": {
+      "n_datasets": 1,
+      "fixed_pi": 37.92,
+      "fixed_ps": 49.96,
+      "claude": 51.82,
+      "gemini": 47.32
+    }
+  },
+  "overall": {
+    "fixed_pi": 37.92,
+    "fixed_ps": 49.96,
+    "claude": 51.82,
+    "gemini": 47.32
+  }
+}

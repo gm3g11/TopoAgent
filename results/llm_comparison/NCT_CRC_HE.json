@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:19:49",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "gpt4o",
+      "claude",
+      "gemini_flash",
+      "gemini_pro"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "gpt4o": "GPT-4o",
+      "claude": "Claude",
+      "gemini_flash": "Gemini-Flash",
+      "gemini_pro": "Gemini-Pro"
+    }
+  },
+  "per_dataset": {
+    "NCT_CRC_HE": {
+      "fixed_pi": {
+        "accuracy": 53.84,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 1352,
+        "time": 59.5
+      },
+      "fixed_ps": {
+        "accuracy": 57.76,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 25.5
+      },
+      "gpt4o": {
+        "accuracy": 41.31,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 33.0,
+        "time": 65.3
+      },
+      "claude": {
+        "accuracy": 57.76,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 7.7,
+        "time": 33.1
+      },
+      "gemini_flash": {
+        "accuracy": 41.31,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 47.1,
+        "time": 79.3
+      },
+      "gemini_pro": {
+        "accuracy": 53.74,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 89.7,
+        "time": 99.6
+      }
+    }
+  },
+  "per_object_type": {
+    "glands_lumens": {
+      "n_datasets": 1,
+      "fixed_pi": 53.84,
+      "fixed_ps": 57.76,
+      "gpt4o": 41.31,
+      "claude": 57.76,
+      "gemini_flash": 41.31,
+      "gemini_pro": 53.74
+    }
+  },
+  "overall": {
+    "fixed_pi": 53.84,
+    "fixed_ps": 57.76,
+    "gpt4o": 41.31,
+    "claude": 57.76,
+    "gemini_flash": 41.31,
+    "gemini_pro": 53.74
+  }
+}

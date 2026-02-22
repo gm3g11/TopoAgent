@@ -1,0 +1,97 @@
+{
+  "dataset": "IDRiD",
+  "method": "rule_based",
+  "descriptor": "lbp_texture",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.3956,
+  "best_accuracy": 0.54,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.3955714285714286,
+      "accuracy": 0.54,
+      "std": 0.05303542618272056,
+      "fold_balanced_accuracy": [
+        0.3211538461538462,
+        0.37230769230769234,
+        0.414065934065934,
+        0.3876923076923077,
+        0.4826373626373626
+      ],
+      "fold_accuracy": [
+        0.475,
+        0.525,
+        0.55,
+        0.55,
+        0.6
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.393,
+      "accuracy": 0.48500000000000004,
+      "std": 0.02832905650704588,
+      "fold_balanced_accuracy": [
+        0.37115384615384617,
+        0.43648351648351646,
+        0.4015384615384615,
+        0.4015384615384615,
+        0.35428571428571426
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.525,
+        0.475,
+        0.475,
+        0.45
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.3767802197802198,
+      "accuracy": 0.45999999999999996,
+      "std": 0.03455109326967377,
+      "fold_balanced_accuracy": [
+        0.3557692307692308,
+        0.32395604395604394,
+        0.3769230769230769,
+        0.41692307692307695,
+        0.4103296703296704
+      ],
+      "fold_accuracy": [
+        0.475,
+        0.425,
+        0.475,
+        0.5,
+        0.425
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.33385714285714285,
+      "accuracy": 0.445,
+      "std": 0.04824263935714402,
+      "fold_balanced_accuracy": [
+        0.3057692307692308,
+        0.27252747252747256,
+        0.34615384615384615,
+        0.41692307692307695,
+        0.32791208791208787
+      ],
+      "fold_accuracy": [
+        0.45,
+        0.4,
+        0.425,
+        0.5,
+        0.45
+      ]
+    }
+  },
+  "feature_dim": 912,
+  "selection_reasoning": "Top-1 for vessel_trees: lbp_texture (benchmark accuracy: 52.2%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 584.31,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:52:50.534466"
+}

@@ -1,0 +1,91 @@
+{
+  "condition": "c4_no_analyze",
+  "condition_id": "c4",
+  "dataset": "OrganSMNIST",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "minkowski_functionals",
+    "minkowski_functionals",
+    "minkowski_functionals",
+    "minkowski_functionals",
+    "minkowski_functionals"
+  ],
+  "majority_descriptor": "minkowski_functionals",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "XGBoost",
+  "balanced_accuracy": 43.66,
+  "std_accuracy": 9.01,
+  "fold_accuracies": [
+    55.56,
+    41.63,
+    33.79
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "minkowski_functionals",
+      "stance": "FOLLOW",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 3,
+      "retry_used": false,
+      "time_seconds": 23.26
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 3,
+      "descriptor": "minkowski_functionals",
+      "stance": "DEVIATE",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": true,
+      "time_seconds": 31.49
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 4,
+      "descriptor": "minkowski_functionals",
+      "stance": "FOLLOW",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 3,
+      "retry_used": false,
+      "time_seconds": 23.07
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 5,
+      "descriptor": "minkowski_functionals",
+      "stance": "FOLLOW",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 3,
+      "retry_used": false,
+      "time_seconds": 15.93
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 6,
+      "descriptor": "minkowski_functionals",
+      "stance": "FOLLOW",
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 3,
+      "retry_used": false,
+      "time_seconds": 14.87
+    }
+  ],
+  "demo_time_seconds": 123.34,
+  "eval_time_seconds": 27.53,
+  "total_time_seconds": 150.87
+}

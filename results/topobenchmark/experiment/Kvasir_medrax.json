@@ -1,0 +1,106 @@
+{
+  "dataset": "Kvasir",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.63,
+  "best_accuracy": 0.63,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.63,
+      "accuracy": 0.63,
+      "std": 0.07483314773547883,
+      "fold_balanced_accuracy": [
+        0.675,
+        0.5,
+        0.725,
+        0.625,
+        0.625
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.5,
+        0.725,
+        0.625,
+        0.625
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.56,
+      "accuracy": 0.56,
+      "std": 0.07176350047203664,
+      "fold_balanced_accuracy": [
+        0.525,
+        0.55,
+        0.7000000000000001,
+        0.525,
+        0.5
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.55,
+        0.7,
+        0.525,
+        0.5
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.61,
+      "accuracy": 0.61,
+      "std": 0.06041522986797284,
+      "fold_balanced_accuracy": [
+        0.525,
+        0.6000000000000001,
+        0.7,
+        0.65,
+        0.575
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.6,
+        0.7,
+        0.65,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.55,
+      "accuracy": 0.55,
+      "std": 0.06708203932499371,
+      "fold_balanced_accuracy": [
+        0.5249999999999999,
+        0.525,
+        0.675,
+        0.55,
+        0.47500000000000003
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.525,
+        0.675,
+        0.55,
+        0.475
+      ]
+    }
+  },
+  "feature_dim": 11400,
+  "selection_reasoning": "Persistence landscapes are well-suited for capturing the detailed topological features and variations in texture and shape, which are critical for distinguishing between different classes in the dataset. They provide a robust way to analyze the noisy persistence signal by emphasizing the most significant topological features.",
+  "selection_time_s": 4.97,
+  "eval_time_s": 2098.98,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:03:30.540033",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 16594.0,
+    "avg_H1_count": 24558.3,
+    "avg_H0_persistence": 0.010697,
+    "avg_H1_persistence": 0.014593,
+    "avg_total_features": 41152.3,
+    "avg_h1_h0_ratio": 1.48
+  }
+}

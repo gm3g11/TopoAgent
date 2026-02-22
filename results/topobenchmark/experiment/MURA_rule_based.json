@@ -1,0 +1,78 @@
+{
+  "dataset": "MURA",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.2595,
+  "best_accuracy": 0.26,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.24047619047619045,
+      "accuracy": 0.24,
+      "std": 0.08397710518356379,
+      "fold_balanced_accuracy": [
+        0.2857142857142857,
+        0.20238095238095236,
+        0.14285714285714285,
+        0.1904761904761905,
+        0.38095238095238093
+      ],
+      "fold_accuracy": [
+        0.275,
+        0.2,
+        0.15,
+        0.2,
+        0.375
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.2595238095238095,
+      "accuracy": 0.25999999999999995,
+      "std": 0.03868589716493312,
+      "fold_balanced_accuracy": [
+        0.20238095238095238,
+        0.25,
+        0.25,
+        0.32142857142857134,
+        0.27380952380952384
+      ],
+      "fold_accuracy": [
+        0.2,
+        0.25,
+        0.25,
+        0.325,
+        0.275
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.24761904761904757,
+      "accuracy": 0.24500000000000002,
+      "std": 0.08295833995325877,
+      "fold_balanced_accuracy": [
+        0.21428571428571427,
+        0.25,
+        0.16666666666666666,
+        0.20238095238095238,
+        0.4047619047619047
+      ],
+      "fold_accuracy": [
+        0.2,
+        0.25,
+        0.175,
+        0.2,
+        0.4
+      ]
+    }
+  },
+  "feature_dim": 105,
+  "selection_reasoning": "Top-1 for organ_shape: minkowski_functionals (benchmark accuracy: 77.3%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 2691.66,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T22:08:07.159447"
+}

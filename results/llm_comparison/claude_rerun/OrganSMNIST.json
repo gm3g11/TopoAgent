@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:55:57",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "OrganSMNIST": {
+      "claude": {
+        "accuracy": 45.93,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 105,
+        "agent_time": 79.2,
+        "time": 99.4
+      }
+    }
+  },
+  "per_object_type": {
+    "organ_shape": {
+      "n_datasets": 1,
+      "claude": 45.93
+    }
+  },
+  "overall": {
+    "claude": 45.93
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "dataset": "NCT_CRC_HE",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.653,
+  "best_accuracy": 0.66,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.652962962962963,
+      "accuracy": 0.66,
+      "std": 0.09978440408033731,
+      "fold_balanced_accuracy": [
+        0.5,
+        0.7777777777777778,
+        0.7388888888888888,
+        0.5944444444444444,
+        0.6537037037037037
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.8,
+        0.725,
+        0.6,
+        0.65
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.6351851851851852,
+      "accuracy": 0.655,
+      "std": 0.0915122155600432,
+      "fold_balanced_accuracy": [
+        0.5055555555555556,
+        0.6962962962962963,
+        0.5907407407407407,
+        0.7722222222222221,
+        0.6111111111111112
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.725,
+        0.625,
+        0.775,
+        0.625
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.6496296296296296,
+      "accuracy": 0.655,
+      "std": 0.08931533508268767,
+      "fold_balanced_accuracy": [
+        0.5314814814814814,
+        0.787037037037037,
+        0.711111111111111,
+        0.6074074074074075,
+        0.6111111111111112
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.8,
+        0.7,
+        0.6,
+        0.625
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.5962962962962963,
+      "accuracy": 0.61,
+      "std": 0.04464461097867897,
+      "fold_balanced_accuracy": [
+        0.5666666666666668,
+        0.625925925925926,
+        0.6462962962962963,
+        0.6185185185185186,
+        0.5240740740740741
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.65,
+        0.65,
+        0.625,
+        0.525
+      ]
+    }
+  },
+  "feature_dim": 4056,
+  "selection_reasoning": "Persistence images are well-suited for capturing the spatial distribution and density of topological features, which is important for analyzing the complex glandular and cellular patterns in colorectal cancer tissues. Given the noisy persistence signal, persistence images can help in visualizing and interpreting these features effectively.",
+  "selection_time_s": 4.34,
+  "eval_time_s": 805.76,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:22:55.617423",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 1354.0,
+    "avg_H1_count": 1895.0,
+    "avg_H0_persistence": 0.04497,
+    "avg_H1_persistence": 0.042001,
+    "avg_total_features": 3249.0,
+    "avg_h1_h0_ratio": 1.38
+  }
+}

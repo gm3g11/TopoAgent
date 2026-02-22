@@ -1,0 +1,93 @@
+{
+  "dataset": "AML_Cytomorphology",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.4542,
+  "best_accuracy": 0.705,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.44649202371006885,
+      "accuracy": 0.6900000000000001,
+      "std": 0.051836874767360964,
+      "fold_balanced_accuracy": [
+        0.40740740740740744,
+        0.36649659863945583,
+        0.471219715956558,
+        0.47873851294903924,
+        0.5085978835978836
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.675,
+        0.7,
+        0.675,
+        0.75
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.0,
+      "accuracy": 0.0,
+      "std": 0.0,
+      "error": "Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3 4 5 6 7], got [1 2 3 4 5 6 7 8]"
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.45422315709909694,
+      "accuracy": 0.7050000000000001,
+      "std": 0.07456566943761662,
+      "fold_balanced_accuracy": [
+        0.3865740740740741,
+        0.38236961451247165,
+        0.5095238095238095,
+        0.5720133667502088,
+        0.42063492063492064
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.725,
+        0.725,
+        0.775,
+        0.675
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.3837301587301587,
+      "accuracy": 0.6599999999999999,
+      "std": 0.012710807442894417,
+      "fold_balanced_accuracy": [
+        0.375,
+        0.375,
+        0.4087301587301587,
+        0.38095238095238093,
+        0.37896825396825395
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.725,
+        0.65,
+        0.65,
+        0.65
+      ]
+    }
+  },
+  "feature_dim": 600,
+  "selection_reasoning": "Given the subtle and potentially noisy nature of the features, persistence images are suitable as they provide a stable and robust representation of topological features, capturing both the presence and distribution of features across the dataset. This is particularly useful for distinguishing between the subtle differences in cell morphology and nuclear characteristics.",
+  "selection_time_s": 5.76,
+  "eval_time_s": 148.0,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:50:27.916617",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 9417.3,
+    "avg_H1_count": 12028.0,
+    "avg_H0_persistence": 0.005857,
+    "avg_H1_persistence": 0.004795,
+    "avg_total_features": 21445.3,
+    "avg_h1_h0_ratio": 1.27
+  }
+}

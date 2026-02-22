@@ -1,0 +1,97 @@
+{
+  "dataset": "ISIC2019",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.2354,
+  "best_accuracy": 0.54,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.1738095238095238,
+      "accuracy": 0.52,
+      "std": 0.03949080664564613,
+      "fold_balanced_accuracy": [
+        0.14285714285714285,
+        0.19166666666666665,
+        0.23809523809523805,
+        0.17142857142857143,
+        0.125
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.5,
+        0.575,
+        0.525,
+        0.5
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.23542233560090703,
+      "accuracy": 0.54,
+      "std": 0.048102969448433675,
+      "fold_balanced_accuracy": [
+        0.32448979591836735,
+        0.19166666666666665,
+        0.24603174603174605,
+        0.2122448979591837,
+        0.2026785714285714
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.5,
+        0.55,
+        0.5,
+        0.55
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.22238662131519274,
+      "accuracy": 0.53,
+      "std": 0.04295549549115715,
+      "fold_balanced_accuracy": [
+        0.2469387755102041,
+        0.14166666666666666,
+        0.24603174603174605,
+        0.2612244897959184,
+        0.21607142857142858
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.425,
+        0.55,
+        0.55,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.16768707482993198,
+      "accuracy": 0.525,
+      "std": 0.014295429155443478,
+      "fold_balanced_accuracy": [
+        0.14285714285714285,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.17653061224489797,
+        0.1857142857142857
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.5,
+        0.525,
+        0.525,
+        0.575
+      ]
+    }
+  },
+  "feature_dim": 864,
+  "selection_reasoning": "Persistence images are effective for capturing topological features in high-resolution images, making them suitable for analyzing lesion texture, color distribution, and boundary patterns in the ISIC2019 dataset.",
+  "selection_time_s": 1.31,
+  "eval_time_s": 456.42,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:07:15.730952"
+}

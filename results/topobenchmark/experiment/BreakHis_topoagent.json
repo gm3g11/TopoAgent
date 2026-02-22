@@ -1,0 +1,196 @@
+{
+  "dataset": "BreakHis",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.4943,
+  "best_accuracy": 0.635,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.4943137254901961,
+      "accuracy": 0.635,
+      "std": 0.06161286970420412,
+      "fold_balanced_accuracy": [
+        0.5082107843137255,
+        0.45710784313725494,
+        0.4854166666666666,
+        0.41875,
+        0.6020833333333333
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.6,
+        0.675,
+        0.6,
+        0.675
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.44703431372549024,
+      "accuracy": 0.595,
+      "std": 0.060683366348147624,
+      "fold_balanced_accuracy": [
+        0.4666666666666667,
+        0.39460784313725494,
+        0.4051470588235294,
+        0.4111111111111111,
+        0.5576388888888888
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.575,
+        0.6,
+        0.6,
+        0.575
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.45728758169934636,
+      "accuracy": 0.585,
+      "std": 0.04165206715902812,
+      "fold_balanced_accuracy": [
+        0.4519607843137255,
+        0.4987745098039216,
+        0.44681372549019605,
+        0.3875,
+        0.5013888888888889
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.625,
+        0.625,
+        0.575,
+        0.525
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.3943627450980392,
+      "accuracy": 0.5900000000000001,
+      "std": 0.07596236784594357,
+      "fold_balanced_accuracy": [
+        0.4666666666666667,
+        0.34681372549019607,
+        0.325,
+        0.3284722222222222,
+        0.5048611111111111
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.55,
+        0.575,
+        0.575,
+        0.625
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_landscapes', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 101.42,
+  "eval_time_s": 99.4,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:20:01.227624",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image is from a histopathology domain where glandular structures and lumen patterns are key features, indicating the presence of glands and lumens.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is an RGB histopathology image where color variations due to H&E staining carry diagnostic information, making per-channel analysis beneficial.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Histopathology images typically have dark-stained structures on a lighter background, so sublevel filtration is appropriate to capture these dark-on-light features.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 23630,
+            "h1_h0_ratio": 1.48
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 37.44
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image likely contains histopathological structures such as glandular formations and lumens, which are key features in breast cancer histopathology.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is in RGB format and color differences in H&E staining can carry diagnostic information relevant to pathology.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for capturing dark-on-light structures such as stained cells and tissue boundaries typical in histopathology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 33484,
+            "h1_h0_ratio": 1.46
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 35.11
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image likely contains histopathological features such as glandular structures and lumens, typical in breast tissue samples.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "In histopathology, color carries significant diagnostic information, making per-channel analysis beneficial for capturing distinct features in each color channel.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which are common in H&E stained images where stained cells and boundaries are dark.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 28.87
+    }
+  ]
+}

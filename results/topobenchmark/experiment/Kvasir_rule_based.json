@@ -1,0 +1,97 @@
+{
+  "dataset": "Kvasir",
+  "method": "rule_based",
+  "descriptor": "persistence_statistics",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.665,
+  "best_accuracy": 0.665,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.665,
+      "accuracy": 0.665,
+      "std": 0.0717635004720366,
+      "fold_balanced_accuracy": [
+        0.575,
+        0.6,
+        0.7749999999999999,
+        0.675,
+        0.7
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.6,
+        0.775,
+        0.675,
+        0.7
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.56,
+      "accuracy": 0.56,
+      "std": 0.05830951894845301,
+      "fold_balanced_accuracy": [
+        0.55,
+        0.525,
+        0.525,
+        0.675,
+        0.525
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.525,
+        0.525,
+        0.675,
+        0.525
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.55,
+      "accuracy": 0.55,
+      "std": 0.02236067977499787,
+      "fold_balanced_accuracy": [
+        0.525,
+        0.575,
+        0.55,
+        0.525,
+        0.575
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.575,
+        0.55,
+        0.525,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.5750000000000001,
+      "accuracy": 0.5750000000000001,
+      "std": 0.031622776601683805,
+      "fold_balanced_accuracy": [
+        0.525,
+        0.55,
+        0.6,
+        0.6000000000000001,
+        0.6000000000000001
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.55,
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Top-1 for glands_lumens: persistence_statistics (benchmark accuracy: 90.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 109.5,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:05:20.045475"
+}

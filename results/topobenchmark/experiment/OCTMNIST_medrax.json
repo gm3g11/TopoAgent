@@ -1,0 +1,106 @@
+{
+  "dataset": "OCTMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.4686,
+  "best_accuracy": 0.67,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.4686255703360967,
+      "accuracy": 0.6699999999999999,
+      "std": 0.03359453211498976,
+      "fold_balanced_accuracy": [
+        0.4841269841269842,
+        0.42434210526315785,
+        0.4332706766917293,
+        0.49248120300751874,
+        0.5089068825910932
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.65,
+        0.725,
+        0.65,
+        0.7
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.4043416232889917,
+      "accuracy": 0.625,
+      "std": 0.03850096851805379,
+      "fold_balanced_accuracy": [
+        0.4494047619047619,
+        0.3449248120300752,
+        0.37969924812030076,
+        0.4393796992481203,
+        0.40829959514170044
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.575,
+        0.65,
+        0.625,
+        0.625
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.4391255382044855,
+      "accuracy": 0.635,
+      "std": 0.07720782031596794,
+      "fold_balanced_accuracy": [
+        0.498015873015873,
+        0.36184210526315785,
+        0.3975563909774436,
+        0.3773496240601503,
+        0.5608636977058029
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.625,
+        0.675,
+        0.525,
+        0.7
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.3753221194010667,
+      "accuracy": 0.6100000000000001,
+      "std": 0.04917995093959867,
+      "fold_balanced_accuracy": [
+        0.32936507936507936,
+        0.3843984962406015,
+        0.40225563909774437,
+        0.44783834586466165,
+        0.31275303643724695
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.65,
+        0.675,
+        0.65,
+        0.525
+      ]
+    }
+  },
+  "feature_dim": 3500,
+  "selection_reasoning": "Persistence landscapes are suitable for capturing the topological features of retinal layers and fluid accumulations, as they provide a robust way to summarize the persistence of features across multiple scales. Given the noisy persistence signal, persistence landscapes can help filter out noise and highlight significant topological features relevant to retinal pathology.",
+  "selection_time_s": 5.39,
+  "eval_time_s": 476.82,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:32:43.157732",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 2827.7,
+    "avg_H1_count": 4219.7,
+    "avg_H0_persistence": 0.02985,
+    "avg_H1_persistence": 0.029879,
+    "avg_total_features": 7047.3,
+    "avg_h1_h0_ratio": 1.48
+  }
+}

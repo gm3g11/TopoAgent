@@ -1,0 +1,229 @@
+{
+  "dataset": "Kvasir",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "n_samples": 5,
+  "per_image_results": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "ground_truth_class": "dyed-lifted-polyps",
+      "ltm_entries_available": 0,
+      "ltm_entries_after": 1,
+      "perceive_decisions": {
+        "filtration_type": "sublevel",
+        "apply_denoising": false,
+        "filtration_reasoning": "The image has a dark background with bright features, which aligns with the analyzer's suggestion to use sublevel filtration to emphasize bright features that are likely to be clinically significant.",
+        "denoising_reasoning": "The SNR is very high at 198.28, indicating a clean signal, so no denoising is necessary."
+      },
+      "analysis": {
+        "object_type": "organ_shape",
+        "color_mode": "per_channel",
+        "descriptor_intuition": "A statistical descriptor family, such as persistence_statistics or persistence_entropy, makes intuitive sense given the detailed PH statistics and the need to capture the nuanced topological variations in the image."
+      },
+      "plan": {
+        "descriptor": "minkowski_functionals",
+        "stance": "FOLLOW",
+        "backup": "edge_histogram",
+        "reasoning": "The analysis indicates a high SNR of 198.28, suggesting a clean image, and the presence of both H0 and H1 features with varied persistence values, indicating a complex topological structure. The PH si"
+      },
+      "reflect": {
+        "n_rounds": 1,
+        "quality_ok": true,
+        "decision": "COMPLETE"
+      },
+      "n_llm_calls": 4,
+      "tools_used": [
+        "image_loader",
+        "image_analyzer",
+        "compute_ph",
+        "topological_features",
+        "betti_ratios",
+        "minkowski_functionals"
+      ],
+      "time_seconds": 25.86
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 0,
+      "ground_truth_class": "dyed-lifted-polyps",
+      "ltm_entries_available": 1,
+      "ltm_entries_after": 3,
+      "perceive_decisions": {
+        "filtration_type": "sublevel",
+        "apply_denoising": false,
+        "filtration_reasoning": "The image has a dark background with bright features, which aligns with the sublevel filtration to effectively capture these bright features.",
+        "denoising_reasoning": "The SNR is high at 78.65, indicating a clean signal where denoising is unnecessary."
+      },
+      "analysis": {
+        "object_type": "glands_lumens",
+        "color_mode": "per_channel",
+        "descriptor_intuition": "Functional descriptors like persistence_landscapes make intuitive sense here due to the rich multi-scale topological information present in the image, as highlighted by the strong H1 presence."
+      },
+      "plan": {
+        "descriptor": "persistence_landscapes",
+        "stance": "DEVIATE",
+        "backup": "persistence_landscapes",
+        "reasoning": "RETRY: 'persistence_statistics' failed quality check (While the features are dense and informative, the extremely high variance and high kurtosis indicate). Switching to backup descriptor 'persistence"
+      },
+      "reflect": {
+        "n_rounds": 2,
+        "quality_ok": true,
+        "decision": "COMPLETE"
+      },
+      "n_llm_calls": 5,
+      "tools_used": [
+        "image_loader",
+        "image_analyzer",
+        "compute_ph",
+        "topological_features",
+        "betti_ratios",
+        "persistence_landscapes"
+      ],
+      "time_seconds": 38.34
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 1,
+      "ground_truth_class": "dyed-resection-margins",
+      "ltm_entries_available": 3,
+      "ltm_entries_after": 4,
+      "perceive_decisions": {
+        "filtration_type": "sublevel",
+        "apply_denoising": false,
+        "filtration_reasoning": "The image analyzer detected a dark background, suggesting that important structures are bright features. Therefore, a sublevel filtration is appropriate to capture these bright features.",
+        "denoising_reasoning": "The SNR is 92.65, which is significantly higher than the threshold of 20, indicating a clean signal. Hence, denoising is unnecessary."
+      },
+      "analysis": {
+        "object_type": "organ_shape",
+        "color_mode": "per_channel",
+        "descriptor_intuition": "Functional descriptors like persistence_landscapes are intuitively appropriate due to the multi-scale topological information captured, as indicated by the rich topological structure and the PH signals recommending functional approaches."
+      },
+      "plan": {
+        "descriptor": "persistence_landscapes",
+        "stance": "DEVIATE",
+        "backup": "minkowski_functionals",
+        "reasoning": "The PH analysis reveals a rich topological structure with a high number of features (total_features=32716) and an H1-heavy profile (h1_h0_ratio=1.43), suggesting multi-scale structures. This aligns we"
+      },
+      "reflect": {
+        "n_rounds": 1,
+        "quality_ok": true,
+        "decision": "COMPLETE"
+      },
+      "n_llm_calls": 4,
+      "tools_used": [
+        "image_loader",
+        "image_analyzer",
+        "compute_ph",
+        "topological_features",
+        "betti_ratios",
+        "persistence_landscapes"
+      ],
+      "time_seconds": 28.36
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 1,
+      "ground_truth_class": "dyed-resection-margins",
+      "ltm_entries_available": 4,
+      "ltm_entries_after": 5,
+      "perceive_decisions": {
+        "filtration_type": "sublevel",
+        "apply_denoising": false,
+        "filtration_reasoning": "The image has a dark background with important bright features, as indicated by the bright_ratio and dark_ratio, and the analyzer's suggestion supports using sublevel filtration.",
+        "denoising_reasoning": "The high SNR of 108.09 suggests that the image is clean and does not require denoising."
+      },
+      "analysis": {
+        "object_type": "glands_lumens",
+        "color_mode": "per_channel",
+        "descriptor_intuition": "Statistical descriptors like persistence_statistics and persistence_entropy make intuitive sense due to the large number of features and the need to summarize complex topology succinctly."
+      },
+      "plan": {
+        "descriptor": "persistence_landscapes",
+        "stance": "DEVIATE",
+        "backup": "persistence_statistics",
+        "reasoning": "The PH interpretation indicates a high number of H0 features with a maximum persistence of 1.0, suggesting distinct topological components, which persistence_statistics can summarize well. However, pa"
+      },
+      "reflect": {
+        "n_rounds": 1,
+        "quality_ok": true,
+        "decision": "COMPLETE"
+      },
+      "n_llm_calls": 4,
+      "tools_used": [
+        "image_loader",
+        "image_analyzer",
+        "compute_ph",
+        "topological_features",
+        "betti_ratios",
+        "persistence_landscapes"
+      ],
+      "time_seconds": 27.62
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 2,
+      "ground_truth_class": "esophagitis",
+      "ltm_entries_available": 5,
+      "ltm_entries_after": 6,
+      "perceive_decisions": {
+        "filtration_type": "superlevel",
+        "apply_denoising": false,
+        "filtration_reasoning": "The image has a bright background and the goal is to capture dark features such as lesions, which is aligned with the superlevel filtration.",
+        "denoising_reasoning": "The SNR is 256.93, which is significantly above the threshold of 20, indicating a clean signal with no need for denoising."
+      },
+      "analysis": {
+        "object_type": "surface_lesions",
+        "color_mode": "per_channel",
+        "descriptor_intuition": "Given the strong PH signals and the multi-scale topological richness of the image, a functional descriptor such as persistence_landscapes is intuitive for capturing the detailed topological features."
+      },
+      "plan": {
+        "descriptor": "persistence_landscapes",
+        "stance": "DEVIATE",
+        "backup": "betti_curves",
+        "reasoning": "The PH analysis reveals a rich topological structure with an H1-heavy profile (h1_h0_ratio=1.43) and a high total feature count (total_features=71918), suggesting complex multi-scale surface patterns."
+      },
+      "reflect": {
+        "n_rounds": 1,
+        "quality_ok": true,
+        "decision": "COMPLETE"
+      },
+      "n_llm_calls": 4,
+      "tools_used": [
+        "image_loader",
+        "image_analyzer",
+        "compute_ph",
+        "topological_features",
+        "betti_ratios",
+        "persistence_landscapes"
+      ],
+      "time_seconds": 40.62
+    }
+  ],
+  "aggregate": {
+    "descriptors_used": [
+      "minkowski_functionals",
+      "persistence_landscapes",
+      "persistence_landscapes",
+      "persistence_landscapes",
+      "persistence_landscapes"
+    ],
+    "unique_descriptors": 2,
+    "llm_call_counts": [
+      4,
+      5,
+      4,
+      4,
+      4
+    ],
+    "ltm_growth": [
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "retries": 1,
+    "total_time": 160.8
+  }
+}

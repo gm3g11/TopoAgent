@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:18:03",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "gpt4o",
+      "claude",
+      "gemini_flash",
+      "gemini_pro"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "gpt4o": "GPT-4o",
+      "claude": "Claude",
+      "gemini_flash": "Gemini-Flash",
+      "gemini_pro": "Gemini-Pro"
+    }
+  },
+  "per_dataset": {
+    "PCam": {
+      "fixed_pi": {
+        "accuracy": 75.43,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 200,
+        "time": 20.7
+      },
+      "fixed_ps": {
+        "accuracy": 77.48,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 6.8
+      },
+      "gpt4o": {
+        "accuracy": 77.48,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 31.7,
+        "time": 39.0
+      },
+      "claude": {
+        "accuracy": 77.48,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 29.8,
+        "time": 37.0
+      },
+      "gemini_flash": {
+        "accuracy": 60.55,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 40,
+        "agent_time": 44.3,
+        "time": 54.8
+      },
+      "gemini_pro": {
+        "accuracy": 60.55,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 40,
+        "agent_time": 85.2,
+        "time": 96.1
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "fixed_pi": 75.43,
+      "fixed_ps": 77.48,
+      "gpt4o": 77.48,
+      "claude": 77.48,
+      "gemini_flash": 60.55,
+      "gemini_pro": 60.55
+    }
+  },
+  "overall": {
+    "fixed_pi": 75.43,
+    "fixed_ps": 77.48,
+    "gpt4o": 77.48,
+    "claude": 77.48,
+    "gemini_flash": 60.55,
+    "gemini_pro": 60.55
+  }
+}

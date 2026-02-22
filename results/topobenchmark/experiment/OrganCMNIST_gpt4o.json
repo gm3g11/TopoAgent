@@ -1,0 +1,78 @@
+{
+  "dataset": "OrganCMNIST",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.35,
+  "best_accuracy": 0.425,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.3467676767676767,
+      "accuracy": 0.42000000000000004,
+      "std": 0.04877083166215502,
+      "fold_balanced_accuracy": [
+        0.38636363636363635,
+        0.4106060606060606,
+        0.3494949494949495,
+        0.3111111111111111,
+        0.27626262626262627
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.475,
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.35,
+      "accuracy": 0.425,
+      "std": 0.05083929799867281,
+      "fold_balanced_accuracy": [
+        0.3686868686868687,
+        0.35454545454545455,
+        0.4292929292929293,
+        0.3212121212121212,
+        0.27626262626262627
+      ],
+      "fold_accuracy": [
+        0.45,
+        0.425,
+        0.475,
+        0.4,
+        0.375
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.30343434343434345,
+      "accuracy": 0.41,
+      "std": 0.03953406830673957,
+      "fold_balanced_accuracy": [
+        0.3156565656565657,
+        0.3621212121212121,
+        0.2772727272727273,
+        0.24545454545454548,
+        0.31666666666666665
+      ],
+      "fold_accuracy": [
+        0.425,
+        0.425,
+        0.425,
+        0.35,
+        0.425
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are well-suited for capturing the shape and silhouette information of objects, making them ideal for classifying organ shapes in coronal-view CT images.",
+  "selection_time_s": 1.58,
+  "eval_time_s": 280.01,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:14:14.497966"
+}

@@ -1,0 +1,106 @@
+{
+  "dataset": "PCam",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.81,
+  "best_accuracy": 0.81,
+  "best_classifier": "RandomForest",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.7150000000000001,
+      "accuracy": 0.7150000000000001,
+      "std": 0.04636809247747852,
+      "fold_balanced_accuracy": [
+        0.675,
+        0.8,
+        0.725,
+        0.7,
+        0.675
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.8,
+        0.725,
+        0.7,
+        0.675
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7249999999999999,
+      "accuracy": 0.7250000000000001,
+      "std": 0.04472135954999574,
+      "fold_balanced_accuracy": [
+        0.675,
+        0.7749999999999999,
+        0.7250000000000001,
+        0.675,
+        0.7749999999999999
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.775,
+        0.725,
+        0.675,
+        0.775
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7849999999999999,
+      "accuracy": 0.7849999999999999,
+      "std": 0.03391164991562631,
+      "fold_balanced_accuracy": [
+        0.8,
+        0.825,
+        0.7250000000000001,
+        0.7749999999999999,
+        0.8
+      ],
+      "fold_accuracy": [
+        0.8,
+        0.825,
+        0.725,
+        0.775,
+        0.8
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.8099999999999999,
+      "accuracy": 0.8099999999999999,
+      "std": 0.03391164991562631,
+      "fold_balanced_accuracy": [
+        0.775,
+        0.85,
+        0.775,
+        0.85,
+        0.8
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.85,
+        0.775,
+        0.85,
+        0.8
+      ]
+    }
+  },
+  "feature_dim": 600,
+  "selection_reasoning": "The persistence_image descriptor is well-suited for capturing the spatial distribution and density of cellular structures, which are key in distinguishing metastatic from normal tissue. It effectively visualizes the topological features, allowing for better interpretation of the noisy persistence signal in the context of cellular patterns.",
+  "selection_time_s": 6.31,
+  "eval_time_s": 52.73,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:28:36.530995",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 764.7,
+    "avg_H1_count": 1279.7,
+    "avg_H0_persistence": 0.082618,
+    "avg_H1_persistence": 0.067395,
+    "avg_total_features": 2044.3,
+    "avg_h1_h0_ratio": 1.67
+  }
+}

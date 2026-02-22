@@ -1,0 +1,91 @@
+{
+  "condition": "c0_full",
+  "condition_id": "c0",
+  "dataset": "ISIC2019",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "lbp_texture",
+    "lbp_texture",
+    "lbp_texture",
+    "lbp_texture",
+    "lbp_texture"
+  ],
+  "majority_descriptor": "lbp_texture",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "TabPFN",
+  "balanced_accuracy": 23.61,
+  "std_accuracy": 4.04,
+  "fold_accuracies": [
+    22.49,
+    19.32,
+    29.03
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "lbp_texture",
+      "stance": "DEVIATE",
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 5,
+      "retry_used": true,
+      "time_seconds": 79.6
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 1,
+      "descriptor": "lbp_texture",
+      "stance": "DEVIATE",
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 45.85
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 2,
+      "descriptor": "lbp_texture",
+      "stance": "DEVIATE",
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 53.22
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 4,
+      "descriptor": "lbp_texture",
+      "stance": "DEVIATE",
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 53.91
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 4,
+      "descriptor": "lbp_texture",
+      "stance": "DEVIATE",
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 52.0
+    }
+  ],
+  "demo_time_seconds": 298.31,
+  "eval_time_seconds": 3490.6,
+  "total_time_seconds": 3788.92
+}

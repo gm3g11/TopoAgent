@@ -1,0 +1,163 @@
+{
+  "dataset": "OrganAMNIST",
+  "method": "topoagent",
+  "descriptor": "edge_histogram",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.6366,
+  "best_accuracy": 0.69,
+  "best_classifier": "RandomForest",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.5647619047619048,
+      "accuracy": 0.615,
+      "std": 0.04163962128947363,
+      "fold_balanced_accuracy": [
+        0.6318181818181818,
+        0.5945887445887444,
+        0.5409090909090909,
+        0.5331168831168831,
+        0.5233766233766235
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.6,
+        0.625,
+        0.6,
+        0.55
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.5783982683982684,
+      "accuracy": 0.645,
+      "std": 0.06146247108326615,
+      "fold_balanced_accuracy": [
+        0.5560606060606061,
+        0.633982683982684,
+        0.48246753246753243,
+        0.6551948051948052,
+        0.5642857142857143
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.675,
+        0.575,
+        0.7,
+        0.65
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6366233766233765,
+      "accuracy": 0.6900000000000001,
+      "std": 0.05075808803588672,
+      "fold_balanced_accuracy": [
+        0.6348484848484849,
+        0.6794372294372294,
+        0.5506493506493506,
+        0.6227272727272727,
+        0.6954545454545454
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.7,
+        0.65,
+        0.7,
+        0.7
+      ]
+    }
+  },
+  "feature_dim": 512,
+  "selection_reasoning": "Majority vote from 3 demo images: ['edge_histogram', 'persistence_image', 'edge_histogram']",
+  "selection_time_s": 60.55,
+  "eval_time_s": 639.25,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:09:35.333634",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "edge_histogram",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image is an axial-view CT scan of an organ, where the primary focus is on the overall shape and silhouette of the organ in the axial plane.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale, typical of CT scans, where color is not diagnostically meaningful.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures, which aligns with the emphasis on boundary contours in grayscale CT images.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "edge_histogram"
+      ],
+      "time_s": 21.18
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_image",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image is from the OrganAMNIST dataset, which consists of axial-view CT organ images, so it likely contains the shape of an organ such as the bladder, femur, heart, etc.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale as it is a CT scan, and color is not diagnostically meaningful in this context.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "In CT images, dark regions typically correspond to less dense structures, so using sublevel filtration will capture the organ boundaries effectively as dark-on-light structures.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "sparse_distinctive",
+          "description": "Few but persistent features \u2014 compact representations preferred",
+          "recommends": [
+            "tropical_coordinates",
+            "persistence_image"
+          ],
+          "reasoning": "Sparse PH diagrams with high average persistence contain few but meaningful features. Tropical coordinates or persistence images can preserve the geometric structure of these sparse diagrams better than statistical summaries.",
+          "metrics": {
+            "total_features": 95,
+            "h0_avg_persistence": 0.101974
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_image"
+      ],
+      "time_s": 24.26
+    },
+    {
+      "index": 30,
+      "descriptor": "edge_histogram",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image is an axial-view CT scan containing an organ, where the primary feature of interest is the overall shape and silhouette of the organ.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is a CT scan, which is inherently grayscale, and color does not carry diagnostic information in this context.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which is suitable for emphasizing organ boundaries and contours in CT images.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "edge_histogram"
+      ],
+      "time_s": 15.11
+    }
+  ]
+}

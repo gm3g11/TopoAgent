@@ -1,0 +1,236 @@
+{
+  "dataset": "IDRiD",
+  "method": "topoagent",
+  "descriptor": "persistence_landscapes",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.4194,
+  "best_accuracy": 0.545,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.38934065934065937,
+      "accuracy": 0.55,
+      "std": 0.048455931498918144,
+      "fold_balanced_accuracy": [
+        0.3269230769230769,
+        0.3516483516483516,
+        0.39230769230769236,
+        0.46703296703296704,
+        0.4087912087912088
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.55,
+        0.5,
+        0.6,
+        0.6
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.373032967032967,
+      "accuracy": 0.49000000000000005,
+      "std": 0.04176700891193991,
+      "fold_balanced_accuracy": [
+        0.4269230769230769,
+        0.3371428571428571,
+        0.34615384615384615,
+        0.4208791208791209,
+        0.33406593406593404
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.425,
+        0.425,
+        0.525,
+        0.5
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.41936263736263746,
+      "accuracy": 0.5450000000000002,
+      "std": 0.031209131711499544,
+      "fold_balanced_accuracy": [
+        0.44230769230769235,
+        0.37010989010989015,
+        0.4054945054945055,
+        0.4608791208791209,
+        0.41802197802197805
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.5,
+        0.5,
+        0.55,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.3781648351648351,
+      "accuracy": 0.525,
+      "std": 0.0684772140874087,
+      "fold_balanced_accuracy": [
+        0.38269230769230766,
+        0.26153846153846155,
+        0.39230769230769236,
+        0.47626373626373625,
+        0.37802197802197807
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.425,
+        0.5,
+        0.575,
+        0.55
+      ]
+    }
+  },
+  "feature_dim": 3000,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_landscapes', 'persistence_landscapes', 'lbp_texture']",
+  "selection_time_s": 135.87,
+  "eval_time_s": 608.82,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:30:58.652188",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "vessel_trees",
+        "object_type_reasoning": "The image contains retinal vessel branching patterns, which are characteristic of vessel trees.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "In fundoscopy images, color carries diagnostic information that can enhance feature extraction accuracy for vessel trees.",
+        "filtration_type": "superlevel",
+        "filtration_reasoning": "The bright vessels on a darker background require a superlevel filtration to effectively capture these bright-on-dark structures.",
+        "_n_channels": 3,
+        "_gt_object_type": "vessel_trees",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 146435,
+            "h1_h0_ratio": 1.76
+          }
+        },
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.009313,
+            "h1_avg_persistence": 0.009359
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 38.68
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "vessel_trees",
+        "object_type_reasoning": "The image contains retinal fundus structures where vessel branching and patterns are key features, typical of vessel trees.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color information in RGB channels is important for fundoscopy images to differentiate between various retinal features and pathologies.",
+        "filtration_type": "superlevel",
+        "filtration_reasoning": "Vessel structures typically appear brighter against the darker background of the retina, making superlevel filtration suitable for capturing these bright-on-dark features.",
+        "_n_channels": 3,
+        "_gt_object_type": "vessel_trees",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 144627,
+            "h1_h0_ratio": 1.76
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 51.11
+    },
+    {
+      "index": 30,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "vessel_trees",
+        "object_type_reasoning": "The IDRiD dataset focuses on retinal fundus images which typically contain vascular structures like retinal vessel branching.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "For retinal images, color can carry diagnostic information, particularly for fundoscopy, hence per-channel analysis can enhance feature extraction.",
+        "filtration_type": "superlevel",
+        "filtration_reasoning": "Retinal vessel trees are generally bright against a darker background, making superlevel filtration suitable to capture these structures effectively.",
+        "_n_channels": 3,
+        "_gt_object_type": "vessel_trees",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 135827,
+            "h1_h0_ratio": 1.76
+          }
+        },
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.008092,
+            "h1_avg_persistence": 0.00841
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 46.08
+    }
+  ]
+}

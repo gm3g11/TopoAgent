@@ -1,0 +1,168 @@
+{
+  "dataset": "DermaMNIST",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.3337,
+  "best_accuracy": 0.67,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.2360884547551214,
+      "accuracy": 0.67,
+      "std": 0.03056968495687739,
+      "fold_balanced_accuracy": [
+        0.23765432098765435,
+        0.2251851851851852,
+        0.18717948717948718,
+        0.25,
+        0.2804232804232804
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.65,
+        0.625,
+        0.7,
+        0.725
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.3084639804639805,
+      "accuracy": 0.7000000000000001,
+      "std": 0.04146890745172215,
+      "fold_balanced_accuracy": [
+        0.23765432098765435,
+        0.36777777777777776,
+        0.31025641025641026,
+        0.31049382716049384,
+        0.3161375661375661
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.675,
+        0.7,
+        0.725,
+        0.75
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.33370587437254107,
+      "accuracy": 0.67,
+      "std": 0.08269852272872988,
+      "fold_balanced_accuracy": [
+        0.22530864197530864,
+        0.39296296296296296,
+        0.28076923076923077,
+        0.4586419753086419,
+        0.31084656084656087
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.65,
+        0.675,
+        0.7,
+        0.725
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.1761413648080315,
+      "accuracy": 0.65,
+      "std": 0.028919520761954694,
+      "fold_balanced_accuracy": [
+        0.16049382716049382,
+        0.2325925925925926,
+        0.15384615384615385,
+        0.16049382716049382,
+        0.17328042328042326
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.675,
+        0.6,
+        0.65,
+        0.675
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_statistics', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 61.69,
+  "eval_time_s": 103.39,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:56:04.760092",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image contains a dermoscopic image of a skin lesion, which is best categorized as a surface lesion for topological analysis.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color carries significant diagnostic information in dermoscopic images, making per-channel analysis suitable to capture color-specific features.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for capturing dark-on-light structures like lesions and tissue boundaries present in dermoscopic images.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 19.56
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is from a dermatology dataset focusing on skin lesions, which are surface-level abnormalities.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color carries significant diagnostic information in dermoscopic images, so per-channel mode can capture this crucial detail.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures, which is common in skin lesion images where the lesion is often darker than the surrounding skin.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 22.15
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image contains dermoscopic images of skin lesions, which are characterized as surface lesions due to their prominence on the skin's surface.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color in dermoscopic images carries significant diagnostic information, thus using per-channel mode allows capturing important color patterns across R, G, and B channels.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which are common in dermoscopy where lesions often appear darker than the surrounding skin.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 19.97
+    }
+  ]
+}

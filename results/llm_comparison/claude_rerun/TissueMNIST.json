@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:36:08",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "TissueMNIST": {
+      "claude": {
+        "accuracy": 13.52,
+        "descriptor": "persistence_codebook",
+        "n_valid": 200,
+        "feature_dim": 96,
+        "agent_time": 78.8,
+        "time": 154.7
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "claude": 13.52
+    }
+  },
+  "overall": {
+    "claude": 13.52
+  }
+}

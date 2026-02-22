@@ -1,0 +1,97 @@
+{
+  "dataset": "GasHisSDB",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.7167,
+  "best_accuracy": 0.735,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.6764166666666667,
+      "accuracy": 0.71,
+      "std": 0.06548462499786581,
+      "fold_balanced_accuracy": [
+        0.6354166666666667,
+        0.7604166666666667,
+        0.6458333333333333,
+        0.59375,
+        0.7466666666666666
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.775,
+        0.7,
+        0.625,
+        0.75
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.71675,
+      "accuracy": 0.7350000000000001,
+      "std": 0.04491921761463697,
+      "fold_balanced_accuracy": [
+        0.6770833333333333,
+        0.78125,
+        0.65625,
+        0.7291666666666667,
+        0.74
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.775,
+        0.7,
+        0.75,
+        0.725
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.6914999999999999,
+      "accuracy": 0.7,
+      "std": 0.07265863870027967,
+      "fold_balanced_accuracy": [
+        0.7395833333333333,
+        0.8020833333333333,
+        0.6145833333333333,
+        0.6145833333333333,
+        0.6866666666666666
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.8,
+        0.65,
+        0.6,
+        0.675
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6914166666666667,
+      "accuracy": 0.72,
+      "std": 0.07411917955413279,
+      "fold_balanced_accuracy": [
+        0.6666666666666667,
+        0.7604166666666667,
+        0.5729166666666667,
+        0.6770833333333333,
+        0.78
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.775,
+        0.625,
+        0.7,
+        0.775
+      ]
+    }
+  },
+  "feature_dim": 864,
+  "selection_reasoning": "Persistence images are effective for capturing topological features in texture and surface patterns, which are crucial for distinguishing between abnormal and normal tissue in histopathology images.",
+  "selection_time_s": 1.05,
+  "eval_time_s": 66.6,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:34:59.609881"
+}

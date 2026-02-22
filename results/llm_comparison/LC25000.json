@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:50:39",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "gpt4o",
+      "claude",
+      "gemini_flash",
+      "gemini_pro"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "gpt4o": "GPT-4o",
+      "claude": "Claude",
+      "gemini_flash": "Gemini-Flash",
+      "gemini_pro": "Gemini-Pro"
+    }
+  },
+  "per_dataset": {
+    "LC25000": {
+      "fixed_pi": {
+        "accuracy": 74.76,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 1352,
+        "time": 365.9
+      },
+      "fixed_ps": {
+        "accuracy": 85.57,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 296.5
+      },
+      "gpt4o": {
+        "accuracy": 82.49,
+        "descriptor": "persistence_landscapes",
+        "n_valid": 200,
+        "feature_dim": 3800,
+        "agent_time": 35.3,
+        "time": 361.8
+      },
+      "claude": {
+        "accuracy": 82.49,
+        "descriptor": "persistence_landscapes",
+        "n_valid": 200,
+        "feature_dim": 3800,
+        "agent_time": 80.9,
+        "time": 408.1
+      },
+      "gemini_flash": {
+        "accuracy": 82.49,
+        "descriptor": "persistence_landscapes",
+        "n_valid": 200,
+        "feature_dim": 3800,
+        "agent_time": 35.9,
+        "time": 363.5
+      },
+      "gemini_pro": {
+        "accuracy": 73.55,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 90.4,
+        "time": 413.9
+      }
+    }
+  },
+  "per_object_type": {
+    "glands_lumens": {
+      "n_datasets": 1,
+      "fixed_pi": 74.76,
+      "fixed_ps": 85.57,
+      "gpt4o": 82.49,
+      "claude": 82.49,
+      "gemini_flash": 82.49,
+      "gemini_pro": 73.55
+    }
+  },
+  "overall": {
+    "fixed_pi": 74.76,
+    "fixed_ps": 85.57,
+    "gpt4o": 82.49,
+    "claude": 82.49,
+    "gemini_flash": 82.49,
+    "gemini_pro": 73.55
+  }
+}

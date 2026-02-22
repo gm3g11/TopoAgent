@@ -1,0 +1,168 @@
+{
+  "dataset": "OCTMNIST",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.4404,
+  "best_accuracy": 0.695,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.44042477989846407,
+      "accuracy": 0.6950000000000001,
+      "std": 0.039296482953842124,
+      "fold_balanced_accuracy": [
+        0.4990079365079365,
+        0.4332706766917293,
+        0.37969924812030076,
+        0.4609962406015038,
+        0.4291497975708502
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.725,
+        0.65,
+        0.675,
+        0.7
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.3848314696998908,
+      "accuracy": 0.5850000000000001,
+      "std": 0.04717407745455907,
+      "fold_balanced_accuracy": [
+        0.439484126984127,
+        0.37969924812030076,
+        0.40272556390977443,
+        0.40366541353383456,
+        0.298582995951417
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.65,
+        0.6,
+        0.575,
+        0.475
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.3577188162714478,
+      "accuracy": 0.57,
+      "std": 0.04043017130807199,
+      "fold_balanced_accuracy": [
+        0.3630952380952381,
+        0.4201127819548872,
+        0.3092105263157895,
+        0.3773496240601503,
+        0.3188259109311741
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.7,
+        0.525,
+        0.525,
+        0.525
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.36983885997043897,
+      "accuracy": 0.595,
+      "std": 0.025510836665527854,
+      "fold_balanced_accuracy": [
+        0.3373015873015873,
+        0.41541353383458646,
+        0.3665413533834586,
+        0.35949248120300753,
+        0.37044534412955465
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.7,
+        0.625,
+        0.5,
+        0.6
+      ]
+    }
+  },
+  "feature_dim": 62,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_statistics', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 55.59,
+  "eval_time_s": 42.82,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:23:47.234661",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is a cross-section of retinal OCT, where surface deformations and lesions like drusen or fluid accumulations are observed.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale as it is an OCT image, and color does not carry diagnostic information.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate because we are interested in capturing the dark-on-light structures typical in retinal OCT images, such as tissue boundaries and dark lesions.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 16.93
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image contains cross-sectional views of the retina where surface lesions such as choroidal neovascularization, diabetic macular edema, or drusen might be present.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale, typical of OCT images, where color is not diagnostically meaningful.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures such as tissue boundaries and lesions that appear darker in the retinal layers.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 20.42
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image likely contains surface lesions such as fluid accumulations and deformations in retinal cross-sections, typical of conditions like choroidal neovascularization or diabetic macular edema.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale and does not contain color information that would be diagnostically meaningful.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which is typical for identifying layer structures and deformations in retinal cross-sections.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 18.24
+    }
+  ]
+}

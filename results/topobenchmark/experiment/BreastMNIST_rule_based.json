@@ -1,0 +1,97 @@
+{
+  "dataset": "BreastMNIST",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.659,
+  "best_accuracy": 0.79,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.6590073145245559,
+      "accuracy": 0.79,
+      "std": 0.05765095495790743,
+      "fold_balanced_accuracy": [
+        0.5564263322884012,
+        0.664576802507837,
+        0.6473354231974922,
+        0.7100313479623824,
+        0.7166666666666667
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.8,
+        0.775,
+        0.825,
+        0.825
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.6257784743991641,
+      "accuracy": 0.75,
+      "std": 0.08896366398336392,
+      "fold_balanced_accuracy": [
+        0.47648902821316613,
+        0.5846394984326019,
+        0.6410658307210031,
+        0.7100313479623824,
+        0.7166666666666667
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.725,
+        0.725,
+        0.825,
+        0.825
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.6111912225705329,
+      "accuracy": 0.73,
+      "std": 0.06883384409278258,
+      "fold_balanced_accuracy": [
+        0.5047021943573667,
+        0.567398119122257,
+        0.6300940438871474,
+        0.7037617554858934,
+        0.65
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.7,
+        0.75,
+        0.775,
+        0.775
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6158620689655173,
+      "accuracy": 0.77,
+      "std": 0.07881668260504635,
+      "fold_balanced_accuracy": [
+        0.47648902821316613,
+        0.6191222570532915,
+        0.6018808777429467,
+        0.6818181818181819,
+        0.7
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.775,
+        0.75,
+        0.825,
+        0.85
+      ]
+    }
+  },
+  "feature_dim": 105,
+  "selection_reasoning": "Top-1 for organ_shape: minkowski_functionals (benchmark accuracy: 77.3%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 50.69,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:52:36.966875"
+}

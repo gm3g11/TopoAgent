@@ -1,0 +1,106 @@
+{
+  "dataset": "BreastMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.733,
+  "best_accuracy": 0.795,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.6774399164054337,
+      "accuracy": 0.765,
+      "std": 0.07383333908420472,
+      "fold_balanced_accuracy": [
+        0.5956112852664577,
+        0.664576802507837,
+        0.6520376175548589,
+        0.658307210031348,
+        0.8166666666666667
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.8,
+        0.7,
+        0.75,
+        0.875
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7243782654127481,
+      "accuracy": 0.8,
+      "std": 0.05950006585932127,
+      "fold_balanced_accuracy": [
+        0.6410658307210031,
+        0.6927899686520376,
+        0.7037617554858934,
+        0.8009404388714734,
+        0.7833333333333333
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.8,
+        0.775,
+        0.875,
+        0.825
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7330094043887148,
+      "accuracy": 0.795,
+      "std": 0.08251695979140808,
+      "fold_balanced_accuracy": [
+        0.6410658307210031,
+        0.6927899686520376,
+        0.6692789968652038,
+        0.8119122257053292,
+        0.8500000000000001
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.8,
+        0.725,
+        0.85,
+        0.875
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6612330198537094,
+      "accuracy": 0.7700000000000001,
+      "std": 0.07717274404945255,
+      "fold_balanced_accuracy": [
+        0.5501567398119123,
+        0.6191222570532915,
+        0.6865203761755485,
+        0.7836990595611285,
+        0.6666666666666667
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.775,
+        0.75,
+        0.85,
+        0.8
+      ]
+    }
+  },
+  "feature_dim": 3500,
+  "selection_reasoning": "Persistence landscapes are chosen because they provide a robust way to summarize the persistence of topological features, allowing for the differentiation between noise and significant features. This is particularly useful in the context of analyzing lesion boundary irregularities, which are crucial for distinguishing between benign and malignant lesions.",
+  "selection_time_s": 4.92,
+  "eval_time_s": 261.55,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:51:46.277031",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 1666.0,
+    "avg_H1_count": 2279.0,
+    "avg_H0_persistence": 0.017794,
+    "avg_H1_persistence": 0.020114,
+    "avg_total_features": 3945.0,
+    "avg_h1_h0_ratio": 1.37
+  }
+}

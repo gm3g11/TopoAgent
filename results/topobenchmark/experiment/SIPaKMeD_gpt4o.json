@@ -1,0 +1,97 @@
+{
+  "dataset": "SIPaKMeD",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.7888,
+  "best_accuracy": 0.79,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.7838095238095237,
+      "accuracy": 0.7849999999999999,
+      "std": 0.050212699516594086,
+      "fold_balanced_accuracy": [
+        0.8226190476190476,
+        0.775,
+        0.7,
+        0.775,
+        0.8464285714285715
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.775,
+        0.7,
+        0.775,
+        0.85
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7888095238095237,
+      "accuracy": 0.7899999999999999,
+      "std": 0.02530539096302175,
+      "fold_balanced_accuracy": [
+        0.8226190476190476,
+        0.8,
+        0.75,
+        0.8,
+        0.7714285714285715
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.8,
+        0.75,
+        0.8,
+        0.775
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7643650793650792,
+      "accuracy": 0.7649999999999999,
+      "std": 0.06564139811801989,
+      "fold_balanced_accuracy": [
+        0.8476190476190476,
+        0.7,
+        0.675,
+        0.8,
+        0.7992063492063493
+      ],
+      "fold_accuracy": [
+        0.85,
+        0.7,
+        0.675,
+        0.8,
+        0.8
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.7880952380952382,
+      "accuracy": 0.7899999999999999,
+      "std": 0.05332541985886477,
+      "fold_balanced_accuracy": [
+        0.8698412698412697,
+        0.775,
+        0.75,
+        0.825,
+        0.7206349206349206
+      ],
+      "fold_accuracy": [
+        0.875,
+        0.775,
+        0.75,
+        0.825,
+        0.725
+      ]
+    }
+  },
+  "feature_dim": 600,
+  "selection_reasoning": "Persistence images are effective for capturing topological features such as shape and structure, which are crucial for analyzing individual cell shapes and nucleus-to-cytoplasm ratios in cytology images.",
+  "selection_time_s": 1.81,
+  "eval_time_s": 134.93,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:44:24.746472"
+}

@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:50:18",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "BreastMNIST": {
+      "claude": {
+        "accuracy": 61.04,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 77.5,
+        "time": 108.3
+      }
+    }
+  },
+  "per_object_type": {
+    "organ_shape": {
+      "n_datasets": 1,
+      "claude": 61.04
+    }
+  },
+  "overall": {
+    "claude": 61.04
+  }
+}

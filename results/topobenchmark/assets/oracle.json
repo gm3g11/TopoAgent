@@ -1,0 +1,109 @@
+{
+  "mean_accuracy": 0.7694,
+  "per_dataset": {
+    "AML_Cytomorphology": {
+      "accuracy": 0.407,
+      "descriptor": "betti_curves"
+    },
+    "APTOS2019": {
+      "accuracy": 0.5772,
+      "descriptor": "lbp_texture"
+    },
+    "BloodMNIST": {
+      "accuracy": 0.9796,
+      "descriptor": "persistence_codebook"
+    },
+    "BrainTumorMRI": {
+      "accuracy": 0.9608,
+      "descriptor": "ATOL"
+    },
+    "BreakHis": {
+      "accuracy": 0.8871,
+      "descriptor": "persistence_statistics"
+    },
+    "BreastMNIST": {
+      "accuracy": 0.7898,
+      "descriptor": "persistence_statistics"
+    },
+    "Chaoyang": {
+      "accuracy": 0.7932,
+      "descriptor": "ATOL"
+    },
+    "DermaMNIST": {
+      "accuracy": 0.5765,
+      "descriptor": "persistence_statistics"
+    },
+    "GasHisSDB": {
+      "accuracy": 0.9587,
+      "descriptor": "ATOL"
+    },
+    "IDRiD": {
+      "accuracy": 0.4597,
+      "descriptor": "lbp_texture"
+    },
+    "ISIC2019": {
+      "accuracy": 0.3686,
+      "descriptor": "minkowski_functionals"
+    },
+    "Kvasir": {
+      "accuracy": 0.7997,
+      "descriptor": "persistence_codebook"
+    },
+    "LC25000": {
+      "accuracy": 1.0,
+      "descriptor": "persistence_codebook"
+    },
+    "MURA": {
+      "accuracy": 0.5797,
+      "descriptor": "lbp_texture"
+    },
+    "MalariaCell": {
+      "accuracy": 0.9544,
+      "descriptor": "persistence_codebook"
+    },
+    "NCT_CRC_HE": {
+      "accuracy": 0.9771,
+      "descriptor": "persistence_codebook"
+    },
+    "OCTMNIST": {
+      "accuracy": 0.6673,
+      "descriptor": "template_functions"
+    },
+    "OrganAMNIST": {
+      "accuracy": 0.8558,
+      "descriptor": "minkowski_functionals"
+    },
+    "OrganCMNIST": {
+      "accuracy": 0.8292,
+      "descriptor": "edge_histogram"
+    },
+    "OrganSMNIST": {
+      "accuracy": 0.8119,
+      "descriptor": "minkowski_functionals"
+    },
+    "PCam": {
+      "accuracy": 0.9044,
+      "descriptor": "ATOL"
+    },
+    "PathMNIST": {
+      "accuracy": 0.975,
+      "descriptor": "persistence_statistics"
+    },
+    "PneumoniaMNIST": {
+      "accuracy": 0.954,
+      "descriptor": "edge_histogram"
+    },
+    "RetinaMNIST": {
+      "accuracy": 0.5553,
+      "descriptor": "persistence_statistics"
+    },
+    "SIPaKMeD": {
+      "accuracy": 0.9764,
+      "descriptor": "persistence_statistics"
+    },
+    "TissueMNIST": {
+      "accuracy": 0.4061,
+      "descriptor": "ATOL"
+    }
+  }
+}

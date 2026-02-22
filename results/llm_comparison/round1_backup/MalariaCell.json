@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:22:08",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "MalariaCell": {
+      "fixed_pi": {
+        "accuracy": 88.0,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 200,
+        "time": 14.9
+      },
+      "fixed_ps": {
+        "accuracy": 87.02,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 10.3
+      },
+      "claude": {
+        "accuracy": 58.36,
+        "descriptor": "persistence_codebook",
+        "n_valid": 200,
+        "feature_dim": 96,
+        "agent_time": 90.5,
+        "time": 106.1
+      },
+      "gemini": {
+        "accuracy": 78.05,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 40,
+        "agent_time": 42.8,
+        "time": 56.3
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "fixed_pi": 88.0,
+      "fixed_ps": 87.02,
+      "claude": 58.36,
+      "gemini": 78.05
+    }
+  },
+  "overall": {
+    "fixed_pi": 88.0,
+    "fixed_ps": 87.02,
+    "claude": 58.36,
+    "gemini": 78.05
+  }
+}

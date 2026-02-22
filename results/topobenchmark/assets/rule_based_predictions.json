@@ -1,0 +1,106 @@
+{
+  "AML_Cytomorphology": {
+    "predicted": "betti_curves",
+    "rule": "Rule 1: high contrast + negative skew \u2192 discrete objects"
+  },
+  "APTOS2019": {
+    "predicted": "persistence_statistics",
+    "rule": "Rule 2: dominant component \u2192 diffuse/scattered"
+  },
+  "BloodMNIST": {
+    "predicted": "betti_curves",
+    "rule": "Rule 1: high contrast + negative skew \u2192 discrete objects"
+  },
+  "BrainTumorMRI": {
+    "predicted": "template_functions",
+    "rule": "Rule 3: dark images \u2192 multi-scale/dense"
+  },
+  "BreakHis": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "BreastMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "Chaoyang": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "DermaMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "GasHisSDB": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "IDRiD": {
+    "predicted": "persistence_statistics",
+    "rule": "Rule 2: dominant component \u2192 diffuse/scattered"
+  },
+  "ISIC2019": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "Kvasir": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "LC25000": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "MURA": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "MalariaCell": {
+    "predicted": "betti_curves",
+    "rule": "Rule 1: high contrast + negative skew \u2192 discrete objects"
+  },
+  "NCT_CRC_HE": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "OCTMNIST": {
+    "predicted": "template_functions",
+    "rule": "Rule 3: dark images \u2192 multi-scale/dense"
+  },
+  "OrganAMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "OrganCMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "OrganSMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "PCam": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "PathMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "PneumoniaMNIST": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "RetinaMNIST": {
+    "predicted": "persistence_statistics",
+    "rule": "Rule 2: dominant component \u2192 diffuse/scattered"
+  },
+  "SIPaKMeD": {
+    "predicted": "ATOL",
+    "rule": "Rule 4: default"
+  },
+  "TissueMNIST": {
+    "predicted": "template_functions",
+    "rule": "Rule 3: dark images \u2192 multi-scale/dense"
+  }
+}

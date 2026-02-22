@@ -1,0 +1,91 @@
+{
+  "condition": "c2_no_memory",
+  "condition_id": "c2",
+  "dataset": "APTOS2019",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "lbp_texture",
+    "lbp_texture",
+    "lbp_texture",
+    "lbp_texture",
+    "lbp_texture"
+  ],
+  "majority_descriptor": "lbp_texture",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "TabPFN",
+  "balanced_accuracy": 37.75,
+  "std_accuracy": 3.29,
+  "fold_accuracies": [
+    42.31,
+    34.67,
+    36.26
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "lbp_texture",
+      "stance": "FOLLOW",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 45.62
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 0,
+      "descriptor": "lbp_texture",
+      "stance": "FOLLOW",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 48.38
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 0,
+      "descriptor": "lbp_texture",
+      "stance": "FOLLOW",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 48.9
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 0,
+      "descriptor": "lbp_texture",
+      "stance": "FOLLOW",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 51.41
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 0,
+      "descriptor": "lbp_texture",
+      "stance": "FOLLOW",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 45.36
+    }
+  ],
+  "demo_time_seconds": 256.23,
+  "eval_time_seconds": 3768.48,
+  "total_time_seconds": 4024.71
+}

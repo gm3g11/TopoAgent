@@ -1,0 +1,97 @@
+{
+  "dataset": "TissueMNIST",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "discrete_cells",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.2811,
+  "best_accuracy": 0.475,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.2753739316239316,
+      "accuracy": 0.47000000000000003,
+      "std": 0.03910097318233877,
+      "fold_balanced_accuracy": [
+        0.2702991452991453,
+        0.3368055555555556,
+        0.21607905982905984,
+        0.2641025641025641,
+        0.2895833333333333
+      ],
+      "fold_accuracy": [
+        0.375,
+        0.575,
+        0.4,
+        0.475,
+        0.525
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.2810683760683761,
+      "accuracy": 0.475,
+      "std": 0.05089787320314192,
+      "fold_balanced_accuracy": [
+        0.25747863247863245,
+        0.2716346153846154,
+        0.24465811965811968,
+        0.2503205128205128,
+        0.38125000000000003
+      ],
+      "fold_accuracy": [
+        0.425,
+        0.525,
+        0.4,
+        0.425,
+        0.6
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.2700213675213675,
+      "accuracy": 0.445,
+      "std": 0.04011707893504541,
+      "fold_balanced_accuracy": [
+        0.21741452991452992,
+        0.27857905982905984,
+        0.234241452991453,
+        0.29070512820512817,
+        0.3291666666666667
+      ],
+      "fold_accuracy": [
+        0.35,
+        0.525,
+        0.375,
+        0.425,
+        0.55
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.27557692307692305,
+      "accuracy": 0.445,
+      "std": 0.04947648765196206,
+      "fold_balanced_accuracy": [
+        0.20512820512820512,
+        0.3341346153846154,
+        0.2620192307692308,
+        0.24743589743589745,
+        0.32916666666666666
+      ],
+      "fold_accuracy": [
+        0.3,
+        0.55,
+        0.4,
+        0.425,
+        0.55
+      ]
+    }
+  },
+  "feature_dim": 180,
+  "selection_reasoning": "Top-1 for discrete_cells: minkowski_functionals (benchmark accuracy: 76.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 96.21,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:21:02.718558"
+}

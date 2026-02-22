@@ -1,0 +1,106 @@
+{
+  "dataset": "IDRiD",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.4194,
+  "best_accuracy": 0.545,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.38934065934065937,
+      "accuracy": 0.55,
+      "std": 0.048455931498918144,
+      "fold_balanced_accuracy": [
+        0.3269230769230769,
+        0.3516483516483516,
+        0.39230769230769236,
+        0.46703296703296704,
+        0.4087912087912088
+      ],
+      "fold_accuracy": [
+        0.5,
+        0.55,
+        0.5,
+        0.6,
+        0.6
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.373032967032967,
+      "accuracy": 0.49000000000000005,
+      "std": 0.04176700891193991,
+      "fold_balanced_accuracy": [
+        0.4269230769230769,
+        0.3371428571428571,
+        0.34615384615384615,
+        0.4208791208791209,
+        0.33406593406593404
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.425,
+        0.425,
+        0.525,
+        0.5
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.41936263736263746,
+      "accuracy": 0.5450000000000002,
+      "std": 0.031209131711499544,
+      "fold_balanced_accuracy": [
+        0.44230769230769235,
+        0.37010989010989015,
+        0.4054945054945055,
+        0.4608791208791209,
+        0.41802197802197805
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.5,
+        0.5,
+        0.55,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.3781648351648351,
+      "accuracy": 0.525,
+      "std": 0.0684772140874087,
+      "fold_balanced_accuracy": [
+        0.38269230769230766,
+        0.26153846153846155,
+        0.39230769230769236,
+        0.47626373626373625,
+        0.37802197802197807
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.425,
+        0.5,
+        0.575,
+        0.55
+      ]
+    }
+  },
+  "feature_dim": 3000,
+  "selection_reasoning": "Persistence landscapes are effective for capturing the distribution and significance of topological features, allowing for a robust analysis of the retinal vessel branching patterns and microaneurysms. Given the high number of features and their low persistence, landscapes can help in distinguishing significant patterns from noise.",
+  "selection_time_s": 3.97,
+  "eval_time_s": 608.82,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:43:06.223192",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 52792.3,
+    "avg_H1_count": 92606.3,
+    "avg_H0_persistence": 0.007861,
+    "avg_H1_persistence": 0.008317,
+    "avg_total_features": 145398.7,
+    "avg_h1_h0_ratio": 1.75
+  }
+}

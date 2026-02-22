@@ -1,0 +1,37 @@
+\begin{table}[h]
+\centering
+\caption{Convergence analysis results for all 26 datasets. $n^*$ is the smallest sample size where accuracy converges (within 1\% of $n_{\max}$ with $<$2\% cross-seed variance). $n^*_{\text{rank}}$ is where descriptor rankings stabilize (Spearman $\rho > 0.9$).}
+\label{tab:convergence}
+\begin{tabular}{lrrrrr}
+\toprule
+Dataset & \#Cls & $n_{\max}$ & $n^*$ & $n^*_{\text{rank}}$ & Top Acc \\
+\midrule
+AML\_Cytomorphology & 15 & 5000 & -- & -- & 39.8\% \\
+APTOS2019 & 5 & 3296 & 3000 & 500 & 57.7\% \\
+BloodMNIST & 8 & 5000 & 3000 & 200 & 97.9\% \\
+BrainTumorMRI & 4 & 5000 & 5000 & 2000 & 95.7\% \\
+BreakHis & 8 & 5000 & 5000 & 5000 & 88.9\% \\
+BreastMNIST & 2 & 546 & 546 & 200 & 76.6\% \\
+Chaoyang & 4 & 5000 & 5000 & 50 & 79.5\% \\
+DermaMNIST & 7 & 5000 & 7500 & 1000 & 57.5\% \\
+GasHisSDB & 2 & 5000 & 7500 & 50 & 95.9\% \\
+IDRiD & 5 & 516 & 500 & 50 & 45.1\% \\
+ISIC2019 & 8 & 5000 & 5000 & 200 & 35.4\% \\
+Kvasir & 8 & 4000 & -- & -- & 80.2\% \\
+LC25000 & 5 & 5000 & 2000 & 100 & 99.9\% \\
+MURA & 14 & 5000 & 5000 & 200 & 57.5\% \\
+MalariaCell & 2 & 5000 & 2000 & 100 & 95.6\% \\
+NCT\_CRC\_HE & 9 & 5000 & 7500 & 1000 & 97.9\% \\
+OCTMNIST & 4 & 5000 & 5000 & 1000 & 65.5\% \\
+OrganAMNIST & 11 & 5000 & 5000 & 5000 & 86.3\% \\
+OrganCMNIST & 11 & 5000 & 5000 & 200 & 83.3\% \\
+OrganSMNIST & 11 & 5000 & 5000 & 500 & 83.0\% \\
+PCam & 2 & 5000 & 7500 & 500 & 90.4\% \\
+PathMNIST & 9 & 5000 & 3000 & 500 & 97.7\% \\
+PneumoniaMNIST & 2 & 4708 & 3000 & 50 & 95.0\% \\
+RetinaMNIST & 5 & 1080 & 1080 & 200 & 55.6\% \\
+SIPaKMeD & 5 & 4049 & -- & -- & 97.7\% \\
+TissueMNIST & 8 & 5000 & 7500 & 1000 & 36.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,48 @@
+# Environment and secrets
+.env
+medrax.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data caches
+results/benchmark4/ph_cache/
+results/topobenchmark/frozen_ph/
+
+# Logs
+topo_logs/
+*.log
+
+# Claude Code
+.claude/
+
+# CatBoost
+catboost_info/
+
+# SGE job outputs
+*.o[0-9]*
+*.e[0-9]*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints (keep pre-trained in models/)
+*.ckpt

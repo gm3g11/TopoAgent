@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:43:28",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "OCTMNIST": {
+      "claude": {
+        "accuracy": 42.03,
+        "descriptor": "lbp_texture",
+        "n_valid": 200,
+        "feature_dim": 180,
+        "agent_time": 62.4,
+        "time": 143.0
+      }
+    }
+  },
+  "per_object_type": {
+    "organ_shape": {
+      "n_datasets": 1,
+      "claude": 42.03
+    }
+  },
+  "overall": {
+    "claude": 42.03
+  }
+}

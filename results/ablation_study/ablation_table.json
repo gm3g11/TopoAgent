@@ -1,0 +1,2094 @@
+{
+  "description": "TopoAgent v8.1 Ablation Study Results",
+  "setup": {
+    "conditions": {
+      "c0_full": "TopoAgent (full)",
+      "c1_no_skills": "w/o Skills",
+      "c2_no_memory": "w/o Memory",
+      "c3_no_reflect": "w/o Reflect",
+      "c4_no_analyze": "w/o Interpret"
+    },
+    "n_datasets": 26,
+    "n_eval_images": 200,
+    "n_demo_images": 5,
+    "cv_folds": 3,
+    "metric": "balanced_accuracy",
+    "object_type_groups": {
+      "Cells": [
+        "BloodMNIST",
+        "TissueMNIST",
+        "PCam",
+        "MalariaCell",
+        "AML_Cytomorphology"
+      ],
+      "Glands": [
+        "PathMNIST",
+        "Kvasir",
+        "NCT_CRC_HE",
+        "BreakHis",
+        "LC25000",
+        "Chaoyang",
+        "GasHisSDB"
+      ],
+      "Organs": [
+        "OrganAMNIST",
+        "OrganCMNIST",
+        "OrganSMNIST",
+        "BrainTumorMRI",
+        "MURA",
+        "PneumoniaMNIST",
+        "BreastMNIST",
+        "OCTMNIST"
+      ],
+      "Surface": [
+        "DermaMNIST",
+        "ISIC2019",
+        "SIPaKMeD"
+      ],
+      "Vessels": [
+        "RetinaMNIST",
+        "IDRiD",
+        "APTOS2019"
+      ]
+    }
+  },
+  "table": {
+    "columns": [
+      "Cells",
+      "Glands",
+      "Organs",
+      "Surface",
+      "Vessels",
+      "Avg"
+    ],
+    "rows": {
+      "TopoAgent (full)": {
+        "Cells": 69.41,
+        "Glands": 68.71,
+        "Organs": 56.0,
+        "Surface": 40.91,
+        "Vessels": 35.67,
+        "Avg": 57.92
+      },
+      "w/o Skills": {
+        "Cells": 62.71,
+        "Glands": 69.79,
+        "Organs": 50.57,
+        "Surface": 45.11,
+        "Vessels": 32.33,
+        "Avg": 55.34
+      },
+      "w/o Memory": {
+        "Cells": 69.41,
+        "Glands": 70.28,
+        "Organs": 56.0,
+        "Surface": 38.64,
+        "Vessels": 35.87,
+        "Avg": 58.1
+      },
+      "w/o Reflect": {
+        "Cells": 64.71,
+        "Glands": 70.24,
+        "Organs": 51.77,
+        "Surface": 43.81,
+        "Vessels": 35.87,
+        "Avg": 56.48
+      },
+      "w/o Interpret": {
+        "Cells": 65.97,
+        "Glands": 67.65,
+        "Organs": 54.37,
+        "Surface": 38.64,
+        "Vessels": 35.87,
+        "Avg": 56.22
+      }
+    }
+  },
+  "component_contribution": {
+    "w/o Skills": {
+      "Cells": {
+        "avg_drop": 6.7,
+        "c0_wins": 4,
+        "cx_wins": 0,
+        "max_drop": 22.97,
+        "max_gain": 0.0
+      },
+      "Glands": {
+        "avg_drop": -1.07,
+        "c0_wins": 0,
+        "cx_wins": 1,
+        "max_drop": 0.0,
+        "max_gain": -7.51
+      },
+      "Organs": {
+        "avg_drop": 5.44,
+        "c0_wins": 5,
+        "cx_wins": 1,
+        "max_drop": 16.49,
+        "max_gain": -2.19
+      },
+      "Surface": {
+        "avg_drop": -4.2,
+        "c0_wins": 2,
+        "cx_wins": 1,
+        "max_drop": 0.74,
+        "max_gain": -13.9
+      },
+      "Vessels": {
+        "avg_drop": 3.34,
+        "c0_wins": 2,
+        "cx_wins": 0,
+        "max_drop": 7.9,
+        "max_gain": 0.0
+      },
+      "Overall": {
+        "avg_drop": 2.57,
+        "c0_wins": 13,
+        "cx_wins": 3,
+        "max_drop": 22.97,
+        "max_gain": -13.9
+      }
+    },
+    "w/o Memory": {
+      "Cells": {
+        "avg_drop": 0.0,
+        "c0_wins": 0,
+        "cx_wins": 0,
+        "max_drop": 0.0,
+        "max_gain": 0.0
+      },
+      "Glands": {
+        "avg_drop": -1.57,
+        "c0_wins": 0,
+        "cx_wins": 2,
+        "max_drop": 0.0,
+        "max_gain": -9.48
+      },
+      "Organs": {
+        "avg_drop": 0.0,
+        "c0_wins": 0,
+        "cx_wins": 0,
+        "max_drop": 0.0,
+        "max_gain": 0.0
+      },
+      "Surface": {
+        "avg_drop": 2.27,
+        "c0_wins": 2,
+        "cx_wins": 0,
+        "max_drop": 5.09,
+        "max_gain": 0.0
+      },
+      "Vessels": {
+        "avg_drop": -0.2,
+        "c0_wins": 0,
+        "cx_wins": 1,
+        "max_drop": 0.0,
+        "max_gain": -0.59
+      },
+      "Overall": {
+        "avg_drop": -0.18,
+        "c0_wins": 2,
+        "cx_wins": 3,
+        "max_drop": 5.09,
+        "max_gain": -9.48
+      }
+    },
+    "w/o Reflect": {
+      "Cells": {
+        "avg_drop": 4.7,
+        "c0_wins": 2,
+        "cx_wins": 0,
+        "max_drop": 22.97,
+        "max_gain": 0.0
+      },
+      "Glands": {
+        "avg_drop": -1.52,
+        "c0_wins": 1,
+        "cx_wins": 2,
+        "max_drop": 0.31,
+        "max_gain": -9.48
+      },
+      "Organs": {
+        "avg_drop": 4.23,
+        "c0_wins": 3,
+        "cx_wins": 0,
+        "max_drop": 12.52,
+        "max_gain": 0.0
+      },
+      "Surface": {
+        "avg_drop": -2.9,
+        "c0_wins": 2,
+        "cx_wins": 1,
+        "max_drop": 3.48,
+        "max_gain": -13.9
+      },
+      "Vessels": {
+        "avg_drop": -0.2,
+        "c0_wins": 0,
+        "cx_wins": 1,
+        "max_drop": 0.0,
+        "max_gain": -0.59
+      },
+      "Overall": {
+        "avg_drop": 1.44,
+        "c0_wins": 8,
+        "cx_wins": 4,
+        "max_drop": 22.97,
+        "max_gain": -13.9
+      }
+    },
+    "w/o Interpret": {
+      "Cells": {
+        "avg_drop": 3.44,
+        "c0_wins": 1,
+        "cx_wins": 2,
+        "max_drop": 22.97,
+        "max_gain": -4.78
+      },
+      "Glands": {
+        "avg_drop": 1.07,
+        "c0_wins": 1,
+        "cx_wins": 1,
+        "max_drop": 8.96,
+        "max_gain": -1.49
+      },
+      "Organs": {
+        "avg_drop": 1.63,
+        "c0_wins": 2,
+        "cx_wins": 0,
+        "max_drop": 11.14,
+        "max_gain": 0.0
+      },
+      "Surface": {
+        "avg_drop": 2.27,
+        "c0_wins": 2,
+        "cx_wins": 0,
+        "max_drop": 5.09,
+        "max_gain": 0.0
+      },
+      "Vessels": {
+        "avg_drop": -0.2,
+        "c0_wins": 0,
+        "cx_wins": 1,
+        "max_drop": 0.0,
+        "max_gain": -0.59
+      },
+      "Overall": {
+        "avg_drop": 1.69,
+        "c0_wins": 6,
+        "cx_wins": 4,
+        "max_drop": 22.97,
+        "max_gain": -4.78
+      }
+    }
+  },
+  "descriptor_changes": {
+    "w/o Skills": {
+      "n_changed": 16,
+      "datasets": [
+        {
+          "dataset": "BloodMNIST",
+          "c0": "template_functions",
+          "w/o Skills": "persistence_statistics"
+        },
+        {
+          "dataset": "TissueMNIST",
+          "c0": "persistence_statistics",
+          "w/o Skills": "tropical_coordinates"
+        },
+        {
+          "dataset": "OCTMNIST",
+          "c0": "lbp_texture",
+          "w/o Skills": "persistence_entropy"
+        },
+        {
+          "dataset": "OrganAMNIST",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "tropical_coordinates"
+        },
+        {
+          "dataset": "RetinaMNIST",
+          "c0": "lbp_texture",
+          "w/o Skills": "persistence_landscapes"
+        },
+        {
+          "dataset": "PneumoniaMNIST",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "persistence_entropy"
+        },
+        {
+          "dataset": "DermaMNIST",
+          "c0": "ATOL",
+          "w/o Skills": "persistence_statistics"
+        },
+        {
+          "dataset": "OrganCMNIST",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "persistence_statistics"
+        },
+        {
+          "dataset": "OrganSMNIST",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "persistence_image"
+        },
+        {
+          "dataset": "ISIC2019",
+          "c0": "lbp_texture",
+          "w/o Skills": "persistence_landscapes"
+        },
+        {
+          "dataset": "BrainTumorMRI",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "persistence_entropy"
+        },
+        {
+          "dataset": "MalariaCell",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "persistence_statistics"
+        },
+        {
+          "dataset": "LC25000",
+          "c0": "ATOL",
+          "w/o Skills": "persistence_entropy"
+        },
+        {
+          "dataset": "SIPaKMeD",
+          "c0": "template_functions",
+          "w/o Skills": "persistence_statistics"
+        },
+        {
+          "dataset": "AML_Cytomorphology",
+          "c0": "minkowski_functionals",
+          "w/o Skills": "lbp_texture"
+        },
+        {
+          "dataset": "APTOS2019",
+          "c0": "persistence_landscapes",
+          "w/o Skills": "persistence_entropy"
+        }
+      ]
+    },
+    "w/o Memory": {
+      "n_changed": 5,
+      "datasets": [
+        {
+          "dataset": "ISIC2019",
+          "c0": "lbp_texture",
+          "w/o Memory": "persistence_statistics"
+        },
+        {
+          "dataset": "BreakHis",
+          "c0": "persistence_landscapes",
+          "w/o Memory": "persistence_statistics"
+        },
+        {
+          "dataset": "LC25000",
+          "c0": "ATOL",
+          "w/o Memory": "persistence_statistics"
+        },
+        {
+          "dataset": "SIPaKMeD",
+          "c0": "template_functions",
+          "w/o Memory": "lbp_texture"
+        },
+        {
+          "dataset": "APTOS2019",
+          "c0": "persistence_landscapes",
+          "w/o Memory": "lbp_texture"
+        }
+      ]
+    },
+    "w/o Reflect": {
+      "n_changed": 12,
+      "datasets": [
+        {
+          "dataset": "DermaMNIST",
+          "c0": "ATOL",
+          "w/o Reflect": "persistence_statistics"
+        },
+        {
+          "dataset": "OrganSMNIST",
+          "c0": "minkowski_functionals",
+          "w/o Reflect": "persistence_image"
+        },
+        {
+          "dataset": "ISIC2019",
+          "c0": "lbp_texture",
+          "w/o Reflect": "persistence_statistics"
+        },
+        {
+          "dataset": "BrainTumorMRI",
+          "c0": "minkowski_functionals",
+          "w/o Reflect": "edge_histogram"
+        },
+        {
+          "dataset": "MURA",
+          "c0": "lbp_texture",
+          "w/o Reflect": "minkowski_functionals"
+        },
+        {
+          "dataset": "BreakHis",
+          "c0": "persistence_landscapes",
+          "w/o Reflect": "persistence_statistics"
+        },
+        {
+          "dataset": "MalariaCell",
+          "c0": "minkowski_functionals",
+          "w/o Reflect": "template_functions"
+        },
+        {
+          "dataset": "LC25000",
+          "c0": "ATOL",
+          "w/o Reflect": "persistence_statistics"
+        },
+        {
+          "dataset": "SIPaKMeD",
+          "c0": "template_functions",
+          "w/o Reflect": "minkowski_functionals"
+        },
+        {
+          "dataset": "AML_Cytomorphology",
+          "c0": "minkowski_functionals",
+          "w/o Reflect": "lbp_texture"
+        },
+        {
+          "dataset": "APTOS2019",
+          "c0": "persistence_landscapes",
+          "w/o Reflect": "lbp_texture"
+        },
+        {
+          "dataset": "Chaoyang",
+          "c0": "persistence_landscapes",
+          "w/o Reflect": "persistence_statistics"
+        }
+      ]
+    },
+    "w/o Interpret": {
+      "n_changed": 10,
+      "datasets": [
+        {
+          "dataset": "TissueMNIST",
+          "c0": "persistence_statistics",
+          "w/o Interpret": "minkowski_functionals"
+        },
+        {
+          "dataset": "OCTMNIST",
+          "c0": "lbp_texture",
+          "w/o Interpret": "minkowski_functionals"
+        },
+        {
+          "dataset": "BreastMNIST",
+          "c0": "persistence_statistics",
+          "w/o Interpret": "minkowski_functionals"
+        },
+        {
+          "dataset": "ISIC2019",
+          "c0": "lbp_texture",
+          "w/o Interpret": "persistence_statistics"
+        },
+        {
+          "dataset": "BreakHis",
+          "c0": "persistence_landscapes",
+          "w/o Interpret": "persistence_statistics"
+        },
+        {
+          "dataset": "PCam",
+          "c0": "persistence_statistics",
+          "w/o Interpret": "template_functions"
+        },
+        {
+          "dataset": "SIPaKMeD",
+          "c0": "template_functions",
+          "w/o Interpret": "lbp_texture"
+        },
+        {
+          "dataset": "AML_Cytomorphology",
+          "c0": "minkowski_functionals",
+          "w/o Interpret": "lbp_texture"
+        },
+        {
+          "dataset": "APTOS2019",
+          "c0": "persistence_landscapes",
+          "w/o Interpret": "lbp_texture"
+        },
+        {
+          "dataset": "GasHisSDB",
+          "c0": "persistence_statistics",
+          "w/o Interpret": "ATOL"
+        }
+      ]
+    }
+  },
+  "per_dataset": {
+    "TopoAgent (full)": {
+      "BloodMNIST": {
+        "balanced_accuracy": 85.08,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions"
+        ]
+      },
+      "TissueMNIST": {
+        "balanced_accuracy": 24.07,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "PathMNIST": {
+        "balanced_accuracy": 82.19,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OCTMNIST": {
+        "balanced_accuracy": 43.56,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "OrganAMNIST": {
+        "balanced_accuracy": 50.52,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "RetinaMNIST": {
+        "balanced_accuracy": 34.67,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "PneumoniaMNIST": {
+        "balanced_accuracy": 84.01,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "BreastMNIST": {
+        "balanced_accuracy": 70.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "DermaMNIST": {
+        "balanced_accuracy": 15.08,
+        "majority_descriptor": "ATOL",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "ATOL"
+        ]
+      },
+      "OrganCMNIST": {
+        "balanced_accuracy": 46.4,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "tropical_coordinates",
+          "minkowski_functionals",
+          "tropical_coordinates",
+          "minkowski_functionals"
+        ]
+      },
+      "OrganSMNIST": {
+        "balanced_accuracy": 43.66,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "ISIC2019": {
+        "balanced_accuracy": 23.61,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "Kvasir": {
+        "balanced_accuracy": 56.66,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "edge_histogram",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "edge_histogram",
+          "persistence_landscapes"
+        ]
+      },
+      "BrainTumorMRI": {
+        "balanced_accuracy": 80.03,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "ATOL",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "MURA": {
+        "balanced_accuracy": 28.93,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "lbp_texture",
+          "minkowski_functionals",
+          "lbp_texture",
+          "minkowski_functionals",
+          "lbp_texture"
+        ]
+      },
+      "BreakHis": {
+        "balanced_accuracy": 30.22,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "NCT_CRC_HE": {
+        "balanced_accuracy": 81.76,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "MalariaCell": {
+        "balanced_accuracy": 94.53,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "IDRiD": {
+        "balanced_accuracy": 35.18,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "PCam": {
+        "balanced_accuracy": 75.97,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "LC25000": {
+        "balanced_accuracy": 87.0,
+        "majority_descriptor": "ATOL",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "persistence_statistics",
+          "ATOL"
+        ]
+      },
+      "SIPaKMeD": {
+        "balanced_accuracy": 84.03,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions"
+        ]
+      },
+      "AML_Cytomorphology": {
+        "balanced_accuracy": 67.4,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "APTOS2019": {
+        "balanced_accuracy": 37.16,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "GasHisSDB": {
+        "balanced_accuracy": 83.39,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Chaoyang": {
+        "balanced_accuracy": 59.78,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      }
+    },
+    "w/o Skills": {
+      "BloodMNIST": {
+        "balanced_accuracy": 82.88,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "TissueMNIST": {
+        "balanced_accuracy": 19.28,
+        "majority_descriptor": "tropical_coordinates",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "tropical_coordinates",
+          "tropical_coordinates",
+          "tropical_coordinates",
+          "tropical_coordinates",
+          "tropical_coordinates"
+        ]
+      },
+      "PathMNIST": {
+        "balanced_accuracy": 82.19,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "tropical_coordinates",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OCTMNIST": {
+        "balanced_accuracy": 45.75,
+        "majority_descriptor": "persistence_entropy",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy"
+        ]
+      },
+      "OrganAMNIST": {
+        "balanced_accuracy": 34.03,
+        "majority_descriptor": "tropical_coordinates",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "tropical_coordinates",
+          "tropical_coordinates",
+          "tropical_coordinates",
+          "tropical_coordinates",
+          "tropical_coordinates"
+        ]
+      },
+      "RetinaMNIST": {
+        "balanced_accuracy": 26.77,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "PneumoniaMNIST": {
+        "balanced_accuracy": 75.36,
+        "majority_descriptor": "persistence_entropy",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy"
+        ]
+      },
+      "BreastMNIST": {
+        "balanced_accuracy": 70.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "DermaMNIST": {
+        "balanced_accuracy": 28.98,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OrganCMNIST": {
+        "balanced_accuracy": 43.59,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "tropical_coordinates",
+          "persistence_statistics",
+          "tropical_coordinates",
+          "persistence_statistics"
+        ]
+      },
+      "OrganSMNIST": {
+        "balanced_accuracy": 31.14,
+        "majority_descriptor": "persistence_image",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "persistence_image",
+          "persistence_statistics",
+          "persistence_image",
+          "persistence_image",
+          "persistence_image"
+        ]
+      },
+      "ISIC2019": {
+        "balanced_accuracy": 22.87,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "lbp_texture",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "Kvasir": {
+        "balanced_accuracy": 56.66,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_entropy",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "BrainTumorMRI": {
+        "balanced_accuracy": 74.83,
+        "majority_descriptor": "persistence_entropy",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy"
+        ]
+      },
+      "MURA": {
+        "balanced_accuracy": 28.93,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "BreakHis": {
+        "balanced_accuracy": 30.22,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "NCT_CRC_HE": {
+        "balanced_accuracy": 81.76,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "MalariaCell": {
+        "balanced_accuracy": 90.98,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_landscapes",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "IDRiD": {
+        "balanced_accuracy": 35.18,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      },
+      "PCam": {
+        "balanced_accuracy": 75.97,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "LC25000": {
+        "balanced_accuracy": 94.51,
+        "majority_descriptor": "persistence_entropy",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_landscapes"
+        ]
+      },
+      "SIPaKMeD": {
+        "balanced_accuracy": 83.48,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "AML_Cytomorphology": {
+        "balanced_accuracy": 44.43,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "lbp_texture",
+          "lbp_texture",
+          "edge_histogram",
+          "lbp_texture"
+        ]
+      },
+      "APTOS2019": {
+        "balanced_accuracy": 35.04,
+        "majority_descriptor": "persistence_entropy",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy",
+          "persistence_entropy"
+        ]
+      },
+      "GasHisSDB": {
+        "balanced_accuracy": 83.39,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Chaoyang": {
+        "balanced_accuracy": 59.78,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      }
+    },
+    "w/o Memory": {
+      "BloodMNIST": {
+        "balanced_accuracy": 85.08,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions"
+        ]
+      },
+      "TissueMNIST": {
+        "balanced_accuracy": 24.07,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "tropical_coordinates",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "PathMNIST": {
+        "balanced_accuracy": 82.19,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OCTMNIST": {
+        "balanced_accuracy": 43.56,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "lbp_texture",
+          "persistence_statistics",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "OrganAMNIST": {
+        "balanced_accuracy": 50.52,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "RetinaMNIST": {
+        "balanced_accuracy": 34.67,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "PneumoniaMNIST": {
+        "balanced_accuracy": 84.01,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "edge_histogram",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "BreastMNIST": {
+        "balanced_accuracy": 70.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "ATOL"
+        ]
+      },
+      "DermaMNIST": {
+        "balanced_accuracy": 15.08,
+        "majority_descriptor": "ATOL",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "persistence_statistics"
+        ]
+      },
+      "OrganCMNIST": {
+        "balanced_accuracy": 46.4,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "OrganSMNIST": {
+        "balanced_accuracy": 43.66,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "persistence_image",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "ISIC2019": {
+        "balanced_accuracy": 21.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "edge_histogram",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Kvasir": {
+        "balanced_accuracy": 56.66,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "edge_histogram",
+          "persistence_landscapes",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "persistence_landscapes"
+        ]
+      },
+      "BrainTumorMRI": {
+        "balanced_accuracy": 80.03,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "MURA": {
+        "balanced_accuracy": 28.93,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "lbp_texture",
+          "minkowski_functionals",
+          "lbp_texture",
+          "minkowski_functionals",
+          "edge_histogram"
+        ]
+      },
+      "BreakHis": {
+        "balanced_accuracy": 31.71,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_codebook",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "NCT_CRC_HE": {
+        "balanced_accuracy": 81.76,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "MalariaCell": {
+        "balanced_accuracy": 94.53,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "template_functions",
+          "minkowski_functionals",
+          "template_functions"
+        ]
+      },
+      "IDRiD": {
+        "balanced_accuracy": 35.18,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "PCam": {
+        "balanced_accuracy": 75.97,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "LC25000": {
+        "balanced_accuracy": 96.48,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "SIPaKMeD": {
+        "balanced_accuracy": 78.94,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "template_functions"
+        ]
+      },
+      "AML_Cytomorphology": {
+        "balanced_accuracy": 67.4,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "template_functions",
+          "lbp_texture"
+        ]
+      },
+      "APTOS2019": {
+        "balanced_accuracy": 37.75,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "GasHisSDB": {
+        "balanced_accuracy": 83.39,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Chaoyang": {
+        "balanced_accuracy": 59.78,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_statistics",
+          "persistence_landscapes"
+        ]
+      }
+    },
+    "w/o Reflect": {
+      "BloodMNIST": {
+        "balanced_accuracy": 85.08,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "minkowski_functionals",
+          "template_functions"
+        ]
+      },
+      "TissueMNIST": {
+        "balanced_accuracy": 24.07,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "PathMNIST": {
+        "balanced_accuracy": 82.19,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OCTMNIST": {
+        "balanced_accuracy": 43.56,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "OrganAMNIST": {
+        "balanced_accuracy": 50.52,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "persistence_image",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "RetinaMNIST": {
+        "balanced_accuracy": 34.67,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "PneumoniaMNIST": {
+        "balanced_accuracy": 84.01,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "BreastMNIST": {
+        "balanced_accuracy": 70.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "DermaMNIST": {
+        "balanced_accuracy": 28.98,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OrganCMNIST": {
+        "balanced_accuracy": 46.4,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "persistence_image",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "OrganSMNIST": {
+        "balanced_accuracy": 31.14,
+        "majority_descriptor": "persistence_image",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "persistence_image",
+          "minkowski_functionals",
+          "persistence_image",
+          "edge_histogram",
+          "minkowski_functionals"
+        ]
+      },
+      "ISIC2019": {
+        "balanced_accuracy": 21.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Kvasir": {
+        "balanced_accuracy": 56.66,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "edge_histogram",
+          "persistence_landscapes",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "persistence_landscapes"
+        ]
+      },
+      "BrainTumorMRI": {
+        "balanced_accuracy": 69.18,
+        "majority_descriptor": "edge_histogram",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "edge_histogram",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "edge_histogram"
+        ]
+      },
+      "MURA": {
+        "balanced_accuracy": 18.45,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "edge_histogram",
+          "minkowski_functionals",
+          "edge_histogram",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "BreakHis": {
+        "balanced_accuracy": 31.71,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "NCT_CRC_HE": {
+        "balanced_accuracy": 81.76,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "MalariaCell": {
+        "balanced_accuracy": 94.01,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "persistence_landscapes",
+          "minkowski_functionals",
+          "template_functions",
+          "template_functions"
+        ]
+      },
+      "IDRiD": {
+        "balanced_accuracy": 35.18,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "PCam": {
+        "balanced_accuracy": 75.97,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "LC25000": {
+        "balanced_accuracy": 96.48,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_landscapes"
+        ]
+      },
+      "SIPaKMeD": {
+        "balanced_accuracy": 80.55,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "lbp_texture",
+          "lbp_texture",
+          "minkowski_functionals",
+          "template_functions"
+        ]
+      },
+      "AML_Cytomorphology": {
+        "balanced_accuracy": 44.43,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "edge_histogram",
+          "lbp_texture",
+          "lbp_texture",
+          "minkowski_functionals",
+          "lbp_texture"
+        ]
+      },
+      "APTOS2019": {
+        "balanced_accuracy": 37.75,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "GasHisSDB": {
+        "balanced_accuracy": 83.39,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Chaoyang": {
+        "balanced_accuracy": 59.47,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_landscapes"
+        ]
+      }
+    },
+    "w/o Interpret": {
+      "BloodMNIST": {
+        "balanced_accuracy": 85.08,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions"
+        ]
+      },
+      "TissueMNIST": {
+        "balanced_accuracy": 28.85,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "PathMNIST": {
+        "balanced_accuracy": 82.19,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "OCTMNIST": {
+        "balanced_accuracy": 41.63,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "OrganAMNIST": {
+        "balanced_accuracy": 50.52,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "RetinaMNIST": {
+        "balanced_accuracy": 34.67,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "PneumoniaMNIST": {
+        "balanced_accuracy": 84.01,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "edge_histogram",
+          "edge_histogram"
+        ]
+      },
+      "BreastMNIST": {
+        "balanced_accuracy": 59.76,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "DermaMNIST": {
+        "balanced_accuracy": 15.08,
+        "majority_descriptor": "ATOL",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "ATOL"
+        ]
+      },
+      "OrganCMNIST": {
+        "balanced_accuracy": 46.4,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "OrganSMNIST": {
+        "balanced_accuracy": 43.66,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "ISIC2019": {
+        "balanced_accuracy": 21.9,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "Kvasir": {
+        "balanced_accuracy": 56.66,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "persistence_landscapes",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_landscapes"
+        ]
+      },
+      "BrainTumorMRI": {
+        "balanced_accuracy": 80.03,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "edge_histogram",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "MURA": {
+        "balanced_accuracy": 28.93,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "XGBoost",
+        "descriptor_choices": [
+          "lbp_texture",
+          "template_functions",
+          "lbp_texture",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "BreakHis": {
+        "balanced_accuracy": 31.71,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_codebook",
+          "persistence_landscapes",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "NCT_CRC_HE": {
+        "balanced_accuracy": 81.76,
+        "majority_descriptor": "persistence_statistics",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "persistence_statistics",
+          "persistence_statistics",
+          "persistence_statistics",
+          "ATOL"
+        ]
+      },
+      "MalariaCell": {
+        "balanced_accuracy": 94.53,
+        "majority_descriptor": "minkowski_functionals",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals",
+          "minkowski_functionals"
+        ]
+      },
+      "IDRiD": {
+        "balanced_accuracy": 35.18,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "lbp_texture",
+          "persistence_landscapes"
+        ]
+      },
+      "PCam": {
+        "balanced_accuracy": 76.96,
+        "majority_descriptor": "template_functions",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions",
+          "template_functions"
+        ]
+      },
+      "LC25000": {
+        "balanced_accuracy": 87.0,
+        "majority_descriptor": "ATOL",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "persistence_statistics",
+          "persistence_statistics"
+        ]
+      },
+      "SIPaKMeD": {
+        "balanced_accuracy": 78.94,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "template_functions",
+          "lbp_texture",
+          "lbp_texture",
+          "minkowski_functionals",
+          "persistence_landscapes"
+        ]
+      },
+      "AML_Cytomorphology": {
+        "balanced_accuracy": 44.43,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "minkowski_functionals",
+          "lbp_texture",
+          "lbp_texture",
+          "template_functions",
+          "lbp_texture"
+        ]
+      },
+      "APTOS2019": {
+        "balanced_accuracy": 37.75,
+        "majority_descriptor": "lbp_texture",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture",
+          "lbp_texture"
+        ]
+      },
+      "GasHisSDB": {
+        "balanced_accuracy": 74.43,
+        "majority_descriptor": "ATOL",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "ATOL",
+          "ATOL"
+        ]
+      },
+      "Chaoyang": {
+        "balanced_accuracy": 59.78,
+        "majority_descriptor": "persistence_landscapes",
+        "classifier": "TabPFN",
+        "descriptor_choices": [
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes",
+          "persistence_landscapes"
+        ]
+      }
+    }
+  }
+}

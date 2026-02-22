@@ -1,0 +1,91 @@
+{
+  "condition": "c0_full",
+  "condition_id": "c0",
+  "dataset": "BloodMNIST",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "template_functions",
+    "template_functions",
+    "template_functions",
+    "template_functions",
+    "template_functions"
+  ],
+  "majority_descriptor": "template_functions",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "TabPFN",
+  "balanced_accuracy": 85.08,
+  "std_accuracy": 5.21,
+  "fold_accuracies": [
+    91.06,
+    85.8,
+    78.37
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "template_functions",
+      "stance": "DEVIATE",
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 23.32
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 1,
+      "descriptor": "template_functions",
+      "stance": "DEVIATE",
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 21.55
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 1,
+      "descriptor": "template_functions",
+      "stance": "DEVIATE",
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 19.02
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 2,
+      "descriptor": "template_functions",
+      "stance": "DEVIATE",
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 23.81
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 3,
+      "descriptor": "template_functions",
+      "stance": "DEVIATE",
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "filtration_type": "superlevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 24.84
+    }
+  ],
+  "demo_time_seconds": 129.12,
+  "eval_time_seconds": 177.45,
+  "total_time_seconds": 306.58
+}

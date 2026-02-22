@@ -1,0 +1,236 @@
+{
+  "dataset": "ISIC2019",
+  "method": "topoagent",
+  "descriptor": "persistence_landscapes",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.2749,
+  "best_accuracy": 0.575,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.23135770975056688,
+      "accuracy": 0.5450000000000002,
+      "std": 0.04458618185566016,
+      "fold_balanced_accuracy": [
+        0.2704081632653061,
+        0.2125,
+        0.29365079365079366,
+        0.1704081632653061,
+        0.20982142857142855
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.45,
+        0.65,
+        0.475,
+        0.55
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.20544501133786847,
+      "accuracy": 0.5,
+      "std": 0.049373187592724514,
+      "fold_balanced_accuracy": [
+        0.17755102040816326,
+        0.1875,
+        0.30158730158730157,
+        0.16326530612244897,
+        0.1973214285714286
+      ],
+      "fold_accuracy": [
+        0.475,
+        0.45,
+        0.625,
+        0.45,
+        0.5
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.274923469387755,
+      "accuracy": 0.575,
+      "std": 0.04304922334940654,
+      "fold_balanced_accuracy": [
+        0.25510204081632654,
+        0.27499999999999997,
+        0.35714285714285715,
+        0.2346938775510204,
+        0.2526785714285714
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.575,
+        0.675,
+        0.475,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.22135770975056693,
+      "accuracy": 0.55,
+      "std": 0.04082282560377431,
+      "fold_balanced_accuracy": [
+        0.22040816326530613,
+        0.1875,
+        0.29365079365079366,
+        0.17755102040816326,
+        0.2276785714285714
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.45,
+        0.65,
+        0.5,
+        0.575
+      ]
+    }
+  },
+  "feature_dim": 8400,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_landscapes', 'lbp_texture', 'persistence_landscapes']",
+  "selection_time_s": 126.42,
+  "eval_time_s": 2390.63,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:59:37.997765",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image from the ISIC2019 dataset likely contains skin lesions, which are surface abnormalities of the skin that can be analyzed for diagnostic purposes.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "In dermoscopy images, color distribution is diagnostically important, making per-channel analysis more suitable to capture subtle variations in texture and color.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for capturing dark-on-light structures, which is common in dermoscopy images where lesions typically appear darker than the surrounding skin.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 84175,
+            "h1_h0_ratio": 1.4
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 36.22
+    },
+    {
+      "index": 15,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is from the ISIC 2019 dataset, which focuses on skin lesions, making surface_lesions the appropriate choice.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Dermoscopy images often contain diagnostically significant color information, so per-channel processing can enhance feature extraction.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures, which is typical in dermoscopy images where lesions are often darker than the surrounding skin.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.009609,
+            "h1_avg_persistence": 0.006648
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 45.1
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is from a dermatology dataset focused on skin lesions, indicating the presence of surface lesions.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Color distribution in dermoscopy images is diagnostically significant for identifying lesion types, justifying the use of per-channel mode.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures typical in dermoscopy images where lesions appear darker than the surrounding skin.",
+        "_n_channels": 3,
+        "_gt_object_type": "surface_lesions",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "h1_dominant",
+          "description": "H1 features significantly outnumber H0 \u2014 loop/cavity structure dominates",
+          "recommends": [
+            "persistence_landscapes",
+            "persistence_silhouette"
+          ],
+          "reasoning": "When H1 features greatly exceed H0, the image has rich loop/cavity structure. Persistence landscapes capture multi-level H1 information via layered envelope functions, better than single-summary descriptors.",
+          "metrics": {
+            "h1_h0_ratio": 1.91,
+            "h1_count": 82680
+          }
+        },
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 125859,
+            "h1_h0_ratio": 1.91
+          }
+        },
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.004635,
+            "h1_avg_persistence": 0.00471
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 45.1
+    }
+  ]
+}

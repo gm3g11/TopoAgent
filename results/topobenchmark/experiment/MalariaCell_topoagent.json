@@ -1,0 +1,168 @@
+{
+  "dataset": "MalariaCell",
+  "method": "topoagent",
+  "descriptor": "template_functions",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.945,
+  "best_accuracy": 0.945,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.945,
+      "accuracy": 0.945,
+      "std": 0.03674234614174766,
+      "fold_balanced_accuracy": [
+        0.925,
+        0.975,
+        0.925,
+        0.9,
+        1.0
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.975,
+        0.925,
+        0.9,
+        1.0
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.9349999999999999,
+      "accuracy": 0.9349999999999999,
+      "std": 0.037416573867739396,
+      "fold_balanced_accuracy": [
+        0.95,
+        0.925,
+        0.9,
+        0.9,
+        1.0
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.925,
+        0.9,
+        0.9,
+        1.0
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.945,
+      "accuracy": 0.945,
+      "std": 0.029154759474226483,
+      "fold_balanced_accuracy": [
+        0.95,
+        0.925,
+        0.925,
+        0.925,
+        1.0
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.925,
+        0.925,
+        0.925,
+        1.0
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.945,
+      "accuracy": 0.945,
+      "std": 0.039999999999999994,
+      "fold_balanced_accuracy": [
+        0.95,
+        0.95,
+        0.875,
+        0.95,
+        1.0
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.95,
+        0.875,
+        0.95,
+        1.0
+      ]
+    }
+  },
+  "feature_dim": 486,
+  "selection_reasoning": "Majority vote from 3 demo images: ['template_functions', 'template_functions', 'template_functions']",
+  "selection_time_s": 71.48,
+  "eval_time_s": 142.48,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:21:43.145095",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains isolated red blood cells, which are distinct, individual cellular objects typical of discrete cell structures.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since the image is an RGB image and color can carry diagnostic information in pathology images, using per-channel mode will help capture more detailed features.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The sublevel filtration is suitable for capturing the dark-on-light structures of stained cells in blood smear images.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 23.55
+    },
+    {
+      "index": 15,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains isolated red blood cells, some of which may be parasitized, which fits the description of discrete cells.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since the image is an RGB image and color may carry diagnostic information for identifying parasitized cells, per-channel analysis is suitable.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The sublevel filtration is appropriate for capturing dark-on-light structures such as stained cells in thin blood smear images.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 27.05
+    },
+    {
+      "index": 30,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains isolated red blood cells, which are individual cell structures, making 'discrete_cells' the appropriate object type.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "As the image is RGB and color information might be useful to distinguish parasitized cells from uninfected ones, using per-channel mode allows leveraging this potential diagnostic information.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable because it captures dark-on-light structures, which is typical for stained cells in microscopy images like this one.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 20.88
+    }
+  ]
+}

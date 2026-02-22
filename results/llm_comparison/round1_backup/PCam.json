@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:21:38",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "PCam": {
+      "fixed_pi": {
+        "accuracy": 75.43,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 200,
+        "time": 18.0
+      },
+      "fixed_ps": {
+        "accuracy": 77.48,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 6.9
+      },
+      "claude": {
+        "accuracy": 77.48,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 84.0,
+        "time": 90.8
+      },
+      "gemini": {
+        "accuracy": 77.48,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 33.4,
+        "time": 40.1
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "fixed_pi": 75.43,
+      "fixed_ps": 77.48,
+      "claude": 77.48,
+      "gemini": 77.48
+    }
+  },
+  "overall": {
+    "fixed_pi": 75.43,
+    "fixed_ps": 77.48,
+    "claude": 77.48,
+    "gemini": 77.48
+  }
+}

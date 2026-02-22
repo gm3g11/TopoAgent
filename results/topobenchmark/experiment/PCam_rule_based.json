@@ -1,0 +1,97 @@
+{
+  "dataset": "PCam",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.8,
+  "best_accuracy": 0.8,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.8,
+      "accuracy": 0.8,
+      "std": 0.02236067977499787,
+      "fold_balanced_accuracy": [
+        0.775,
+        0.825,
+        0.775,
+        0.8,
+        0.825
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.825,
+        0.775,
+        0.8,
+        0.825
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7849999999999999,
+      "accuracy": 0.7849999999999999,
+      "std": 0.03391164991562631,
+      "fold_balanced_accuracy": [
+        0.775,
+        0.75,
+        0.75,
+        0.825,
+        0.825
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.75,
+        0.75,
+        0.825,
+        0.825
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.78,
+      "accuracy": 0.78,
+      "std": 0.053385391260156546,
+      "fold_balanced_accuracy": [
+        0.675,
+        0.8,
+        0.8,
+        0.8,
+        0.825
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.8,
+        0.8,
+        0.8,
+        0.825
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.8,
+      "accuracy": 0.8,
+      "std": 0.03162277660168377,
+      "fold_balanced_accuracy": [
+        0.75,
+        0.825,
+        0.775,
+        0.825,
+        0.825
+      ],
+      "fold_accuracy": [
+        0.75,
+        0.825,
+        0.775,
+        0.825,
+        0.825
+      ]
+    }
+  },
+  "feature_dim": 540,
+  "selection_reasoning": "Top-1 for discrete_cells: minkowski_functionals (benchmark accuracy: 76.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 85.99,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:30:02.523135"
+}

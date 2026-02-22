@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:32:49",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "Chaoyang": {
+      "fixed_pi": {
+        "accuracy": 46.14,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 1352,
+        "time": 217.1
+      },
+      "fixed_ps": {
+        "accuracy": 50.14,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 140.1
+      },
+      "claude": {
+        "accuracy": 57.9,
+        "descriptor": "persistence_landscapes",
+        "n_valid": 200,
+        "feature_dim": 3800,
+        "agent_time": 95.6,
+        "time": 280.5
+      },
+      "gemini": {
+        "accuracy": 50.14,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 42.9,
+        "time": 182.1
+      }
+    }
+  },
+  "per_object_type": {
+    "glands_lumens": {
+      "n_datasets": 1,
+      "fixed_pi": 46.14,
+      "fixed_ps": 50.14,
+      "claude": 57.9,
+      "gemini": 50.14
+    }
+  },
+  "overall": {
+    "fixed_pi": 46.14,
+    "fixed_ps": 50.14,
+    "claude": 57.9,
+    "gemini": 50.14
+  }
+}

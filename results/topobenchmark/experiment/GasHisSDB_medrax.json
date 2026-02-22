@@ -1,0 +1,106 @@
+{
+  "dataset": "GasHisSDB",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.7167,
+  "best_accuracy": 0.735,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.6764166666666667,
+      "accuracy": 0.71,
+      "std": 0.06548462499786581,
+      "fold_balanced_accuracy": [
+        0.6354166666666667,
+        0.7604166666666667,
+        0.6458333333333333,
+        0.59375,
+        0.7466666666666666
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.775,
+        0.7,
+        0.625,
+        0.75
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.71675,
+      "accuracy": 0.7350000000000001,
+      "std": 0.04491921761463697,
+      "fold_balanced_accuracy": [
+        0.6770833333333333,
+        0.78125,
+        0.65625,
+        0.7291666666666667,
+        0.74
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.775,
+        0.7,
+        0.75,
+        0.725
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.6914999999999999,
+      "accuracy": 0.7,
+      "std": 0.07265863870027967,
+      "fold_balanced_accuracy": [
+        0.7395833333333333,
+        0.8020833333333333,
+        0.6145833333333333,
+        0.6145833333333333,
+        0.6866666666666666
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.8,
+        0.65,
+        0.6,
+        0.675
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6914166666666667,
+      "accuracy": 0.72,
+      "std": 0.07411917955413279,
+      "fold_balanced_accuracy": [
+        0.6666666666666667,
+        0.7604166666666667,
+        0.5729166666666667,
+        0.6770833333333333,
+        0.78
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.775,
+        0.625,
+        0.7,
+        0.775
+      ]
+    }
+  },
+  "feature_dim": 864,
+  "selection_reasoning": "The persistence_image descriptor is well-suited for capturing the spatial distribution and intensity of topological features, which aligns with the need to analyze texture and surface patterns in gastric histopathology. Given the noisy persistence signal, this descriptor can effectively summarize the complex and subtle topological features present in the dataset.",
+  "selection_time_s": 4.48,
+  "eval_time_s": 66.6,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:35:04.269251",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 673.3,
+    "avg_H1_count": 1017.0,
+    "avg_H0_persistence": 0.053595,
+    "avg_H1_persistence": 0.028255,
+    "avg_total_features": 1690.3,
+    "avg_h1_h0_ratio": 1.5
+  }
+}

@@ -1,0 +1,902 @@
+{
+  "summary": {
+    "topoagent": {
+      "mean": 0.6119461538461539,
+      "std": 0.22986526192326942,
+      "ci_lower": 0.5205881730769231,
+      "ci_upper": 0.698239903846154,
+      "n_datasets": 26,
+      "min": 0.2595,
+      "max": 0.955,
+      "median": 0.6162000000000001
+    },
+    "gpt4o": {
+      "mean": 0.5155576923076922,
+      "std": 0.2393074963837192,
+      "ci_lower": 0.4214148076923077,
+      "ci_upper": 0.6065416346153846,
+      "n_datasets": 26,
+      "min": 0.1643,
+      "max": 0.93,
+      "median": 0.5051
+    },
+    "medrax": {
+      "mean": 0.5418538461538461,
+      "std": 0.23969995704689648,
+      "ci_lower": 0.4465374038461539,
+      "ci_upper": 0.6299652884615383,
+      "n_datasets": 26,
+      "min": 0.1786,
+      "max": 0.93,
+      "median": 0.5515000000000001
+    },
+    "rule_based": {
+      "mean": 0.620976923076923,
+      "std": 0.22142565918244142,
+      "ci_lower": 0.5334108653846154,
+      "ci_upper": 0.7047885576923075,
+      "n_datasets": 26,
+      "min": 0.2595,
+      "max": 0.955,
+      "median": 0.6352
+    }
+  },
+  "per_dataset": {
+    "BloodMNIST": {
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "template_functions",
+        "balanced_accuracy": 0.8866,
+        "accuracy": 0.89,
+        "best_classifier": "TabPFN",
+        "feature_dim": 486
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.7547,
+        "accuracy": 0.795,
+        "best_classifier": "TabPFN",
+        "feature_dim": 600
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.7955,
+        "accuracy": 0.83,
+        "best_classifier": "TabPFN",
+        "feature_dim": 10500
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.8476,
+        "accuracy": 0.85,
+        "best_classifier": "TabPFN",
+        "feature_dim": 540
+      }
+    },
+    "TissueMNIST": {
+      "object_type": "discrete_cells",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "template_functions",
+        "balanced_accuracy": 0.265,
+        "accuracy": 0.415,
+        "best_classifier": "CatBoost",
+        "feature_dim": 162
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2367,
+        "accuracy": 0.36,
+        "best_classifier": "XGBoost",
+        "feature_dim": 200
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2367,
+        "accuracy": 0.36,
+        "best_classifier": "XGBoost",
+        "feature_dim": 200
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.2811,
+        "accuracy": 0.475,
+        "best_classifier": "XGBoost",
+        "feature_dim": 180
+      }
+    },
+    "PathMNIST": {
+      "object_type": "glands_lumens",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8344,
+        "accuracy": 0.85,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.6415,
+        "accuracy": 0.66,
+        "best_classifier": "TabPFN",
+        "feature_dim": 4056
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.7063,
+        "accuracy": 0.73,
+        "best_classifier": "TabPFN",
+        "feature_dim": 11400
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8344,
+        "accuracy": 0.85,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    },
+    "OCTMNIST": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.4404,
+        "accuracy": 0.695,
+        "best_classifier": "TabPFN",
+        "feature_dim": 62
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.3817,
+        "accuracy": 0.59,
+        "best_classifier": "CatBoost",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.4686,
+        "accuracy": 0.67,
+        "best_classifier": "TabPFN",
+        "feature_dim": 3500
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.4076,
+        "accuracy": 0.665,
+        "best_classifier": "TabPFN",
+        "feature_dim": 105
+      }
+    },
+    "OrganAMNIST": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "edge_histogram",
+        "balanced_accuracy": 0.6366,
+        "accuracy": 0.69,
+        "best_classifier": "RandomForest",
+        "feature_dim": 512
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.401,
+        "accuracy": 0.495,
+        "best_classifier": "RandomForest",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.5369,
+        "accuracy": 0.555,
+        "best_classifier": "RandomForest",
+        "feature_dim": 3500
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.6114,
+        "accuracy": 0.645,
+        "best_classifier": "CatBoost",
+        "feature_dim": 105
+      }
+    },
+    "RetinaMNIST": {
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.3827,
+        "accuracy": 0.565,
+        "best_classifier": "TabPFN",
+        "feature_dim": 912
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2247,
+        "accuracy": 0.405,
+        "best_classifier": "RandomForest",
+        "feature_dim": 1176
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2247,
+        "accuracy": 0.405,
+        "best_classifier": "RandomForest",
+        "feature_dim": 1176
+      },
+      "rule_based": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.3827,
+        "accuracy": 0.565,
+        "best_classifier": "TabPFN",
+        "feature_dim": 912
+      }
+    },
+    "PneumoniaMNIST": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "edge_histogram",
+        "balanced_accuracy": 0.9069,
+        "accuracy": 0.92,
+        "best_classifier": "TabPFN",
+        "feature_dim": 512
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.8529,
+        "accuracy": 0.895,
+        "best_classifier": "TabPFN",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.8529,
+        "accuracy": 0.895,
+        "best_classifier": "TabPFN",
+        "feature_dim": 288
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.8803,
+        "accuracy": 0.91,
+        "best_classifier": "TabPFN",
+        "feature_dim": 105
+      }
+    },
+    "BreastMNIST": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.7277,
+        "accuracy": 0.805,
+        "best_classifier": "CatBoost",
+        "feature_dim": 62
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.5961,
+        "accuracy": 0.75,
+        "best_classifier": "CatBoost",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.733,
+        "accuracy": 0.795,
+        "best_classifier": "CatBoost",
+        "feature_dim": 3500
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.659,
+        "accuracy": 0.79,
+        "best_classifier": "TabPFN",
+        "feature_dim": 105
+      }
+    },
+    "DermaMNIST": {
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.3337,
+        "accuracy": 0.67,
+        "best_classifier": "CatBoost",
+        "feature_dim": 186
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2093,
+        "accuracy": 0.665,
+        "best_classifier": "XGBoost",
+        "feature_dim": 864
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2093,
+        "accuracy": 0.665,
+        "best_classifier": "XGBoost",
+        "feature_dim": 864
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.3337,
+        "accuracy": 0.67,
+        "best_classifier": "CatBoost",
+        "feature_dim": 186
+      }
+    },
+    "OrganCMNIST": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "edge_histogram",
+        "balanced_accuracy": 0.6024,
+        "accuracy": 0.665,
+        "best_classifier": "CatBoost",
+        "feature_dim": 512
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.35,
+        "accuracy": 0.425,
+        "best_classifier": "CatBoost",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.35,
+        "accuracy": 0.425,
+        "best_classifier": "CatBoost",
+        "feature_dim": 288
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.5558,
+        "accuracy": 0.57,
+        "best_classifier": "CatBoost",
+        "feature_dim": 105
+      }
+    },
+    "OrganSMNIST": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "edge_histogram",
+        "balanced_accuracy": 0.3309,
+        "accuracy": 0.45,
+        "best_classifier": "CatBoost",
+        "feature_dim": 512
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.3109,
+        "accuracy": 0.41,
+        "best_classifier": "XGBoost",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.3109,
+        "accuracy": 0.41,
+        "best_classifier": "XGBoost",
+        "feature_dim": 288
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.5067,
+        "accuracy": 0.565,
+        "best_classifier": "CatBoost",
+        "feature_dim": 105
+      }
+    },
+    "ISIC2019": {
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.2749,
+        "accuracy": 0.575,
+        "best_classifier": "CatBoost",
+        "feature_dim": 8400
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2354,
+        "accuracy": 0.54,
+        "best_classifier": "XGBoost",
+        "feature_dim": 864
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2354,
+        "accuracy": 0.54,
+        "best_classifier": "XGBoost",
+        "feature_dim": 864
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.2848,
+        "accuracy": 0.565,
+        "best_classifier": "CatBoost",
+        "feature_dim": 186
+      }
+    },
+    "Kvasir": {
+      "object_type": "glands_lumens",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.63,
+        "accuracy": 0.63,
+        "best_classifier": "TabPFN",
+        "feature_dim": 11400
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.635,
+        "accuracy": 0.635,
+        "best_classifier": "TabPFN",
+        "feature_dim": 4056
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.63,
+        "accuracy": 0.63,
+        "best_classifier": "TabPFN",
+        "feature_dim": 11400
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.665,
+        "accuracy": 0.665,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    },
+    "BrainTumorMRI": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8145,
+        "accuracy": 0.82,
+        "best_classifier": "TabPFN",
+        "feature_dim": 62
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.7259,
+        "accuracy": 0.735,
+        "best_classifier": "XGBoost",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.782,
+        "accuracy": 0.79,
+        "best_classifier": "TabPFN",
+        "feature_dim": 3500
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.7963,
+        "accuracy": 0.8,
+        "best_classifier": "CatBoost",
+        "feature_dim": 105
+      }
+    },
+    "MURA": {
+      "object_type": "organ_shape",
+      "color_mode": "grayscale",
+      "topoagent": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.2595,
+        "accuracy": 0.26,
+        "best_classifier": "CatBoost",
+        "feature_dim": 105
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.1643,
+        "accuracy": 0.165,
+        "best_classifier": "CatBoost",
+        "feature_dim": 288
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.1786,
+        "accuracy": 0.175,
+        "best_classifier": "RandomForest",
+        "feature_dim": 3500
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.2595,
+        "accuracy": 0.26,
+        "best_classifier": "CatBoost",
+        "feature_dim": 105
+      }
+    },
+    "BreakHis": {
+      "object_type": "glands_lumens",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.4943,
+        "accuracy": 0.635,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2939,
+        "accuracy": 0.5,
+        "best_classifier": "CatBoost",
+        "feature_dim": 4056
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2939,
+        "accuracy": 0.5,
+        "best_classifier": "CatBoost",
+        "feature_dim": 4056
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.4943,
+        "accuracy": 0.635,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    },
+    "NCT_CRC_HE": {
+      "object_type": "glands_lumens",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8181,
+        "accuracy": 0.825,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.653,
+        "accuracy": 0.66,
+        "best_classifier": "TabPFN",
+        "feature_dim": 4056
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.653,
+        "accuracy": 0.66,
+        "best_classifier": "TabPFN",
+        "feature_dim": 4056
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8181,
+        "accuracy": 0.825,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    },
+    "MalariaCell": {
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "template_functions",
+        "balanced_accuracy": 0.945,
+        "accuracy": 0.945,
+        "best_classifier": "TabPFN",
+        "feature_dim": 486
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.885,
+        "accuracy": 0.885,
+        "best_classifier": "CatBoost",
+        "feature_dim": 600
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.885,
+        "accuracy": 0.885,
+        "best_classifier": "CatBoost",
+        "feature_dim": 600
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.925,
+        "accuracy": 0.925,
+        "best_classifier": "TabPFN",
+        "feature_dim": 540
+      }
+    },
+    "IDRiD": {
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.4194,
+        "accuracy": 0.545,
+        "best_classifier": "CatBoost",
+        "feature_dim": 3000
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.2765,
+        "accuracy": 0.35,
+        "best_classifier": "XGBoost",
+        "feature_dim": 1176
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.4194,
+        "accuracy": 0.545,
+        "best_classifier": "CatBoost",
+        "feature_dim": 3000
+      },
+      "rule_based": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.3956,
+        "accuracy": 0.54,
+        "best_classifier": "TabPFN",
+        "feature_dim": 912
+      }
+    },
+    "PCam": {
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "template_functions",
+        "balanced_accuracy": 0.8,
+        "accuracy": 0.8,
+        "best_classifier": "CatBoost",
+        "feature_dim": 486
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.81,
+        "accuracy": 0.81,
+        "best_classifier": "RandomForest",
+        "feature_dim": 600
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.81,
+        "accuracy": 0.81,
+        "best_classifier": "RandomForest",
+        "feature_dim": 600
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.8,
+        "accuracy": 0.8,
+        "best_classifier": "TabPFN",
+        "feature_dim": 540
+      }
+    },
+    "LC25000": {
+      "object_type": "glands_lumens",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.955,
+        "accuracy": 0.955,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.93,
+        "accuracy": 0.93,
+        "best_classifier": "TabPFN",
+        "feature_dim": 4056
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.93,
+        "accuracy": 0.93,
+        "best_classifier": "TabPFN",
+        "feature_dim": 4056
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.955,
+        "accuracy": 0.955,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    },
+    "SIPaKMeD": {
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.7802,
+        "accuracy": 0.78,
+        "best_classifier": "TabPFN",
+        "feature_dim": 912
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.7888,
+        "accuracy": 0.79,
+        "best_classifier": "XGBoost",
+        "feature_dim": 600
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.7888,
+        "accuracy": 0.79,
+        "best_classifier": "XGBoost",
+        "feature_dim": 600
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.8795,
+        "accuracy": 0.88,
+        "best_classifier": "TabPFN",
+        "feature_dim": 540
+      }
+    },
+    "AML_Cytomorphology": {
+      "object_type": "discrete_cells",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.4838,
+        "accuracy": 0.72,
+        "best_classifier": "TabPFN",
+        "feature_dim": 912
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.4542,
+        "accuracy": 0.705,
+        "best_classifier": "CatBoost",
+        "feature_dim": 600
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.4542,
+        "accuracy": 0.705,
+        "best_classifier": "CatBoost",
+        "feature_dim": 600
+      },
+      "rule_based": {
+        "descriptor": "minkowski_functionals",
+        "balanced_accuracy": 0.6597,
+        "accuracy": 0.85,
+        "best_classifier": "TabPFN",
+        "feature_dim": 540
+      }
+    },
+    "APTOS2019": {
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.4368,
+        "accuracy": 0.66,
+        "best_classifier": "CatBoost",
+        "feature_dim": 912
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.3203,
+        "accuracy": 0.545,
+        "best_classifier": "XGBoost",
+        "feature_dim": 1176
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.3203,
+        "accuracy": 0.545,
+        "best_classifier": "XGBoost",
+        "feature_dim": 1176
+      },
+      "rule_based": {
+        "descriptor": "lbp_texture",
+        "balanced_accuracy": 0.4368,
+        "accuracy": 0.66,
+        "best_classifier": "CatBoost",
+        "feature_dim": 912
+      }
+    },
+    "GasHisSDB": {
+      "object_type": "surface_lesions",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8857,
+        "accuracy": 0.89,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.7167,
+        "accuracy": 0.735,
+        "best_classifier": "XGBoost",
+        "feature_dim": 864
+      },
+      "medrax": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.7167,
+        "accuracy": 0.735,
+        "best_classifier": "XGBoost",
+        "feature_dim": 864
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.8857,
+        "accuracy": 0.89,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    },
+    "Chaoyang": {
+      "object_type": "glands_lumens",
+      "color_mode": "per_channel",
+      "topoagent": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.5661,
+        "accuracy": 0.645,
+        "best_classifier": "TabPFN",
+        "feature_dim": 11400
+      },
+      "gpt4o": {
+        "descriptor": "persistence_image",
+        "balanced_accuracy": 0.556,
+        "accuracy": 0.67,
+        "best_classifier": "CatBoost",
+        "feature_dim": 4056
+      },
+      "medrax": {
+        "descriptor": "persistence_landscapes",
+        "balanced_accuracy": 0.5661,
+        "accuracy": 0.645,
+        "best_classifier": "TabPFN",
+        "feature_dim": 11400
+      },
+      "rule_based": {
+        "descriptor": "persistence_statistics",
+        "balanced_accuracy": 0.5898,
+        "accuracy": 0.685,
+        "best_classifier": "TabPFN",
+        "feature_dim": 186
+      }
+    }
+  },
+  "descriptor_frequency": {
+    "topoagent": {
+      "persistence_statistics": 9,
+      "template_functions": 4,
+      "edge_histogram": 4,
+      "lbp_texture": 4,
+      "persistence_landscapes": 4,
+      "minkowski_functionals": 1
+    },
+    "gpt4o": {
+      "persistence_image": 26
+    },
+    "medrax": {
+      "persistence_image": 16,
+      "persistence_landscapes": 10
+    },
+    "rule_based": {
+      "minkowski_functionals": 14,
+      "persistence_statistics": 9,
+      "lbp_texture": 3
+    }
+  },
+  "metric": "best_balanced_accuracy",
+  "n_datasets": 26
+}

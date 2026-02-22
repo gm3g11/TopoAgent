@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:24:02",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "BloodMNIST": {
+      "fixed_pi": {
+        "accuracy": 50.96,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 200,
+        "time": 108.1
+      },
+      "fixed_ps": {
+        "accuracy": 63.93,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 28.4
+      },
+      "claude": {
+        "accuracy": 76.99,
+        "descriptor": "template_functions",
+        "n_valid": 200,
+        "feature_dim": 162,
+        "agent_time": 57.7,
+        "time": 115.6
+      },
+      "gemini": {
+        "accuracy": 73.42,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 180,
+        "agent_time": 41.5,
+        "time": 64.7
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "fixed_pi": 50.96,
+      "fixed_ps": 63.93,
+      "claude": 76.99,
+      "gemini": 73.42
+    }
+  },
+  "overall": {
+    "fixed_pi": 50.96,
+    "fixed_ps": 63.93,
+    "claude": 76.99,
+    "gemini": 73.42
+  }
+}

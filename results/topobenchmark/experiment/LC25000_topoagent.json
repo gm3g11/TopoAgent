@@ -1,0 +1,168 @@
+{
+  "dataset": "LC25000",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.955,
+  "best_accuracy": 0.955,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.9549999999999998,
+      "accuracy": 0.9549999999999998,
+      "std": 0.018708286933869687,
+      "fold_balanced_accuracy": [
+        0.975,
+        0.925,
+        0.95,
+        0.95,
+        0.975
+      ],
+      "fold_accuracy": [
+        0.975,
+        0.925,
+        0.95,
+        0.95,
+        0.975
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.915,
+      "accuracy": 0.915,
+      "std": 0.012247448713915901,
+      "fold_balanced_accuracy": [
+        0.925,
+        0.9,
+        0.9,
+        0.925,
+        0.925
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.9,
+        0.9,
+        0.925,
+        0.925
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.9099999999999999,
+      "accuracy": 0.9099999999999999,
+      "std": 0.03391164991562634,
+      "fold_balanced_accuracy": [
+        0.925,
+        0.85,
+        0.9,
+        0.95,
+        0.925
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.85,
+        0.9,
+        0.95,
+        0.925
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.9149999999999998,
+      "accuracy": 0.9149999999999998,
+      "std": 0.033911649915626334,
+      "fold_balanced_accuracy": [
+        0.9,
+        0.9,
+        0.875,
+        0.925,
+        0.975
+      ],
+      "fold_accuracy": [
+        0.9,
+        0.9,
+        0.875,
+        0.925,
+        0.975
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_statistics', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 81.91,
+  "eval_time_s": 82.11,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:38:53.648589",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image likely contains glandular structures characteristic of histopathology images, particularly in the context of lung and colon cancer where glandular architecture is a key feature.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "As this is an RGB image from pathology, color differences between channels can carry diagnostic information, making per-channel analysis valuable.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures such as stained tissue boundaries and cellular structures in histopathological images.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 31.76
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image is from histopathology of lung and colon tissues, where glandular structures and lumens are key diagnostic features.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "In histopathology, color information from staining is diagnostically meaningful, and per-channel processing can enhance feature extraction.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Histopathology images often contain dark-stained tissue structures against a lighter background, making sublevel filtration appropriate for capturing these structures.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 27.62
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "glands_lumens",
+        "object_type_reasoning": "The image likely contains structures typical of histopathology, such as glandular architecture and tissue organization, which are common in lung and colon cancer pathology.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "As this is an RGB histopathology image, color can carry significant diagnostic information, enhancing feature extraction when processed per channel.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures like stained cells and tissue boundaries, which are prevalent in histopathology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 22.53
+    }
+  ]
+}

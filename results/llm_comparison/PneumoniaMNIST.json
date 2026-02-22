@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:19:37",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "gpt4o",
+      "claude",
+      "gemini_flash",
+      "gemini_pro"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "gpt4o": "GPT-4o",
+      "claude": "Claude",
+      "gemini_flash": "Gemini-Flash",
+      "gemini_pro": "Gemini-Pro"
+    }
+  },
+  "per_dataset": {
+    "PneumoniaMNIST": {
+      "fixed_pi": {
+        "accuracy": 73.85,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 288,
+        "time": 27.7
+      },
+      "fixed_ps": {
+        "accuracy": 87.5,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 22.0
+      },
+      "gpt4o": {
+        "accuracy": 84.56,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 105,
+        "agent_time": 20.2,
+        "time": 31.0
+      },
+      "claude": {
+        "accuracy": 87.5,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 130.5,
+        "time": 152.5
+      },
+      "gemini_flash": {
+        "accuracy": 84.56,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 105,
+        "agent_time": 36.5,
+        "time": 47.4
+      },
+      "gemini_pro": {
+        "accuracy": 84.56,
+        "descriptor": "minkowski_functionals",
+        "n_valid": 200,
+        "feature_dim": 105,
+        "agent_time": 72.0,
+        "time": 83.0
+      }
+    }
+  },
+  "per_object_type": {
+    "organ_shape": {
+      "n_datasets": 1,
+      "fixed_pi": 73.85,
+      "fixed_ps": 87.5,
+      "gpt4o": 84.56,
+      "claude": 87.5,
+      "gemini_flash": 84.56,
+      "gemini_pro": 84.56
+    }
+  },
+  "overall": {
+    "fixed_pi": 73.85,
+    "fixed_ps": 87.5,
+    "gpt4o": 84.56,
+    "claude": 87.5,
+    "gemini_flash": 84.56,
+    "gemini_pro": 84.56
+  }
+}

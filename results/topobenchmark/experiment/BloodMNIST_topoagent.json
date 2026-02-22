@@ -1,0 +1,168 @@
+{
+  "dataset": "BloodMNIST",
+  "method": "topoagent",
+  "descriptor": "template_functions",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.8866,
+  "best_accuracy": 0.89,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.8866071428571429,
+      "accuracy": 0.89,
+      "std": 0.052110112163404,
+      "fold_balanced_accuracy": [
+        0.9047619047619048,
+        0.9017857142857143,
+        0.9508928571428572,
+        0.7924107142857142,
+        0.8831845238095237
+      ],
+      "fold_accuracy": [
+        0.9,
+        0.9,
+        0.95,
+        0.8,
+        0.9
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.806547619047619,
+      "accuracy": 0.8299999999999998,
+      "std": 0.05606980143731522,
+      "fold_balanced_accuracy": [
+        0.8377976190476191,
+        0.8601190476190477,
+        0.8467261904761905,
+        0.7090773809523809,
+        0.7790178571428572
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.875,
+        0.85,
+        0.75,
+        0.85
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.8288690476190477,
+      "accuracy": 0.845,
+      "std": 0.027390655630579873,
+      "fold_balanced_accuracy": [
+        0.8065476190476191,
+        0.8601190476190477,
+        0.8645833333333333,
+        0.8080357142857142,
+        0.8050595238095237
+      ],
+      "fold_accuracy": [
+        0.8,
+        0.875,
+        0.875,
+        0.825,
+        0.85
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.7897321428571429,
+      "accuracy": 0.8299999999999998,
+      "std": 0.04794253959871758,
+      "fold_balanced_accuracy": [
+        0.8422619047619048,
+        0.7559523809523809,
+        0.8467261904761905,
+        0.7247023809523809,
+        0.7790178571428572
+      ],
+      "fold_accuracy": [
+        0.85,
+        0.825,
+        0.85,
+        0.775,
+        0.85
+      ]
+    }
+  },
+  "feature_dim": 486,
+  "selection_reasoning": "Majority vote from 3 demo images: ['template_functions', 'template_functions', 'template_functions']",
+  "selection_time_s": 89.95,
+  "eval_time_s": 299.02,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:21:56.148317",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains individual blood cells, each isolated and distinct, which aligns with the discrete_cells category.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "BloodMNIST images are RGB and color information (from stains) can be diagnostically meaningful, making per-channel mode advantageous.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The cells are stained and appear darker against a light background, making sublevel filtration suitable for capturing these structures.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 23.46
+    },
+    {
+      "index": 15,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains individual blood cells, which are isolated objects and fit the description of discrete cells.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since the image is in RGB and the cells are stained with Wright-Giemsa, the color carries diagnostic information useful for distinguishing cell types.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures, which is typical for stained cells against a light background.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 35.61
+    },
+    {
+      "index": 30,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains individual blood cells, which are distinct, isolated objects on a light background.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is an RGB microscopy image where the color of the stain can carry diagnostic information about the cell types.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The stained cells are dark structures on a light background, making sublevel filtration appropriate to capture these features.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 30.88
+    }
+  ]
+}

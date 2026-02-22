@@ -1,0 +1,177 @@
+{
+  "dataset": "MURA",
+  "method": "topoagent",
+  "descriptor": "minkowski_functionals",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.2595,
+  "best_accuracy": 0.26,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.24047619047619045,
+      "accuracy": 0.24,
+      "std": 0.08397710518356379,
+      "fold_balanced_accuracy": [
+        0.2857142857142857,
+        0.20238095238095236,
+        0.14285714285714285,
+        0.1904761904761905,
+        0.38095238095238093
+      ],
+      "fold_accuracy": [
+        0.275,
+        0.2,
+        0.15,
+        0.2,
+        0.375
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.2595238095238095,
+      "accuracy": 0.25999999999999995,
+      "std": 0.03868589716493312,
+      "fold_balanced_accuracy": [
+        0.20238095238095238,
+        0.25,
+        0.25,
+        0.32142857142857134,
+        0.27380952380952384
+      ],
+      "fold_accuracy": [
+        0.2,
+        0.25,
+        0.25,
+        0.325,
+        0.275
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.24761904761904757,
+      "accuracy": 0.24500000000000002,
+      "std": 0.08295833995325877,
+      "fold_balanced_accuracy": [
+        0.21428571428571427,
+        0.25,
+        0.16666666666666666,
+        0.20238095238095238,
+        0.4047619047619047
+      ],
+      "fold_accuracy": [
+        0.2,
+        0.25,
+        0.175,
+        0.2,
+        0.4
+      ]
+    }
+  },
+  "feature_dim": 105,
+  "selection_reasoning": "Majority vote from 3 demo images: ['minkowski_functionals', 'minkowski_functionals', 'edge_histogram']",
+  "selection_time_s": 88.46,
+  "eval_time_s": 2691.66,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:44:39.748841",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "minkowski_functionals",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image is from an orthopedic radiology dataset focusing on musculoskeletal structures, indicating that it likely contains outlines of bones or skeletal structures, which are best categorized as organ shapes.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is a single-channel X-ray image, which is inherently grayscale, making the grayscale mode appropriate for downstream vectorization.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "In X-ray images, bone structures appear darker than the surrounding tissues. Using sublevel filtration will effectively capture these dark-on-light structures, which are essential for analyzing skeletal outlines.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.008216,
+            "h1_avg_persistence": 0.006851
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "minkowski_functionals"
+      ],
+      "time_s": 24.67
+    },
+    {
+      "index": 15,
+      "descriptor": "minkowski_functionals",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image likely contains a skeletal structure from the musculoskeletal system, such as a bone or joint, which is best described as an organ shape.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "Since the image is a 1-channel X-ray, it is inherently grayscale, and color is not diagnostically meaningful in this context.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures, which is characteristic of skeletal outlines and bone shapes in X-ray images.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "minkowski_functionals"
+      ],
+      "time_s": 25.18
+    },
+    {
+      "index": 30,
+      "descriptor": "edge_histogram",
+      "observe_decisions": {
+        "object_type": "organ_shape",
+        "object_type_reasoning": "The image is an X-ray from the MURA dataset, which typically contains images of bones and skeletal structures. These are best classified under 'organ_shape' due to their distinct outlines and shapes.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "As this is an X-ray image, it is inherently grayscale and color is not relevant for diagnostic purposes. Therefore, using 'grayscale' is appropriate for downstream processing.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The sublevel filtration is suitable for X-ray images where we focus on dark regions appearing first, capturing the skeletal outlines and bone structures effectively against the lighter background.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "low_persistence_signal",
+          "description": "Very low average persistence in both H0 and H1 \u2014 PH is noisy",
+          "recommends": [
+            "lbp_texture",
+            "edge_histogram"
+          ],
+          "reasoning": "When average persistence is very low in both dimensions, most PH features are noise (short-lived). Image-based descriptors that bypass PH entirely extract more reliable signal from pixel patterns.",
+          "metrics": {
+            "h0_avg_persistence": 0.008167,
+            "h1_avg_persistence": 0.007813
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "edge_histogram"
+      ],
+      "time_s": 38.62
+    }
+  ]
+}

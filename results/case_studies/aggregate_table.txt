@@ -1,0 +1,9 @@
+Dataset          N Object Type       Top Descriptor           Consist   Acc%  Oracle%  Regret%  AvgTime Retries
+---------------------------------------------------------------------------------------------------------------
+BloodMNIST      10 discrete_cells    template_functions         10/10   97.9     98.0     0.06     12.1    0/10
+PathMNIST       10 glands_lumens     persistence_statistics     10/10   97.5     97.5     0.00     10.7    0/10
+RetinaMNIST     10 vessel_trees      lbp_texture                10/10   53.1     55.5     2.46     10.9    0/10
+DermaMNIST      10 surface_lesions   persistence_statistics     10/10   57.6     57.6     0.00      9.5    0/10
+OrganAMNIST     10 organ_shape       edge_histogram             10/10   85.1     85.6     0.45      8.5    0/10
+---------------------------------------------------------------------------------------------------------------
+Mean regret across all:                                                           0.59

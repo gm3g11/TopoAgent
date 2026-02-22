@@ -1,0 +1,106 @@
+{
+  "dataset": "DermaMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "surface_lesions",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.2093,
+  "best_accuracy": 0.665,
+  "best_classifier": "XGBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.167336860670194,
+      "accuracy": 0.665,
+      "std": 0.018514117222835885,
+      "fold_balanced_accuracy": [
+        0.16049382716049382,
+        0.2,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.14285714285714285
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.675,
+        0.65,
+        0.675,
+        0.675
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.20934242300908967,
+      "accuracy": 0.665,
+      "std": 0.027486993575463033,
+      "fold_balanced_accuracy": [
+        0.16049382716049382,
+        0.2325925925925926,
+        0.2371794871794872,
+        0.20216049382716048,
+        0.21428571428571427
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.675,
+        0.625,
+        0.675,
+        0.7
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.20380613213946547,
+      "accuracy": 0.6549999999999999,
+      "std": 0.052537826919118936,
+      "fold_balanced_accuracy": [
+        0.16049382716049382,
+        0.18518518518518517,
+        0.1935897435897436,
+        0.30648148148148147,
+        0.17328042328042326
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.625,
+        0.65,
+        0.675,
+        0.675
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.16857142857142854,
+      "accuracy": 0.6699999999999999,
+      "std": 0.018220120447341902,
+      "fold_balanced_accuracy": [
+        0.16666666666666666,
+        0.2,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.14285714285714285
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.675,
+        0.65,
+        0.675,
+        0.675
+      ]
+    }
+  },
+  "feature_dim": 864,
+  "selection_reasoning": "Given the importance of color patterns and texture in dermatology, the persistence_image descriptor is suitable as it captures topological features in a way that can be correlated with visual patterns and color variations. This aligns well with the need to analyze surface texture and color patterns in dermoscopic images.",
+  "selection_time_s": 4.32,
+  "eval_time_s": 117.85,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:58:09.128075",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 1966.3,
+    "avg_H1_count": 3012.0,
+    "avg_H0_persistence": 0.02594,
+    "avg_H1_persistence": 0.017922,
+    "avg_total_features": 4978.3,
+    "avg_h1_h0_ratio": 1.53
+  }
+}

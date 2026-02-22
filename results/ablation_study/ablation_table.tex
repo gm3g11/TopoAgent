@@ -1,0 +1,24 @@
+\begin{table}[t]
+    \centering
+    \small
+    \caption{Ablation study on TopoAgent components.
+    Each row removes one component while keeping the rest intact.}
+    \label{tab:ablation}
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{@{}l ccccc c@{}}
+        \toprule
+        \multirow{2}{*}{\textbf{Variant}}
+        & \multicolumn{5}{c}{\textbf{TopoBenchmark}}
+        & \multirow{2}{*}{\textbf{Avg.}} \\
+        \cmidrule(lr){2-6}
+        & \textbf{Cells} & \textbf{Glands} & \textbf{Organs} & \textbf{Surface} & \textbf{Vessels} & \\
+        \midrule
+        w/o Skills $\mathcal{S}$        & 62.71 & 69.79 & 50.57 & 45.11 & 32.33 & 55.34 \\
+        w/o Memory $\mathcal{M}$        & 69.41 & 70.28 & 56.00 & 38.64 & 35.87 & 58.10 \\
+        w/o Reflect                      & 64.71 & 70.24 & 51.77 & 43.81 & 35.87 & 56.48 \\
+        w/o Interpret                    & 65.97 & 67.65 & 54.37 & 38.64 & 35.87 & 56.22 \\
+        \midrule
+        \textbf{TopoAgent (full)}       & \textbf{69.41} & \textbf{68.71} & \textbf{56.00} & \textbf{40.91} & \textbf{35.67} & \textbf{57.92} \\
+        \bottomrule
+    \end{tabular}
+\end{table}

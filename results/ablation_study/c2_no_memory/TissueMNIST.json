@@ -1,0 +1,91 @@
+{
+  "condition": "c2_no_memory",
+  "condition_id": "c2",
+  "dataset": "TissueMNIST",
+  "object_type": "discrete_cells",
+  "color_mode": "grayscale",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "persistence_statistics",
+    "tropical_coordinates",
+    "persistence_statistics",
+    "persistence_statistics",
+    "persistence_statistics"
+  ],
+  "majority_descriptor": "persistence_statistics",
+  "unique_descriptors": 2,
+  "n_eval_images": 200,
+  "classifier": "TabPFN",
+  "balanced_accuracy": 24.07,
+  "std_accuracy": 4.09,
+  "fold_accuracies": [
+    20.03,
+    29.67,
+    22.5
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_statistics",
+      "stance": "FOLLOW",
+      "object_type": "glands_lumens",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 21.74
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 0,
+      "descriptor": "tropical_coordinates",
+      "stance": "DEVIATE",
+      "object_type": "glands_lumens",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 5,
+      "retry_used": true,
+      "time_seconds": 30.54
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_statistics",
+      "stance": "FOLLOW",
+      "object_type": "glands_lumens",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 20.62
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 1,
+      "descriptor": "persistence_statistics",
+      "stance": "FOLLOW",
+      "object_type": "glands_lumens",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 19.52
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 3,
+      "descriptor": "persistence_statistics",
+      "stance": "FOLLOW",
+      "object_type": "glands_lumens",
+      "color_mode": "grayscale",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 18.6
+    }
+  ],
+  "demo_time_seconds": 167.16,
+  "eval_time_seconds": 88.87,
+  "total_time_seconds": 256.03
+}

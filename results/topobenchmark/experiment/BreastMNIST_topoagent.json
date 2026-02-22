@@ -1,0 +1,168 @@
+{
+  "dataset": "BreastMNIST",
+  "method": "topoagent",
+  "descriptor": "persistence_statistics",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.7277,
+  "best_accuracy": 0.805,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.7240020898641588,
+      "accuracy": 0.8150000000000001,
+      "std": 0.09238279676045508,
+      "fold_balanced_accuracy": [
+        0.6128526645768024,
+        0.664576802507837,
+        0.7037617554858934,
+        0.755485893416928,
+        0.8833333333333333
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.8,
+        0.775,
+        0.85,
+        0.925
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7195297805642633,
+      "accuracy": 0.8,
+      "std": 0.07563852137647137,
+      "fold_balanced_accuracy": [
+        0.6128526645768024,
+        0.7100313479623824,
+        0.7147335423197492,
+        0.7100313479623824,
+        0.8500000000000001
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.825,
+        0.75,
+        0.825,
+        0.875
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7277115987460816,
+      "accuracy": 0.8049999999999999,
+      "std": 0.06412006357792772,
+      "fold_balanced_accuracy": [
+        0.6128526645768024,
+        0.7100313479623824,
+        0.7601880877742947,
+        0.755485893416928,
+        0.8
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.825,
+        0.775,
+        0.85,
+        0.85
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.7038557993730408,
+      "accuracy": 0.82,
+      "std": 0.09156039526816666,
+      "fold_balanced_accuracy": [
+        0.5846394984326019,
+        0.6818181818181819,
+        0.6473354231974922,
+        0.755485893416928,
+        0.85
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.825,
+        0.775,
+        0.85,
+        0.925
+      ]
+    }
+  },
+  "feature_dim": 62,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_statistics', 'persistence_statistics', 'persistence_statistics']",
+  "selection_time_s": 62.53,
+  "eval_time_s": 30.07,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:46:44.035763",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image likely contains breast ultrasound features where lesion shape and boundary regularity are crucial. Malignant lesions usually have irregular boundaries, indicating surface lesions.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale, and color is not diagnostically meaningful for ultrasound images.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures dark-on-light structures, which aligns with identifying dark lesions or boundaries in ultrasound images.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 17.94
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is from the BreastMNIST dataset, which contains breast ultrasound images. These images typically focus on the shape and boundary regularity of lesions, indicating surface lesions as the primary object type.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale with 1 channel, as is common for ultrasound images. Therefore, grayscale is the appropriate color mode for analysis.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Breast ultrasound images often feature lesions that appear darker than the surrounding tissue. Using sublevel filtration captures these dark-on-light structures effectively.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 22.05
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image is a breast ultrasound which typically contains lesions that need to be classified as benign or malignant based on their shape and boundary regularity.",
+        "color_mode": "grayscale",
+        "color_mode_reasoning": "The image is inherently grayscale as it is a medical ultrasound image where color does not carry diagnostic information.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for identifying dark-on-light structures, such as lesions with irregular boundaries in ultrasound images.",
+        "_n_channels": 1,
+        "_gt_object_type": "organ_shape",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 22.54
+    }
+  ]
+}

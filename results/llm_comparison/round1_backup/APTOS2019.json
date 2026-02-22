@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 10:08:22",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "APTOS2019": {
+      "fixed_pi": {
+        "accuracy": 43.91,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 392,
+        "time": 774.4
+      },
+      "fixed_ps": {
+        "accuracy": 40.25,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 602.9
+      },
+      "claude": {
+        "accuracy": 34.38,
+        "descriptor": "lbp_texture",
+        "n_valid": 200,
+        "feature_dim": 304,
+        "agent_time": 74.3,
+        "time": 800.1
+      },
+      "gemini": {
+        "accuracy": 34.38,
+        "descriptor": "lbp_texture",
+        "n_valid": 200,
+        "feature_dim": 304,
+        "agent_time": 50.4,
+        "time": 777.3
+      }
+    }
+  },
+  "per_object_type": {
+    "vessel_trees": {
+      "n_datasets": 1,
+      "fixed_pi": 43.91,
+      "fixed_ps": 40.25,
+      "claude": 34.38,
+      "gemini": 34.38
+    }
+  },
+  "overall": {
+    "fixed_pi": 43.91,
+    "fixed_ps": 40.25,
+    "claude": 34.38,
+    "gemini": 34.38
+  }
+}

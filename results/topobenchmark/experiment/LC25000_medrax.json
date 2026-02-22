@@ -1,0 +1,106 @@
+{
+  "dataset": "LC25000",
+  "method": "medrax",
+  "descriptor": "persistence_image",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.93,
+  "best_accuracy": 0.93,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.9299999999999999,
+      "accuracy": 0.9299999999999999,
+      "std": 0.02915475947422648,
+      "fold_balanced_accuracy": [
+        0.95,
+        0.9,
+        0.9,
+        0.925,
+        0.975
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.9,
+        0.9,
+        0.925,
+        0.975
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.9099999999999999,
+      "accuracy": 0.9099999999999999,
+      "std": 0.029999999999999995,
+      "fold_balanced_accuracy": [
+        0.925,
+        0.875,
+        0.875,
+        0.925,
+        0.95
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.875,
+        0.875,
+        0.925,
+        0.95
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.9199999999999999,
+      "accuracy": 0.9199999999999999,
+      "std": 0.03674234614174767,
+      "fold_balanced_accuracy": [
+        0.95,
+        0.85,
+        0.925,
+        0.95,
+        0.925
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.85,
+        0.925,
+        0.95,
+        0.925
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.8949999999999999,
+      "accuracy": 0.8949999999999999,
+      "std": 0.04,
+      "fold_balanced_accuracy": [
+        0.95,
+        0.85,
+        0.85,
+        0.9,
+        0.925
+      ],
+      "fold_accuracy": [
+        0.95,
+        0.85,
+        0.85,
+        0.9,
+        0.925
+      ]
+    }
+  },
+  "feature_dim": 4056,
+  "selection_reasoning": "Persistence images can effectively capture the spatial distribution and density of topological features, which is essential for analyzing the complex glandular structures and tissue organization in histopathology images. This aligns well with the need to differentiate between the subtle variations in tissue patterns across different cancer types.",
+  "selection_time_s": 3.57,
+  "eval_time_s": 526.41,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:47:49.183901",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 8205.7,
+    "avg_H1_count": 11948.3,
+    "avg_H0_persistence": 0.02649,
+    "avg_H1_persistence": 0.017299,
+    "avg_total_features": 20154.0,
+    "avg_h1_h0_ratio": 1.46
+  }
+}

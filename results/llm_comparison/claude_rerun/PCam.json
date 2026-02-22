@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 15:45:45",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "PCam": {
+      "claude": {
+        "accuracy": 80.04,
+        "descriptor": "persistence_landscapes",
+        "n_valid": 200,
+        "feature_dim": 3500,
+        "agent_time": 78.8,
+        "time": 100.2
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "claude": 80.04
+    }
+  },
+  "overall": {
+    "claude": 80.04
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:22:58",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "NCT_CRC_HE": {
+      "fixed_pi": {
+        "accuracy": 53.84,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 1352,
+        "time": 61.2
+      },
+      "fixed_ps": {
+        "accuracy": 57.76,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 26.3
+      },
+      "claude": {
+        "accuracy": 57.76,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 65.3,
+        "time": 91.5
+      },
+      "gemini": {
+        "accuracy": 57.76,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 34.6,
+        "time": 60.8
+      }
+    }
+  },
+  "per_object_type": {
+    "glands_lumens": {
+      "n_datasets": 1,
+      "fixed_pi": 53.84,
+      "fixed_ps": 57.76,
+      "claude": 57.76,
+      "gemini": 57.76
+    }
+  },
+  "overall": {
+    "fixed_pi": 53.84,
+    "fixed_ps": 57.76,
+    "claude": 57.76,
+    "gemini": 57.76
+  }
+}

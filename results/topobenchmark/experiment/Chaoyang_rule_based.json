@@ -1,0 +1,97 @@
+{
+  "dataset": "Chaoyang",
+  "method": "rule_based",
+  "descriptor": "persistence_statistics",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.5898,
+  "best_accuracy": 0.685,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.5897997835497836,
+      "accuracy": 0.6850000000000002,
+      "std": 0.030642133837109637,
+      "fold_balanced_accuracy": [
+        0.5967261904761905,
+        0.5788690476190477,
+        0.5648809523809524,
+        0.5625,
+        0.6460227272727272
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.675,
+        0.675,
+        0.7,
+        0.7
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.5577922077922077,
+      "accuracy": 0.63,
+      "std": 0.04963354671624261,
+      "fold_balanced_accuracy": [
+        0.4910714285714286,
+        0.6175595238095237,
+        0.5107142857142857,
+        0.6023809523809524,
+        0.5672348484848485
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.7,
+        0.575,
+        0.725,
+        0.6
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.5776352813852814,
+      "accuracy": 0.65,
+      "std": 0.058546366657384864,
+      "fold_balanced_accuracy": [
+        0.5119047619047619,
+        0.581845238095238,
+        0.5291666666666667,
+        0.5857142857142857,
+        0.6795454545454546
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.65,
+        0.625,
+        0.7,
+        0.7
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.553030303030303,
+      "accuracy": 0.6449999999999999,
+      "std": 0.06669496433782286,
+      "fold_balanced_accuracy": [
+        0.4880952380952381,
+        0.5863095238095238,
+        0.4648809523809524,
+        0.5815476190476191,
+        0.6443181818181818
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.675,
+        0.575,
+        0.7,
+        0.7
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Top-1 for glands_lumens: persistence_statistics (benchmark accuracy: 90.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 108.01,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T18:25:55.932676"
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:24:00",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "DermaMNIST": {
+      "fixed_pi": {
+        "accuracy": 17.02,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 288,
+        "time": 106.0
+      },
+      "fixed_ps": {
+        "accuracy": 27.45,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 32.8
+      },
+      "claude": {
+        "accuracy": 27.45,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 59.4,
+        "time": 92.3
+      },
+      "gemini": {
+        "accuracy": 16.49,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 36,
+        "agent_time": 43.1,
+        "time": 80.8
+      }
+    }
+  },
+  "per_object_type": {
+    "surface_lesions": {
+      "n_datasets": 1,
+      "fixed_pi": 17.02,
+      "fixed_ps": 27.45,
+      "claude": 27.45,
+      "gemini": 16.49
+    }
+  },
+  "overall": {
+    "fixed_pi": 17.02,
+    "fixed_ps": 27.45,
+    "claude": 27.45,
+    "gemini": 16.49
+  }
+}

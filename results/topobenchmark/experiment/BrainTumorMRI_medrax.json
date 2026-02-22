@@ -1,0 +1,106 @@
+{
+  "dataset": "BrainTumorMRI",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.782,
+  "best_accuracy": 0.79,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.781969696969697,
+      "accuracy": 0.79,
+      "std": 0.06585432532540969,
+      "fold_balanced_accuracy": [
+        0.8717171717171718,
+        0.7989898989898991,
+        0.7666666666666666,
+        0.6694444444444444,
+        0.803030303030303
+      ],
+      "fold_accuracy": [
+        0.875,
+        0.8,
+        0.775,
+        0.7,
+        0.8
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7563131313131314,
+      "accuracy": 0.765,
+      "std": 0.028252147861532937,
+      "fold_balanced_accuracy": [
+        0.7707070707070707,
+        0.773989898989899,
+        0.7666666666666666,
+        0.7,
+        0.7702020202020202
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.775,
+        0.775,
+        0.725,
+        0.775
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7681565656565656,
+      "accuracy": 0.775,
+      "std": 0.06184499649502988,
+      "fold_balanced_accuracy": [
+        0.873989898989899,
+        0.7967171717171717,
+        0.7411616161616161,
+        0.7319444444444444,
+        0.696969696969697
+      ],
+      "fold_accuracy": [
+        0.875,
+        0.8,
+        0.75,
+        0.75,
+        0.7
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.7407323232323233,
+      "accuracy": 0.7450000000000001,
+      "std": 0.04867162047989322,
+      "fold_balanced_accuracy": [
+        0.8262626262626263,
+        0.7489898989898991,
+        0.7411616161616161,
+        0.6902777777777778,
+        0.696969696969697
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.75,
+        0.75,
+        0.7,
+        0.7
+      ]
+    }
+  },
+  "feature_dim": 3500,
+  "selection_reasoning": "Persistence landscapes are well-suited for capturing the overall topological features of the dataset, providing a robust summary of the persistence of features across different scales. Given the noisy persistence signal, persistence landscapes can help in distinguishing significant topological features from noise, which is crucial for analyzing tumor shapes and boundaries in brain MRI images.",
+  "selection_time_s": 5.33,
+  "eval_time_s": 556.56,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:14:31.923140",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 3842.3,
+    "avg_H1_count": 4807.0,
+    "avg_H0_persistence": 0.0146,
+    "avg_H1_persistence": 0.01978,
+    "avg_total_features": 8649.3,
+    "avg_h1_h0_ratio": 1.25
+  }
+}

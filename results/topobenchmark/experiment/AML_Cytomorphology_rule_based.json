@@ -1,0 +1,84 @@
+{
+  "dataset": "AML_Cytomorphology",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.6597,
+  "best_accuracy": 0.85,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.6597348530055298,
+      "accuracy": 0.85,
+      "std": 0.15953697241217352,
+      "fold_balanced_accuracy": [
+        0.5324074074074074,
+        0.6422902494331065,
+        0.9394736842105263,
+        0.7003759398496241,
+        0.48412698412698413
+      ],
+      "fold_accuracy": [
+        0.8,
+        0.85,
+        0.95,
+        0.875,
+        0.775
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.0,
+      "accuracy": 0.0,
+      "std": 0.0,
+      "error": "Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3 4 5 6 7], got [1 2 3 4 5 6 7 8]"
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.5889668615984406,
+      "accuracy": 0.79,
+      "std": 0.12798003071388755,
+      "fold_balanced_accuracy": [
+        0.49074074074074076,
+        0.46825396825396826,
+        0.8281537176274018,
+        0.5902255639097744,
+        0.5674603174603176
+      ],
+      "fold_accuracy": [
+        0.75,
+        0.775,
+        0.85,
+        0.75,
+        0.825
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.5626127819548872,
+      "accuracy": 0.8,
+      "std": 0.06229194458500156,
+      "fold_balanced_accuracy": [
+        0.5115740740740741,
+        0.619047619047619,
+        0.6101086048454469,
+        0.6067251461988304,
+        0.4656084656084656
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.825,
+        0.825,
+        0.825,
+        0.75
+      ]
+    }
+  },
+  "feature_dim": 540,
+  "selection_reasoning": "Top-1 for discrete_cells: minkowski_functionals (benchmark accuracy: 76.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 3600.09,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T18:50:28.011711"
+}

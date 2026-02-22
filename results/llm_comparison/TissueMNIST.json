@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:21:49",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "gpt4o",
+      "claude",
+      "gemini_flash",
+      "gemini_pro"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "gpt4o": "GPT-4o",
+      "claude": "Claude",
+      "gemini_flash": "Gemini-Flash",
+      "gemini_pro": "Gemini-Pro"
+    }
+  },
+  "per_dataset": {
+    "TissueMNIST": {
+      "fixed_pi": {
+        "accuracy": 22.25,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 200,
+        "time": 46.4
+      },
+      "fixed_ps": {
+        "accuracy": 21.84,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 42.6
+      },
+      "gpt4o": {
+        "accuracy": 21.01,
+        "descriptor": "tropical_coordinates",
+        "n_valid": 200,
+        "feature_dim": 144,
+        "agent_time": 25.5,
+        "time": 68.7
+      },
+      "claude": {
+        "accuracy": 21.84,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 42.8,
+        "time": 85.5
+      },
+      "gemini_flash": {
+        "accuracy": 18.29,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 40,
+        "agent_time": 49.9,
+        "time": 94.1
+      },
+      "gemini_pro": {
+        "accuracy": 21.01,
+        "descriptor": "tropical_coordinates",
+        "n_valid": 200,
+        "feature_dim": 144,
+        "agent_time": 120.6,
+        "time": 163.8
+      }
+    }
+  },
+  "per_object_type": {
+    "discrete_cells": {
+      "n_datasets": 1,
+      "fixed_pi": 22.25,
+      "fixed_ps": 21.84,
+      "gpt4o": 21.01,
+      "claude": 21.84,
+      "gemini_flash": 18.29,
+      "gemini_pro": 21.01
+    }
+  },
+  "overall": {
+    "fixed_pi": 22.25,
+    "fixed_ps": 21.84,
+    "gpt4o": 21.01,
+    "claude": 21.84,
+    "gemini_flash": 18.29,
+    "gemini_pro": 21.01
+  }
+}

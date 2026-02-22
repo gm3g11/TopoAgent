@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:54:10",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "OrganCMNIST": {
+      "claude": {
+        "accuracy": 40.38,
+        "descriptor": "edge_histogram",
+        "n_valid": 200,
+        "feature_dim": 512,
+        "agent_time": 62.0,
+        "time": 81.2
+      }
+    }
+  },
+  "per_object_type": {
+    "organ_shape": {
+      "n_datasets": 1,
+      "claude": 40.38
+    }
+  },
+  "overall": {
+    "claude": 40.38
+  }
+}

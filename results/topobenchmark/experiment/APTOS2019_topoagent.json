@@ -1,0 +1,182 @@
+{
+  "dataset": "APTOS2019",
+  "method": "topoagent",
+  "descriptor": "lbp_texture",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.4368,
+  "best_accuracy": 0.66,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.3826985645933014,
+      "accuracy": 0.71,
+      "std": 0.04648512482474196,
+      "fold_balanced_accuracy": [
+        0.3254545454545455,
+        0.45,
+        0.3349282296650718,
+        0.40311004784689,
+        0.4
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.8,
+        0.65,
+        0.7,
+        0.75
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.4072025518341308,
+      "accuracy": 0.65,
+      "std": 0.05959779674783958,
+      "fold_balanced_accuracy": [
+        0.4457575757575758,
+        0.49212121212121207,
+        0.332822966507177,
+        0.34856459330143535,
+        0.41674641148325353
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.725,
+        0.575,
+        0.625,
+        0.675
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.43679425837320573,
+      "accuracy": 0.66,
+      "std": 0.06901874542080808,
+      "fold_balanced_accuracy": [
+        0.47757575757575765,
+        0.483939393939394,
+        0.30411483253588517,
+        0.43341307814992025,
+        0.4849282296650717
+      ],
+      "fold_accuracy": [
+        0.65,
+        0.725,
+        0.525,
+        0.675,
+        0.725
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.42938437001594904,
+      "accuracy": 0.6849999999999999,
+      "std": 0.07891086914237415,
+      "fold_balanced_accuracy": [
+        0.47393939393939394,
+        0.5021212121212122,
+        0.34334928229665074,
+        0.3244019138755981,
+        0.50311004784689
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.75,
+        0.6,
+        0.625,
+        0.75
+      ]
+    }
+  },
+  "feature_dim": 912,
+  "selection_reasoning": "Majority vote from 3 demo images: ['lbp_texture', 'lbp_texture', 'persistence_landscapes']",
+  "selection_time_s": 126.46,
+  "eval_time_s": 539.82,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:02:17.800768",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "vessel_trees",
+        "object_type_reasoning": "The image is a retinal fundus image, which primarily contains vascular structures such as arteries and veins forming tree-like patterns.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Fundoscopy images often contain important diagnostic information in color, thus using per-channel processing can capture features across different color channels more effectively.",
+        "filtration_type": "superlevel",
+        "filtration_reasoning": "Bright vessels on a darker background are prominent in fundus images, making superlevel filtration suitable to capture these structures efficiently.",
+        "_n_channels": 3,
+        "_gt_object_type": "vessel_trees",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 43.85
+    },
+    {
+      "index": 15,
+      "descriptor": "lbp_texture",
+      "observe_decisions": {
+        "object_type": "vessel_trees",
+        "object_type_reasoning": "The image contains retinal fundus features such as vessel patterns which are characteristic of vessel trees.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "This is an RGB image where color can carry diagnostic information, especially in fundoscopy, thus per-channel mode is appropriate.",
+        "filtration_type": "superlevel",
+        "filtration_reasoning": "Retinal vessels and bright lesions are typically bright-on-dark structures, so superlevel filtration is suitable to capture these features.",
+        "_n_channels": 3,
+        "_gt_object_type": "vessel_trees",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "lbp_texture"
+      ],
+      "time_s": 46.53
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "vessel_trees",
+        "object_type_reasoning": "The image is a retinal fundus image, which prominently features vascular structures characteristic of vessel trees.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "For retinal fundus images, color can provide important diagnostic information, particularly in assessing diabetic retinopathy severity.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate as it captures the dark-on-light structures typical in retinal images, such as the dark vessels against the lighter background.",
+        "_n_channels": 3,
+        "_gt_object_type": "vessel_trees",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 98568,
+            "h1_h0_ratio": 1.59
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 36.08
+    }
+  ]
+}

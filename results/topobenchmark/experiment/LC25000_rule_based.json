@@ -1,0 +1,97 @@
+{
+  "dataset": "LC25000",
+  "method": "rule_based",
+  "descriptor": "persistence_statistics",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.955,
+  "best_accuracy": 0.955,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.9549999999999998,
+      "accuracy": 0.9549999999999998,
+      "std": 0.018708286933869687,
+      "fold_balanced_accuracy": [
+        0.975,
+        0.925,
+        0.95,
+        0.95,
+        0.975
+      ],
+      "fold_accuracy": [
+        0.975,
+        0.925,
+        0.95,
+        0.95,
+        0.975
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.915,
+      "accuracy": 0.915,
+      "std": 0.012247448713915901,
+      "fold_balanced_accuracy": [
+        0.925,
+        0.9,
+        0.9,
+        0.925,
+        0.925
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.9,
+        0.9,
+        0.925,
+        0.925
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.9099999999999999,
+      "accuracy": 0.9099999999999999,
+      "std": 0.03391164991562634,
+      "fold_balanced_accuracy": [
+        0.925,
+        0.85,
+        0.9,
+        0.95,
+        0.925
+      ],
+      "fold_accuracy": [
+        0.925,
+        0.85,
+        0.9,
+        0.95,
+        0.925
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.9149999999999998,
+      "accuracy": 0.9149999999999998,
+      "std": 0.033911649915626334,
+      "fold_balanced_accuracy": [
+        0.9,
+        0.9,
+        0.875,
+        0.925,
+        0.975
+      ],
+      "fold_accuracy": [
+        0.9,
+        0.9,
+        0.875,
+        0.925,
+        0.975
+      ]
+    }
+  },
+  "feature_dim": 186,
+  "selection_reasoning": "Top-1 for glands_lumens: persistence_statistics (benchmark accuracy: 90.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 82.11,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:47:49.185383"
+}

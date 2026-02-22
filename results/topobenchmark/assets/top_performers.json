@@ -1,0 +1,2004 @@
+{
+  "AML_Cytomorphology": [
+    {
+      "accuracy": 0.407,
+      "descriptor": "betti_curves",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.4019,
+      "descriptor": "persistence_codebook",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.401,
+      "descriptor": "minkowski_functionals",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.3965,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.3873,
+      "descriptor": "template_functions",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.3774,
+      "descriptor": "persistence_landscapes",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.3767,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.3728,
+      "descriptor": "persistence_statistics",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.3427,
+      "descriptor": "persistence_silhouette",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.3226,
+      "descriptor": "persistence_image",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.3204,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.3019,
+      "descriptor": "lbp_texture",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.2723,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.189,
+      "descriptor": "edge_histogram",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.1293,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "APTOS2019": [
+    {
+      "accuracy": 0.5772,
+      "descriptor": "lbp_texture",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.5499,
+      "descriptor": "persistence_statistics",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.5391,
+      "descriptor": "tropical_coordinates",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.5384,
+      "descriptor": "template_functions",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.5329,
+      "descriptor": "persistence_landscapes",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.5314,
+      "descriptor": "edge_histogram",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.5293,
+      "descriptor": "persistence_codebook",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.5198,
+      "descriptor": "minkowski_functionals",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.5185,
+      "descriptor": "ATOL",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.5145,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.5138,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.5112,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.5,
+      "descriptor": "betti_curves",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.4494,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.3959,
+      "descriptor": "persistence_image",
+      "rank": 15
+    }
+  ],
+  "BloodMNIST": [
+    {
+      "accuracy": 0.9796,
+      "descriptor": "persistence_codebook",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.979,
+      "descriptor": "template_functions",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9772,
+      "descriptor": "minkowski_functionals",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9763,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9748,
+      "descriptor": "betti_curves",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.973,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9692,
+      "descriptor": "persistence_landscapes",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9672,
+      "descriptor": "persistence_statistics",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9558,
+      "descriptor": "persistence_silhouette",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9408,
+      "descriptor": "persistence_entropy",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9235,
+      "descriptor": "tropical_coordinates",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.9063,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.9,
+      "descriptor": "lbp_texture",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.7899,
+      "descriptor": "edge_histogram",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.464,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "BrainTumorMRI": [
+    {
+      "accuracy": 0.9608,
+      "descriptor": "ATOL",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9557,
+      "descriptor": "persistence_codebook",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9515,
+      "descriptor": "template_functions",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9508,
+      "descriptor": "persistence_statistics",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9492,
+      "descriptor": "lbp_texture",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9475,
+      "descriptor": "minkowski_functionals",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9453,
+      "descriptor": "betti_curves",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9347,
+      "descriptor": "persistence_landscapes",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9245,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9226,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9113,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.9101,
+      "descriptor": "edge_histogram",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.8581,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.8339,
+      "descriptor": "persistence_image",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.7952,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "BreakHis": [
+    {
+      "accuracy": 0.8871,
+      "descriptor": "persistence_statistics",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.8698,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.8591,
+      "descriptor": "persistence_codebook",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.8395,
+      "descriptor": "minkowski_functionals",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.8237,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.796,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.7772,
+      "descriptor": "betti_curves",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.77,
+      "descriptor": "lbp_texture",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.7585,
+      "descriptor": "tropical_coordinates",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.7522,
+      "descriptor": "persistence_landscapes",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.7341,
+      "descriptor": "persistence_silhouette",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.7146,
+      "descriptor": "persistence_entropy",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.6788,
+      "descriptor": "persistence_image",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.3137,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.2112,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "BreastMNIST": [
+    {
+      "accuracy": 0.7898,
+      "descriptor": "persistence_statistics",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.7591,
+      "descriptor": "persistence_landscapes",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.7554,
+      "descriptor": "ATOL",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.7554,
+      "descriptor": "persistence_codebook",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.7501,
+      "descriptor": "persistence_silhouette",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.7486,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.7349,
+      "descriptor": "minkowski_functionals",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.7311,
+      "descriptor": "persistence_entropy",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.7241,
+      "descriptor": "tropical_coordinates",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.7129,
+      "descriptor": "edge_histogram",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.6983,
+      "descriptor": "lbp_texture",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.6926,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.6595,
+      "descriptor": "betti_curves",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.6591,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.6044,
+      "descriptor": "persistence_image",
+      "rank": 15
+    }
+  ],
+  "Chaoyang": [
+    {
+      "accuracy": 0.7932,
+      "descriptor": "ATOL",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.7883,
+      "descriptor": "persistence_codebook",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.7753,
+      "descriptor": "minkowski_functionals",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.7707,
+      "descriptor": "persistence_statistics",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.7614,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.738,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.7352,
+      "descriptor": "betti_curves",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.7195,
+      "descriptor": "persistence_silhouette",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.7155,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.7154,
+      "descriptor": "persistence_entropy",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.7143,
+      "descriptor": "lbp_texture",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.6691,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.6375,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.4485,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.3614,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "DermaMNIST": [
+    {
+      "accuracy": 0.5765,
+      "descriptor": "persistence_statistics",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.5394,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.5091,
+      "descriptor": "persistence_codebook",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.5071,
+      "descriptor": "minkowski_functionals",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.4766,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.4281,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.4122,
+      "descriptor": "betti_curves",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.4102,
+      "descriptor": "tropical_coordinates",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.4082,
+      "descriptor": "lbp_texture",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.3713,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.3522,
+      "descriptor": "persistence_landscapes",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.3322,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.328,
+      "descriptor": "persistence_entropy",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.2856,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.2729,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "GasHisSDB": [
+    {
+      "accuracy": 0.9587,
+      "descriptor": "ATOL",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9541,
+      "descriptor": "persistence_codebook",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9528,
+      "descriptor": "persistence_statistics",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.946,
+      "descriptor": "minkowski_functionals",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9362,
+      "descriptor": "template_functions",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9339,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9302,
+      "descriptor": "betti_curves",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9234,
+      "descriptor": "lbp_texture",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9103,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.8984,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.8907,
+      "descriptor": "tropical_coordinates",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.8895,
+      "descriptor": "persistence_entropy",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.8005,
+      "descriptor": "persistence_image",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.7072,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.6233,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "IDRiD": [
+    {
+      "accuracy": 0.4597,
+      "descriptor": "lbp_texture",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.4349,
+      "descriptor": "persistence_statistics",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.4056,
+      "descriptor": "tropical_coordinates",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.405,
+      "descriptor": "persistence_codebook",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.3993,
+      "descriptor": "template_functions",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.3812,
+      "descriptor": "betti_curves",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.3767,
+      "descriptor": "persistence_landscapes",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.3757,
+      "descriptor": "ATOL",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.3747,
+      "descriptor": "persistence_entropy",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.3719,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.3594,
+      "descriptor": "minkowski_functionals",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.3503,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.3444,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.3374,
+      "descriptor": "edge_histogram",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.3104,
+      "descriptor": "persistence_image",
+      "rank": 15
+    }
+  ],
+  "ISIC2019": [
+    {
+      "accuracy": 0.3686,
+      "descriptor": "minkowski_functionals",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.361,
+      "descriptor": "persistence_statistics",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.3504,
+      "descriptor": "persistence_codebook",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.3396,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.3378,
+      "descriptor": "betti_curves",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.3334,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.3309,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.3223,
+      "descriptor": "lbp_texture",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.2972,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.2958,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.2945,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.2811,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.2761,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.2311,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.2052,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "Kvasir": [
+    {
+      "accuracy": 0.7997,
+      "descriptor": "persistence_codebook",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.7953,
+      "descriptor": "persistence_statistics",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.7857,
+      "descriptor": "template_functions",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.7847,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.7722,
+      "descriptor": "minkowski_functionals",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.7708,
+      "descriptor": "betti_curves",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.766,
+      "descriptor": "lbp_texture",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.7612,
+      "descriptor": "persistence_entropy",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.761,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.7478,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.7432,
+      "descriptor": "persistence_image",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.7392,
+      "descriptor": "persistence_silhouette",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.6395,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.636,
+      "descriptor": "edge_histogram",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.5813,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "LC25000": [
+    {
+      "accuracy": 1.0,
+      "descriptor": "persistence_codebook",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9996,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.999,
+      "descriptor": "minkowski_functionals",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9986,
+      "descriptor": "betti_curves",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.998,
+      "descriptor": "persistence_statistics",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9978,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9974,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9972,
+      "descriptor": "persistence_silhouette",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9956,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9932,
+      "descriptor": "lbp_texture",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9922,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.9862,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.9858,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.7754,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.6958,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "MURA": [
+    {
+      "accuracy": 0.5797,
+      "descriptor": "lbp_texture",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.506,
+      "descriptor": "minkowski_functionals",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.5039,
+      "descriptor": "ATOL",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.4993,
+      "descriptor": "persistence_statistics",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.4857,
+      "descriptor": "persistence_codebook",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.4782,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.4492,
+      "descriptor": "persistence_landscapes",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.4403,
+      "descriptor": "betti_curves",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.4011,
+      "descriptor": "persistence_entropy",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.3913,
+      "descriptor": "persistence_image",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.3851,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.3637,
+      "descriptor": "persistence_silhouette",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.3533,
+      "descriptor": "edge_histogram",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.3521,
+      "descriptor": "tropical_coordinates",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.2435,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "MalariaCell": [
+    {
+      "accuracy": 0.9544,
+      "descriptor": "persistence_codebook",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9536,
+      "descriptor": "minkowski_functionals",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9534,
+      "descriptor": "template_functions",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9532,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9506,
+      "descriptor": "persistence_entropy",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9504,
+      "descriptor": "betti_curves",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9474,
+      "descriptor": "tropical_coordinates",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9468,
+      "descriptor": "persistence_statistics",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9462,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.937,
+      "descriptor": "persistence_landscapes",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9328,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.9316,
+      "descriptor": "persistence_silhouette",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.9096,
+      "descriptor": "lbp_texture",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.9088,
+      "descriptor": "persistence_image",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.8652,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "NCT_CRC_HE": [
+    {
+      "accuracy": 0.9771,
+      "descriptor": "persistence_codebook",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9769,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9752,
+      "descriptor": "persistence_statistics",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9685,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9621,
+      "descriptor": "minkowski_functionals",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9577,
+      "descriptor": "lbp_texture",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9565,
+      "descriptor": "template_functions",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9556,
+      "descriptor": "betti_curves",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9485,
+      "descriptor": "persistence_silhouette",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9454,
+      "descriptor": "persistence_landscapes",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9349,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.9127,
+      "descriptor": "tropical_coordinates",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.8759,
+      "descriptor": "persistence_image",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.597,
+      "descriptor": "edge_histogram",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.563,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "OCTMNIST": [
+    {
+      "accuracy": 0.6673,
+      "descriptor": "template_functions",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.6553,
+      "descriptor": "edge_histogram",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.6413,
+      "descriptor": "persistence_landscapes",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.6407,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.6077,
+      "descriptor": "persistence_codebook",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.5993,
+      "descriptor": "minkowski_functionals",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.5866,
+      "descriptor": "persistence_statistics",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.5799,
+      "descriptor": "tropical_coordinates",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.5742,
+      "descriptor": "persistence_silhouette",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.5739,
+      "descriptor": "lbp_texture",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.5699,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.5612,
+      "descriptor": "betti_curves",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.5572,
+      "descriptor": "persistence_entropy",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.5346,
+      "descriptor": "persistence_image",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.3768,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "OrganAMNIST": [
+    {
+      "accuracy": 0.8558,
+      "descriptor": "minkowski_functionals",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.8513,
+      "descriptor": "edge_histogram",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.8267,
+      "descriptor": "ATOL",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.806,
+      "descriptor": "persistence_statistics",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.7888,
+      "descriptor": "lbp_texture",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.7822,
+      "descriptor": "persistence_codebook",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.7758,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.7484,
+      "descriptor": "persistence_landscapes",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.7419,
+      "descriptor": "template_functions",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.7367,
+      "descriptor": "betti_curves",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.7016,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.6462,
+      "descriptor": "tropical_coordinates",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.6365,
+      "descriptor": "persistence_silhouette",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.5895,
+      "descriptor": "persistence_entropy",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.5762,
+      "descriptor": "persistence_image",
+      "rank": 15
+    }
+  ],
+  "OrganCMNIST": [
+    {
+      "accuracy": 0.8292,
+      "descriptor": "edge_histogram",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.816,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.8131,
+      "descriptor": "minkowski_functionals",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.7964,
+      "descriptor": "lbp_texture",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.7687,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.7656,
+      "descriptor": "persistence_codebook",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.7633,
+      "descriptor": "persistence_statistics",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.6904,
+      "descriptor": "persistence_landscapes",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.6868,
+      "descriptor": "template_functions",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.6809,
+      "descriptor": "betti_curves",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.6071,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.599,
+      "descriptor": "persistence_silhouette",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.5965,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.5628,
+      "descriptor": "persistence_entropy",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.5161,
+      "descriptor": "persistence_image",
+      "rank": 15
+    }
+  ],
+  "OrganSMNIST": [
+    {
+      "accuracy": 0.8119,
+      "descriptor": "minkowski_functionals",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.7993,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.7691,
+      "descriptor": "lbp_texture",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.7662,
+      "descriptor": "persistence_statistics",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.7603,
+      "descriptor": "persistence_codebook",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.7493,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.6784,
+      "descriptor": "template_functions",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.6766,
+      "descriptor": "persistence_landscapes",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.6749,
+      "descriptor": "betti_curves",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.6528,
+      "descriptor": "edge_histogram",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.5977,
+      "descriptor": "persistence_silhouette",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.577,
+      "descriptor": "tropical_coordinates",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.559,
+      "descriptor": "persistence_entropy",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.4996,
+      "descriptor": "persistence_image",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.4539,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "PCam": [
+    {
+      "accuracy": 0.9044,
+      "descriptor": "ATOL",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9024,
+      "descriptor": "persistence_codebook",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.8962,
+      "descriptor": "persistence_statistics",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.8896,
+      "descriptor": "template_functions",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.8876,
+      "descriptor": "minkowski_functionals",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.8872,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.8782,
+      "descriptor": "betti_curves",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.8704,
+      "descriptor": "persistence_silhouette",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.8642,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.8568,
+      "descriptor": "lbp_texture",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.8438,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.8128,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.807,
+      "descriptor": "tropical_coordinates",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.7254,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.6966,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "PathMNIST": [
+    {
+      "accuracy": 0.975,
+      "descriptor": "persistence_statistics",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9746,
+      "descriptor": "ATOL",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.973,
+      "descriptor": "persistence_codebook",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9682,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9662,
+      "descriptor": "minkowski_functionals",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9621,
+      "descriptor": "lbp_texture",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9569,
+      "descriptor": "template_functions",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9559,
+      "descriptor": "betti_curves",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9491,
+      "descriptor": "persistence_silhouette",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9456,
+      "descriptor": "persistence_landscapes",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9332,
+      "descriptor": "persistence_entropy",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.907,
+      "descriptor": "tropical_coordinates",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.8787,
+      "descriptor": "persistence_image",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.6077,
+      "descriptor": "edge_histogram",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.5644,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 15
+    }
+  ],
+  "PneumoniaMNIST": [
+    {
+      "accuracy": 0.954,
+      "descriptor": "edge_histogram",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9344,
+      "descriptor": "persistence_statistics",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9344,
+      "descriptor": "template_functions",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9332,
+      "descriptor": "lbp_texture",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.931,
+      "descriptor": "ATOL",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9287,
+      "descriptor": "persistence_landscapes",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.916,
+      "descriptor": "minkowski_functionals",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9125,
+      "descriptor": "tropical_coordinates",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9079,
+      "descriptor": "persistence_codebook",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9058,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9057,
+      "descriptor": "persistence_silhouette",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.8931,
+      "descriptor": "betti_curves",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.8919,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.8873,
+      "descriptor": "persistence_image",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.88,
+      "descriptor": "persistence_entropy",
+      "rank": 15
+    }
+  ],
+  "RetinaMNIST": [
+    {
+      "accuracy": 0.5553,
+      "descriptor": "persistence_statistics",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.5307,
+      "descriptor": "lbp_texture",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.4588,
+      "descriptor": "template_functions",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.4475,
+      "descriptor": "persistence_landscapes",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.4352,
+      "descriptor": "tropical_coordinates",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.4331,
+      "descriptor": "ATOL",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.4221,
+      "descriptor": "minkowski_functionals",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.4074,
+      "descriptor": "persistence_codebook",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.4064,
+      "descriptor": "persistence_entropy",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.4063,
+      "descriptor": "betti_curves",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.4022,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.3936,
+      "descriptor": "persistence_silhouette",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.3912,
+      "descriptor": "edge_histogram",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.3061,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.2718,
+      "descriptor": "persistence_image",
+      "rank": 15
+    }
+  ],
+  "SIPaKMeD": [
+    {
+      "accuracy": 0.9764,
+      "descriptor": "persistence_statistics",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.9691,
+      "descriptor": "minkowski_functionals",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.9646,
+      "descriptor": "persistence_codebook",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.9619,
+      "descriptor": "ATOL",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.9449,
+      "descriptor": "template_functions",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.9426,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.9417,
+      "descriptor": "lbp_texture",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.9379,
+      "descriptor": "tropical_coordinates",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.9344,
+      "descriptor": "persistence_landscapes",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.9283,
+      "descriptor": "persistence_silhouette",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.9217,
+      "descriptor": "betti_curves",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.9125,
+      "descriptor": "persistence_entropy",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.9089,
+      "descriptor": "persistence_image",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.6372,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.215,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ],
+  "TissueMNIST": [
+    {
+      "accuracy": 0.4061,
+      "descriptor": "ATOL",
+      "rank": 1
+    },
+    {
+      "accuracy": 0.3858,
+      "descriptor": "persistence_landscapes",
+      "rank": 2
+    },
+    {
+      "accuracy": 0.3782,
+      "descriptor": "persistence_codebook",
+      "rank": 3
+    },
+    {
+      "accuracy": 0.3767,
+      "descriptor": "euler_characteristic_curve",
+      "rank": 4
+    },
+    {
+      "accuracy": 0.3743,
+      "descriptor": "minkowski_functionals",
+      "rank": 5
+    },
+    {
+      "accuracy": 0.3677,
+      "descriptor": "template_functions",
+      "rank": 6
+    },
+    {
+      "accuracy": 0.3541,
+      "descriptor": "persistence_statistics",
+      "rank": 7
+    },
+    {
+      "accuracy": 0.3431,
+      "descriptor": "betti_curves",
+      "rank": 8
+    },
+    {
+      "accuracy": 0.3406,
+      "descriptor": "persistence_silhouette",
+      "rank": 9
+    },
+    {
+      "accuracy": 0.3262,
+      "descriptor": "lbp_texture",
+      "rank": 10
+    },
+    {
+      "accuracy": 0.3259,
+      "descriptor": "tropical_coordinates",
+      "rank": 11
+    },
+    {
+      "accuracy": 0.3099,
+      "descriptor": "persistence_image",
+      "rank": 12
+    },
+    {
+      "accuracy": 0.3071,
+      "descriptor": "persistence_entropy",
+      "rank": 13
+    },
+    {
+      "accuracy": 0.2236,
+      "descriptor": "euler_characteristic_transform",
+      "rank": 14
+    },
+    {
+      "accuracy": 0.1764,
+      "descriptor": "edge_histogram",
+      "rank": 15
+    }
+  ]
+}

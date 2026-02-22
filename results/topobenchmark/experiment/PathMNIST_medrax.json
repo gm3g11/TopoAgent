@@ -1,0 +1,106 @@
+{
+  "dataset": "PathMNIST",
+  "method": "medrax",
+  "descriptor": "persistence_landscapes",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.7063,
+  "best_accuracy": 0.73,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.7062962962962962,
+      "accuracy": 0.73,
+      "std": 0.06452953088821388,
+      "fold_balanced_accuracy": [
+        0.6444444444444444,
+        0.7037037037037037,
+        0.6351851851851852,
+        0.8111111111111111,
+        0.7370370370370369
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.75,
+        0.675,
+        0.825,
+        0.725
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.5940740740740741,
+      "accuracy": 0.605,
+      "std": 0.036541124398283234,
+      "fold_balanced_accuracy": [
+        0.5592592592592592,
+        0.6222222222222222,
+        0.6,
+        0.6425925925925926,
+        0.5462962962962963
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.65,
+        0.625,
+        0.65,
+        0.525
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.6096296296296296,
+      "accuracy": 0.6300000000000001,
+      "std": 0.024042714617951825,
+      "fold_balanced_accuracy": [
+        0.6092592592592592,
+        0.5888888888888889,
+        0.5925925925925926,
+        0.6555555555555556,
+        0.6018518518518519
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.625,
+        0.65,
+        0.675,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.6125925925925925,
+      "accuracy": 0.6299999999999999,
+      "std": 0.03849714506721861,
+      "fold_balanced_accuracy": [
+        0.6203703703703703,
+        0.6537037037037037,
+        0.5444444444444444,
+        0.6425925925925925,
+        0.6018518518518519
+      ],
+      "fold_accuracy": [
+        0.625,
+        0.7,
+        0.6,
+        0.65,
+        0.575
+      ]
+    }
+  },
+  "feature_dim": 11400,
+  "selection_reasoning": "Persistence landscapes are well-suited for capturing the topological features of glandular structures and lumens, providing a robust summary of the persistence of features across different scales. This is particularly useful given the noisy persistence signal, as landscapes can help in distinguishing significant topological features from noise.",
+  "selection_time_s": 7.73,
+  "eval_time_s": 3581.89,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:31:38.880246",
+  "ph_stats_aggregated": {
+    "n_samples": 3,
+    "avg_H0_count": 1785.3,
+    "avg_H1_count": 2494.0,
+    "avg_H0_persistence": 0.03897,
+    "avg_H1_persistence": 0.035024,
+    "avg_total_features": 4279.3,
+    "avg_h1_h0_ratio": 1.39
+  }
+}

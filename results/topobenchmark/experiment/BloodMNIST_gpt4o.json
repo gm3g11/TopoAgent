@@ -1,0 +1,97 @@
+{
+  "dataset": "BloodMNIST",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.7547,
+  "best_accuracy": 0.795,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.7546726190476191,
+      "accuracy": 0.7949999999999999,
+      "std": 0.06006816564378776,
+      "fold_balanced_accuracy": [
+        0.8172619047619047,
+        0.7819940476190477,
+        0.8050595238095238,
+        0.7068452380952381,
+        0.6622023809523809
+      ],
+      "fold_accuracy": [
+        0.825,
+        0.825,
+        0.825,
+        0.75,
+        0.75
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.677797619047619,
+      "accuracy": 0.73,
+      "std": 0.052671962862311364,
+      "fold_balanced_accuracy": [
+        0.650595238095238,
+        0.7778273809523809,
+        0.6279761904761905,
+        0.6525297619047619,
+        0.6800595238095237
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.8,
+        0.675,
+        0.675,
+        0.775
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.7536309523809523,
+      "accuracy": 0.785,
+      "std": 0.07446774715033522,
+      "fold_balanced_accuracy": [
+        0.8601190476190477,
+        0.8038690476190475,
+        0.7529761904761905,
+        0.7046130952380952,
+        0.6465773809523809
+      ],
+      "fold_accuracy": [
+        0.875,
+        0.825,
+        0.75,
+        0.75,
+        0.725
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.698422619047619,
+      "accuracy": 0.7649999999999999,
+      "std": 0.03374475057857111,
+      "fold_balanced_accuracy": [
+        0.7351190476190476,
+        0.7331845238095238,
+        0.7008928571428571,
+        0.6473214285714286,
+        0.6755952380952381
+      ],
+      "fold_accuracy": [
+        0.8,
+        0.8,
+        0.75,
+        0.7,
+        0.775
+      ]
+    }
+  },
+  "feature_dim": 600,
+  "selection_reasoning": "Persistence images are well-suited for capturing the shape and internal granularity of cells, as they provide a stable and informative representation of topological features, which are crucial for distinguishing between the 8 cell types in BloodMNIST.",
+  "selection_time_s": 1.77,
+  "eval_time_s": 114.37,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:23:52.296814"
+}

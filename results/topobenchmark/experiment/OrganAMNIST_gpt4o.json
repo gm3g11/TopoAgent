@@ -1,0 +1,78 @@
+{
+  "dataset": "OrganAMNIST",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.401,
+  "best_accuracy": 0.495,
+  "best_classifier": "RandomForest",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.3386580086580086,
+      "accuracy": 0.425,
+      "std": 0.09163118700878028,
+      "fold_balanced_accuracy": [
+        0.29393939393939394,
+        0.49220779220779215,
+        0.39155844155844155,
+        0.24155844155844156,
+        0.27402597402597406
+      ],
+      "fold_accuracy": [
+        0.425,
+        0.55,
+        0.475,
+        0.325,
+        0.35
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.3808441558441559,
+      "accuracy": 0.48,
+      "std": 0.09796872513391512,
+      "fold_balanced_accuracy": [
+        0.25681818181818183,
+        0.5521645021645022,
+        0.3688311688311688,
+        0.3279220779220779,
+        0.3984848484848485
+      ],
+      "fold_accuracy": [
+        0.4,
+        0.6,
+        0.45,
+        0.425,
+        0.525
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.401017316017316,
+      "accuracy": 0.49499999999999994,
+      "std": 0.05016994786694243,
+      "fold_balanced_accuracy": [
+        0.3977272727272727,
+        0.4354978354978355,
+        0.44090909090909086,
+        0.3051948051948052,
+        0.4257575757575758
+      ],
+      "fold_accuracy": [
+        0.475,
+        0.5,
+        0.55,
+        0.4,
+        0.55
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are effective for capturing the shape and boundary features of objects, which are crucial for distinguishing between different organ classes based on their silhouettes in axial CT images.",
+  "selection_time_s": 1.94,
+  "eval_time_s": 303.16,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:14:40.438166"
+}

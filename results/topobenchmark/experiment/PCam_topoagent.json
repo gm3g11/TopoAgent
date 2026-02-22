@@ -1,0 +1,168 @@
+{
+  "dataset": "PCam",
+  "method": "topoagent",
+  "descriptor": "template_functions",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.8,
+  "best_accuracy": 0.8,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.765,
+      "accuracy": 0.765,
+      "std": 0.046368092477478536,
+      "fold_balanced_accuracy": [
+        0.7,
+        0.775,
+        0.725,
+        0.8,
+        0.825
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.775,
+        0.725,
+        0.8,
+        0.825
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.7949999999999999,
+      "accuracy": 0.7949999999999999,
+      "std": 0.050990195135927875,
+      "fold_balanced_accuracy": [
+        0.7,
+        0.8500000000000001,
+        0.8,
+        0.825,
+        0.8
+      ],
+      "fold_accuracy": [
+        0.7,
+        0.85,
+        0.8,
+        0.825,
+        0.8
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.8,
+      "accuracy": 0.8,
+      "std": 0.035355339059327376,
+      "fold_balanced_accuracy": [
+        0.7749999999999999,
+        0.85,
+        0.8,
+        0.825,
+        0.75
+      ],
+      "fold_accuracy": [
+        0.775,
+        0.85,
+        0.8,
+        0.825,
+        0.75
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.77,
+      "accuracy": 0.77,
+      "std": 0.03674234614174765,
+      "fold_balanced_accuracy": [
+        0.7250000000000001,
+        0.8,
+        0.8,
+        0.8,
+        0.7250000000000001
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.8,
+        0.8,
+        0.8,
+        0.725
+      ]
+    }
+  },
+  "feature_dim": 486,
+  "selection_reasoning": "Majority vote from 3 demo images: ['template_functions', 'template_functions', 'template_functions']",
+  "selection_time_s": 63.45,
+  "eval_time_s": 189.18,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T17:27:36.229917",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The image contains small tissue patches from lymph node sections, which are likely to show cellular structures that are discrete in nature.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The image is RGB, and color can carry diagnostic information in histopathology images, so using per-channel mode can enhance feature extraction.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for capturing dark-on-light structures, such as stained cells, which are common in histopathology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 20.26
+    },
+    {
+      "index": 15,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The PCam image contains small tissue patches from lymph node sections, which are likely to exhibit discrete cellular structures indicative of metastatic or normal tissue.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since this is a histopathology image with RGB channels, per-channel mode is appropriate as color carries diagnostic information that can enhance the detection of features like cell density and distribution.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable for histopathology images where dark regions, such as stained cells or tissue boundaries, need to be captured effectively in the persistent homology computation.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 22.2
+    },
+    {
+      "index": 30,
+      "descriptor": "template_functions",
+      "observe_decisions": {
+        "object_type": "discrete_cells",
+        "object_type_reasoning": "The PCam image consists of small tissue patches from lymph node sections, typically containing discrete cellular structures associated with metastatic tissue.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "In histopathological images, color can carry significant diagnostic information, and per-channel mode is recommended for processing RGB images to capture this information effectively.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "The sublevel filtration is suitable for capturing dark-on-light structures, such as stained cells or tissue boundaries, which are common in histopathology images.",
+        "_n_channels": 3,
+        "_gt_object_type": "discrete_cells",
+        "_object_type_correct": true
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "template_functions"
+      ],
+      "time_s": 20.99
+    }
+  ]
+}

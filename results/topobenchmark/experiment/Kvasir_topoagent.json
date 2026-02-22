@@ -1,0 +1,196 @@
+{
+  "dataset": "Kvasir",
+  "method": "topoagent",
+  "descriptor": "persistence_landscapes",
+  "object_type": "glands_lumens",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.63,
+  "best_accuracy": 0.63,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.63,
+      "accuracy": 0.63,
+      "std": 0.07483314773547883,
+      "fold_balanced_accuracy": [
+        0.675,
+        0.5,
+        0.725,
+        0.625,
+        0.625
+      ],
+      "fold_accuracy": [
+        0.675,
+        0.5,
+        0.725,
+        0.625,
+        0.625
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.56,
+      "accuracy": 0.56,
+      "std": 0.07176350047203664,
+      "fold_balanced_accuracy": [
+        0.525,
+        0.55,
+        0.7000000000000001,
+        0.525,
+        0.5
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.55,
+        0.7,
+        0.525,
+        0.5
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.61,
+      "accuracy": 0.61,
+      "std": 0.06041522986797284,
+      "fold_balanced_accuracy": [
+        0.525,
+        0.6000000000000001,
+        0.7,
+        0.65,
+        0.575
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.6,
+        0.7,
+        0.65,
+        0.575
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.55,
+      "accuracy": 0.55,
+      "std": 0.06708203932499371,
+      "fold_balanced_accuracy": [
+        0.5249999999999999,
+        0.525,
+        0.675,
+        0.55,
+        0.47500000000000003
+      ],
+      "fold_accuracy": [
+        0.525,
+        0.525,
+        0.675,
+        0.55,
+        0.475
+      ]
+    }
+  },
+  "feature_dim": 11400,
+  "selection_reasoning": "Majority vote from 3 demo images: ['persistence_landscapes', 'persistence_statistics', 'persistence_landscapes']",
+  "selection_time_s": 89.46,
+  "eval_time_s": 2098.98,
+  "n_eval": 200,
+  "n_demo": 3,
+  "n_llm_calls": 9,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:53:05.093131",
+  "demo_results": [
+    {
+      "index": 95,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image likely contains surface lesions, as Kvasir images often depict mucosal surfaces with potential pathological findings like lesions or polyps.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "The RGB color channels may carry diagnostic information about the mucosal surface texture and pathological features, which is common in endoscopic images.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable to capture dark-on-light structures like lesions and tissue boundaries that are typical in endoscopic images.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 40665,
+            "h1_h0_ratio": 1.42
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 34.8
+    },
+    {
+      "index": 15,
+      "descriptor": "persistence_statistics",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image likely contains structures related to mucosal surface texture and lesions typical in endoscopic images of the gastrointestinal tract.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Since this is an RGB image from an endoscopic procedure, color may provide diagnostic information about the surface lesions.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is appropriate for capturing dark-on-light structures such as lesions and tissue boundaries common in endoscopic images.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "FOLLOW",
+      "ph_signals": [],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_statistics"
+      ],
+      "time_s": 23.51
+    },
+    {
+      "index": 30,
+      "descriptor": "persistence_landscapes",
+      "observe_decisions": {
+        "object_type": "surface_lesions",
+        "object_type_reasoning": "The image likely contains surface lesions as it is an endoscopic image of the gastrointestinal tract, where mucosal surface texture and polyp shapes are key diagnostic features.",
+        "color_mode": "per_channel",
+        "color_mode_reasoning": "Per-channel mode is chosen because the image is in RGB format and color variations can provide important diagnostic information in endoscopic images.",
+        "filtration_type": "sublevel",
+        "filtration_reasoning": "Sublevel filtration is suitable as it captures dark-on-light structures, which is common in endoscopic images where tissue boundaries and dark lesions are of interest.",
+        "_n_channels": 3,
+        "_gt_object_type": "glands_lumens",
+        "_object_type_correct": false
+      },
+      "benchmark_stance": "DEVIATE",
+      "ph_signals": [
+        {
+          "name": "rich_topology",
+          "description": "Very many PH features with H1-heavy profile \u2014 multi-scale structure",
+          "recommends": [
+            "persistence_landscapes",
+            "betti_curves"
+          ],
+          "reasoning": "Extremely rich PH diagrams (>20K features) with H1 emphasis contain multi-scale topological information. Persistence landscapes' layered representation captures different scales via different landscape levels.",
+          "metrics": {
+            "total_features": 41149,
+            "h1_h0_ratio": 1.53
+          }
+        }
+      ],
+      "tools_used": [
+        "image_loader",
+        "compute_ph",
+        "persistence_landscapes"
+      ],
+      "time_s": 31.15
+    }
+  ]
+}

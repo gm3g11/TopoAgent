@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 14:52:40",
+    "n_datasets": 1,
+    "methods": [
+      "claude"
+    ],
+    "labels": {
+      "claude": "Claude"
+    }
+  },
+  "per_dataset": {
+    "DermaMNIST": {
+      "claude": {
+        "accuracy": 16.49,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 36,
+        "agent_time": 83.5,
+        "time": 133.4
+      }
+    }
+  },
+  "per_object_type": {
+    "surface_lesions": {
+      "n_datasets": 1,
+      "claude": 16.49
+    }
+  },
+  "overall": {
+    "claude": 16.49
+  }
+}

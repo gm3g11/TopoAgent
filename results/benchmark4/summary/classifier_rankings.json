@@ -1,0 +1,182 @@
+{
+  "overall": {
+    "TabPFN": {
+      "mean": 0.6711112,
+      "std": 0.25339914493841115,
+      "median": 0.735402,
+      "n_evaluations": 380
+    },
+    "XGBoost": {
+      "mean": 0.6468112894736842,
+      "std": 0.24006668789353947,
+      "median": 0.692304,
+      "n_evaluations": 380
+    },
+    "CatBoost": {
+      "mean": 0.6437671526315789,
+      "std": 0.24294849455942816,
+      "median": 0.682759,
+      "n_evaluations": 380
+    },
+    "RandomForest": {
+      "mean": 0.6120486351706037,
+      "std": 0.24737677124573362,
+      "median": 0.649421,
+      "n_evaluations": 381
+    },
+    "TabM": {
+      "mean": 0.6490689921052631,
+      "std": 0.2461116496264876,
+      "median": 0.7015765,
+      "n_evaluations": 380
+    },
+    "RealMLP": {
+      "mean": 0.6404806526315789,
+      "std": 0.24888098060411032,
+      "median": 0.684552,
+      "n_evaluations": 380
+    }
+  },
+  "by_object_type": {
+    "TabPFN": {
+      "discrete_cells": {
+        "mean": 0.7001453820224718,
+        "n": 89
+      },
+      "glands_lumens": {
+        "mean": 0.8233033294117648,
+        "n": 85
+      },
+      "organ_shape": {
+        "mean": 0.6988444333333333,
+        "n": 120
+      },
+      "vessel_trees": {
+        "mean": 0.39933932558139534,
+        "n": 43
+      },
+      "surface_lesions": {
+        "mean": 0.5045490930232558,
+        "n": 43
+      }
+    },
+    "XGBoost": {
+      "discrete_cells": {
+        "mean": 0.6799645617977528,
+        "n": 89
+      },
+      "glands_lumens": {
+        "mean": 0.769723305882353,
+        "n": 85
+      },
+      "organ_shape": {
+        "mean": 0.6767109833333333,
+        "n": 120
+      },
+      "vessel_trees": {
+        "mean": 0.41201213953488375,
+        "n": 43
+      },
+      "surface_lesions": {
+        "mean": 0.4865842558139534,
+        "n": 43
+      }
+    },
+    "CatBoost": {
+      "discrete_cells": {
+        "mean": 0.6792599325842696,
+        "n": 89
+      },
+      "glands_lumens": {
+        "mean": 0.7203566,
+        "n": 85
+      },
+      "organ_shape": {
+        "mean": 0.6822294999999999,
+        "n": 120
+      },
+      "vessel_trees": {
+        "mean": 0.42941669767441865,
+        "n": 43
+      },
+      "surface_lesions": {
+        "mean": 0.5259212790697674,
+        "n": 43
+      }
+    },
+    "RandomForest": {
+      "discrete_cells": {
+        "mean": 0.6541171348314607,
+        "n": 89
+      },
+      "glands_lumens": {
+        "mean": 0.72105,
+        "n": 86
+      },
+      "organ_shape": {
+        "mean": 0.646942525,
+        "n": 120
+      },
+      "vessel_trees": {
+        "mean": 0.3846747209302325,
+        "n": 43
+      },
+      "surface_lesions": {
+        "mean": 0.436969511627907,
+        "n": 43
+      }
+    },
+    "TabM": {
+      "discrete_cells": {
+        "mean": 0.6846665505617978,
+        "n": 89
+      },
+      "glands_lumens": {
+        "mean": 0.789615376470588,
+        "n": 85
+      },
+      "organ_shape": {
+        "mean": 0.673720625,
+        "n": 120
+      },
+      "vessel_trees": {
+        "mean": 0.38136437209302326,
+        "n": 43
+      },
+      "surface_lesions": {
+        "mean": 0.4964754418604651,
+        "n": 43
+      }
+    },
+    "RealMLP": {
+      "discrete_cells": {
+        "mean": 0.6807722359550563,
+        "n": 89
+      },
+      "glands_lumens": {
+        "mean": 0.7805116823529413,
+        "n": 85
+      },
+      "organ_shape": {
+        "mean": 0.663198025,
+        "n": 120
+      },
+      "vessel_trees": {
+        "mean": 0.3767143023255814,
+        "n": 43
+      },
+      "surface_lesions": {
+        "mean": 0.4806499534883721,
+        "n": 43
+      }
+    }
+  },
+  "best_counts": {
+    "TabPFN": 239,
+    "XGBoost": 9,
+    "CatBoost": 113,
+    "RandomForest": 7,
+    "TabM": 12,
+    "RealMLP": 1
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "dataset": "SIPaKMeD",
+  "method": "rule_based",
+  "descriptor": "minkowski_functionals",
+  "object_type": "discrete_cells",
+  "color_mode": "per_channel",
+  "best_balanced_accuracy": 0.8795,
+  "best_accuracy": 0.88,
+  "best_classifier": "TabPFN",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.8795238095238096,
+      "accuracy": 0.8800000000000001,
+      "std": 0.030671907928983402,
+      "fold_balanced_accuracy": [
+        0.8448412698412697,
+        0.925,
+        0.85,
+        0.875,
+        0.9027777777777779
+      ],
+      "fold_accuracy": [
+        0.85,
+        0.925,
+        0.85,
+        0.875,
+        0.9
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.8406349206349206,
+      "accuracy": 0.8400000000000001,
+      "std": 0.033933189140881635,
+      "fold_balanced_accuracy": [
+        0.8734126984126984,
+        0.8,
+        0.8,
+        0.875,
+        0.8547619047619047
+      ],
+      "fold_accuracy": [
+        0.875,
+        0.8,
+        0.8,
+        0.875,
+        0.85
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.8406349206349206,
+      "accuracy": 0.8400000000000001,
+      "std": 0.04299038663947372,
+      "fold_balanced_accuracy": [
+        0.8448412698412697,
+        0.825,
+        0.775,
+        0.85,
+        0.9083333333333334
+      ],
+      "fold_accuracy": [
+        0.85,
+        0.825,
+        0.775,
+        0.85,
+        0.9
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.8331746031746032,
+      "accuracy": 0.8300000000000001,
+      "std": 0.046463221366832966,
+      "fold_balanced_accuracy": [
+        0.8575396825396826,
+        0.775,
+        0.8,
+        0.825,
+        0.9083333333333334
+      ],
+      "fold_accuracy": [
+        0.85,
+        0.775,
+        0.8,
+        0.825,
+        0.9
+      ]
+    }
+  },
+  "feature_dim": 540,
+  "selection_reasoning": "Top-1 for discrete_cells: minkowski_functionals (benchmark accuracy: 76.0%)",
+  "selection_time_s": 0.0,
+  "eval_time_s": 3366.43,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 0,
+  "seed": 42,
+  "timestamp": "2026-02-16T18:40:44.666780"
+}

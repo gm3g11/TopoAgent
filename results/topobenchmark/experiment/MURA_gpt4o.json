@@ -1,0 +1,78 @@
+{
+  "dataset": "MURA",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.1643,
+  "best_accuracy": 0.165,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "XGBoost": {
+      "balanced_accuracy": 0.11666666666666667,
+      "accuracy": 0.12,
+      "std": 0.04416008807378907,
+      "fold_balanced_accuracy": [
+        0.14285714285714285,
+        0.09523809523809523,
+        0.047619047619047616,
+        0.17857142857142858,
+        0.11904761904761904
+      ],
+      "fold_accuracy": [
+        0.15,
+        0.1,
+        0.05,
+        0.175,
+        0.125
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.16428571428571428,
+      "accuracy": 0.16499999999999998,
+      "std": 0.025421614885788837,
+      "fold_balanced_accuracy": [
+        0.14285714285714285,
+        0.16666666666666669,
+        0.17857142857142858,
+        0.13095238095238093,
+        0.20238095238095236
+      ],
+      "fold_accuracy": [
+        0.15,
+        0.175,
+        0.175,
+        0.125,
+        0.2
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.14523809523809522,
+      "accuracy": 0.14500000000000002,
+      "std": 0.047856550576766146,
+      "fold_balanced_accuracy": [
+        0.19047619047619047,
+        0.16666666666666666,
+        0.07142857142857142,
+        0.10714285714285712,
+        0.19047619047619047
+      ],
+      "fold_accuracy": [
+        0.2,
+        0.175,
+        0.075,
+        0.1,
+        0.175
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are effective for capturing topological features like bone shapes and skeletal outlines, which are crucial for classifying musculoskeletal X-ray images.",
+  "selection_time_s": 1.91,
+  "eval_time_s": 189.13,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T21:47:50.795963"
+}

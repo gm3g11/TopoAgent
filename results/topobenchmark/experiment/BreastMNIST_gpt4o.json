@@ -1,0 +1,97 @@
+{
+  "dataset": "BreastMNIST",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.5961,
+  "best_accuracy": 0.75,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.5509822361546499,
+      "accuracy": 0.735,
+      "std": 0.02769595186885002,
+      "fold_balanced_accuracy": [
+        0.5736677115987461,
+        0.5282131661442007,
+        0.5454545454545454,
+        0.5909090909090909,
+        0.5166666666666667
+      ],
+      "fold_accuracy": [
+        0.75,
+        0.725,
+        0.75,
+        0.775,
+        0.675
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.5790804597701149,
+      "accuracy": 0.735,
+      "std": 0.05228430823425853,
+      "fold_balanced_accuracy": [
+        0.6018808777429467,
+        0.5109717868338558,
+        0.658307210031348,
+        0.5909090909090909,
+        0.5333333333333333
+      ],
+      "fold_accuracy": [
+        0.75,
+        0.7,
+        0.75,
+        0.775,
+        0.7
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.5960919540229884,
+      "accuracy": 0.75,
+      "std": 0.0717126951337656,
+      "fold_balanced_accuracy": [
+        0.5736677115987461,
+        0.5454545454545454,
+        0.738244514106583,
+        0.5564263322884012,
+        0.5666666666666667
+      ],
+      "fold_accuracy": [
+        0.75,
+        0.75,
+        0.825,
+        0.725,
+        0.7
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.51,
+      "accuracy": 0.735,
+      "std": 0.020000000000000018,
+      "fold_balanced_accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.55
+      ],
+      "fold_accuracy": [
+        0.725,
+        0.725,
+        0.725,
+        0.725,
+        0.775
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are effective for capturing the shape and boundary regularity of lesions, which are crucial for distinguishing between benign and malignant cases in breast ultrasound images.",
+  "selection_time_s": 1.91,
+  "eval_time_s": 33.38,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:47:19.325307"
+}

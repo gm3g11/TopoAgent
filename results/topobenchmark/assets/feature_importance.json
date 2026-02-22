@@ -1,0 +1,343 @@
+{
+  "n_folds": 26,
+  "n_features": 40,
+  "ranked_features": [
+    {
+      "rank": 1,
+      "feature": "glcm_contrast",
+      "mean_importance": 0.32623233344155417,
+      "std_importance": 0.12026086691875572,
+      "pct_total": 32.623233344155416
+    },
+    {
+      "rank": 2,
+      "feature": "class_imbalance",
+      "mean_importance": 0.22181025276673247,
+      "std_importance": 0.10840831264690332,
+      "pct_total": 22.181025276673246
+    },
+    {
+      "rank": 3,
+      "feature": "glcm_homogeneity",
+      "mean_importance": 0.055315558452003755,
+      "std_importance": 0.06346822652146199,
+      "pct_total": 5.5315558452003755
+    },
+    {
+      "rank": 4,
+      "feature": "desc_euler_characteristic_transform",
+      "mean_importance": 0.045721783736991366,
+      "std_importance": 0.0034814561869318025,
+      "pct_total": 4.572178373699137
+    },
+    {
+      "rank": 5,
+      "feature": "desc_edge_histogram",
+      "mean_importance": 0.03735896606488369,
+      "std_importance": 0.0030852597065824123,
+      "pct_total": 3.7358966064883687
+    },
+    {
+      "rank": 6,
+      "feature": "gradient_mean",
+      "mean_importance": 0.03610906169106954,
+      "std_importance": 0.013568981629774018,
+      "pct_total": 3.610906169106954
+    },
+    {
+      "rank": 7,
+      "feature": "intensity_entropy",
+      "mean_importance": 0.0352729872838445,
+      "std_importance": 0.01668117202659805,
+      "pct_total": 3.52729872838445
+    },
+    {
+      "rank": 8,
+      "feature": "intensity_skewness",
+      "mean_importance": 0.027968015139909787,
+      "std_importance": 0.012789924141792532,
+      "pct_total": 2.7968015139909785
+    },
+    {
+      "rank": 9,
+      "feature": "otsu_stability",
+      "mean_importance": 0.026526802204522255,
+      "std_importance": 0.08351871386634582,
+      "pct_total": 2.6526802204522255
+    },
+    {
+      "rank": 10,
+      "feature": "laplacian_variance",
+      "mean_importance": 0.02118053430987268,
+      "std_importance": 0.014183837148711818,
+      "pct_total": 2.118053430987268
+    },
+    {
+      "rank": 11,
+      "feature": "n_classes",
+      "mean_importance": 0.018642959297337468,
+      "std_importance": 0.010431633699034288,
+      "pct_total": 1.8642959297337467
+    },
+    {
+      "rank": 12,
+      "feature": "binary_fill_ratio",
+      "mean_importance": 0.017157747162055054,
+      "std_importance": 0.008501625520604014,
+      "pct_total": 1.7157747162055055
+    },
+    {
+      "rank": 13,
+      "feature": "samples_per_class",
+      "mean_importance": 0.016693777216721904,
+      "std_importance": 0.007332500309936734,
+      "pct_total": 1.6693777216721903
+    },
+    {
+      "rank": 14,
+      "feature": "intensity_p95_p5",
+      "mean_importance": 0.015918989266508705,
+      "std_importance": 0.0068433333005358836,
+      "pct_total": 1.5918989266508705
+    },
+    {
+      "rank": 15,
+      "feature": "fg_bg_contrast",
+      "mean_importance": 0.014916293390035354,
+      "std_importance": 0.0038706318949577262,
+      "pct_total": 1.4916293390035353
+    },
+    {
+      "rank": 16,
+      "feature": "intensity_std",
+      "mean_importance": 0.013440005790042092,
+      "std_importance": 0.007294832318113062,
+      "pct_total": 1.3440005790042093
+    },
+    {
+      "rank": 17,
+      "feature": "edge_density",
+      "mean_importance": 0.009565800171863344,
+      "std_importance": 0.008283493426035144,
+      "pct_total": 0.9565800171863345
+    },
+    {
+      "rank": 18,
+      "feature": "intensity_mean",
+      "mean_importance": 0.00948926370029126,
+      "std_importance": 0.004230523073964291,
+      "pct_total": 0.948926370029126
+    },
+    {
+      "rank": 19,
+      "feature": "desc_persistence_image",
+      "mean_importance": 0.008280895691760475,
+      "std_importance": 0.0006170671346557343,
+      "pct_total": 0.8280895691760475
+    },
+    {
+      "rank": 20,
+      "feature": "largest_component_ratio",
+      "mean_importance": 0.007633187231728087,
+      "std_importance": 0.0065107248304534186,
+      "pct_total": 0.7633187231728087
+    },
+    {
+      "rank": 21,
+      "feature": "intensity_kurtosis",
+      "mean_importance": 0.006517241770211599,
+      "std_importance": 0.002268835267217157,
+      "pct_total": 0.6517241770211599
+    },
+    {
+      "rank": 22,
+      "feature": "fft_low_freq_ratio",
+      "mean_importance": 0.00555912452813416,
+      "std_importance": 0.004066277727639254,
+      "pct_total": 0.5559124528134161
+    },
+    {
+      "rank": 23,
+      "feature": "component_size_mean",
+      "mean_importance": 0.005108152124458651,
+      "std_importance": 0.0022679913516728094,
+      "pct_total": 0.5108152124458651
+    },
+    {
+      "rank": 24,
+      "feature": "otsu_components",
+      "mean_importance": 0.0031452458762635457,
+      "std_importance": 0.002652056120375895,
+      "pct_total": 0.3145245876263546
+    },
+    {
+      "rank": 25,
+      "feature": "otsu_holes",
+      "mean_importance": 0.00251496239317221,
+      "std_importance": 0.0021954534307281437,
+      "pct_total": 0.251496239317221
+    },
+    {
+      "rank": 26,
+      "feature": "component_size_cv",
+      "mean_importance": 0.002507649688628111,
+      "std_importance": 0.0021134724198228418,
+      "pct_total": 0.2507649688628111
+    },
+    {
+      "rank": 27,
+      "feature": "desc_persistence_statistics",
+      "mean_importance": 0.0021532060013942276,
+      "std_importance": 0.0002736975815283333,
+      "pct_total": 0.21532060013942275
+    },
+    {
+      "rank": 28,
+      "feature": "desc_ATOL",
+      "mean_importance": 0.0018197029808992963,
+      "std_importance": 0.00025477434201442816,
+      "pct_total": 0.18197029808992962
+    },
+    {
+      "rank": 29,
+      "feature": "desc_tropical_coordinates",
+      "mean_importance": 0.0017591951354712773,
+      "std_importance": 0.00022253880602489916,
+      "pct_total": 0.17591951354712773
+    },
+    {
+      "rank": 30,
+      "feature": "desc_persistence_entropy",
+      "mean_importance": 0.0016438781410904825,
+      "std_importance": 0.00023510702479167763,
+      "pct_total": 0.16438781410904824
+    },
+    {
+      "rank": 31,
+      "feature": "desc_minkowski_functionals",
+      "mean_importance": 0.0009705505122563986,
+      "std_importance": 0.00025034820358186015,
+      "pct_total": 0.09705505122563986
+    },
+    {
+      "rank": 32,
+      "feature": "desc_persistence_codebook",
+      "mean_importance": 0.0004929768699950821,
+      "std_importance": 0.00012626159310276833,
+      "pct_total": 0.049297686999508206
+    },
+    {
+      "rank": 33,
+      "feature": "desc_persistence_silhouette",
+      "mean_importance": 0.00042843030360518585,
+      "std_importance": 0.0001173837011398648,
+      "pct_total": 0.042843030360518584
+    },
+    {
+      "rank": 34,
+      "feature": "desc_lbp_texture",
+      "mean_importance": 0.00013461437268056398,
+      "std_importance": 9.148389798577755e-05,
+      "pct_total": 0.013461437268056398
+    },
+    {
+      "rank": 35,
+      "feature": "desc_euler_characteristic_curve",
+      "mean_importance": 8.316509477574511e-06,
+      "std_importance": 1.531595294326462e-05,
+      "pct_total": 0.0008316509477574512
+    },
+    {
+      "rank": 36,
+      "feature": "desc_betti_curves",
+      "mean_importance": 1.0334856924976078e-06,
+      "std_importance": 5.16742846248804e-06,
+      "pct_total": 0.00010334856924976079
+    },
+    {
+      "rank": 37,
+      "feature": "desc_persistence_landscapes",
+      "mean_importance": 5.052968411536968e-07,
+      "std_importance": 2.526484205768483e-06,
+      "pct_total": 5.0529684115369683e-05
+    },
+    {
+      "rank": 38,
+      "feature": "desc_template_functions",
+      "mean_importance": 0.0,
+      "std_importance": 0.0,
+      "pct_total": 0.0
+    },
+    {
+      "rank": 39,
+      "feature": "polarity",
+      "mean_importance": 0.0,
+      "std_importance": 0.0,
+      "pct_total": 0.0
+    },
+    {
+      "rank": 40,
+      "feature": "n_samples",
+      "mean_importance": 0.0,
+      "std_importance": 0.0,
+      "pct_total": 0.0
+    }
+  ],
+  "category_importance": {
+    "texture": {
+      "total_importance": 0.3815478918935579,
+      "pct_total": 38.15478918935579,
+      "n_features": 2
+    },
+    "structure": {
+      "total_importance": 0.2571469892807918,
+      "pct_total": 25.714698928079184,
+      "n_features": 4
+    },
+    "intensity": {
+      "total_importance": 0.10860650295080795,
+      "pct_total": 10.860650295080795,
+      "n_features": 6
+    },
+    "gradient": {
+      "total_importance": 0.04567486186293288,
+      "pct_total": 4.567486186293288,
+      "n_features": 2
+    },
+    "stability": {
+      "total_importance": 0.026526802204522255,
+      "pct_total": 2.6526802204522255,
+      "n_features": 1
+    },
+    "topology_proxy": {
+      "total_importance": 0.02281795543149081,
+      "pct_total": 2.281795543149081,
+      "n_features": 3
+    },
+    "fine_texture": {
+      "total_importance": 0.02118053430987268,
+      "pct_total": 2.118053430987268,
+      "n_features": 1
+    },
+    "polarity": {
+      "total_importance": 0.014916293390035354,
+      "pct_total": 1.4916293390035353,
+      "n_features": 2
+    },
+    "scale": {
+      "total_importance": 0.007633187231728087,
+      "pct_total": 0.7633187231728087,
+      "n_features": 1
+    },
+    "components": {
+      "total_importance": 0.007615801813086762,
+      "pct_total": 0.7615801813086762,
+      "n_features": 2
+    },
+    "frequency": {
+      "total_importance": 0.00555912452813416,
+      "pct_total": 0.5559124528134161,
+      "n_features": 1
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-18 09:42:46",
+    "n_datasets": 1,
+    "methods": [
+      "fixed_pi",
+      "fixed_ps",
+      "claude",
+      "gemini"
+    ],
+    "labels": {
+      "fixed_pi": "Fixed-PI",
+      "fixed_ps": "Fixed-PS",
+      "claude": "Claude",
+      "gemini": "Gemini"
+    }
+  },
+  "per_dataset": {
+    "Kvasir": {
+      "fixed_pi": {
+        "accuracy": 30.5,
+        "descriptor": "persistence_image",
+        "n_valid": 200,
+        "feature_dim": 1352,
+        "time": 420.3
+      },
+      "fixed_ps": {
+        "accuracy": 38.37,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "time": 275.8
+      },
+      "claude": {
+        "accuracy": 38.37,
+        "descriptor": "persistence_statistics",
+        "n_valid": 200,
+        "feature_dim": 62,
+        "agent_time": 78.2,
+        "time": 355.1
+      },
+      "gemini": {
+        "accuracy": 36.98,
+        "descriptor": "ATOL",
+        "n_valid": 200,
+        "feature_dim": 48,
+        "agent_time": 55.0,
+        "time": 382.3
+      }
+    }
+  },
+  "per_object_type": {
+    "glands_lumens": {
+      "n_datasets": 1,
+      "fixed_pi": 30.5,
+      "fixed_ps": 38.37,
+      "claude": 38.37,
+      "gemini": 36.98
+    }
+  },
+  "overall": {
+    "fixed_pi": 30.5,
+    "fixed_ps": 38.37,
+    "claude": 38.37,
+    "gemini": 36.98
+  }
+}

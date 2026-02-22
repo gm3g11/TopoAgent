@@ -1,0 +1,91 @@
+{
+  "condition": "c1_no_skills",
+  "condition_id": "c1",
+  "dataset": "APTOS2019",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "persistence_entropy",
+    "persistence_entropy",
+    "persistence_entropy",
+    "persistence_entropy",
+    "persistence_entropy"
+  ],
+  "majority_descriptor": "persistence_entropy",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "TabPFN",
+  "balanced_accuracy": 35.04,
+  "std_accuracy": 0.52,
+  "fold_accuracies": [
+    35.35,
+    35.47,
+    34.31
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_entropy",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 5,
+      "retry_used": true,
+      "time_seconds": 69.34
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_entropy",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 46.23
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_entropy",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 47.06
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_entropy",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 53.27
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_entropy",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 42.93
+    }
+  ],
+  "demo_time_seconds": 273.67,
+  "eval_time_seconds": 3497.05,
+  "total_time_seconds": 3770.71
+}

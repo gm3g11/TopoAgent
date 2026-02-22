@@ -1,0 +1,91 @@
+{
+  "condition": "c0_full",
+  "condition_id": "c0",
+  "dataset": "APTOS2019",
+  "object_type": "vessel_trees",
+  "color_mode": "per_channel",
+  "n_demo_images": 5,
+  "descriptor_choices": [
+    "persistence_landscapes",
+    "persistence_landscapes",
+    "persistence_landscapes",
+    "persistence_landscapes",
+    "persistence_landscapes"
+  ],
+  "majority_descriptor": "persistence_landscapes",
+  "unique_descriptors": 1,
+  "n_eval_images": 200,
+  "classifier": "TabPFN",
+  "balanced_accuracy": 37.16,
+  "std_accuracy": 2.09,
+  "fold_accuracies": [
+    35.96,
+    40.1,
+    35.42
+  ],
+  "per_image_details": [
+    {
+      "image_index": 0,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_landscapes",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 9,
+      "retry_used": true,
+      "time_seconds": 131.69
+    },
+    {
+      "image_index": 1,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_landscapes",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 54.66
+    },
+    {
+      "image_index": 2,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_landscapes",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 58.48
+    },
+    {
+      "image_index": 3,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_landscapes",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 60.61
+    },
+    {
+      "image_index": 4,
+      "ground_truth_label": 0,
+      "descriptor": "persistence_landscapes",
+      "stance": "DEVIATE",
+      "object_type": "vessel_trees",
+      "color_mode": "per_channel",
+      "filtration_type": "sublevel",
+      "n_llm_calls": 4,
+      "retry_used": false,
+      "time_seconds": 55.84
+    }
+  ],
+  "demo_time_seconds": 376.62,
+  "eval_time_seconds": 3670.52,
+  "total_time_seconds": 4047.14
+}

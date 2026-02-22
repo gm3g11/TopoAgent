@@ -1,0 +1,97 @@
+{
+  "dataset": "OCTMNIST",
+  "method": "gpt4o",
+  "descriptor": "persistence_image",
+  "object_type": "organ_shape",
+  "color_mode": "grayscale",
+  "best_balanced_accuracy": 0.3817,
+  "best_accuracy": 0.59,
+  "best_classifier": "CatBoost",
+  "per_classifier": {
+    "TabPFN": {
+      "balanced_accuracy": 0.3281125891652207,
+      "accuracy": 0.5349999999999999,
+      "std": 0.04949819237319863,
+      "fold_balanced_accuracy": [
+        0.35119047619047616,
+        0.28289473684210525,
+        0.2866541353383459,
+        0.30545112781954886,
+        0.4143724696356275
+      ],
+      "fold_accuracy": [
+        0.575,
+        0.475,
+        0.5,
+        0.5,
+        0.625
+      ]
+    },
+    "XGBoost": {
+      "balanced_accuracy": 0.34460590579011635,
+      "accuracy": 0.555,
+      "std": 0.02146792530305031,
+      "fold_balanced_accuracy": [
+        0.3859126984126984,
+        0.34022556390977443,
+        0.3355263157894737,
+        0.32330827067669177,
+        0.33805668016194335
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.575,
+        0.575,
+        0.525,
+        0.55
+      ]
+    },
+    "CatBoost": {
+      "balanced_accuracy": 0.3816693978536084,
+      "accuracy": 0.59,
+      "std": 0.04077419485309517,
+      "fold_balanced_accuracy": [
+        0.4176587301587302,
+        0.3270676691729323,
+        0.37124060150375937,
+        0.3543233082706767,
+        0.4380566801619433
+      ],
+      "fold_accuracy": [
+        0.6,
+        0.55,
+        0.625,
+        0.575,
+        0.6
+      ]
+    },
+    "RandomForest": {
+      "balanced_accuracy": 0.35400038557933294,
+      "accuracy": 0.5900000000000001,
+      "std": 0.020600100231322478,
+      "fold_balanced_accuracy": [
+        0.33333333333333337,
+        0.3355263157894737,
+        0.36184210526315785,
+        0.34962406015037595,
+        0.38967611336032393
+      ],
+      "fold_accuracy": [
+        0.55,
+        0.575,
+        0.625,
+        0.575,
+        0.625
+      ]
+    }
+  },
+  "feature_dim": 288,
+  "selection_reasoning": "Persistence images are well-suited for capturing the topological features of retinal layer structures and deformations, which are crucial for distinguishing between the classes in OCT images.",
+  "selection_time_s": 1.45,
+  "eval_time_s": 51.21,
+  "n_eval": 200,
+  "n_demo": 0,
+  "n_llm_calls": 1,
+  "seed": 42,
+  "timestamp": "2026-02-16T16:24:40.396581"
+}
