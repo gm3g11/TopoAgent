@@ -123,6 +123,8 @@ cp .env.example .env
 
 ## Running TopoAgent
 
+> 📋 For the full clone → install → data → run checklist, see **[REPRODUCE.md](REPRODUCE.md)**.
+
 ### 1. Python API
 
 The factory returns an agent; `classify()` runs the full PRAR loop on one image and returns the determined descriptor, the feature vector, and the reasoning trace.
