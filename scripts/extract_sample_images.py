@@ -30,7 +30,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 OUTPUT_DIR = PROJECT_ROOT / "results" / "sample_images"
 
 # ── DRIVE paths (not in benchmark, loaded directly) ──
-DRIVE_ROOT = Path("/afs/crc/group/ball_lab/gmeng_cl/cl_new/datasets/drive/DRIVE")
+DRIVE_ROOT = Path(os.environ.get("DRIVE_ROOT", str(PROJECT_ROOT / "datasets" / "drive" / "DRIVE")))
 
 
 def save_image(arr, path):

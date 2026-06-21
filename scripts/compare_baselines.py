@@ -23,9 +23,7 @@ import numpy as np
 from PIL import Image
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MEDRAX_ROOT = PROJECT_ROOT.parent / "MedRAX"
 sys.path.insert(0, str(PROJECT_ROOT))
-sys.path.insert(0, str(MEDRAX_ROOT))
 
 from dotenv import load_dotenv
 load_dotenv(PROJECT_ROOT / ".env")

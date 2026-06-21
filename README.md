@@ -1,8 +1,8 @@
 # TopoAgent
 
-**Medical AI Agent for Topological Data Analysis**
+**An Agentic Framework for Automated Topology Learning in Medical Imaging** — ECCV 2026
 
-TopoAgent is a LangGraph-based AI agent that uses Topological Data Analysis (TDA) for medical image classification. It combines architectural patterns from MedRAX and EndoAgent to provide interpretable, topology-based medical image analysis.
+TopoAgent is a LangGraph-based LLM agent that, given a raw medical image and a task prompt, automatically determines the most suitable **topological descriptor** (and its parameters) and produces a topological feature vector for downstream classification — all without task-specific training. It operates through a **Perception–Reasoning–Action–Reflection (PRAR)** loop backed by 21 domain-specific tools, dual memory, and a benchmark-distilled skill set.
 
 ## 📄 Paper
 
@@ -22,200 +22,136 @@ TopoAgent obtains **68.21%** average balanced accuracy, outperforming the strong
 
 Additional figures are in [`figures/`](figures/): motivation (`fig1`), skill set `S` (`fig3`), ablation study (`table2`), case studies (`fig4`), and downstream CNN/Transformer integration (`table3`).
 
-## Architecture
+## Why TopoAgent
 
-TopoAgent combines:
-- **MedRAX**: LangGraph StateGraph workflow + ReAct loop
-- **EndoAgent**: Dual-memory mechanism (Ms, Ml) + reflection loop (max 3 rounds)
-- **TDA Tools**: 15 specialized tools for topological feature extraction
+Persistent homology (PH) captures structural properties — connected components, loops, shape — that pixel-level deep learning often neglects. Many *topological descriptors* convert persistence diagrams into fixed-length feature vectors, but **no single descriptor is best across datasets**: choosing one demands TDA expertise and trial-and-error. TopoAgent automates this per-image determination with full reasoning traces.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     TopoAgent Workflow                          │
-├─────────────────────────────────────────────────────────────────┤
-│  Query + Image → Analyze → Select Tool → Execute → Update Ms   │
-│                                                     ↓          │
-│                    ← Loop (round < 3) ← Reflect → Update Ml    │
-│                                                     ↓          │
-│                              Generate Answer ← Check Complete  │
-└─────────────────────────────────────────────────────────────────┘
-```
+## Method: the PRAR loop
+
+- **Perception** — six perception tools compute a PH profile `h(I)` (birth–death counts per homology dimension, average persistence, Betti ratio `β1/β0`), visual statistics `v(I)` (SNR, contrast, edge density), and identify the object type `o ∈ {cells, glands/lumens, organ shapes, vessel trees, surface lesions}` by jointly reasoning over the raw image and its PH.
+- **Reasoning** — two steps with *asymmetric information access*. A **proposal** step sees descriptor properties `Sprop` and only *stripped* reasoning patterns (no rankings) to avoid anchoring bias; a **determination** step then integrates the full rankings `Srank` and long-term memory `Ml` to finalize the descriptor `d*` and parameters `θ*`.
+- **Action** — runs the determined descriptor tool to produce a feature vector `f ∈ R^{n_d}`, using parameters validated during skill-set construction.
+- **Reflection** — the LLM validates `f` against quality criteria (sparsity, variance, kurtosis, skewness, dynamic range, informative-feature ratio). On failure it records a diagnosis in `Ml` and retries (≤ 2 retries within a time budget), else falls back to the top-ranked descriptor for `o`.
+
+## Tools (21)
+
+**6 perception:** `image_loader`, `image_analyzer`, `noise_filter`, `compute_ph` (GUDHI cubical-complex filtration), `topological_features` (PH profile), `betti_ratios`.
+
+**15 descriptors** — 10 PH-derived: `persistence_image`, `persistence_landscapes`, `persistence_silhouette`, `persistence_entropy`, `persistence_statistics`, `betti_curves`, `template_functions`, `atol`, `persistence_codebook`, `tropical_coordinates`; and 5 image-based: `minkowski_functionals`, `euler_characteristic_curve`, `euler_characteristic_transform`, `lbp_texture`, `edge_histogram`.
+
+> Note: `topoagent/tools/__init__.py` registers a larger superset of tools (including legacy classifiers and filtration variants from earlier versions); the PRAR pipeline uses the 21-tool subset above. The current paper pipeline is **v9** (`agentic_v9=True`); v2–v8 remain in the code for reference.
+
+## Skill set S
+
+Distilled offline from [`RuleBenchmark/`](RuleBenchmark/) (15 descriptors × 26 datasets × 6 classifiers), organized at the object-type level to prevent dataset leakage. Encoded in [`topoagent/skills/`](topoagent/skills/):
+
+- **`Sprop`** — descriptor mathematical properties, strengths/weaknesses, and parameter heuristics.
+- **`Srank`** — per-object-type tiered rankings, reasoning chains, and threshold-based PH signal rules.
+- **`Sparam`** — validated parameters for all descriptor × object-type combinations.
+
+## Dual memory
+
+- **Short-term `Ms`** — tool invocations within a single run (the LLM's context window).
+- **Long-term `Ml`** — diagnostic entries across runs *within a dataset* (failed descriptor, diagnosed cause, successful correction); reset between datasets to prevent cross-dataset leakage. Seeds live in `topoagent/memory/*.json` (empty by default).
+
+## TopoBenchmark
+
+A frozen benchmark of **113,182 samples** from **26** public 2D medical datasets across five object types, with convergence-based per-dataset sizing, precomputed PH caches, and fixed fold indices. Construction and evaluation harness in [`TopoBenchmark/`](TopoBenchmark/).
 
 ## Installation
 
 ```bash
-# Clone and navigate to project
-cd /afs/crc.nd.edu/user/g/gmeng/Private/TopoAgent
-
-# Activate conda environment
-conda activate medrax
-
-# Install additional dependencies (if needed)
+git clone https://github.com/gm3g11/TopoAgent.git
+cd TopoAgent
 pip install -r requirements.txt
+
+# API keys (see .env.example)
+cp .env.example .env   # then add OPENAI_API_KEY / ANTHROPIC_API_KEY / GOOGLE_API_KEY
 ```
 
-## Quick Start
+## Quick start
 
 ```python
 from topoagent import create_topoagent
 
-# Create agent
-agent = create_topoagent(model_name="gpt-4o", max_rounds=3)
+agent = create_topoagent(model_name="gpt-4o", agentic_v9=True)
 
-# Classify an image
 result = agent.classify(
-    image_path="path/to/dermoscopy.png",
-    query="Classify this skin lesion using topological features"
+    image_path="path/to/image.png",
+    query="Analyze this medical image, compute its persistent homology, "
+          "and determine the most suitable topology descriptor.",
 )
 
-print(f"Classification: {result['classification']}")
-print(f"Confidence: {result['confidence']:.1f}%")
-print(f"Tools used: {result['tools_used']}")
+print("Descriptor determined:", result["descriptor"])
+print("Confidence:", result["confidence"])
+print("Tools used:", result["tools_used"])
+print("Reasoning trace:", result["reasoning_trace"])
 ```
 
-## Command Line Usage
+Other backbones: `create_topoagent_claude`, `create_topoagent_gemini`, `create_topoagent_ollama`.
+
+## Command line
 
 ```bash
-# Run on single image
-python main.py --image path/to/image.png --model gpt-4o
-
-# Interactive mode
-python main.py --interactive
-
-# List available tools
-python main.py --list-tools
-
-# Batch processing
-python scripts/run_agent.py --image-dir path/to/images/ --output results.json
-
-# Evaluate on MedMNIST
-python scripts/evaluate.py --dataset dermamnist --n-samples 100
-
-# Run ablation study (with/without reflection)
-python scripts/evaluate.py --dataset dermamnist --ablation
-
-# Generate TopoQA benchmark
-python scripts/generate_benchmark.py --output benchmark/topoqa_v1.json
+python main.py --image path/to/image.png --model gpt-4o   # single image
+python main.py --interactive                               # interactive mode
+python main.py --list-tools                                # list available tools
 ```
 
-## TDA Tools (15 total)
+## Reproducing the paper
 
-### Preprocessing (3)
-| Tool | Description |
-|------|-------------|
-| `image_loader` | Load and normalize medical images (DICOM, PNG, JPEG) |
-| `binarization` | Adaptive thresholding (Otsu, adaptive mean/gaussian) |
-| `noise_filter` | Gaussian/median/bilateral filtering |
+```bash
+python scripts/run_llm_comparison.py     # Table 1: main results vs. baselines
+python scripts/run_ablation_study.py     # Table 2: component/design ablations
+python TopoBenchmark/run_experiment.py   # TopoBenchmark evaluation
+```
 
-### Filtration (3)
-| Tool | Description | Best For |
-|------|-------------|----------|
-| `sublevel_filtration` | Sublevel set filtration | Bright features (lesions, nodules) |
-| `superlevel_filtration` | Superlevel set filtration | Dark features (vessels, cavities) |
-| `cubical_complex` | Cubical complex for grids | 2D/3D structured images |
+## Datasets
 
-### Homology (3)
-| Tool | Description |
-|------|-------------|
-| `compute_ph` | Compute persistent homology (H0, H1, H2) |
-| `persistence_diagram` | Generate and analyze persistence diagrams |
-| `persistence_image` | Convert PD to fixed-size vector representation |
+MedMNIST plus 15 external datasets. Paths are read from environment variables (defaults defined in `RuleBenchmark/benchmark{3,4}/config.py`); see [`docs/benchmark3_datasets.md`](docs/benchmark3_datasets.md) for the full roster.
 
-### Features (3)
-| Tool | Description |
-|------|-------------|
-| `topological_features` | Extract statistics (persistence, entropy, amplitude) |
-| `wasserstein_distance` | Compare persistence diagrams (optimal transport) |
-| `bottleneck_distance` | Compare diagrams (max matching cost) |
+```bash
+export MEDMNIST_PATH=~/.medmnist
+export EXTERNAL_DATASETS_ROOT=/path/to/datasets
+# optional overrides: ISIC_PATH, KVASIR_PATH, DRIVE_ROOT, CUPH_PATH (GPU PH)
+```
 
-### Classification (3)
-| Tool | Description |
-|------|-------------|
-| `knn_classifier` | k-Nearest Neighbors on topological features |
-| `mlp_classifier` | Neural network classifier |
-| `ensemble_classifier` | Combined prediction from multiple classifiers |
-
-## Dual-Memory System
-
-Following EndoAgent's design:
-
-- **Short-term Memory (Ms)**: Recent tool executions in current session
-  ```
-  Ms = [(tool_1, output_1), (tool_2, output_2), ...]
-  ```
-
-- **Long-term Memory (Ml)**: Reflection experiences from past sessions
-  ```
-  Ml = [ReflectionEntry(round, error_analysis, suggestion, experience), ...]
-  ```
-
-Key insight from EndoAgent:
-- Reflection alone: **+26.5% visual accuracy**
-- Dual-memory: **+1.5% visual, +3.06% language accuracy**
-
-## TopoQA Benchmark
-
-Benchmark for evaluating TopoAgent with 5 task categories:
-
-| Category | % | Description |
-|----------|---|-------------|
-| Method Selection | 20% | Choose appropriate TDA methods |
-| Parameter Tuning | 20% | Optimize parameters |
-| Topological Interpretation | 25% | Explain topological features |
-| Multi-step Analysis | 25% | Complete classification pipeline |
-| Error Recovery | 10% | Handle failure cases |
-
-Datasets: DermaMNIST, PathMNIST, RetinaMNIST, PneumoniaMNIST
-
-## Project Structure
+## Repository structure
 
 ```
 TopoAgent/
-├── main.py                     # Entry point
-├── requirements.txt            # Dependencies
-├── README.md                   # This file
-├── CLAUDE.md                   # Development notes
-│
-├── topoagent/
-│   ├── __init__.py
-│   ├── agent.py                # Main TopoAgent class
-│   ├── state.py                # TopoAgentState definition
-│   ├── workflow.py             # LangGraph workflow
-│   ├── reflection.py           # Reflection mechanism
-│   ├── prompts.py              # Prompt templates
-│   │
-│   ├── tools/                  # 15 TDA tools
-│   │   ├── preprocessing/      # image_loader, binarization, noise_filter
-│   │   ├── filtration/         # sublevel, superlevel, cubical
-│   │   ├── homology/           # compute_ph, persistence_diagram, persistence_image
-│   │   ├── features/           # topological_features, wasserstein, bottleneck
-│   │   └── classification/     # knn, mlp, ensemble
-│   │
-│   ├── memory/                 # Dual-memory system
-│   │   ├── short_term.py       # Ms: recent tool outputs
-│   │   └── long_term.py        # Ml: reflection experiences
-│   │
-│   └── utils/
-│
-├── benchmark/
-│   └── topoqa/                 # TopoQA benchmark
-│       ├── templates.py        # Question templates
-│       └── generator.py        # Benchmark generator
-│
-├── scripts/
-│   ├── run_agent.py            # Run agent on images
-│   ├── evaluate.py             # Evaluation script
-│   └── generate_benchmark.py   # Generate TopoQA
-│
-└── tests/
+├── topoagent/            # Core PRAR agent
+│   ├── agent.py          # TopoAgent class + create_topoagent* factories
+│   ├── workflow.py       # LangGraph PRAR workflow (v9 = paper pipeline)
+│   ├── state.py, reflection.py, prompts.py
+│   ├── tools/            # 21 PRAR tools (perception + descriptors) + registry
+│   ├── skills/           # Skill set S: Sprop / Srank / Sparam (rules_data.py)
+│   └── memory/           # Dual memory (short_term, long_term)
+├── TopoBenchmark/        # Frozen benchmark + evaluation harness (26 datasets)
+├── RuleBenchmark/        # Skill-set distillation study (benchmark3/4/5)
+├── baselines/            # Fixed-descriptor & general-LLM baselines
+├── scripts/              # Reproduction & analysis scripts
+├── docs/                 # Architecture, tools, and workflow documentation
+├── figures/              # Paper figures
+├── main.py               # CLI entry point
+└── requirements.txt
 ```
 
-## References
+## Citation
 
-- **MedRAX**: LangGraph workflow pattern (`/afs/crc.nd.edu/user/g/gmeng/Private/MedRAX`)
-- **EndoAgent**: Dual-memory + reflection (`/afs/crc.nd.edu/user/g/gmeng/Private/EndoAgent`)
-- **TDA Libraries**: GUDHI, giotto-tda, ripser, persim
+```bibtex
+@inproceedings{meng2026topoagent,
+  title     = {TopoAgent: An Agentic Framework for Automated Topology Learning in Medical Imaging},
+  author    = {Meng, Guangyu and Gu, Pengfei and Li, Xueyang and Shi, Yiyu and Chambers, Erin Wolf and Chen, Danny Z.},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
+}
+```
+
+## Acknowledgments
+
+Built on [LangGraph](https://github.com/langchain-ai/langgraph); persistent homology via [GUDHI](https://gudhi.inria.fr/). The PRAR architecture and dual-memory design draw on MedRAX and EndoAgent. TDA libraries: GUDHI, giotto-tda, persim.
 
 ## License
 
-Research use only.
+See [LICENSE](LICENSE).

@@ -88,7 +88,7 @@ def run_one_dataset(dataset: str, model: str = "gpt-4o") -> dict:
     try:
         result = subprocess.run(
             cmd, capture_output=True, text=True, timeout=300,
-            cwd="/afs/crc.nd.edu/user/g/gmeng/Private/TopoAgent",
+            cwd=str(Path(__file__).resolve().parent.parent),
         )
         if result.returncode != 0:
             print(f" FAILED (exit {result.returncode})")

@@ -29,10 +29,11 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-# CuPH path
-CUPH_PATH = Path("/afs/crc.nd.edu/user/g/gmeng/Private/accelerate_PH/CuPH")
-if CUPH_PATH.exists():
-    sys.path.insert(0, str(CUPH_PATH))
+# CuPH path (set the CUPH_PATH env var to enable GPU PH)
+import os
+_cuph = os.environ.get("CUPH_PATH")
+if _cuph and Path(_cuph).exists():
+    sys.path.insert(0, _cuph)
 
 import argparse
 import pickle

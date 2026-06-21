@@ -13,6 +13,7 @@ Key changes from Benchmark3:
 - TabPFN PCA-bagging for >2000D features
 """
 
+import os
 import numpy as np
 from pathlib import Path
 from typing import Dict, List, Optional, Any
@@ -24,7 +25,7 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent
 SCRIPTS_DIR = Path(__file__).parent
 BENCHMARK3_DIR = PROJECT_ROOT / "benchmarks" / "benchmark3"
 
-MEDMNIST_PATH = Path("/users/gmeng/afs/.medmnist")
+MEDMNIST_PATH = Path(os.environ.get("MEDMNIST_PATH", os.path.expanduser("~/.medmnist")))
 RESULTS_PATH = PROJECT_ROOT / "results" / "benchmark4"
 PH_CACHE_PATH = RESULTS_PATH / "ph_cache"
 RAW_RESULTS_PATH = RESULTS_PATH / "raw"
@@ -33,13 +34,13 @@ SUMMARY_PATH = RESULTS_PATH / "summary"
 # Exp4 rules (from benchmark3)
 EXP4_RULES_PATH = PROJECT_ROOT / "results" / "benchmark3" / "exp4" / "exp4_final_recommendations.json"
 
-# CuPH library
-CUPH_PATH = Path("/afs/crc.nd.edu/user/g/gmeng/Private/accelerate_PH/CuPH")
+# CuPH library (set the CUPH_PATH env var to enable GPU PH)
+CUPH_PATH = Path(os.environ["CUPH_PATH"]) if os.environ.get("CUPH_PATH") else None
 
-# External dataset paths (reuse from benchmark3)
-EXTERNAL_DATASETS_ROOT = Path("/afs/crc/group/ball_lab/gmeng_cl/cl_new/datasets")
-ISIC_PATH = Path("/users/gmeng/afs/isic2019/train")
-KVASIR_PATH = Path("/users/gmeng/afs/kvasir-dataset")
+# External dataset paths (reuse from benchmark3; override via env vars)
+EXTERNAL_DATASETS_ROOT = Path(os.environ.get("EXTERNAL_DATASETS_ROOT", str(PROJECT_ROOT / "datasets")))
+ISIC_PATH = Path(os.environ.get("ISIC_PATH", str(EXTERNAL_DATASETS_ROOT / "isic2019" / "train")))
+KVASIR_PATH = Path(os.environ.get("KVASIR_PATH", str(EXTERNAL_DATASETS_ROOT / "kvasir-dataset")))
 BRAIN_TUMOR_PATH = EXTERNAL_DATASETS_ROOT / "data" / "BrainTumorMRI" / "Training"
 MURA_PATH = EXTERNAL_DATASETS_ROOT / "MURA-v1.1"
 BREAKHIS_PATH = (EXTERNAL_DATASETS_ROOT / "ambarish" / "breakhis" / "versions" / "4"

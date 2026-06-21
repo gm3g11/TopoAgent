@@ -80,12 +80,12 @@ All MedMNIST datasets are stored as pre-saved 224x224 NPZ files under the MedMNI
 
 ## Dataset Paths
 
-All paths are defined in `scripts/run_benchmark3/config.py`.
+All paths are defined in `RuleBenchmark/benchmark3/config.py` and can be overridden via environment variables (`MEDMNIST_PATH`, `EXTERNAL_DATASETS_ROOT`, `ISIC_PATH`, `KVASIR_PATH`).
 
 ### MedMNIST (NPZ files)
 
 ```
-MEDMNIST_PATH = /users/gmeng/afs/.medmnist/
+MEDMNIST_PATH = ~/.medmnist/        # default; override via the MEDMNIST_PATH env var
 
 Files:
   bloodmnist_224.npz      breastmnist_224.npz     dermamnist_224.npz
@@ -101,13 +101,13 @@ Each NPZ contains: `train_images`, `train_labels`, `val_images`, `val_labels`, `
 All external datasets live under the shared datasets root unless noted:
 
 ```
-EXTERNAL_DATASETS_ROOT = /afs/crc/group/ball_lab/gmeng_cl/cl_new/datasets/
+EXTERNAL_DATASETS_ROOT = <repo>/datasets/   # default; override via the EXTERNAL_DATASETS_ROOT env var
 ```
 
 | Dataset | Path | Directory Structure |
 |---------|------|---------------------|
-| ISIC2019 | `/users/gmeng/afs/isic2019/train/` | `{AK,BCC,BKL,DF,MEL,NV,SCC,VASC}/*.jpg` |
-| Kvasir | `/users/gmeng/afs/kvasir-dataset/` | `{class_name}/*.jpg` (8 folders, 500 each) |
+| ISIC2019 | `$ISIC_PATH` (default `$EXTERNAL_DATASETS_ROOT/isic2019/train/`) | `{AK,BCC,BKL,DF,MEL,NV,SCC,VASC}/*.jpg` |
+| Kvasir | `$KVASIR_PATH` (default `$EXTERNAL_DATASETS_ROOT/kvasir-dataset/`) | `{class_name}/*.jpg` (8 folders, 500 each) |
 | BrainTumorMRI | `EXTERNAL/data/BrainTumorMRI/Training/` | `{glioma,meningioma,notumor,pituitary}/*.jpg` (Testing/ sibling) |
 | MURA | `EXTERNAL/MURA-v1.1/` | `train/XR_{PART}/patient/study/*.png` (7 body parts x pos/neg) |
 | BreakHis | `EXTERNAL/ambarish/breakhis/.../breast/` | `{benign,malignant}/SOB/{subtype}/patient/{40X,100X,200X,400X}/*.png` |
