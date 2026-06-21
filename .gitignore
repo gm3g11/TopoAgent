@@ -1,48 +1,73 @@
-# Environment and secrets
-.env
-medrax.env
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-*.egg-info/
-dist/
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
 *.egg
 
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
 # IDE
-.vscode/
 .idea/
+.vscode/
 *.swp
 *.swo
-*~
 
-# OS
-.DS_Store
-Thumbs.db
+# Jupyter
+.ipynb_checkpoints
 
-# Large data caches
-results/benchmark4/ph_cache/
-results/topobenchmark/frozen_ph/
-
-# Logs
-topo_logs/
-*.log
-
-# Claude Code
-.claude/
-
-# CatBoost
-catboost_info/
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
 
 # SGE job outputs
 *.o[0-9]*
-*.e[0-9]*
 
-# Jupyter
-.ipynb_checkpoints/
+# Logs directory
+logs/
 
-# Model checkpoints (keep pre-trained in models/)
-*.ckpt
+# CatBoost artifacts
+catboost_info/
+
+# Zip archives
+*.zip
+
+# Misc
+*.log
+.DS_Store
+
+# --- Public release: keep heavy artifacts / non-portable files out ---
+topo_logs/
+results/
+models/
+rebuttal/
+medrax.env
+*.pt
+*.pth
+*.pkl
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.pdf

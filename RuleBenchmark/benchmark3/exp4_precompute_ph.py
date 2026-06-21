@@ -13,13 +13,12 @@ Usage:
     python benchmarks/benchmark3/exp4_precompute_ph.py --dataset BloodMNIST --n-jobs 16 --force
 """
 
-import os
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-# Add CuPH to path if available (optional GPU-accelerated PH)
-CUPH_PATH = Path(os.environ.get("CUPH_PATH", "/opt/CuPH"))
+# Add CuPH to path if available
+CUPH_PATH = Path("/afs/crc.nd.edu/user/g/gmeng/Private/accelerate_PH/CuPH")
 if CUPH_PATH.exists():
     sys.path.insert(0, str(CUPH_PATH))
 

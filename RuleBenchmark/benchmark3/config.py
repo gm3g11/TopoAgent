@@ -17,7 +17,6 @@ Key changes from Benchmark2:
 - StandardScaler preprocessing, NO PCA
 """
 
-import os
 import numpy as np
 from pathlib import Path
 from typing import Dict, List, Optional, Any
@@ -26,13 +25,13 @@ from typing import Dict, List, Optional, Any
 # PATHS
 # =============================================================================
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-MEDMNIST_PATH = Path(os.environ.get("MEDMNIST_PATH", str(Path.home() / ".medmnist")))
+MEDMNIST_PATH = Path("/users/gmeng/afs/.medmnist")
 RESULTS_PATH = PROJECT_ROOT / "results" / "benchmark3"
 
-# External dataset paths (override via environment variables)
-EXTERNAL_DATASETS_ROOT = Path(os.environ.get("EXTERNAL_DATASETS_ROOT", str(PROJECT_ROOT / "data" / "external")))
-ISIC_PATH = Path(os.environ.get("ISIC_PATH", str(EXTERNAL_DATASETS_ROOT / "isic2019" / "train")))
-KVASIR_PATH = Path(os.environ.get("KVASIR_PATH", str(EXTERNAL_DATASETS_ROOT / "kvasir-dataset")))
+# External dataset paths
+EXTERNAL_DATASETS_ROOT = Path("/afs/crc/group/ball_lab/gmeng_cl/cl_new/datasets")
+ISIC_PATH = Path("/users/gmeng/afs/isic2019/train")
+KVASIR_PATH = Path("/users/gmeng/afs/kvasir-dataset")
 BRAIN_TUMOR_PATH = EXTERNAL_DATASETS_ROOT / "data" / "BrainTumorMRI" / "Training"
 MURA_PATH = EXTERNAL_DATASETS_ROOT / "MURA-v1.1"
 BREAKHIS_PATH = (EXTERNAL_DATASETS_ROOT / "ambarish" / "breakhis" / "versions" / "4"

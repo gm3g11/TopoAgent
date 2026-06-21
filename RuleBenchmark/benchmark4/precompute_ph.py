@@ -25,13 +25,12 @@ Usage:
     python benchmarks/benchmark4/precompute_ph.py --dataset BloodMNIST --compare --n-samples 50
 """
 
-import os
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-# CuPH path (optional GPU-accelerated PH)
-CUPH_PATH = Path(os.environ.get("CUPH_PATH", "/opt/CuPH"))
+# CuPH path
+CUPH_PATH = Path("/afs/crc.nd.edu/user/g/gmeng/Private/accelerate_PH/CuPH")
 if CUPH_PATH.exists():
     sys.path.insert(0, str(CUPH_PATH))
 

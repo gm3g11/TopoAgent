@@ -34,6 +34,7 @@ import time
 import tempfile
 from collections import Counter
 from pathlib import Path
+from typing import Optional
 
 import numpy as np
 from PIL import Image
@@ -73,7 +74,7 @@ DATASET_INFO = {
 
 # -- Dataset helpers -------------------------------------------------------
 
-def load_dataset_unified(dataset_name: str, n_samples: int = 10):
+def load_dataset_unified(dataset_name: str, n_samples: int = 10, seed: int = 42):
     """Load images from any of the 26 datasets using benchmark4's loader."""
     sys.path.insert(0, str(PROJECT_ROOT / "RuleBenchmark" / "benchmark4"))
     try:
@@ -83,7 +84,7 @@ def load_dataset_unified(dataset_name: str, n_samples: int = 10):
 
     color_mode = DATASET_INFO[dataset_name]["color_mode"]
     images, labels, class_names = load_dataset(
-        dataset_name, n_samples=n_samples, seed=42, color_mode=color_mode,
+        dataset_name, n_samples=n_samples, seed=seed, color_mode=color_mode,
     )
     n_channels = 3 if images.ndim == 4 and images.shape[-1] == 3 else 1
     return images, labels, class_names, n_channels
@@ -148,7 +149,8 @@ def _build_query(dataset_name: str, object_type: str,
 # -- Demo phase: run agent on sample images --------------------------------
 
 def run_demo_phase(dataset_name: str, condition: str, n_samples: int = 5,
-                   time_limit: float = 120.0, verbose: bool = False):
+                   time_limit: float = 120.0, verbose: bool = False,
+                   seed: int = 42, temperature: float = 0.7, top_p: float = 0.95):
     """Run the agentic pipeline on n_samples images for a given condition.
 
     Returns:
@@ -162,7 +164,16 @@ def run_demo_phase(dataset_name: str, condition: str, n_samples: int = 5,
 
     # Load images
     images, labels, class_names, n_ch = load_dataset_unified(
-        dataset_name, n_samples=n_samples + 5  # extra buffer
+        dataset_name, n_samples=n_samples + 5, seed=seed,  # extra buffer
+    )
+
+    # Per-cell log_dir avoids the topo_logs/v8_reflections.json TOCTOU race
+    # when multiple SGE jobs run concurrently. Each cell gets its own LTM file
+    # which is consistent with the existing `agent._long_term_memory.clear()`
+    # protocol — cells must not share LTM state.
+    cell_log_dir = str(
+        PROJECT_ROOT / "topo_logs" /
+        f"cell_{condition}_{dataset_name}_seed{seed}_T{temperature}"
     )
 
     # Create agent with ablation flags
@@ -170,6 +181,10 @@ def run_demo_phase(dataset_name: str, condition: str, n_samples: int = 5,
         model_name="gpt-4o",
         agentic_v8=True,
         time_limit_seconds=time_limit,
+        temperature=temperature,
+        top_p=top_p,
+        openai_seed=seed,
+        log_dir=cell_log_dir,
         **flags,
     )
     agent.workflow.verbose = verbose
@@ -299,7 +314,8 @@ def _extract_features_single(tools, gray_2d, descriptor_name, params):
 
 
 def run_eval_phase(dataset_name: str, descriptor_name: str,
-                   object_type: str, color_mode: str, n_eval: int = 500):
+                   object_type: str, color_mode: str, n_eval: int = 500,
+                   seed: int = 42):
     """Run 3-fold stratified CV with TabPFN on extracted features.
 
     Uses the benchmark4 classifier_wrapper for consistency with v7 benchmark:
@@ -331,7 +347,7 @@ def run_eval_phase(dataset_name: str, descriptor_name: str,
 
     print(f"  [Eval] Loading {n_eval} samples from {dataset_name}...")
     images, labels, class_names, n_ch = load_dataset_unified(
-        dataset_name, n_samples=n_eval)
+        dataset_name, n_samples=n_eval, seed=seed)
 
     # Create agent just for tool access (no LLM calls)
     agent = create_topoagent(model_name="gpt-4o", skills_mode=True)
@@ -440,7 +456,7 @@ def run_eval_phase(dataset_name: str, descriptor_name: str,
 
     print(f"  Classifier: {clf_name} (dim={total_dim}, classes={n_classes}, device={device})")
 
-    skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
+    skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=seed)
     fold_accs = []
 
     for fold_i, (train_idx, test_idx) in enumerate(skf.split(X, y_enc)):
@@ -452,7 +468,7 @@ def run_eval_phase(dataset_name: str, descriptor_name: str,
                 clf_name,
                 n_features=total_dim,
                 n_classes=n_classes,
-                seed=42,
+                seed=seed,
                 device=device,
             )
             clf.fit(X_train, y_train)
@@ -470,7 +486,7 @@ def run_eval_phase(dataset_name: str, descriptor_name: str,
                         "XGBoost",
                         n_features=total_dim,
                         n_classes=n_classes,
-                        seed=42,
+                        seed=seed,
                         device="cpu",
                     )
                     clf.fit(X_train, y_train)
@@ -497,7 +513,9 @@ def run_eval_phase(dataset_name: str, descriptor_name: str,
 def run_ablation(condition: str, dataset_name: str,
                  n_samples: int = 5, n_eval: int = 500,
                  time_limit: float = 120.0, verbose: bool = False,
-                 skip_eval: bool = False):
+                 skip_eval: bool = False,
+                 seed: int = 42, temperature: float = 0.7, top_p: float = 0.95,
+                 outdir_root: Optional[str] = None):
     """Run full ablation for one condition + dataset.
 
     Returns:
@@ -515,11 +533,12 @@ def run_ablation(condition: str, dataset_name: str,
     print("=" * 80)
 
     # Phase 1: Demo — get descriptor choices
-    print(f"\n--- DEMO PHASE ({n_samples} images) ---")
+    print(f"\n--- DEMO PHASE ({n_samples} images) | seed={seed} T={temperature} top_p={top_p} ---")
     t0 = time.time()
     per_image_details = run_demo_phase(
         dataset_name, condition, n_samples=n_samples,
         time_limit=time_limit, verbose=verbose,
+        seed=seed, temperature=temperature, top_p=top_p,
     )
     demo_time = time.time() - t0
 
@@ -549,7 +568,7 @@ def run_ablation(condition: str, dataset_name: str,
         t1 = time.time()
         balanced_accuracy, std_accuracy, fold_accuracies, classifier_name = run_eval_phase(
             dataset_name, majority_descriptor,
-            object_type, color_mode, n_eval=n_eval,
+            object_type, color_mode, n_eval=n_eval, seed=seed,
         )
         eval_time = time.time() - t1
     else:
@@ -562,6 +581,9 @@ def run_ablation(condition: str, dataset_name: str,
         "dataset": dataset_name,
         "object_type": object_type,
         "color_mode": color_mode,
+        "seed": seed,
+        "temperature": temperature,
+        "top_p": top_p,
         "n_demo_images": n_samples,
         "descriptor_choices": descriptor_choices,
         "majority_descriptor": majority_descriptor,
@@ -578,9 +600,14 @@ def run_ablation(condition: str, dataset_name: str,
     }
 
     # Save result
-    outdir = PROJECT_ROOT / "results" / "ablation_study" / cond_info["label"]
+    if outdir_root:
+        outdir = Path(outdir_root) / cond_info["label"]
+        json_name = f"{dataset_name}_seed{seed}_T{temperature}.json"
+    else:
+        outdir = PROJECT_ROOT / "results" / "ablation_study" / cond_info["label"]
+        json_name = f"{dataset_name}.json"
     outdir.mkdir(parents=True, exist_ok=True)
-    json_path = outdir / f"{dataset_name}.json"
+    json_path = outdir / json_name
     with open(json_path, "w") as f:
         json.dump(result, f, indent=2, default=str)
     print(f"\n  Saved to: {json_path}")
@@ -607,6 +634,16 @@ def main():
                         help="Print full LLM prompts/responses")
     parser.add_argument("--no-eval", action="store_true",
                         help="Skip classifier evaluation (demo phase only)")
+    parser.add_argument("--seed", type=int, default=42,
+                        help="Experiment seed; threads through dataset sampling, "
+                             "CV split, classifier RNG, and OpenAI seed (default: 42)")
+    parser.add_argument("--temperature", type=float, default=0.7,
+                        help="LLM sampling temperature (default: 0.7, paper-faithful)")
+    parser.add_argument("--top-p", type=float, default=0.95,
+                        help="LLM nucleus sampling top_p (default: 0.95)")
+    parser.add_argument("--outdir-root", type=str, default=None,
+                        help="Override output root (default: results/ablation_study). "
+                             "When set, files are named {dataset}_seed{S}_T{T}.json")
     args = parser.parse_args()
 
     conditions = list(CONDITION_MAP.keys()) if args.condition == "all" else [args.condition]
@@ -622,6 +659,10 @@ def main():
                 time_limit=args.time_limit,
                 verbose=args.verbose,
                 skip_eval=args.no_eval,
+                seed=args.seed,
+                temperature=args.temperature,
+                top_p=args.top_p,
+                outdir_root=args.outdir_root,
             )
             summaries.append(result)
         except Exception as e:

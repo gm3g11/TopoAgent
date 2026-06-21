@@ -715,6 +715,8 @@ def create_topoagent(
     base_url: Optional[str] = None,
     temperature: float = 0.7,
     top_p: float = 0.95,
+    openai_seed: Optional[int] = None,
+    log_dir: str = "topo_logs",
     max_rounds: int = 4,
     tools: Optional[Dict[str, Any]] = None,
     skills_mode: bool = False,
@@ -789,6 +791,8 @@ def create_topoagent(
     if base_url:
         openai_kwargs["base_url"] = base_url
 
+    if openai_seed is not None:
+        openai_kwargs["seed"] = openai_seed
     model = ChatOpenAI(
         model=model_name,
         temperature=temperature,
@@ -799,6 +803,7 @@ def create_topoagent(
     return TopoAgent(
         model=model,
         tools=tools,
+        log_dir=log_dir,
         max_rounds=max_rounds,
         skills_mode=skills_mode,
         agentic_mode=agentic_mode,

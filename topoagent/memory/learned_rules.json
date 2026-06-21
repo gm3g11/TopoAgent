@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "timestamp": "2026-02-13T20:16:18.218859",
+      "object_type": "discrete_cells",
+      "dataset": "BloodMNIST",
+      "agent_choice": "template_functions",
+      "agent_accuracy": 0.979,
+      "oracle_choice": "persistence_codebook",
+      "oracle_accuracy": 0.9796,
+      "was_optimal": false,
+      "params_used": {},
+      "source": "benchmark_mode_a"
+    },
+    {
+      "timestamp": "2026-02-13T20:17:19.885804",
+      "object_type": "glands_lumens",
+      "dataset": "PathMNIST",
+      "agent_choice": "persistence_statistics",
+      "agent_accuracy": 0.975,
+      "oracle_choice": "persistence_statistics",
+      "oracle_accuracy": 0.975,
+      "was_optimal": true,
+      "params_used": {},
+      "source": "benchmark_mode_a"
+    },
+    {
+      "timestamp": "2026-02-13T20:13:55.976073",
+      "object_type": "vessel_trees",
+      "dataset": "RetinaMNIST",
+      "agent_choice": "lbp_texture",
+      "agent_accuracy": 0.5307,
+      "oracle_choice": "persistence_statistics",
+      "oracle_accuracy": 0.5553,
+      "was_optimal": false,
+      "params_used": {},
+      "source": "benchmark_mode_a"
+    },
+    {
+      "timestamp": "2026-02-13T20:17:32.107531",
+      "object_type": "surface_lesions",
+      "dataset": "DermaMNIST",
+      "agent_choice": "persistence_statistics",
+      "agent_accuracy": 0.5765,
+      "oracle_choice": "persistence_statistics",
+      "oracle_accuracy": 0.5765,
+      "was_optimal": true,
+      "params_used": {},
+      "source": "benchmark_mode_a"
+    },
+    {
+      "timestamp": "2026-02-13T20:17:43.108917",
+      "object_type": "organ_shape",
+      "dataset": "OrganAMNIST",
+      "agent_choice": "edge_histogram",
+      "agent_accuracy": 0.8513,
+      "oracle_choice": "minkowski_functionals",
+      "oracle_accuracy": 0.8558,
+      "was_optimal": false,
+      "params_used": {},
+      "source": "benchmark_mode_a"
+    }
+  ],
+  "updated_rankings": {
+    "discrete_cells": [
+      {
+        "descriptor": "template_functions",
+        "accuracy": 0.979,
+        "trials": 3
+      }
+    ],
+    "glands_lumens": [
+      {
+        "descriptor": "persistence_statistics",
+        "accuracy": 0.975,
+        "trials": 3
+      }
+    ],
+    "vessel_trees": [
+      {
+        "descriptor": "lbp_texture",
+        "accuracy": 0.5307,
+        "trials": 3
+      }
+    ],
+    "surface_lesions": [
+      {
+        "descriptor": "persistence_statistics",
+        "accuracy": 0.5765,
+        "trials": 3
+      }
+    ],
+    "organ_shape": [
+      {
+        "descriptor": "edge_histogram",
+        "accuracy": 0.8513,
+        "trials": 3
+      }
+    ]
+  }
+}

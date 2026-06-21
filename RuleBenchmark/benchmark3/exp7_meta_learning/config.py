@@ -1,6 +1,5 @@
 """Configuration for Exp7: Meta-Learning for Descriptor Selection."""
 
-import os
 from pathlib import Path
 
 # ─── Paths ───────────────────────────────────────────────────────────────────
@@ -12,8 +11,8 @@ CACHE_DIR = OUTPUT_DIR / "cache"
 MODELS_DIR = OUTPUT_DIR / "models"
 
 # MedMNIST and external dataset paths (from benchmark3 config)
-MEDMNIST_PATH = Path(os.environ.get("MEDMNIST_PATH", str(Path.home() / ".medmnist")))
-EXTERNAL_DATASETS_ROOT = Path(os.environ.get("EXTERNAL_DATASETS_ROOT", str(PROJECT_ROOT / "data" / "external")))
+MEDMNIST_PATH = Path("/users/gmeng/afs/.medmnist")
+EXTERNAL_DATASETS_ROOT = Path("/afs/crc/group/ball_lab/gmeng_cl/cl_new/datasets")
 
 # ─── Datasets (13) ──────────────────────────────────────────────────────────
 
