@@ -48,7 +48,7 @@ TopoAgent runs a four-phase loop (implemented as a LangGraph state machine in [`
 
 **6 perception tools:** `image_loader`, `image_analyzer`, `noise_filter`, `compute_ph` (GUDHI cubical-complex filtration), `topological_features` (PH profile), `betti_ratios`.
 
-**15 descriptor tools** — 10 PH-derived: `persistence_image`, `persistence_landscapes`, `persistence_silhouette`, `persistence_entropy`, `persistence_statistics`, `betti_curves`, `template_functions`, `atol`, `persistence_codebook`, `tropical_coordinates`; and 5 image-based: `minkowski_functionals`, `euler_characteristic_curve`, `euler_characteristic_transform`, `lbp_texture`, `edge_histogram`.
+**15 descriptor tools** — 10 PH-derived: `persistence_image`, `persistence_landscapes`, `persistence_silhouette`, `persistence_entropy`, `persistence_statistics`, `betti_curves`, `template_functions`, `ATOL`, `persistence_codebook`, `tropical_coordinates`; and 5 image-based: `minkowski_functionals`, `euler_characteristic_curve`, `euler_characteristic_transform`, `lbp_texture`, `edge_histogram`.
 
 > Note: `topoagent/tools/__init__.py` registers a larger superset of tools (including legacy classifiers and filtration variants from earlier versions); the PRAR pipeline uses the 21-tool subset above. The current paper pipeline is **v9** (`agentic_v9=True`); v2–v8 remain in the code for reference.
 

@@ -217,6 +217,7 @@ def compute_statistics(diagrams):
         lifetimes = deaths - births
 
         # Basic stats
+        lifetimes_norm = lifetimes / (lifetimes.sum() + 1e-10)
         dim_stats = [
             # Lifetime stats
             np.mean(lifetimes), np.std(lifetimes), np.median(lifetimes),
@@ -230,8 +231,7 @@ def compute_statistics(diagrams):
             # Death stats
             np.mean(deaths), np.std(deaths),
             # Entropy
-            lifetimes_norm = lifetimes / (lifetimes.sum() + 1e-10),
-        -np.sum(lifetimes_norm * np.log(lifetimes_norm + 1e-10)),  # entropy
+            -np.sum(lifetimes_norm * np.log(lifetimes_norm + 1e-10)),  # entropy
         ]
 
         # Flatten and extend

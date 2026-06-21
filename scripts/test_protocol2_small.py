@@ -498,7 +498,7 @@ def main():
         if not api_key:
             print("ERROR: OPENAI_API_KEY not set")
             sys.exit(1)
-        print(f"API key: ...{api_key[-8:]}")
+        print("API key: set")
 
     if args.mode == "benchmark":
         run_benchmark_mode(args)

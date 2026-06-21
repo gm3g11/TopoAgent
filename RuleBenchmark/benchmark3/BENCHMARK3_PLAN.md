@@ -1,5 +1,7 @@
 # Benchmark3 Plan
 
+> **Note:** This is an early planning document. The final shipped study (see the [README](../../README.md)) uses **15 descriptors × 26 datasets × 6 classifiers**; the numbers below reflect an intermediate plan, not the released scope.
+
 **Goal:** Refine benchmark2 with (1) updated/increased dimensions for existing descriptors, (2) 7 new descriptors (19 total), (3) 5 new datasets (13 total).
 
 ---

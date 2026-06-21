@@ -411,7 +411,8 @@ def failure_analysis(images, datasets):
 
     print(f"\n    Confusion matrix:")
     all_ots = sorted(set(list(ot_confusion.keys()) + [p for c in ot_confusion.values() for p in c.keys()]))
-    print(f"    {'GT \\ Predicted':<20}", end="")
+    header = r'GT \ Predicted'
+    print(f"    {header:<20}", end="")
     for ot in all_ots:
         print(f" {ot[:12]:>12}", end="")
     print(f" {'Total':>6} {'Acc%':>6}")
