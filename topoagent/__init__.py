@@ -31,7 +31,13 @@ Example (Custom Configuration):
 __version__ = "0.1.0"
 __author__ = "TopoAgent Team"
 
-from .agent import TopoAgent, create_topoagent, create_topoagent_ollama
+from .agent import (
+    TopoAgent,
+    create_topoagent,
+    create_topoagent_ollama,
+    create_topoagent_claude,
+    create_topoagent_gemini,
+)
 from .state import TopoAgentState, create_initial_state, ReflectionEntry
 from .workflow import TopoAgentWorkflow, create_topoagent_workflow
 from .reflection import ReflectionEngine, DualMemoryManager
@@ -42,6 +48,8 @@ __all__ = [
     "TopoAgent",
     "create_topoagent",
     "create_topoagent_ollama",
+    "create_topoagent_claude",
+    "create_topoagent_gemini",
     # State
     "TopoAgentState",
     "create_initial_state",

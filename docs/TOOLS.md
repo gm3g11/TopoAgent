@@ -1,6 +1,8 @@
 # TopoAgent Tools Reference
 
-Complete reference for all 15 TDA tools.
+> ⚠️ **Legacy document (v2 tools).** This page describes an earlier tool set and is kept for reference only. The current PRAR pipeline uses **21 tools** (6 perception + 15 descriptors); see the [README tool list](../README.md#tools-21) for the authoritative inventory.
+
+Reference for the earlier (v2) TDA tool set.
 
 ## Tool Categories
 

@@ -4,11 +4,13 @@
 # ============== Core Dependencies ==============
 
 # LangChain/LangGraph (Agent Framework)
-langgraph>=0.0.10
-langchain>=0.1.0
-langchain-core>=0.1.0
-langchain-openai>=0.0.2
-langchain-anthropic>=0.0.2
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langchain-anthropic>=0.2.0
+langchain-google-genai>=1.0.0   # Gemini backbone
+langchain-ollama>=0.1.0         # Ollama backbone (local, no API key)
 
 # ============== TDA Libraries ==============
 
@@ -75,3 +77,13 @@ mypy>=0.950
 
 # Weights & Biases logging (optional)
 # wandb>=0.12.0
+
+# Baselines / downstream / demos (optional — uncomment as needed)
+# openai>=1.0.0         # raw SDK for the GPT-4V baseline + demo scripts
+# requests>=2.28.0      # HTTP calls in baselines/demos
+# torchvision>=0.15.0   # CNN+TDA hybrid features (downstream integration)
+# numba>=0.56.0         # optional JIT speedup for the persistence_statistics descriptor
+
+# ============== Benchmark reproduction ==============
+# To reproduce TopoBenchmark / RuleBenchmark (15 descriptors x 26 datasets x 6 classifiers):
+#   pip install -r requirements-benchmark.txt

@@ -29,7 +29,7 @@ All MedMNIST datasets are stored as pre-saved 224x224 NPZ files under the MedMNI
 | 12 | ISIC2019 | 8 | 25,331 | 25,331 | 0 | 0 | ~600x450 | Dermatoscopy | Skin lesion types (8 classes) |
 | 13 | Kvasir | 8 | 4,000 | 4,000 | 0 | 0 | ~720x576 | Endoscopy | GI tract findings (8 classes) |
 | 14 | BrainTumorMRI | 4 | 7,023 | 5,712 | 0 | 1,311 | ~512x512 | MRI | Brain tumor types (4 classes) |
-| 15 | MURA | 14 | 40,005 | 36,808 | 3,197 | 0 | variable | X-ray | Musculoskeletal abnormality (7 body parts x 2) |
+| 15 | MURA | 14 | 40,005 | 36,808 | 3,197 | 0 | variable | X-ray | Musculoskeletal abnormality (14 = 7 body parts × {normal, abnormal}) |
 | 16 | BreakHis | 8 | 7,909 | 7,909 | 0 | 0 | 700x460 | Microscopy (H&E) | Breast tumor histology (8 subtypes) |
 | 17 | NCT_CRC_HE | 9 | 100,000 | 100,000 | 0 | 0 | 224x224 | Microscopy (H&E) | Colorectal cancer tissue (9 types) |
 | 18 | MalariaCell | 2 | 27,560 | 27,560 | 0 | 0 | ~130x130 | Microscopy | Malaria cell detection (2 classes) |
@@ -126,10 +126,10 @@ EXTERNAL_DATASETS_ROOT = <repo>/datasets/   # default; override via the EXTERNAL
 
 ## Unified Data Loader
 
-All 26 datasets are loaded through a single function in `scripts/run_benchmark3/data_loader.py`:
+All 26 datasets are loaded through a single function in `RuleBenchmark/benchmark4/data_loader.py`:
 
 ```python
-from scripts.run_benchmark3.data_loader import load_dataset
+from RuleBenchmark.benchmark4.data_loader import load_dataset
 
 # Load any dataset by name (stratified sampling to n_samples)
 images, labels, class_names = load_dataset("DermaMNIST", n_samples=5000, seed=42)
@@ -167,8 +167,8 @@ All loaders output the same format:
 
 ```bash
 # Test a single dataset
-python scripts/run_benchmark3/data_loader.py DermaMNIST
+python RuleBenchmark/benchmark4/data_loader.py DermaMNIST
 
 # Test all 26 datasets (loads 100 samples each)
-python scripts/run_benchmark3/data_loader.py
+python RuleBenchmark/benchmark4/data_loader.py
 ```

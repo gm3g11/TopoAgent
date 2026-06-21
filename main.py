@@ -45,8 +45,8 @@ def main():
     parser.add_argument(
         "--max-rounds", "-r",
         type=int,
-        default=3,
-        help="Maximum reasoning rounds (default: 3)"
+        default=4,
+        help="Maximum reasoning rounds (default: 4)"
     )
     parser.add_argument(
         "--interactive",
@@ -94,7 +94,8 @@ def main():
         # Create agent
         agent = create_topoagent(
             model_name=args.model,
-            max_rounds=args.max_rounds
+            max_rounds=args.max_rounds,
+            agentic_v9=True,
         )
 
         # Run classification
@@ -122,7 +123,8 @@ def run_interactive(model_name: str, max_rounds: int):
 
     agent = create_topoagent(
         model_name=model_name,
-        max_rounds=max_rounds
+        max_rounds=max_rounds,
+        agentic_v9=True,
     )
 
     while True:
@@ -178,6 +180,8 @@ def print_result(result: dict):
     print("RESULTS")
     print("=" * 50)
 
+    if result.get('descriptor'):
+        print(f"\nDescriptor determined: {result['descriptor']}")
     print(f"\nClassification: {result.get('classification', 'Unknown')}")
     print(f"Confidence: {result.get('confidence', 0):.1f}%")
     print(f"Rounds Used: {result.get('rounds_used', 0)}")

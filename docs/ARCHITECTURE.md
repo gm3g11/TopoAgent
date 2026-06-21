@@ -1,8 +1,10 @@
 # TopoAgent Architecture
 
+> ⚠️ **Legacy document.** This describes the earlier ReAct + Reflection (v2/v4) workflow. The current paper pipeline is the **v9 Perception–Reasoning–Action–Reflection (PRAR)** loop — see [README → How the PRAR phases map to the code](../README.md#how-the-prar-phases-map-to-the-code) for the authoritative architecture.
+
 ## Overview
 
-TopoAgent implements a **ReAct + Reflection** workflow for medical image classification using Topological Data Analysis (TDA).
+TopoAgent (legacy v2/v4) implements a **ReAct + Reflection** workflow for medical image classification using Topological Data Analysis (TDA).
 
 ## Core Components
 

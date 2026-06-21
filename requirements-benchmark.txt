@@ -1,0 +1,15 @@
+# TopoAgent — benchmark reproduction dependencies
+# Install on top of the core requirements to reproduce TopoBenchmark / RuleBenchmark
+# (15 descriptors x 26 datasets x 6 classifiers):
+#
+#   pip install -r requirements.txt
+#   pip install -r requirements-benchmark.txt
+#
+# The six tabular classifiers used during skill-set construction:
+tabpfn>=2.0.0      # TabPFN tabular foundation model
+xgboost>=1.7.0     # XGBoost
+catboost>=1.2      # CatBoost
+pytabkit>=1.0.0    # provides TabM and RealMLP classifiers
+# Data handling for the benchmark loaders / analysis:
+pandas>=1.5.0      # meta-learning (exp7) + analysis scripts
+h5py>=3.0.0        # HDF5 dataset caches (e.g. PCam)

@@ -147,6 +147,13 @@ print("Reasoning trace:     ", result["reasoning_trace"])  # the full trace R
 
 Other backbones use the same API: `create_topoagent_claude`, `create_topoagent_gemini`, and `create_topoagent_ollama` (free, local — no API key).
 
+> **No image handy?** Grab one from MedMNIST (already a dependency) for a copy-paste first run:
+> ```python
+> from medmnist import DermaMNIST
+> img, _ = DermaMNIST(split="test", download=True, size=224)[0]
+> img.save("example.png")   # then use --image example.png
+> ```
+
 ### 2. Command line
 
 ```bash
@@ -175,7 +182,17 @@ python scripts/run_ablation_study.py
 python TopoBenchmark/run_experiment.py
 ```
 
-These read the frozen splits and precomputed PH caches; configure dataset locations first (see [Datasets](#datasets)).
+> **What these need:** these three scripts perform **live** feature extraction (persistent homology is computed on the fly), so they require only the datasets on disk (set the env vars in [Datasets](#datasets)) plus an LLM API key — **not** the excluded `results/` caches. Install the six benchmark classifiers first: `pip install -r requirements-benchmark.txt`.
+>
+> The lower-level `TopoBenchmark/run_protocol1.py` and `scripts/protocol2_*.py` additionally require precomputed oracle assets (`results/benchmark4/raw/`, `results/topobenchmark/assets/`) that are **not** shipped — regenerate them by running the `RuleBenchmark/benchmark4` study, or request the asset archive from the authors.
+
+**Reproducibility at a glance:**
+
+| Goal | Needs |
+|------|-------|
+| Run the agent on one image | `pip install -r requirements.txt` + an LLM API key |
+| Reproduce Table 1 / Table 2 | + the 26 datasets on disk + `requirements-benchmark.txt` |
+| Protocol / oracle metrics | + regenerated `results/benchmark4` & `results/topobenchmark/assets` |
 
 ---
 
@@ -192,7 +209,7 @@ TopoAgent/
 │   ├── state.py               # TopoAgentState: short_term_memory (Ms), long_term_memory (Ml)
 │   ├── reflection.py          # Reflection engine + DualMemoryManager
 │   ├── prompts.py             # Prompt templates for each PRAR phase
-│   ├── tools/                 # 21 PRAR tools + registry (get_all_tools / get_all_descriptors)
+│   ├── tools/                 # PRAR tool set (21) within a 29-tool registry (get_all_tools / get_all_descriptors)
 │   │   ├── preprocessing/     #   image_loader, image_analyzer, noise_filter
 │   │   ├── homology/          #   compute_ph, persistence_diagram, persistence_image
 │   │   ├── morphology/        #   betti_ratios, minkowski_functionals
