@@ -31,7 +31,7 @@ opencv-python>=4.5.0
 pydicom>=2.3.0
 
 # Medical datasets
-medmnist>=2.2.0
+medmnist>=3.0.0   # 3.0+ provides the 224x224 "MedMNIST+" variants used here
 
 # ============== Machine Learning ==============
 

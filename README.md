@@ -258,7 +258,18 @@ The v9 pipeline is built in `topoagent/workflow.py` as six LangGraph nodes:
 
 ## Datasets
 
-MedMNIST plus 15 external datasets. Dataset locations are read from environment variables (defaults are defined in `RuleBenchmark/benchmark{3,4}/config.py`); see [`docs/benchmark3_datasets.md`](docs/benchmark3_datasets.md) for the full roster and directory layout.
+The 26 datasets are **not** shipped with the repo. Obtain them as follows; full source links, access notes, and licenses are in the [data-acquisition guide](docs/benchmark3_datasets.md#downloading-the-datasets).
+
+**MedMNIST (11)** — one command (auto-downloads the 224×224 variants):
+
+```bash
+pip install "medmnist>=3.0.0"
+python scripts/download_medmnist.py        # writes <flag>_224.npz into $MEDMNIST_PATH
+```
+
+**External (15)** — download each from its source (ISIC2019, Kvasir, MURA, BreakHis, NCT-CRC-HE, PCam, IDRiD, APTOS2019, …); see the [data-acquisition guide](docs/benchmark3_datasets.md#downloading-the-datasets) for per-dataset links and licenses.
+
+Then point the environment variables at your download locations (defaults are defined in `RuleBenchmark/benchmark{3,4}/config.py`):
 
 ```bash
 export MEDMNIST_PATH=~/.medmnist

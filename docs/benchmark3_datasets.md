@@ -2,6 +2,49 @@
 
 26 medical image classification datasets (11 MedMNIST + 15 external) used in the Benchmark3 experiment.
 
+## Downloading the Datasets
+
+The repository does **not** ship the datasets. Obtain them as follows, then point the
+environment variables (`MEDMNIST_PATH`, `EXTERNAL_DATASETS_ROOT`, …) at the download
+locations. Licenses vary — please honor each one and cite the original papers.
+
+### MedMNIST (11) — one command
+
+These auto-download via the `medmnist` package (needs `medmnist>=3.0.0` for the 224×224
+variants):
+
+```bash
+pip install "medmnist>=3.0.0"
+MEDMNIST_PATH=~/.medmnist python scripts/download_medmnist.py
+```
+
+This writes `<flag>_224.npz` (e.g. `bloodmnist_224.npz`) into `MEDMNIST_PATH` — exactly the
+files the loader expects.
+
+### External datasets (15)
+
+Download each from its source and extract it under `EXTERNAL_DATASETS_ROOT` (or set the
+per-dataset override env var). The expected on-disk layout for each is in the
+[directory-layout tables](#external-datasets) further down this page.
+
+| Dataset (repo id) | Official source | Access · license |
+|---|---|---|
+| **ISIC2019** | [ISIC 2019 challenge](https://challenge.isic-archive.com/data/#2019) | direct S3 zips · CC BY-NC 4.0 · [Kaggle mirror](https://www.kaggle.com/datasets/andrewmvd/isic-2019) |
+| **Kvasir** (v2) | [Simula](https://datasets.simula.no/kvasir/) | direct download · research/educational use |
+| **BrainTumorMRI** | [Kaggle (Nickparvar)](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset) | Kaggle account · CC0 |
+| **MURA** | [Stanford ML Group](https://stanfordmlgroup.github.io/competitions/mura/) | registration (Stanford AIMI) · research-use agreement |
+| **BreakHis** | [UFPR VRI](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/) | direct + form · CC BY 4.0 · [Kaggle mirror](https://www.kaggle.com/datasets/ambarish/breakhis) |
+| **NCT_CRC_HE** | [Zenodo 1214456](https://zenodo.org/records/1214456) | direct · CC BY 4.0 |
+| **MalariaCell** | [NIH/NLM](https://data.lhncbc.nlm.nih.gov/public/Malaria/cell_images.zip) | direct download · cite source |
+| **IDRiD** | [IEEE DataPort](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid) | free registration · CC BY 4.0 |
+| **PCam** | [github.com/basveeling/pcam](https://github.com/basveeling/pcam) | direct (Google Drive) · CC0 · decompress `.h5.gz` |
+| **LC25000** | [github.com/tampapath/lung_colon_image_set](https://github.com/tampapath/lung_colon_image_set) | torrent · [Kaggle mirror](https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images) |
+| **SIPaKMeD** | [Univ. of Ioannina](https://www.cs.uoi.gr/~marina/sipakmed.html) | direct (`.7z` per class) · research use |
+| **AML_Cytomorphology** | [TCIA](https://www.cancerimagingarchive.net/collection/aml-cytomorphology_lmu/) | TCIA client · CC BY 3.0 |
+| **APTOS2019** | [Kaggle competition](https://www.kaggle.com/competitions/aptos2019-blindness-detection/data) | Kaggle + accept rules · competition use |
+| **GasHisSDB** | [figshare 15066147](https://figshare.com/articles/dataset/GasHisSDB/15066147) | direct · CC BY 4.0 |
+| **Chaoyang** | [BUPT HSA-NRL](https://bupt-ai-cz.github.io/HSA-NRL/) | request form · academic only |
+
 ## Dataset Table
 
 ### MedMNIST Datasets (11)
